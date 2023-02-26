@@ -1,0 +1,27 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid bce493c3-4661-483c-bc4d-e2ca1766e4e9)
+
+  (paper "A4")
+
+  (title_block
+    (title "Suspension potentiometers")
+    (date "2023-02-24")
+    (rev "${REVISION}")
+    (company "Author: Szymon Kostrubiec")
+    (comment 1 "Reviewer:")
+  )
+
+  (lib_symbols
+  )
+
+
+  (hierarchical_label "POTENTIOMETER_IN" (shape input) (at 82.55 83.82 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 902f2bab-a77c-412b-9d89-45ae44ebcb20)
+  )
+  (hierarchical_label "SIGNAL_OUT" (shape output) (at 109.22 83.82 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 94ddb89f-ea83-4a83-8249-a66ed17bdb1c)
+  )
+)
