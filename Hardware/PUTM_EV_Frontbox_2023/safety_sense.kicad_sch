@@ -425,12 +425,6 @@
     (uuid f61a8e4c-cc2c-4f6c-9699-88920abc4f96)
   )
 
-  (text "A może po prostu dzielnik napięcia? Poziomy stanów logicznych na to pozwalają"
-    (at 110.49 142.24 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid d95c8c10-5d12-4c8f-a344-661b62eb1989)
-  )
-
   (hierarchical_label "Safety_right_kill" (shape input) (at 105.41 92.71 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 002c64ab-44a5-4afe-8efe-f61a68040b6d)

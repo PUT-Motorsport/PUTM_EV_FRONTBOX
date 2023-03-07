@@ -512,15 +512,11 @@
     ],
     [
       "fc1ffdcd-7b51-43f2-87c4-9a5d8609cd78",
-      "IMU Sensor ISM330DHCX"
+      "IMU Sensor ISM330DHCX and SWPS"
     ],
     [
       "fd3e8671-032e-4b6a-9a43-a9c36a92201e",
       "Power section"
-    ],
-    [
-      "aeac1b44-d1ec-4b85-b8f8-1431058c9399",
-      "Steering wheel position sensor"
     ],
     [
       "e2b31807-b5f3-44ae-a974-1e60e93e59ed",
@@ -545,6 +541,10 @@
     [
       "89069515-a409-433b-9ed0-2772e97aaa2d",
       "APPS measurement"
+    ],
+    [
+      "55cf8599-7fcf-4ad3-afe8-d836ab083f74",
+      "Brake pressure"
     ],
     [
       "9fbfc50e-04b7-423f-b17b-8c9b93934806",
