@@ -519,8 +519,12 @@
       "Power section"
     ],
     [
-      "e2b31807-b5f3-44ae-a974-1e60e93e59ed",
+      "79afe43e-babf-4d5d-a636-ae8293b09b20",
       "CAN bus"
+    ],
+    [
+      "e2b31807-b5f3-44ae-a974-1e60e93e59ed",
+      "CAN bus 2"
     ],
     [
       "4deadd9b-3e18-4284-beb5-6600402c5311",
@@ -549,6 +553,22 @@
     [
       "9fbfc50e-04b7-423f-b17b-8c9b93934806",
       "Additional analog input"
+    ],
+    [
+      "84ca731d-94a5-4171-8601-4e7d05eef579",
+      "Suspension potentiometers 2"
+    ],
+    [
+      "a8c4f732-a122-416e-8a5e-65ca70330696",
+      "Laptimer"
+    ],
+    [
+      "92e1c237-4df1-4ea5-b062-79b6d493fbfe",
+      "APPS measurement1"
+    ],
+    [
+      "29fc5711-91c1-44a8-8ded-bc50bce49a50",
+      "Brake PPS"
     ]
   ],
   "text_variables": {

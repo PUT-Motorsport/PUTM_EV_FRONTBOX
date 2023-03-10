@@ -387,6 +387,9 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "C13") (unit 1)
         )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "C29") (unit 1)
+        )
       )
     )
   )
@@ -411,6 +414,9 @@
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "#PWR040") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "#PWR084") (unit 1)
         )
       )
     )
@@ -437,6 +443,9 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "#PWR036") (unit 1)
         )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "#PWR087") (unit 1)
+        )
       )
     )
   )
@@ -461,6 +470,9 @@
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "#PWR039") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -488,6 +500,9 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "C14") (unit 1)
         )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "C28") (unit 1)
+        )
       )
     )
   )
@@ -512,6 +527,9 @@
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "#PWR038") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "#PWR085") (unit 1)
         )
       )
     )
@@ -546,6 +564,9 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "U5") (unit 1)
         )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "U14") (unit 1)
+        )
       )
     )
   )
@@ -570,6 +591,9 @@
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
           (reference "#PWR037") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
+          (reference "#PWR086") (unit 1)
         )
       )
     )

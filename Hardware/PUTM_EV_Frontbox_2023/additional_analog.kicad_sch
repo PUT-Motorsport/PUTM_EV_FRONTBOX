@@ -5,7 +5,7 @@
   (paper "A4")
 
   (title_block
-    (title "Additional inputs")
+    (title "Additional analog inputs")
     (date "2023-02-24")
     (rev "${REVISION}")
     (company "Author: Szymon Kostrubiec")
@@ -388,7 +388,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid a813d7d3-b44c-4f48-b2b1-a8c2ecb4ab78)
   )
-  (hierarchical_label "OUT_2" (shape output) (at 149.86 121.92 0) (fields_autoplaced)
+  (hierarchical_label "OUT2" (shape output) (at 149.86 121.92 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid eb65a6b7-f5a6-4d15-886f-5ee2a4e6c2ae)
   )

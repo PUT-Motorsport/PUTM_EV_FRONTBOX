@@ -20,7 +20,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 902f2bab-a77c-412b-9d89-45ae44ebcb20)
   )
-  (hierarchical_label "SIGNAL_OUT" (shape output) (at 109.22 83.82 0) (fields_autoplaced)
+  (hierarchical_label "POTENTIOMETER_OUT" (shape output) (at 109.22 83.82 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 94ddb89f-ea83-4a83-8249-a66ed17bdb1c)
   )

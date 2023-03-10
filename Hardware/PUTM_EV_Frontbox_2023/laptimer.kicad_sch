@@ -1,0 +1,27 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 2cc4822a-02e9-4010-b3e5-fbdb38138ead)
+
+  (paper "A4")
+
+  (title_block
+    (title "Laptimer")
+    (date "2023-02-24")
+    (rev "${REVISION}")
+    (company "Author: Szymon Kostrubiec")
+    (comment 1 "Reviewer:")
+  )
+
+  (lib_symbols
+  )
+
+
+  (hierarchical_label "Laptimer_in" (shape input) (at 142.24 88.9 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid c8141632-90e1-46a7-b1be-5289120e0801)
+  )
+  (hierarchical_label "Laptimer_out" (shape output) (at 163.83 88.265 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid edc93a5e-35c2-4c0a-9c62-468bfccfc2f3)
+  )
+)

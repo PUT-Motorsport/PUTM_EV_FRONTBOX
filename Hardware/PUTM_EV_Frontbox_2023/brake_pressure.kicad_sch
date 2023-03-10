@@ -4,6 +4,14 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Brake pressure")
+    (date "2023-02-24")
+    (rev "${REVISION}")
+    (company "Author: Szymon Kostrubiec")
+    (comment 1 "Reviewer:")
+  )
+
   (lib_symbols
     (symbol "Amplifier_Operational:TLV9062" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 0 5.08 0)
