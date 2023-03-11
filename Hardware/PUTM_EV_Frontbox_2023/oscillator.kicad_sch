@@ -6,7 +6,7 @@
 
   (title_block
     (title "Oscillator")
-    (date "2023-02-24")
+    (date "2023-03-11")
     (rev "${REVISION}")
     (company "Author: Szymon Kostrubiec")
     (comment 1 "Reviewer:")
@@ -277,7 +277,7 @@
   (symbol (lib_id "Device:C_Small") (at 147.32 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 32d9a3c1-e87e-44be-8097-e9e0f887ac98)
-    (property "Reference" "C12" (at 149.86 97.79 0)
+    (property "Reference" "C24" (at 149.86 97.79 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10pF" (at 149.86 100.33 0)
@@ -294,7 +294,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"
-          (reference "C12") (unit 1)
+          (reference "C24") (unit 1)
         )
       )
     )
@@ -303,7 +303,7 @@
   (symbol (lib_id "power:GND") (at 142.24 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5641ab51-0d09-4687-bad1-8f689b9afc46)
-    (property "Reference" "#PWR034" (at 142.24 107.95 0)
+    (property "Reference" "#PWR069" (at 142.24 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 106.68 0)
@@ -319,7 +319,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
     )
@@ -359,7 +359,7 @@
   (symbol (lib_id "Device:C_Small") (at 137.16 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c8f7da77-2446-492a-85dd-0068b96ffb52)
-    (property "Reference" "C11" (at 129.54 97.79 0)
+    (property "Reference" "C23" (at 129.54 97.79 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10pF" (at 129.54 100.33 0)
@@ -376,7 +376,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"
-          (reference "C11") (unit 1)
+          (reference "C23") (unit 1)
         )
       )
     )
@@ -385,7 +385,7 @@
   (symbol (lib_id "power:GND") (at 142.24 90.17 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid faba5b63-e5c1-42c9-b8e8-249a84c8d729)
-    (property "Reference" "#PWR035" (at 142.24 83.82 0)
+    (property "Reference" "#PWR068" (at 142.24 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 86.36 0)
@@ -401,7 +401,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR068") (unit 1)
         )
       )
     )

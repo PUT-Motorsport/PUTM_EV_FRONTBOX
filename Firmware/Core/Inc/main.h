@@ -57,10 +57,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define SAFETY_OVERTRAVEL_Pin GPIO_PIN_13
-#define SAFETY_OVERTRAVEL_GPIO_Port GPIOC
+#define SAFETY_CONTROL_Pin GPIO_PIN_13
+#define SAFETY_CONTROL_GPIO_Port GPIOC
 #define SAFETY_BSPD_Pin GPIO_PIN_14
 #define SAFETY_BSPD_GPIO_Port GPIOC
+#define SAFETY_OVERTRAVEL_Pin GPIO_PIN_15
+#define SAFETY_OVERTRAVEL_GPIO_Port GPIOC
 #define SAFETY_INERTIA_Pin GPIO_PIN_0
 #define SAFETY_INERTIA_GPIO_Port GPIOC
 #define SAFETY_DRIVER_Pin GPIO_PIN_1
@@ -69,8 +71,6 @@ void Error_Handler(void);
 #define SAFETY_RIGHT_GPIO_Port GPIOC
 #define SAFETY_LEFT_Pin GPIO_PIN_3
 #define SAFETY_LEFT_GPIO_Port GPIOC
-#define ADC1_BRAKE_Pin GPIO_PIN_0
-#define ADC1_BRAKE_GPIO_Port GPIOA
 #define ADC1_APPS2_Pin GPIO_PIN_1
 #define ADC1_APPS2_GPIO_Port GPIOA
 #define ADC1_APPS1_Pin GPIO_PIN_2
@@ -79,18 +79,30 @@ void Error_Handler(void);
 #define ADC1_EXTRA_1_GPIO_Port GPIOA
 #define ADC2_EXTRA_2_Pin GPIO_PIN_4
 #define ADC2_EXTRA_2_GPIO_Port GPIOA
-#define ADC_BRAKE_L_Pin GPIO_PIN_6
-#define ADC_BRAKE_L_GPIO_Port GPIOA
-#define ADC2_BRAKE_R_Pin GPIO_PIN_7
-#define ADC2_BRAKE_R_GPIO_Port GPIOA
-#define ADC2_SUSP_R_Pin GPIO_PIN_5
-#define ADC2_SUSP_R_GPIO_Port GPIOC
-#define ADC_SUSP_L_Pin GPIO_PIN_2
-#define ADC_SUSP_L_GPIO_Port GPIOB
-#define ADC2_LAPTIMER_Pin GPIO_PIN_11
-#define ADC2_LAPTIMER_GPIO_Port GPIOB
-#define SAFETY_DISCONNECT_Pin GPIO_PIN_12
-#define SAFETY_DISCONNECT_GPIO_Port GPIOA
+#define ADC2_SUSP_R_Pin GPIO_PIN_6
+#define ADC2_SUSP_R_GPIO_Port GPIOA
+#define ADC2_SUSP_L_Pin GPIO_PIN_7
+#define ADC2_SUSP_L_GPIO_Port GPIOA
+#define ADC2_BRAKE_PRESSURE_REAR_Pin GPIO_PIN_4
+#define ADC2_BRAKE_PRESSURE_REAR_GPIO_Port GPIOC
+#define ADC2_BRAKE_PRESSURE_FRONT_Pin GPIO_PIN_5
+#define ADC2_BRAKE_PRESSURE_FRONT_GPIO_Port GPIOC
+#define ADC1_BRAKE_PPS_Pin GPIO_PIN_0
+#define ADC1_BRAKE_PPS_GPIO_Port GPIOB
+#define TIM5_LAPTIMER_Pin GPIO_PIN_2
+#define TIM5_LAPTIMER_GPIO_Port GPIOB
+#define DEBUG_5_Pin GPIO_PIN_6
+#define DEBUG_5_GPIO_Port GPIOC
+#define DEBUG_4_Pin GPIO_PIN_7
+#define DEBUG_4_GPIO_Port GPIOC
+#define DEBUG_3_Pin GPIO_PIN_8
+#define DEBUG_3_GPIO_Port GPIOC
+#define DEBUG_2_Pin GPIO_PIN_9
+#define DEBUG_2_GPIO_Port GPIOC
+#define DEBUG_1_Pin GPIO_PIN_8
+#define DEBUG_1_GPIO_Port GPIOA
+#define TIM3_SWPS_DATA_Pin GPIO_PIN_4
+#define TIM3_SWPS_DATA_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

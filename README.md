@@ -20,16 +20,13 @@ PCB board aquiring data from the front side of the vehicle.
 
 ### APPS
 
-Rotary potentiometers? Hall effect sensors?
+Linear potentiometers:
 
 ### Front and rear brake pressure
 
 Two analog, 5V sensors
 
 ### Safety (shutdown circuit) sensing
-
-Where on the shutdown circuit will the board be placed?
-Optimal placement is before BSPD (most straightforward connections)
 
 The safety state will be measured at:
 - left kill switch
@@ -41,15 +38,13 @@ The safety state will be measured at:
 
 ### IMU measurements
 
-ISM330DHCX mounted on the board (how will the mechanical requirements be fullfilled? reference axis, rigid mounting location?)
+ISM330DHCX mounted on external board with swps:
 
 ### Steering wheel position sensor
 
-Sensor: AS5601
+Sensor: AS5600
 
-The sensor will be placed on a mini-board?
-
-Will be powered from 5V and communicate with the main board over I2C
+The sensor will be placed on a mini-board. The angle signal uses PWM
 
 ### Brake pedal position sensor
 
@@ -57,10 +52,9 @@ Same as APPS
 
 ### Suspension position sensors
 
-Two linear potentiometers?
+Two linear potentiometers
 
 ### IR sensor
 
-What IC will be used?
 IC:
 

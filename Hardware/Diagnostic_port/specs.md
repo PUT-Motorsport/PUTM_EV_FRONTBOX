@@ -1,8 +1,18 @@
-# Diagnostic board with JTAG programmer
+# USB - C Connector pinout
 
-[USB to JTAG IC](https://ftdichip.com/products/ft2232hl/)
+| Pin ID | Name | Pin ID | Name | Adapted function |
+| ------ | ---- | ------ | ---- | ---------------- |
+| A1 | GND | B1 | GND | GND |
+| A2 | TX1+ | B2 | TX2+ | CAN1+ |
+| A3 | TX1- | B3 | TX2- | CAN1- |
+| A4 | VBUS | B4 | VBUS | Strictly +5V |
+| A5 | CC1 | B5 | CC2 | SWCLK |
+| A6 | D+ | B6 | D+ | USB_D+ |
+| A7 | D- | A7 | D- | USB_D- |
+| A8 | SBU1 | B8 | SBU2 | SWDIO |
+| A9 | VBUS | B9 | VBUS | Strictly +5V |
+| A10 | RX2- | B10 | RX1- | CAN2- |
+| A11 | RX2+ | B11 | RX1+ | CAN2+ |
+| A12 | GND | B12 | GND | GND |
 
-[Blue pill schematic](https://stm32-base.org/assets/pdf/boards/original-schematic-STM32F103C8T6-Blue_Pill.pdf)
-[Blue pill bootloader](https://github.com/rogerclarkmelbourne/STM32duino-bootloader)
-[Blue pill to black magic debug probe](https://hackaday.io/project/187043/instructions)
-[Black magic debug probe working with stm32cubeide](https://github.com/mike-pittelko/BlackMagic-STM32CubeIDE)
+NRST does not need to be connected - the SWD protocol supports rebooting over SWDIO

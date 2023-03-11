@@ -6,7 +6,7 @@
 
   (title_block
     (title "Safety relay control")
-    (date "2023-02-24")
+    (date "2023-03-11")
     (rev "${REVISION}")
     (company "Author: Szymon Kostrubiec")
     (comment 1 "Reviewer:")
@@ -553,7 +553,7 @@
   (symbol (lib_id "Device:R_Small") (at 128.27 93.98 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0412da5e-3977-4514-8227-b1b218182c3b)
-    (property "Reference" "R16" (at 127 92.71 0)
+    (property "Reference" "R10" (at 127 92.71 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 127 95.25 0)
@@ -570,7 +570,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
-          (reference "R16") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -634,7 +634,7 @@
   (symbol (lib_id "power:+5V") (at 137.16 66.04 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid acb45b10-fe8c-4416-a520-71a3db44cb22)
-    (property "Reference" "#PWR075" (at 137.16 69.85 0)
+    (property "Reference" "#PWR070" (at 137.16 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 137.16 62.23 0)
@@ -650,7 +650,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
-          (reference "#PWR075") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
     )
@@ -659,7 +659,7 @@
   (symbol (lib_id "power:GND") (at 137.16 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bce0d5bf-b9fb-4059-b16b-413c8a0d32e2)
-    (property "Reference" "#PWR074" (at 137.16 105.41 0)
+    (property "Reference" "#PWR071" (at 137.16 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 137.16 102.87 0)
@@ -675,7 +675,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
-          (reference "#PWR074") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -684,7 +684,7 @@
   (symbol (lib_id "Device:R_Small") (at 119.38 90.17 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f3120c01-e08f-4e39-a4d1-0979001e3655)
-    (property "Reference" "R17" (at 119.38 85.09 90)
+    (property "Reference" "R9" (at 119.38 85.09 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "200R" (at 119.38 87.63 90)
@@ -701,7 +701,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
-          (reference "R17") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )

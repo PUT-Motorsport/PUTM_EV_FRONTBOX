@@ -555,8 +555,8 @@
       "Additional analog input"
     ],
     [
-      "84ca731d-94a5-4171-8601-4e7d05eef579",
-      "Suspension potentiometers 2"
+      "de50c137-74f9-4e43-93cb-58ddb34925e1",
+      "APPS measurement2"
     ],
     [
       "a8c4f732-a122-416e-8a5e-65ca70330696",
@@ -565,10 +565,6 @@
     [
       "92e1c237-4df1-4ea5-b062-79b6d493fbfe",
       "APPS measurement1"
-    ],
-    [
-      "29fc5711-91c1-44a8-8ded-bc50bce49a50",
-      "Brake PPS"
     ]
   ],
   "text_variables": {
