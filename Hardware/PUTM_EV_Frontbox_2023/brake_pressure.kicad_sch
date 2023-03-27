@@ -506,6 +506,14 @@
     (uuid 85c3a3f5-7bd1-4225-b888-d9d535cf6a5c)
   )
 
+  (global_label "5v_ref" (shape input) (at 85.09 93.98 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 0f1ac87d-c45d-44bd-af45-5e458feb3417)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 93.741 93.98 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+
   (hierarchical_label "Brake_pressure_out_1" (shape output) (at 162.56 82.55 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid c3653507-3cc6-4061-b08f-ef7b0c4ef3a9)
@@ -833,31 +841,6 @@
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/55cf8599-7fcf-4ad3-afe8-d836ab083f74"
           (reference "C29") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 85.09 93.98 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 923348c9-59b6-414b-9a9b-f93208e27a0c)
-    (property "Reference" "#PWR098" (at 85.09 97.79 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 85.09 90.17 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 85.09 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 85.09 93.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8814b96c-2760-46ed-a134-04da61ef3a6e))
-    (instances
-      (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/55cf8599-7fcf-4ad3-afe8-d836ab083f74"
-          (reference "#PWR098") (unit 1)
         )
       )
     )

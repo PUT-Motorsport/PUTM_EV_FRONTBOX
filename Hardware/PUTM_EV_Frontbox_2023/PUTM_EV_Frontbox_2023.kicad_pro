@@ -565,6 +565,10 @@
     [
       "92e1c237-4df1-4ea5-b062-79b6d493fbfe",
       "APPS measurement1"
+    ],
+    [
+      "ba538a3c-1084-4770-aed2-08b4305d2379",
+      "Yaw probe"
     ]
   ],
   "text_variables": {
