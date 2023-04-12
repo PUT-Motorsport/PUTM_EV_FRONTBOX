@@ -1,0 +1,3 @@
+[submodule "Hardware/PUTM_Kicad_Library"]
+	path = Hardware/PUTM_Kicad_Library
+	url = git@github.com:PUT-Motorsport/PUTM_Kicad_Library.git

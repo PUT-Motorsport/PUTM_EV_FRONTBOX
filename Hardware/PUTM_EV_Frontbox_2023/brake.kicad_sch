@@ -1,0 +1,28 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 79457a37-d546-4f83-afca-411bd7feb585)
+
+  (paper "A4")
+
+  (title_block
+    (title "Brake pedal position sensor")
+    (date "2023-02-24")
+    (rev "${REVISION}")
+    (company "Author: Szymon Kostrubiec")
+    (comment 1 "Reviewer:")
+  )
+
+  (lib_symbols
+  )
+
+
+
+  (hierarchical_label "Brake_pedal_position_in" (shape input) (at 71.755 76.2 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 8d518b5a-1f2e-416f-9ca4-8cf5ce8bac17)
+  )
+  (hierarchical_label "Brake_pedal_position_out" (shape output) (at 97.155 88.265 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a275e0f6-0f08-4cf3-b0a1-4241531686ad)
+  )
+)
