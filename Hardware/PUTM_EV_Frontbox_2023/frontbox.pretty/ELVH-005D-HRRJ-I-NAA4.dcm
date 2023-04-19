@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ELVH-005D-HRRJ-I-NAA4
+D Board Mount Pressure Sensors PRESSURE SENSOR
+K
+F https://www.allsensors.com/datasheets/DS-0376_Rev_A.pdf
+$ENDCMP
+#
+#End Doc Library

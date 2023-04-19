@@ -614,9 +614,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/89069515-a409-433b-9ed0-2772e97aaa2d"
           (reference "#PWR093") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "#PWR0111") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "#PWR0121") (unit 1)
         )
@@ -633,7 +630,7 @@
     (property "Value" "R_Small" (at 139.065 116.84 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 139.065 114.3 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 139.065 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 139.065 114.3 0)
@@ -649,9 +646,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R74") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R65") (unit 1)
-        )
       )
     )
   )
@@ -665,7 +659,7 @@
     (property "Value" "R_Small" (at 106.68 102.235 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 106.68 104.14 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 106.68 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 106.68 104.14 0)
@@ -680,9 +674,6 @@
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R71") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R62") (unit 1)
         )
       )
     )
@@ -712,9 +703,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "#PWR0125") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "#PWR0115") (unit 1)
-        )
       )
     )
   )
@@ -728,7 +716,7 @@
     (property "Value" "TLV9152IDDFR" (at 181.61 106.68 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 182.88 104.775 0)
+    (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-8_HandSoldering" (at 182.88 104.775 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9151.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1677335283651&ref_url=https%253A%252F%252Fwww.mouser.pl%252F" (at 182.88 104.775 0)
@@ -750,9 +738,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "U18") (unit 3)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "U16") (unit 3)
-        )
       )
     )
   )
@@ -766,7 +751,7 @@
     (property "Value" "10k 1%" (at 56.515 99.06 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 56.515 101.6 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 56.515 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 56.515 101.6 0)
@@ -782,9 +767,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R69") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R60") (unit 1)
-        )
       )
     )
   )
@@ -798,7 +780,7 @@
     (property "Value" "R_Small" (at 27.94 101.6 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 29.21 99.695 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 29.21 99.695 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 29.21 99.695 0)
@@ -813,9 +795,6 @@
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/89069515-a409-433b-9ed0-2772e97aaa2d"
           (reference "R30") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R58") (unit 1)
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R67") (unit 1)
@@ -848,9 +827,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "#PWR0124") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "#PWR0114") (unit 1)
-        )
       )
     )
   )
@@ -864,7 +840,7 @@
     (property "Value" "R_Small" (at 27.94 109.22 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 29.21 107.315 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 29.21 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 29.21 107.315 0)
@@ -879,9 +855,6 @@
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/89069515-a409-433b-9ed0-2772e97aaa2d"
           (reference "R31") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R59") (unit 1)
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R68") (unit 1)
@@ -899,7 +872,7 @@
     (property "Value" "R_Small" (at 127 111.76 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 127 109.22 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 127 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 127 109.22 0)
@@ -915,9 +888,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R73") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R64") (unit 1)
-        )
       )
     )
   )
@@ -931,7 +901,7 @@
     (property "Value" "TLV9152IDDFR" (at 140.335 100.33 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 140.335 106.68 0)
+    (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-8_HandSoldering" (at 140.335 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9151.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1677335283651&ref_url=https%253A%252F%252Fwww.mouser.pl%252F" (at 140.335 106.68 0)
@@ -952,9 +922,6 @@
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "U18") (unit 2)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "U16") (unit 2)
         )
       )
     )
@@ -984,9 +951,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "#PWR0123") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "#PWR0113") (unit 1)
-        )
       )
     )
   )
@@ -1015,9 +979,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "#PWR0122") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "#PWR0112") (unit 1)
-        )
       )
     )
   )
@@ -1031,7 +992,7 @@
     (property "Value" "100n" (at 172.72 106.6863 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 175.26 104.775 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" (at 175.26 104.775 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 175.26 104.775 0)
@@ -1047,9 +1008,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "C35") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "C32") (unit 1)
-        )
       )
     )
   )
@@ -1063,7 +1021,7 @@
     (property "Value" "R_Small" (at 109.22 110.49 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 111.125 108.585 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 111.125 108.585 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 111.125 108.585 0)
@@ -1079,9 +1037,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R72") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R63") (unit 1)
-        )
       )
     )
   )
@@ -1095,7 +1050,7 @@
     (property "Value" "47n 1%" (at 79.3813 90.17 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 79.375 92.71 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" (at 79.375 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 79.375 92.71 0)
@@ -1111,9 +1066,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "C34") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "C31") (unit 1)
-        )
       )
     )
   )
@@ -1127,7 +1079,7 @@
     (property "Value" "47n 1%" (at 71.755 107.3213 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 74.295 105.41 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" (at 74.295 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 74.295 105.41 0)
@@ -1143,9 +1095,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "C33") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "C30") (unit 1)
-        )
       )
     )
   )
@@ -1159,7 +1108,7 @@
     (property "Value" "10k 1%" (at 66.675 99.06 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 66.675 101.6 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 66.675 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 66.675 101.6 0)
@@ -1175,9 +1124,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "R70") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "R61") (unit 1)
-        )
       )
     )
   )
@@ -1191,7 +1137,7 @@
     (property "Value" "TLV9152IDDFR" (at 89.535 97.79 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 89.535 104.14 0)
+    (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-8_HandSoldering" (at 89.535 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv9151.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1677335283651&ref_url=https%253A%252F%252Fwww.mouser.pl%252F" (at 89.535 104.14 0)
@@ -1212,9 +1158,6 @@
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/92e1c237-4df1-4ea5-b062-79b6d493fbfe"
           (reference "U18") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/de50c137-74f9-4e43-93cb-58ddb34925e1"
-          (reference "U16") (unit 1)
         )
       )
     )

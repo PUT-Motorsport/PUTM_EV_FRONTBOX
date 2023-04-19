@@ -563,9 +563,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "TP2") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "TP3") (unit 1)
-        )
       )
     )
   )
@@ -579,7 +576,7 @@
     (property "Value" "100nF" (at 148.59 87.0013 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 146.05 85.09 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 146.05 85.09 0)
@@ -589,9 +586,6 @@
     (pin "2" (uuid fe0b73dc-c4ec-4813-9c3b-0793d344bb7d))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "C22") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "C20") (unit 1)
         )
@@ -617,9 +611,6 @@
     (pin "1" (uuid e3fec4b7-3002-4ed2-9c65-7086fb2e33e3))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "#PWR063") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR058") (unit 1)
         )
@@ -645,9 +636,6 @@
     (pin "1" (uuid 38c41112-a16a-4ca6-b988-7732bcfb43a3))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "#PWR066") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR061") (unit 1)
         )
@@ -676,9 +664,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR0126") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "#PWR0127") (unit 1)
-        )
       )
     )
   )
@@ -704,9 +689,6 @@
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#FLG08") (unit 1)
         )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "#FLG09") (unit 1)
-        )
       )
     )
   )
@@ -729,9 +711,6 @@
     (pin "1" (uuid db469167-40d2-430e-add0-18adfe783b45))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "#PWR067") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR062") (unit 1)
         )
@@ -748,7 +727,7 @@
     (property "Value" "100nF" (at 130.81 87.0013 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 133.35 85.09 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" (at 133.35 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 133.35 85.09 0)
@@ -758,9 +737,6 @@
     (pin "2" (uuid 317fd28b-a068-497c-bccc-242214c8aff0))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "C21") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "C19") (unit 1)
         )
@@ -786,9 +762,6 @@
     (pin "1" (uuid 659d366c-262b-4740-b96e-69c54bf334ef))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "#PWR064") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR059") (unit 1)
         )
@@ -822,9 +795,6 @@
     (pin "9" (uuid 52b045b9-00ff-4726-8245-fc1f5e63ab03))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "U9") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "U8") (unit 1)
         )
@@ -850,9 +820,6 @@
     (pin "1" (uuid 9070a1b0-ae7d-44f5-bd81-1c29b4f4290a))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "#PWR065") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR060") (unit 1)
         )
@@ -869,7 +836,7 @@
     (property "Value" "60R@100MHz" (at 144.78 79.3369 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 140.462 77.47 90)
+    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 140.462 77.47 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 142.24 77.47 0)
@@ -881,9 +848,6 @@
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "FB2") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/e2b31807-b5f3-44ae-a974-1e60e93e59ed"
-          (reference "FB3") (unit 1)
         )
       )
     )
