@@ -3114,6 +3114,7 @@
   (no_connect (at 262.255 40.64) (uuid 92d77c12-267b-4e65-a697-32f4a2decade))
   (no_connect (at 226.695 35.56) (uuid 97195acb-5b26-45a1-84f0-f4b2b01deb9a))
   (no_connect (at 46.355 50.8) (uuid 9750400c-dd8e-4f2a-a732-9984922b333b))
+  (no_connect (at 96.52 92.075) (uuid 982bb36c-ac26-4908-8fee-34f217e0ee4c))
   (no_connect (at 120.65 149.225) (uuid a972cbb2-9248-45f1-8248-f778751bcd12))
   (no_connect (at 46.355 60.96) (uuid ada31539-970c-4e68-9862-6195958baefa))
   (no_connect (at 46.355 78.74) (uuid b3a045e4-0729-4f19-a67d-559d296479db))
@@ -5762,7 +5763,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 765e6c3a-218d-4520-8020-14e02e04c8ce)
   )
-  (label "BRAKE_PRESSURE1" (at 96.52 26.67 0) (fields_autoplaced)
+  (label "BRAKE_PRESSURE1" (at 96.52 24.13 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 77724b08-a954-4e1e-9c8a-621626532595)
   )
@@ -5806,7 +5807,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 846e8c90-50c7-43e9-970c-7e660f82755d)
   )
-  (label "BRAKE_PRESSURE2" (at 96.52 24.13 0) (fields_autoplaced)
+  (label "BRAKE_PRESSURE2" (at 96.52 26.67 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8ece4929-df0e-4f78-9c49-685e03356cd5)
   )
@@ -5818,7 +5819,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 903e0e9e-2058-4cbd-9bd0-3a1d8998ab8b)
   )
-  (label "BRAKE_PRESSURE2" (at 55.88 80.645 0) (fields_autoplaced)
+  (label "BRAKE_PRESSURE2" (at 96.52 71.755 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 906285b5-627e-46b2-b93d-2cadbe6e701d)
   )
@@ -7391,6 +7392,9 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
+          (reference "J4") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/ba538a3c-1084-4770-aed2-08b4305d2379"
           (reference "J4") (unit 1)
         )
       )
