@@ -1,0 +1,63 @@
+#include "apps.hpp"
+
+#include <cmath>
+
+namespace apps {
+    namespace {
+        // todo: apps can be recalibrated, but these values should provide a good starting point
+        adc_data_t apps_1_min_value;
+        adc_data_t apps_2_min_value;
+
+        adc_data_t apps_1_max_value;
+        adc_data_t apps_2_max_value;
+
+        uint32_t time_calibration_end{};
+        constexpr uint32_t calibration_time{5000};
+    }
+
+    apps_t get_apps_value_from_raw(adc_data_t raw_value_1, adc_data_t raw_value_2) {
+        if (HAL_GetTick() < time_calibration_end) {
+            // register highest and lowest values
+            if (raw_value_1 < apps_1_min_value) {
+                apps_1_min_value = raw_value_1;
+            } else if (raw_value_1 > apps_1_max_value) {
+                apps_1_max_value = raw_value_1;
+            }
+            if (raw_value_2 < apps_2_min_value) {
+                apps_2_min_value = raw_value_2;
+            } else if (raw_value_2 > apps_2_max_value) {
+                apps_2_max_value = raw_value_2;
+            }
+
+            return 0;
+        }
+
+        // rescale apps values to 0-1
+        float apps_1 = (apps_1 - apps_1_min_value) / (apps_1_max_value - apps_1_min_value);
+        float apps_2 = (apps_2 - apps_2_min_value) / (apps_2_max_value - apps_2_min_value);
+
+        float apps = (apps_1 + apps_2) / 2;
+
+        return nonlinearize(apps);
+    }
+
+    void calibrate() {
+        time_calibration_end = HAL_GetTick() + calibration_time;
+    }
+
+    namespace {
+        float apps_coefficient{1.0f};
+    }
+    void set_coefficient(float coefficient) {
+        if (coefficient >= 2.0f or coefficient <= 0.5f)
+            return;
+        
+        apps_coefficient = coefficient;
+    }
+
+    // expects the argument to be 0-1
+    float nonlinearize(float arg) {
+        return 500 * std::pow(arg, apps_coefficient);        
+    }
+
+}
