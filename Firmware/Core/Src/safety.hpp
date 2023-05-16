@@ -16,5 +16,5 @@ union SafetyState {
 };
 
 namespace safety {
-    SafetyState get_safety_state();
+    SafetyState get_safety_state() noexcept;
 }
