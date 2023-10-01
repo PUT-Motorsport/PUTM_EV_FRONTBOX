@@ -1,6 +1,7 @@
 #include "apps.hpp"
 
 #include <cmath>
+#include "main.h"
 
 namespace apps {
     namespace {

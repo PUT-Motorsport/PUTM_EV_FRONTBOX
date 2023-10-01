@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PUTM_EV_CAN_LIBRARY/lib/CanHeaders/can_headers.hpp"
+//#include "PUTM_EV_CAN_LIBRARY/lib/CanHeaders/can_headers.hpp"
 #include <array>
 #include "main.h"
 #include <time.h>
@@ -11,11 +11,10 @@
 #include "suspension.hpp"
 #include "safety.hpp"
 
-namespace can {
 
-void init(FDCAN_HandleTypeDef * can) noexcept;
+void init(FDCAN_HandleTypeDef *) noexcept;
 
-bool should_send_frame() noexcept;
+bool should_send_frames() noexcept;
 
 bool send_apps_frame(apps::apps_t apps_value, PUTM_CAN::Apps_states device_state) noexcept;
 
@@ -25,6 +24,5 @@ bool send_data_acquisition_card_imu_frames(std::array<IMU::IMUData_t, 3> imu_acc
 
 bool send_rtd_frame() noexcept;
 
-}
 
 

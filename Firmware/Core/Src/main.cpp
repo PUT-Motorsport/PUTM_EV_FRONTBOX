@@ -68,7 +68,9 @@ bool send_rtd_flag;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
+extern "C"{
 void SystemClock_Config(void);
+}
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
@@ -120,7 +122,8 @@ int main(void) {
 	MX_I2C3_Init();
 	MX_USB_Device_Init();
 	/* USER CODE BEGIN 2 */
-	can::init(&hfdcan2);
+
+	init(&hfdcan2);
 
 	// initialize adc with dma
 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
@@ -141,43 +144,40 @@ int main(void) {
 	while (1) {
 		time_t timeout;
 		// handle safety
-		if (PUTM_CAN::new_data<PUTM_CAN::Steering_Wheel_main>()) {
-			PUTM_CAN::Steering_Wheel_event steering_wheel = PUTM_CAN::get<PUTM_CAN::Steering_Wheel_event>();
-			if (steering_wheel.button == PUTM_CAN::buttonStates::button1) {
-				// enable safety
-				timeout = HAL_GetTick() + 1000;
-				HAL_GPIO_WritePin(SAFETY_CONTROL_GPIO_Port, SAFETY_CONTROL_Pin,
-						GPIO_PIN_SET);
-			}
-			if (steering_wheel.button == PUTM_CAN::buttonStates::button2) {
-				send_rtd_flag = true;
-			}
-		}
-		if ((timeout < HAL_GetTick())
-				and PUTM_CAN::get<PUTM_CAN::BMS_HV_main>().device_state
-						== PUTM_CAN::BMS_HV_states::AIR_opened) {
-			// disable safety
-			HAL_GPIO_WritePin(SAFETY_CONTROL_GPIO_Port, SAFETY_CONTROL_Pin,
-					GPIO_PIN_RESET);
-		}
+//		if (PUTM_CAN::new_data<PUTM_CAN::Steering_Wheel_main>()) {
+//			PUTM_CAN::Steering_Wheel_event steering_wheel = PUTM_CAN::get<PUTM_CAN::Steering_Wheel_event>();
+//			if (steering_wheel.button == PUTM_CAN::buttonStates::button1) {
+//				// enable safety
+//				timeout = HAL_GetTick() + 1000;
+//				HAL_GPIO_WritePin(SAFETY_CONTROL_GPIO_Port, SAFETY_CONTROL_Pin,
+//						GPIO_PIN_SET);
+//			}
+//			if (steering_wheel.button == PUTM_CAN::buttonStates::button2) {
+//				send_rtd_flag = true;
+//			}
+//		}
+//		if ((timeout < HAL_GetTick())
+//				and PUTM_CAN::get<PUTM_CAN::BMS_HV_main>().device_state
+//						== PUTM_CAN::BMS_HV_states::AIR_opened) {
+//			// disable safety
+//			HAL_GPIO_WritePin(SAFETY_CONTROL_GPIO_Port, SAFETY_CONTROL_Pin,
+//					GPIO_PIN_RESET);
+//		}
+//
+//		if (send_rtd_flag) {
+//			can::send_rtd_frame();
+//			send_rtd_flag = false;
+//		}
 
-		if (send_rtd_flag) {
-			can::send_rtd_frame();
-			send_rtd_flag = false;
-		}
-
-		if (can::should_send_frame()) {
+		if (should_send_frames()) {
 			const auto apps = apps::get_apps_value_from_raw(((ADC2_data *)adc2_buffer)->apps_1, ((ADC1_data *)adc1_buffer)->apps_2);
-			can::send_apps_frame(apps.first, apps.second);
+			send_apps_frame(apps.first, apps.second);
 			const auto brake_pressure = get_brake_pressure_from_raw(((ADC2_data *)adc2_buffer)->brake_pressure_front, ((ADC2_data *)adc2_buffer)->brake_pressure_rear);
 			const auto suspension = get_suspension_from_raw(((ADC2_data *)adc2_buffer)->suspension_right, ((ADC2_data *)adc2_buffer)->suspension_left);
 			const auto safety = safety::get_safety_state();
-			can::send_data_acquisition_card_main_frame(brake_pressure,
-					suspension, safety);
 
 			const auto imu_acc = IMU::get_acc_data();
 			const auto imu_gyro = IMU::get_gyro_data();
-			can::send_data_acquisition_card_imu_frames(imu_acc, imu_gyro);
 		}
 
 		/* USER CODE END WHILE */
