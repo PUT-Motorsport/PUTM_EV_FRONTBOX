@@ -1,0 +1,773 @@
+18:07:55 **** Incremental Build of configuration Debug for project Firmware ****
+make -j12 all 
+arm-none-eabi-g++ "../Core/Src/can.cpp" -mcpu=cortex-m4 -std=gnu++20 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G473xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../USB_Device/App -I../USB_Device/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/can.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++20 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G473xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../USB_Device/App -I../USB_Device/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Drivers/CMSIS/Include/core_cm4.h:1955,
+                 from ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h:177,
+                 from ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:113,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h:29,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32g4xx_hal_conf.h:212,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.cpp:20:
+../Drivers/CMSIS/Include/mpu_armv7.h: In function 'void ARM_MPU_Enable(uint32_t)':
+../Drivers/CMSIS/Include/mpu_armv7.h:195:14: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  195 |   SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+../Drivers/CMSIS/Include/mpu_armv7.h: In function 'void ARM_MPU_Disable()':
+../Drivers/CMSIS/Include/mpu_armv7.h:207:14: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  207 |   SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+../Drivers/CMSIS/Include/mpu_armv7.h:209:14: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  209 |   MPU->CTRL  &= ~MPU_CTRL_ENABLE_Msk;
+In file included from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h:29,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32g4xx_hal_conf.h:212,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.cpp:20:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_SetCommonPathInternalChAdd(ADC_Common_TypeDef*, uint32_t)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:2833:3: note: in expansion of macro 'SET_BIT'
+ 2833 |   SET_BIT(ADCxy_COMMON->CCR, PathInternal);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_SetCommonPathInternalChRem(ADC_Common_TypeDef*, uint32_t)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:2857:3: note: in expansion of macro 'CLEAR_BIT'
+ 2857 |   CLEAR_BIT(ADCxy_COMMON->CCR, PathInternal);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_SetChannelSingleDiff(ADC_TypeDef*, uint32_t, uint32_t)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:5503:5: note: in expansion of macro 'SET_BIT'
+ 5503 |     SET_BIT(ADCx->DIFSEL,
+      |     ^~~~~~~
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:5508:5: note: in expansion of macro 'CLEAR_BIT'
+ 5508 |     CLEAR_BIT(ADCx->DIFSEL,
+      |     ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableDeepPowerDown(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6611:3: note: in expansion of macro 'CLEAR_BIT'
+ 6611 |   CLEAR_BIT(ADCx->CR, (ADC_CR_DEEPPWD | ADC_CR_BITS_PROPERTY_RS));
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableInternalRegulator(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6660:3: note: in expansion of macro 'CLEAR_BIT'
+ 6660 |   CLEAR_BIT(ADCx->CR, (ADC_CR_ADVREGEN | ADC_CR_BITS_PROPERTY_RS));
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_REG_StartSamplingPhase(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6884:3: note: in expansion of macro 'SET_BIT'
+ 6884 |   SET_BIT(ADCx->CFGR2, ADC_CFGR2_SWTRIG);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_REG_StopSamplingPhase(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6906:3: note: in expansion of macro 'CLEAR_BIT'
+ 6906 |   CLEAR_BIT(ADCx->CFGR2, ADC_CFGR2_SWTRIG);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_ADRDY(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7764:3: note: in expansion of macro 'SET_BIT'
+ 7764 |   SET_BIT(ADCx->IER, LL_ADC_IT_ADRDY);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_EOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7775:3: note: in expansion of macro 'SET_BIT'
+ 7775 |   SET_BIT(ADCx->IER, LL_ADC_IT_EOC);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_EOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7786:3: note: in expansion of macro 'SET_BIT'
+ 7786 |   SET_BIT(ADCx->IER, LL_ADC_IT_EOS);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_OVR(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7797:3: note: in expansion of macro 'SET_BIT'
+ 7797 |   SET_BIT(ADCx->IER, LL_ADC_IT_OVR);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_EOSMP(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7808:3: note: in expansion of macro 'SET_BIT'
+ 7808 |   SET_BIT(ADCx->IER, LL_ADC_IT_EOSMP);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_JEOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7819:3: note: in expansion of macro 'SET_BIT'
+ 7819 |   SET_BIT(ADCx->IER, LL_ADC_IT_JEOC);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_JEOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7830:3: note: in expansion of macro 'SET_BIT'
+ 7830 |   SET_BIT(ADCx->IER, LL_ADC_IT_JEOS);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_JQOVF(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7841:3: note: in expansion of macro 'SET_BIT'
+ 7841 |   SET_BIT(ADCx->IER, LL_ADC_IT_JQOVF);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_AWD1(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7852:3: note: in expansion of macro 'SET_BIT'
+ 7852 |   SET_BIT(ADCx->IER, LL_ADC_IT_AWD1);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_AWD2(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7863:3: note: in expansion of macro 'SET_BIT'
+ 7863 |   SET_BIT(ADCx->IER, LL_ADC_IT_AWD2);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_AWD3(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7874:3: note: in expansion of macro 'SET_BIT'
+ 7874 |   SET_BIT(ADCx->IER, LL_ADC_IT_AWD3);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_ADRDY(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7885:3: note: in expansion of macro 'CLEAR_BIT'
+ 7885 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_ADRDY);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_EOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7896:3: note: in expansion of macro 'CLEAR_BIT'
+ 7896 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_EOC);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_EOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7907:3: note: in expansion of macro 'CLEAR_BIT'
+ 7907 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_EOS);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_OVR(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7918:3: note: in expansion of macro 'CLEAR_BIT'
+ 7918 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_OVR);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_EOSMP(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7929:3: note: in expansion of macro 'CLEAR_BIT'
+ 7929 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_EOSMP);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_JEOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7940:3: note: in expansion of macro 'CLEAR_BIT'
+ 7940 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_JEOC);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_JEOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7951:3: note: in expansion of macro 'CLEAR_BIT'
+ 7951 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_JEOS);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_JQOVF(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7962:3: note: in expansion of macro 'CLEAR_BIT'
+ 7962 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_JQOVF);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_AWD1(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7973:3: note: in expansion of macro 'CLEAR_BIT'
+ 7973 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_AWD1);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_AWD2(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7984:3: note: in expansion of macro 'CLEAR_BIT'
+ 7984 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_AWD2);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_AWD3(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7995:3: note: in expansion of macro 'CLEAR_BIT'
+ 7995 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_AWD3);
+      |   ^~~~~~~~~
+In file included from ../Drivers/CMSIS/Include/core_cm4.h:1955,
+                 from ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h:177,
+                 from ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:113,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h:29,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32g4xx_hal_conf.h:212,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/can.hpp:5,
+                 from ../Core/Src/can.cpp:1:
+../Drivers/CMSIS/Include/mpu_armv7.h: In function 'void ARM_MPU_Enable(uint32_t)':
+../Drivers/CMSIS/Include/mpu_armv7.h:195:14: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  195 |   SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+../Drivers/CMSIS/Include/mpu_armv7.h: In function 'void ARM_MPU_Disable()':
+../Drivers/CMSIS/Include/mpu_armv7.h:207:14: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  207 |   SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+../Drivers/CMSIS/Include/mpu_armv7.h:209:14: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  209 |   MPU->CTRL  &= ~MPU_CTRL_ENABLE_Msk;
+In file included from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h:29,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32g4xx_hal_conf.h:212,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/can.hpp:5,
+                 from ../Core/Src/can.cpp:1:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_SetCommonPathInternalChAdd(ADC_Common_TypeDef*, uint32_t)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:2833:3: note: in expansion of macro 'SET_BIT'
+ 2833 |   SET_BIT(ADCxy_COMMON->CCR, PathInternal);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_SetCommonPathInternalChRem(ADC_Common_TypeDef*, uint32_t)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:2857:3: note: in expansion of macro 'CLEAR_BIT'
+ 2857 |   CLEAR_BIT(ADCxy_COMMON->CCR, PathInternal);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_SetChannelSingleDiff(ADC_TypeDef*, uint32_t, uint32_t)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:5503:5: note: in expansion of macro 'SET_BIT'
+ 5503 |     SET_BIT(ADCx->DIFSEL,
+      |     ^~~~~~~
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:5508:5: note: in expansion of macro 'CLEAR_BIT'
+ 5508 |     CLEAR_BIT(ADCx->DIFSEL,
+      |     ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableDeepPowerDown(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6611:3: note: in expansion of macro 'CLEAR_BIT'
+ 6611 |   CLEAR_BIT(ADCx->CR, (ADC_CR_DEEPPWD | ADC_CR_BITS_PROPERTY_RS));
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableInternalRegulator(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6660:3: note: in expansion of macro 'CLEAR_BIT'
+ 6660 |   CLEAR_BIT(ADCx->CR, (ADC_CR_ADVREGEN | ADC_CR_BITS_PROPERTY_RS));
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_REG_StartSamplingPhase(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6884:3: note: in expansion of macro 'SET_BIT'
+ 6884 |   SET_BIT(ADCx->CFGR2, ADC_CFGR2_SWTRIG);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_REG_StopSamplingPhase(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:6906:3: note: in expansion of macro 'CLEAR_BIT'
+ 6906 |   CLEAR_BIT(ADCx->CFGR2, ADC_CFGR2_SWTRIG);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_ADRDY(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7764:3: note: in expansion of macro 'SET_BIT'
+ 7764 |   SET_BIT(ADCx->IER, LL_ADC_IT_ADRDY);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_EOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7775:3: note: in expansion of macro 'SET_BIT'
+ 7775 |   SET_BIT(ADCx->IER, LL_ADC_IT_EOC);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_EOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7786:3: note: in expansion of macro 'SET_BIT'
+ 7786 |   SET_BIT(ADCx->IER, LL_ADC_IT_EOS);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_OVR(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7797:3: note: in expansion of macro 'SET_BIT'
+ 7797 |   SET_BIT(ADCx->IER, LL_ADC_IT_OVR);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_EOSMP(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7808:3: note: in expansion of macro 'SET_BIT'
+ 7808 |   SET_BIT(ADCx->IER, LL_ADC_IT_EOSMP);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_JEOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7819:3: note: in expansion of macro 'SET_BIT'
+ 7819 |   SET_BIT(ADCx->IER, LL_ADC_IT_JEOC);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_JEOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7830:3: note: in expansion of macro 'SET_BIT'
+ 7830 |   SET_BIT(ADCx->IER, LL_ADC_IT_JEOS);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_JQOVF(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7841:3: note: in expansion of macro 'SET_BIT'
+ 7841 |   SET_BIT(ADCx->IER, LL_ADC_IT_JQOVF);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_AWD1(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7852:3: note: in expansion of macro 'SET_BIT'
+ 7852 |   SET_BIT(ADCx->IER, LL_ADC_IT_AWD1);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_AWD2(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7863:3: note: in expansion of macro 'SET_BIT'
+ 7863 |   SET_BIT(ADCx->IER, LL_ADC_IT_AWD2);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_EnableIT_AWD3(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7874:3: note: in expansion of macro 'SET_BIT'
+ 7874 |   SET_BIT(ADCx->IER, LL_ADC_IT_AWD3);
+      |   ^~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_ADRDY(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7885:3: note: in expansion of macro 'CLEAR_BIT'
+ 7885 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_ADRDY);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_EOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7896:3: note: in expansion of macro 'CLEAR_BIT'
+ 7896 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_EOC);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_EOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7907:3: note: in expansion of macro 'CLEAR_BIT'
+ 7907 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_EOS);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_OVR(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7918:3: note: in expansion of macro 'CLEAR_BIT'
+ 7918 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_OVR);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_EOSMP(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7929:3: note: in expansion of macro 'CLEAR_BIT'
+ 7929 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_EOSMP);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_JEOC(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7940:3: note: in expansion of macro 'CLEAR_BIT'
+ 7940 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_JEOC);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_JEOS(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7951:3: note: in expansion of macro 'CLEAR_BIT'
+ 7951 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_JEOS);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_JQOVF(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7962:3: note: in expansion of macro 'CLEAR_BIT'
+ 7962 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_JQOVF);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_AWD1(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7973:3: note: in expansion of macro 'CLEAR_BIT'
+ 7973 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_AWD1);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_AWD2(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7984:3: note: in expansion of macro 'CLEAR_BIT'
+ 7984 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_AWD2);
+      |   ^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h: In function 'void LL_ADC_DisableIT_AWD3(ADC_TypeDef*)':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:166:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  166 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                ~~~~~~^~~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h:7995:3: note: in expansion of macro 'CLEAR_BIT'
+ 7995 |   CLEAR_BIT(ADCx->IER, LL_ADC_IT_AWD3);
+      |   ^~~~~~~~~
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In function 'FDCAN_FilterTypeDef PUTM_CAN::filter::id(PUTM_CAN::can_id_t, PUTM_CAN::can_id_t)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:111:21: error: 'FDCAN_FILTER_RXFIFO0' was not declared in this scope; did you mean 'FDCAN_FILTER_TO_RXFIFO0'?
+  111 |     .FilterConfig = FDCAN_FILTER_RXFIFO0, .FilterID1 = low << 21,
+      |                     ^~~~~~~~~~~~~~~~~~~~
+      |                     FDCAN_FILTER_TO_RXFIFO0
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:114:4: error: expected ';' before '}' token
+  114 |   }
+      |    ^
+      |    ;
+  115 | }
+      | ~   
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: At global scope:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:120:21: error: 'FDCAN_FILTER_RXFIFO0' was not declared in this scope; did you mean 'FDCAN_FILTER_TO_RXFIFO0'?
+  120 |     .FilterConfig = FDCAN_FILTER_RXFIFO0,
+      |                     ^~~~~~~~~~~~~~~~~~~~
+      |                     FDCAN_FILTER_TO_RXFIFO0
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:180:2: error: expected ';' after class definition
+  180 | }
+      |  ^
+      |  ;
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In constructor 'constexpr PUTM_CAN::FDCAN::FDCAN(FDCAN_HandleTypeDef*, const FDCAN_FilterTypeDef*, uint32_t)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:48: error: 'FDCAN' is not a member of 'PUTM_CAN::CAN_FD_Format'; did you mean 'FD_CAN'?
+  139 |     can_format((FDCAN_format == CAN_FD_Format::FDCAN) ? FDCAN_FD_CAN ? FDCAN_CLASSIC_CAN)
+      |                                                ^~~~~
+      |                                                FD_CAN
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected ':' before ')' token
+  139 |     can_format((FDCAN_format == CAN_FD_Format::FDCAN) ? FDCAN_FD_CAN ? FDCAN_CLASSIC_CAN)
+      |                                                                                         ^
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected primary-expression before ')' token
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected ':' before ')' token
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected primary-expression before ')' token
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:142:35: error: invalid conversion from 'const FDCAN_FilterTypeDef*' to 'FDCAN_FilterTypeDef*' [-fpermissive]
+  142 |    HAL_FDCAN_ConfigFilter(handle, filter);
+      |                                   ^~~~~~
+      |                                   |
+      |                                   const FDCAN_FilterTypeDef*
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:256,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/can.hpp:5,
+                 from ../Core/Src/can.cpp:1:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h:1167:92: note:   initializing argument 2 of 'HAL_StatusTypeDef HAL_FDCAN_ConfigFilter(FDCAN_HandleTypeDef*, FDCAN_FilterTypeDef*)'
+ 1167 | HAL_StatusTypeDef HAL_FDCAN_ConfigFilter(FDCAN_HandleTypeDef *hfdcan, FDCAN_FilterTypeDef *sFilterConfig);
+      |                                                                       ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In member function 'bool PUTM_CAN::FDCAN::send(const frame_t&)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:152:23: error: 'size' was not declared in this scope
+  152 |         .DataLength = size,
+      |                       ^~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:152:23: note: suggested alternatives:
+In file included from /opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/array:41,
+                 from ../Core/Src/can.hpp:4,
+                 from ../Core/Src/can.cpp:1:
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:254:5: note:   'std::size'
+  254 |     size(const _Tp (&)[_Nm]) noexcept
+      |     ^~~~
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:863:43: note:   'std::ranges::__cust::size'
+  863 |     inline constexpr __cust_access::_Size size{};
+      |                                           ^~~~
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:666:10: note:   'std::ranges::__cust_access::size'
+  666 |     void size(const auto&) = delete;
+      |          ^~~~
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:159:71: error: 'data' was not declared in this scope
+  159 |     return HAL_OK = HAL_FDCAN_AddMessageToTxFifoQ(handle, &tx_header, data);
+      |                                                                       ^~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:159:71: note: suggested alternatives:
+In file included from /opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/array:41,
+                 from ../Core/Src/can.hpp:4,
+                 from ../Core/Src/can.cpp:1:
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:319:5: note:   'std::data'
+  319 |     data(initializer_list<_Tp> __il) noexcept
+      |     ^~~~
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:866:43: note:   'std::ranges::__cust::data'
+  866 |     inline constexpr __cust_access::_Data data{};
+      |                                           ^~~~
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In member function 'bool PUTM_CAN::FDCAN::send_raw(PUTM_CAN::can_id_t, const uint8_t*, std::size_t)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:174:51: error: cannot convert 'FDCAN_FilterTypeDef*' to 'FDCAN_HandleTypeDef*'
+  174 |     return HAL_OK = HAL_FDCAN_AddMessageToTxFifoQ(handle, &tx_header, data);
+      |                                                   ^~~~~~
+      |                                                   |
+      |                                                   FDCAN_FilterTypeDef*
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:256,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/can.hpp:5,
+                 from ../Core/Src/can.cpp:1:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h:1203:70: note:   initializing argument 1 of 'HAL_StatusTypeDef HAL_FDCAN_AddMessageToTxFifoQ(FDCAN_HandleTypeDef*, FDCAN_TxHeaderTypeDef*, uint8_t*)'
+ 1203 | HAL_StatusTypeDef HAL_FDCAN_AddMessageToTxFifoQ(FDCAN_HandleTypeDef *hfdcan, FDCAN_TxHeaderTypeDef *pTxHeader,
+      |                                                 ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: At global scope:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:131:1: error: multiple types in one declaration
+  131 | enum struct CAN_FD_Format : uint8_t {
+      | ^~~~
+../Core/Src/can.cpp:14:17: error: no matching function for call to 'PUTM_CAN::FDCAN::FDCAN()'
+   14 | PUTM_CAN::FDCAN fdcan;
+      |                 ^~~~~
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:137:13: note: candidate: 'constexpr PUTM_CAN::FDCAN::FDCAN(FDCAN_HandleTypeDef*, const FDCAN_FilterTypeDef*, uint32_t)'
+  137 |   constexpr FDCAN(FDCAN_HandleTypeDef *handle,
+      |             ^~~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:137:13: note:   candidate expects 3 arguments, 0 provided
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note: candidate: 'constexpr PUTM_CAN::FDCAN::FDCAN(const PUTM_CAN::FDCAN&)'
+  136 | class FDCAN {
+      |       ^~~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note:   candidate expects 1 argument, 0 provided
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note: candidate: 'constexpr PUTM_CAN::FDCAN::FDCAN(PUTM_CAN::FDCAN&&)'
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note:   candidate expects 1 argument, 0 provided
+../Core/Src/can.cpp: In function 'void init(FDCAN_HandleTypeDef*)':
+../Core/Src/can.cpp:27:88: error: no matching function for call to 'PUTM_CAN::FDCAN::FDCAN(FDCAN_HandleTypeDef*&, FDCAN_FilterTypeDef&, PUTM_CAN::CAN_FD_Format)'
+   27 |  fdcan = PUTM_CAN::FDCAN(fdCanHandle, null_filter, PUTM_CAN::CAN_FD_Format::CLASSIC_CAN);
+      |                                                                                        ^
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:137:13: note: candidate: 'constexpr PUTM_CAN::FDCAN::FDCAN(FDCAN_HandleTypeDef*, const FDCAN_FilterTypeDef*, uint32_t)'
+  137 |   constexpr FDCAN(FDCAN_HandleTypeDef *handle,
+      |             ^~~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:138:46: note:   no known conversion for argument 2 from 'FDCAN_FilterTypeDef' to 'const FDCAN_FilterTypeDef*'
+  138 |                   FDCAN_FilterTypeDef const *filter, uint32_t FDCAN_format) :
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note: candidate: 'constexpr PUTM_CAN::FDCAN::FDCAN(const PUTM_CAN::FDCAN&)'
+  136 | class FDCAN {
+      |       ^~~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note:   candidate expects 1 argument, 3 provided
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note: candidate: 'constexpr PUTM_CAN::FDCAN::FDCAN(PUTM_CAN::FDCAN&&)'
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:136:7: note:   candidate expects 1 argument, 3 provided
+../Core/Src/can.cpp: In function 'bool send_apps_frame(apps::apps_t, PUTM_CAN::Apps_states)':
+../Core/Src/can.cpp:47:31: warning: narrowing conversion of '(((int)apps_value) - ((int)last_value))' from 'int' to 'int8_t' {aka 'signed char'} [-Wnarrowing]
+   47 |   .position_diff = apps_value - last_value,
+      |                    ~~~~~~~~~~~^~~~~~~~~~~~
+../Core/Src/can.cpp:51:29: error: 'bool PUTM_CAN::FDCAN::send(const frame_t&) [with frame_t = PUTM_CAN::Apps_main]' is private within this context
+   51 |  return fdcan.send(apps_data);
+      |                             ^
+In file included from ../Core/Src/can.cpp:7:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:146:36: note: declared private here
+  146 |   template <typename frame_t> bool send(frame_t const &frame) noexcept {
+      |                                    ^~~~
+In file included from ../Core/Src/main.cpp:29:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In function 'FDCAN_FilterTypeDef PUTM_CAN::filter::id(PUTM_CAN::can_id_t, PUTM_CAN::can_id_t)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:111:21: error: 'FDCAN_FILTER_RXFIFO0' was not declared in this scope; did you mean 'FDCAN_FILTER_TO_RXFIFO0'?
+  111 |     .FilterConfig = FDCAN_FILTER_RXFIFO0, .FilterID1 = low << 21,
+      |                     ^~~~~~~~~~~~~~~~~~~~
+      |                     FDCAN_FILTER_TO_RXFIFO0
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:114:4: error: expected ';' before '}' token
+  114 |   }
+      |    ^
+      |    ;
+  115 | }
+      | ~   
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: At global scope:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:120:21: error: 'FDCAN_FILTER_RXFIFO0' was not declared in this scope; did you mean 'FDCAN_FILTER_TO_RXFIFO0'?
+  120 |     .FilterConfig = FDCAN_FILTER_RXFIFO0,
+      |                     ^~~~~~~~~~~~~~~~~~~~
+      |                     FDCAN_FILTER_TO_RXFIFO0
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:180:2: error: expected ';' after class definition
+  180 | }
+      |  ^
+      |  ;
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In constructor 'constexpr PUTM_CAN::FDCAN::FDCAN(FDCAN_HandleTypeDef*, const FDCAN_FilterTypeDef*, uint32_t)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:48: error: 'FDCAN' is not a member of 'PUTM_CAN::CAN_FD_Format'; did you mean 'FD_CAN'?
+  139 |     can_format((FDCAN_format == CAN_FD_Format::FDCAN) ? FDCAN_FD_CAN ? FDCAN_CLASSIC_CAN)
+      |                                                ^~~~~
+      |                                                FD_CAN
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected ':' before ')' token
+  139 |     can_format((FDCAN_format == CAN_FD_Format::FDCAN) ? FDCAN_FD_CAN ? FDCAN_CLASSIC_CAN)
+      |                                                                                         ^
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected primary-expression before ')' token
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected ':' before ')' token
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:139:89: error: expected primary-expression before ')' token
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:142:35: error: invalid conversion from 'const FDCAN_FilterTypeDef*' to 'FDCAN_FilterTypeDef*' [-fpermissive]
+  142 |    HAL_FDCAN_ConfigFilter(handle, filter);
+      |                                   ^~~~~~
+      |                                   |
+      |                                   const FDCAN_FilterTypeDef*
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:256,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.cpp:20:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h:1167:92: note:   initializing argument 2 of 'HAL_StatusTypeDef HAL_FDCAN_ConfigFilter(FDCAN_HandleTypeDef*, FDCAN_FilterTypeDef*)'
+ 1167 | HAL_StatusTypeDef HAL_FDCAN_ConfigFilter(FDCAN_HandleTypeDef *hfdcan, FDCAN_FilterTypeDef *sFilterConfig);
+      |                                                                       ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../Core/Src/main.cpp:29:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In member function 'bool PUTM_CAN::FDCAN::send(const frame_t&)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:152:23: error: 'size' was not declared in this scope
+  152 |         .DataLength = size,
+      |                       ^~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:152:23: note: suggested alternatives:
+In file included from /opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/array:41,
+                 from ../Core/Src/can.hpp:4,
+                 from ../Core/Src/main.cpp:27:
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:254:5: note:   'std::size'
+  254 |     size(const _Tp (&)[_Nm]) noexcept
+      |     ^~~~
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:863:43: note:   'std::ranges::__cust::size'
+  863 |     inline constexpr __cust_access::_Size size{};
+      |                                           ^~~~
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:666:10: note:   'std::ranges::__cust_access::size'
+  666 |     void size(const auto&) = delete;
+      |          ^~~~
+In file included from ../Core/Src/main.cpp:29:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:159:71: error: 'data' was not declared in this scope
+  159 |     return HAL_OK = HAL_FDCAN_AddMessageToTxFifoQ(handle, &tx_header, data);
+      |                                                                       ^~~~
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:159:71: note: suggested alternatives:
+In file included from /opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/array:41,
+                 from ../Core/Src/can.hpp:4,
+                 from ../Core/Src/main.cpp:27:
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:319:5: note:   'std::data'
+  319 |     data(initializer_list<_Tp> __il) noexcept
+      |     ^~~~
+/opt/st/stm32cubeide_1.12.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.200.202301161003/tools/arm-none-eabi/include/c++/10.3.1/bits/range_access.h:866:43: note:   'std::ranges::__cust::data'
+  866 |     inline constexpr __cust_access::_Data data{};
+      |                                           ^~~~
+In file included from ../Core/Src/main.cpp:29:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: In member function 'bool PUTM_CAN::FDCAN::send_raw(PUTM_CAN::can_id_t, const uint8_t*, std::size_t)':
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:174:51: error: cannot convert 'FDCAN_FilterTypeDef*' to 'FDCAN_HandleTypeDef*'
+  174 |     return HAL_OK = HAL_FDCAN_AddMessageToTxFifoQ(handle, &tx_header, data);
+      |                                                   ^~~~~~
+      |                                                   |
+      |                                                   FDCAN_FilterTypeDef*
+In file included from ../Core/Inc/stm32g4xx_hal_conf.h:256,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.cpp:20:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h:1203:70: note:   initializing argument 1 of 'HAL_StatusTypeDef HAL_FDCAN_AddMessageToTxFifoQ(FDCAN_HandleTypeDef*, FDCAN_TxHeaderTypeDef*, uint8_t*)'
+ 1203 | HAL_StatusTypeDef HAL_FDCAN_AddMessageToTxFifoQ(FDCAN_HandleTypeDef *hfdcan, FDCAN_TxHeaderTypeDef *pTxHeader,
+      |                                                 ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from ../Core/Src/main.cpp:29:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp: At global scope:
+../Core/Inc/PUTM_EV_CAN_LIBRARY/lib/can.hpp:131:1: error: multiple types in one declaration
+  131 | enum struct CAN_FD_Format : uint8_t {
+      | ^~~~
+In file included from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h:29,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32g4xx_hal_conf.h:212,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.cpp:20:
+../Core/Src/main.cpp: In function 'void MX_DMA_Init()':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:534:50: note: in expansion of macro 'SET_BIT'
+  534 |                                                  SET_BIT(RCC->AHB1ENR, RCC_AHB1ENR_DMAMUX1EN); \
+      |                                                  ^~~~~~~
+../Core/Src/main.cpp:522:2: note: in expansion of macro '__HAL_RCC_DMAMUX1_CLK_ENABLE'
+  522 |  __HAL_RCC_DMAMUX1_CLK_ENABLE();
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:518:50: note: in expansion of macro 'SET_BIT'
+  518 |                                                  SET_BIT(RCC->AHB1ENR, RCC_AHB1ENR_DMA1EN); \
+      |                                                  ^~~~~~~
+../Core/Src/main.cpp:523:2: note: in expansion of macro '__HAL_RCC_DMA1_CLK_ENABLE'
+  523 |  __HAL_RCC_DMA1_CLK_ENABLE();
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.cpp: In function 'void MX_GPIO_Init()':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:616:50: note: in expansion of macro 'SET_BIT'
+  616 |                                                  SET_BIT(RCC->AHB2ENR, RCC_AHB2ENR_GPIOCEN); \
+      |                                                  ^~~~~~~
+../Core/Src/main.cpp:545:2: note: in expansion of macro '__HAL_RCC_GPIOC_CLK_ENABLE'
+  545 |  __HAL_RCC_GPIOC_CLK_ENABLE();
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:640:50: note: in expansion of macro 'SET_BIT'
+  640 |                                                  SET_BIT(RCC->AHB2ENR, RCC_AHB2ENR_GPIOFEN); \
+      |                                                  ^~~~~~~
+../Core/Src/main.cpp:546:2: note: in expansion of macro '__HAL_RCC_GPIOF_CLK_ENABLE'
+  546 |  __HAL_RCC_GPIOF_CLK_ENABLE();
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:600:50: note: in expansion of macro 'SET_BIT'
+  600 |                                                  SET_BIT(RCC->AHB2ENR, RCC_AHB2ENR_GPIOAEN); \
+      |                                                  ^~~~~~~
+../Core/Src/main.cpp:547:2: note: in expansion of macro '__HAL_RCC_GPIOA_CLK_ENABLE'
+  547 |  __HAL_RCC_GPIOA_CLK_ENABLE();
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:164:38: warning: compound assignment with 'volatile'-qualified left operand is deprecated [-Wvolatile]
+  164 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                ~~~~~~^~~~~~~~
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:608:50: note: in expansion of macro 'SET_BIT'
+  608 |                                                  SET_BIT(RCC->AHB2ENR, RCC_AHB2ENR_GPIOBEN); \
+      |                                                  ^~~~~~~
+../Core/Src/main.cpp:548:2: note: in expansion of macro '__HAL_RCC_GPIOB_CLK_ENABLE'
+  548 |  __HAL_RCC_GPIOB_CLK_ENABLE();
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:50: Core/Src/can.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:50: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+18:07:56 Build Failed. 34 errors, 73 warnings. (took 685ms)
+
