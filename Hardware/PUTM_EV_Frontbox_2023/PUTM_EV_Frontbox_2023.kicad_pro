@@ -539,16 +539,20 @@
       "Suspension potentiometers"
     ],
     [
-      "89069515-a409-433b-9ed0-2772e97aaa2d",
-      "APPS measurement"
+      "a44ca1e3-5a7e-4627-a097-706c52508f74",
+      "Brake Pressure Left"
     ],
     [
-      "55cf8599-7fcf-4ad3-afe8-d836ab083f74",
-      "Brake pressure"
+      "abdacfc0-d2db-4861-a051-817d03ac12cb",
+      "Brake Pressure Right"
     ],
     [
-      "92e1c237-4df1-4ea5-b062-79b6d493fbfe",
-      "APPS measurement1"
+      "49895c84-8e83-4590-9ff0-db88aa4e0182",
+      "APPS2"
+    ],
+    [
+      "f3fd0c3d-b077-4e40-b33e-d111345e89ff",
+      "APPS1"
     ],
     [
       "ba538a3c-1084-4770-aed2-08b4305d2379",

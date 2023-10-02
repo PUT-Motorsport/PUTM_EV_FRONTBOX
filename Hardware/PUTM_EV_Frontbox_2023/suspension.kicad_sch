@@ -836,9 +836,6 @@
     (pin "8" (uuid 39e51aff-d238-4e9f-ac13-afc59541682f))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/55cf8599-7fcf-4ad3-afe8-d836ab083f74"
-          (reference "U2") (unit 2)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fbeff9a7-a54b-4323-8170-de028a14cbc0"
           (reference "U12") (unit 2)
         )
@@ -896,9 +893,6 @@
     (pin "8" (uuid 3f9755c8-51bc-4a57-863d-55d4f64a93d6))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/55cf8599-7fcf-4ad3-afe8-d836ab083f74"
-          (reference "U2") (unit 3)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fbeff9a7-a54b-4323-8170-de028a14cbc0"
           (reference "U12") (unit 3)
         )
@@ -977,9 +971,6 @@
     (pin "2" (uuid c0004ad7-a708-4541-8f47-9c5e7d93c932))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/55cf8599-7fcf-4ad3-afe8-d836ab083f74"
-          (reference "C27") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fbeff9a7-a54b-4323-8170-de028a14cbc0"
           (reference "C25") (unit 1)
         )
@@ -1288,9 +1279,6 @@
     (pin "1" (uuid 5c043875-9c02-42d5-bc39-437634b4ea44))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/55cf8599-7fcf-4ad3-afe8-d836ab083f74"
-          (reference "#PWR077") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fbeff9a7-a54b-4323-8170-de028a14cbc0"
           (reference "#PWR091") (unit 1)
         )
@@ -1349,9 +1337,6 @@
     (pin "8" (uuid e1ee88cd-e1f0-460f-8b46-97cb025a5d51))
     (instances
       (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/55cf8599-7fcf-4ad3-afe8-d836ab083f74"
-          (reference "U2") (unit 1)
-        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fbeff9a7-a54b-4323-8170-de028a14cbc0"
           (reference "U12") (unit 1)
         )
