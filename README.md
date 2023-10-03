@@ -12,9 +12,9 @@ PCB board aquiring data from the front side of the vehicle.
   - front and rear brake pressure measurement
   - safety sensing
   - imu measurements
-  - steering wheel position sensor
-  - brake pedal position sensor
-  - suspension position sensors
+  - steering wheel position sensor?
+  - brake pedal position sensor?
+  - suspension position sensors?
   - <del>Laptimer</del>
 
 ### APPS
