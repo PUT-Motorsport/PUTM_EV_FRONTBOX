@@ -15,7 +15,7 @@ PCB board aquiring data from the front side of the vehicle.
   - steering wheel position sensor
   - brake pedal position sensor
   - suspension position sensors
-<del>- Laptimer </del>
+  - <del>Laptimer</del>
 
 ### APPS
 
