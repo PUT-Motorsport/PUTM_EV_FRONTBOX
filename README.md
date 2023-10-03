@@ -15,8 +15,8 @@ PCB board aquiring data from the front side of the vehicle.
   - steering wheel position sensor
   - brake pedal position sensor
   - suspension position sensors
-- Laptimer
-  - IR sensor
+~~- Laptimer
+  - IR sensor~~
 
 ### APPS
 
@@ -33,8 +33,9 @@ The safety state will be measured at:
 - right kill switch
 - driver's kill switch
 - inertia switch
-- BSPD (can be sensed directly from the neighboring board???)
+- BSPD
 - overtravel
+- ASB
 
 ### IMU measurements
 
@@ -53,8 +54,4 @@ Same as APPS
 ### Suspension position sensors
 
 Two linear potentiometers
-
-### IR sensor
-
-IC:
 
