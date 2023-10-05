@@ -523,6 +523,10 @@
       "CAN bus"
     ],
     [
+      "3ce08e70-b50e-4b1e-a1e7-bc9fe1ac511f",
+      "Suspension Potentiometer (Right)"
+    ],
+    [
       "4deadd9b-3e18-4284-beb5-6600402c5311",
       "Oscillator"
     ],
@@ -535,12 +539,12 @@
       "Safety sense"
     ],
     [
-      "fbeff9a7-a54b-4323-8170-de028a14cbc0",
-      "Suspension potentiometers"
-    ],
-    [
       "a44ca1e3-5a7e-4627-a097-706c52508f74",
       "Brake Pressure Left"
+    ],
+    [
+      "911b86f7-6c1b-4cf5-8c52-4f515716b2b9",
+      "Suspension Potentiometer (Left)"
     ],
     [
       "abdacfc0-d2db-4861-a051-817d03ac12cb",
@@ -553,6 +557,14 @@
     [
       "f3fd0c3d-b077-4e40-b33e-d111345e89ff",
       "APPS1"
+    ],
+    [
+      "4c3f719e-6090-4ae9-a3c2-043efd60682a",
+      "Brake Position Potentiometer"
+    ],
+    [
+      "32922ffc-8c90-47a1-adc3-71498e3aaa04",
+      "Steering Wheel Angle"
     ],
     [
       "ba538a3c-1084-4770-aed2-08b4305d2379",
