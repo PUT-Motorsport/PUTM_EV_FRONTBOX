@@ -611,7 +611,7 @@
     (uuid 13779610-99d6-425c-8a00-ec7003fc54b0)
   )
 
-  (wire (pts (xy 217.17 93.98) (xy 217.17 94.615))
+  (wire (pts (xy 217.17 93.345) (xy 217.17 94.615))
     (stroke (width 0) (type default))
     (uuid 149009f2-7e97-434d-b400-28008a6ca423)
   )
@@ -1061,10 +1061,10 @@
     (uuid f118d988-a5bf-47d1-b009-35a6a6248e0b)
   )
 
-  (global_label "3V3_POT1" (shape input) (at 217.17 93.98 90) (fields_autoplaced)
+  (global_label "3V3_POT1" (shape input) (at 217.17 93.345 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 63c76138-2788-4015-9441-a403bbade8fb)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 217.17 82.4756 90)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 217.17 81.8406 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
