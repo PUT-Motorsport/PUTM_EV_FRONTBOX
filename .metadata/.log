@@ -5919,3 +5919,458 @@ Caused by: java.lang.NullPointerException
 	at com.st.microxplorer.mcufinder.gui.WebAppUi.getEDAapiFileName(WebAppUi.java:346)
 	at com.st.microxplorer.mcufinder.gui.WebAppUi.<clinit>(WebAppUi.java:130)
 	... 63 more
+
+!ENTRY org.eclipse.core.resources 4 2 2023-10-03 17:03:25.722
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Internal error saving launch history
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1182)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	... 9 more
+!SUBENTRY 1 org.eclipse.debug.ui 4 0 2023-10-03 17:03:25.723
+!MESSAGE Internal error saving launch history
+!STACK 0
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.debug.ui 4 0 2023-10-03 17:03:25.723
+!MESSAGE Internal error saving launch history
+!STACK 0
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 2 2023-10-03 17:03:25.724
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems while saving variables and containers
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4424)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	... 10 more
+!SUBENTRY 1 org.eclipse.jdt.core 4 4 2023-10-03 17:03:25.724
+!MESSAGE Problems while saving variables and containers
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 4 2023-10-03 17:03:25.725
+!MESSAGE Problems while saving variables and containers
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 2 2023-10-03 17:03:25.737
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 566 2023-10-03 17:03:25.737
+!MESSAGE Problems occurred during save.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Internal error saving launch history
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1182)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	... 9 more
+!SUBENTRY 2 org.eclipse.debug.ui 4 0 2023-10-03 17:03:25.737
+!MESSAGE Internal error saving launch history
+!STACK 0
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 2 566 2023-10-03 17:03:25.737
+!MESSAGE Problems occurred during save.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems while saving variables and containers
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4424)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	... 10 more
+!SUBENTRY 2 org.eclipse.jdt.core 4 4 2023-10-03 17:03:25.737
+!MESSAGE Problems while saving variables and containers
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1149)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 2 2023-10-03 17:20:26.774
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Internal error saving launch history
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1182)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	... 9 more
+!SUBENTRY 1 org.eclipse.debug.ui 4 0 2023-10-03 17:20:26.774
+!MESSAGE Internal error saving launch history
+!STACK 0
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 1 org.eclipse.debug.ui 4 0 2023-10-03 17:20:26.774
+!MESSAGE Internal error saving launch history
+!STACK 0
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.core.resources 4 2 2023-10-03 17:20:26.780
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems while saving variables and containers
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4424)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	... 10 more
+!SUBENTRY 1 org.eclipse.jdt.core 4 4 2023-10-03 17:20:26.780
+!MESSAGE Problems while saving variables and containers
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 1 org.eclipse.jdt.core 4 4 2023-10-03 17:20:26.780
+!MESSAGE Problems while saving variables and containers
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-10-03 17:20:28.079
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2023-10-03 17:20:28.080
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 566 2023-10-03 17:20:28.080
+!MESSAGE Problems occurred during save.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Internal error saving launch history
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1182)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	... 9 more
+!SUBENTRY 2 org.eclipse.debug.ui 4 0 2023-10-03 17:20:28.080
+!MESSAGE Internal error saving launch history
+!STACK 0
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1043)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.persistLaunchHistory(LaunchConfigurationManager.java:469)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.saving(LaunchConfigurationManager.java:1180)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1DebugUIPluginSaveParticipant.saving(DebugUIPlugin.java:532)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 1 org.eclipse.core.resources 2 566 2023-10-03 17:20:28.080
+!MESSAGE Problems occurred during save.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems while saving variables and containers
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4424)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	... 10 more
+!SUBENTRY 2 org.eclipse.jdt.core 4 4 2023-10-03 17:20:28.080
+!MESSAGE Problems while saving variables and containers
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4419)
+	at org.eclipse.jdt.internal.core.JavaModelManager.savingTimed(JavaModelManager.java:4654)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4640)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:393)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:209)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:212)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1170)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2421)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:554)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2023-10-03 17:20:28.294
+!MESSAGE Internal Error
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.corext.util.History.save(History.java:193)
+	at org.eclipse.jdt.internal.ui.JavaPlugin.stop(JavaPlugin.java:548)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2023-10-03 17:20:28.295
+!MESSAGE Internal Error
+!STACK 0
+java.io.FileNotFoundException: /home/ketirange/Projects/PUTM/PUTM_EV_Frontbox_2023/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.jdt.internal.corext.util.History.save(History.java:193)
+	at org.eclipse.jdt.internal.corext.util.OpenTypeHistory.doShutdown(OpenTypeHistory.java:381)
+	at org.eclipse.jdt.internal.corext.util.OpenTypeHistory.shutdown(OpenTypeHistory.java:194)
+	at org.eclipse.jdt.internal.ui.JavaPlugin.stop(JavaPlugin.java:552)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:833)

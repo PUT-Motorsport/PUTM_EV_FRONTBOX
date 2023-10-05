@@ -1,9 +1,11 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1693315978000
-configurationInstallLocation=/opt/st/stm32cubeide_1.12.1/
+configurationInstallLocation=/opt/st/stm32cubeide_1.13.2/
+ct.upsell.display.after=1696175430748
 eclipse.preferences.version=1
 iconcolormode=primary
-last.download.attempt.time=1696274136257
-lastConfiguration=1696274129915
-newinstall=true
+last.download.attempt.time=1696176558309
+lastConfiguration=1696176546855
+newinstall=false
+showWelcomeDialog=false
 workbench.theme=Dark Gray
