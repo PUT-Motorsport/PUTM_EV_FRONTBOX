@@ -289,8 +289,8 @@
     (property "Datasheet" "~" (at 147.32 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0ad0de59-e7b3-4f0e-8daa-8a9dbcb57167))
-    (pin "2" (uuid 4a1e40e7-5f83-4ebc-a710-4b9325d54686))
+    (pin "1" (uuid 49e3dcf6-a128-4201-8a9a-34c0671ee82f))
+    (pin "2" (uuid b7c8b495-5f1a-4243-999d-daea072ef317))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"
@@ -315,7 +315,7 @@
     (property "Datasheet" "" (at 142.24 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4ce4305b-b31b-49bc-b298-3908fca0915f))
+    (pin "1" (uuid 01bfc480-7598-4be9-b4f1-28cd8889255d))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"
@@ -340,10 +340,10 @@
     (property "Datasheet" "https://www.mouser.pl/datasheet/2/3/ABM8G-1608872.pdf" (at 142.24 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f46f69b0-21f5-4c92-9760-b619ea828074))
-    (pin "2" (uuid 7b0c46c6-ed4f-4a20-8be9-059f53e268dd))
-    (pin "3" (uuid bfd8edc3-43b2-4a81-a781-54701fd1c3ce))
-    (pin "4" (uuid 6d81068c-e759-43f9-8ed5-751e1f5fc671))
+    (pin "1" (uuid d1d75112-c5f3-4582-8874-df8c35b9fbc2))
+    (pin "2" (uuid 1e4ca1ac-629c-4616-81d9-ad8a2a4368ff))
+    (pin "3" (uuid 0cc06204-f3f3-4ba3-867d-a47773c41ad4))
+    (pin "4" (uuid 06befc1e-9408-42ef-82a8-d868a70b0eb4))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
@@ -371,8 +371,8 @@
     (property "Datasheet" "~" (at 137.16 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 284d9c3c-c8c2-4061-9b0e-a8df5862d316))
-    (pin "2" (uuid 22bcf681-76ef-4d6a-ad1b-c60bba8db190))
+    (pin "1" (uuid af7fa153-d64e-4785-8ec4-d02eea3e70fe))
+    (pin "2" (uuid a9c0c07c-45b8-4755-8471-0fc66e7b2829))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"
@@ -397,7 +397,7 @@
     (property "Datasheet" "" (at 142.24 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6ed8a93b-3727-496c-99ed-eb75ad80c525))
+    (pin "1" (uuid 02890b91-7f63-4915-a547-85e9cde494ce))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/4deadd9b-3e18-4284-beb5-6600402c5311"

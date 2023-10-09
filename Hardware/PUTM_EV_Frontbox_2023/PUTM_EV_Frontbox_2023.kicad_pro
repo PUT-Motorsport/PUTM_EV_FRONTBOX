@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 0.64,
+          "width": 0.54
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -177,7 +177,8 @@
         0.2,
         0.4,
         0.6,
-        0.8
+        0.8,
+        1.2
       ],
       "via_dimensions": [
         {
@@ -450,7 +451,12 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": "+7.5V"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -523,8 +529,8 @@
       "CAN bus"
     ],
     [
-      "3ce08e70-b50e-4b1e-a1e7-bc9fe1ac511f",
-      "Suspension Potentiometer (Right)"
+      "cff9e037-b571-49da-8ef7-9a05892cc423",
+      "Brake Position"
     ],
     [
       "4deadd9b-3e18-4284-beb5-6600402c5311",
@@ -537,6 +543,10 @@
     [
       "d8521410-c497-472e-ae31-9f909ba7779b",
       "Safety sense"
+    ],
+    [
+      "6c790ed6-e097-47bd-81fb-910ea194e2b4",
+      "CAN bus1"
     ],
     [
       "a44ca1e3-5a7e-4627-a097-706c52508f74",
@@ -559,12 +569,12 @@
       "APPS1"
     ],
     [
-      "4c3f719e-6090-4ae9-a3c2-043efd60682a",
-      "Brake Position Potentiometer"
+      "9be5e515-3e18-403e-b27a-ea3087f1514f",
+      "Steering Position"
     ],
     [
-      "32922ffc-8c90-47a1-adc3-71498e3aaa04",
-      "Steering Wheel Angle"
+      "9e566fb6-1741-4092-b17e-402796433191",
+      "Suspension Potentiometer (Right)"
     ],
     [
       "ba538a3c-1084-4770-aed2-08b4305d2379",

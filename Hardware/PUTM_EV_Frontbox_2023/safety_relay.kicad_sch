@@ -565,8 +565,8 @@
     (property "Datasheet" "~" (at 128.27 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 40414c76-a0a9-456b-a77f-b7efff144ade))
-    (pin "2" (uuid 43efb04c-495c-428a-beaa-56cde69de7e9))
+    (pin "1" (uuid f2912d9f-abc4-4e48-a808-820ec820e1d2))
+    (pin "2" (uuid c80b43fe-ac36-44fb-86cf-f4997d42fa1c))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
@@ -591,10 +591,10 @@
     (property "Datasheet" "https://www.mouser.pl/ProductDetail/MEDER-electronic-Standex/UMS05-1A80-75D?qs=g9WlUi2XTnY%252B3JYCM9U0HQ%3D%3D" (at 142.24 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3ae06448-092b-4364-a188-208271c659f5))
-    (pin "2" (uuid d48b66fe-0848-4a02-bd1c-42caaee9ea66))
-    (pin "3" (uuid b1b2aa33-de09-47d1-a59c-52590dea7d1a))
-    (pin "4" (uuid 0eca8957-6f26-4e8c-996c-62c852e02359))
+    (pin "1" (uuid f3956b05-7ad4-4043-b245-d4602de5b34e))
+    (pin "2" (uuid 39a8ad30-30ce-406b-9bb9-a7a2e65564ba))
+    (pin "3" (uuid 377a33af-d5a2-4e57-b527-efb215c7c308))
+    (pin "4" (uuid f7be7622-0a2a-4299-a419-37a4b780ab12))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
@@ -619,9 +619,9 @@
     (property "Datasheet" "https://www.mouser.pl/datasheet/2/916/NX7002AK-1360313.pdf" (at 134.62 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (pin "1" (uuid e2a015ea-76fc-4557-94b2-13e8cb131448))
-    (pin "2" (uuid c06bcfdd-417d-404d-a7d9-9e0756b9cd6f))
-    (pin "3" (uuid 4f0b3618-7321-4205-91e5-7dc18b3f32f0))
+    (pin "1" (uuid befa1777-44cd-4196-a3e4-d429de4b9ada))
+    (pin "2" (uuid adb8315c-6c44-4216-a037-a33f9627f253))
+    (pin "3" (uuid 8bf33459-4574-429b-be1e-e93f9fdb1670))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
@@ -646,7 +646,7 @@
     (property "Datasheet" "" (at 137.16 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 742e9daf-0df5-4dbf-802b-7056007f612b))
+    (pin "1" (uuid 092bc9d1-7294-4e87-90fc-ed5216f472e2))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
@@ -671,7 +671,7 @@
     (property "Datasheet" "" (at 137.16 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 06337004-a8d3-4129-8efb-21f7152e2a2d))
+    (pin "1" (uuid aed09e1c-d901-4146-a955-57d35704d58d))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"
@@ -696,8 +696,8 @@
     (property "Datasheet" "~" (at 119.38 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 31e1e19b-6a62-4f36-be76-df4a2e03f99a))
-    (pin "2" (uuid 9b54765d-9d9d-409b-a96b-2029d9ca72c2))
+    (pin "1" (uuid 15277c7f-62db-44f4-84ed-09a3956e26db))
+    (pin "2" (uuid 0d4ecb2f-25db-440a-a8f7-ec7d8efc092e))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e051ed0-2f62-46c8-8b75-4aecd35a5af4"

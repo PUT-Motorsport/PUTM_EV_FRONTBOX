@@ -675,7 +675,7 @@
     (property "Datasheet" "" (at 146.05 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 889064ff-be37-4383-8307-450ca428cdcb))
+    (pin "1" (uuid 6ffa0305-f56f-453f-b6d5-7366d9ade607))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -728,7 +728,7 @@
     (property "Datasheet" "~" (at 161.29 93.345 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 45a27d22-80ed-4e2d-9fa8-21307f66b1ed))
+    (pin "1" (uuid a2eb8f31-e4a4-4153-b953-4b9f0dda6a0e))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -776,8 +776,8 @@
     (property "Datasheet" "~" (at 121.92 102.235 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 62ee7b7f-3498-4297-be9b-e922b30816e6))
-    (pin "2" (uuid 9fdbc9fb-2c1c-4049-9a80-cb952b434cdc))
+    (pin "1" (uuid d798b08c-c589-46bf-8aa8-add5526c734f))
+    (pin "2" (uuid 7e3a08fe-6882-4cc0-8aa0-2a19830df5f7))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -830,7 +830,7 @@
     (property "Datasheet" "" (at 96.52 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e905a17f-81d3-457e-8a98-c4dd5d3ed3e9))
+    (pin "1" (uuid 0509b167-fb3d-4160-8d76-fefbf119d33b))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -883,8 +883,8 @@
     (property "Datasheet" "~" (at 115.57 90.805 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6ef96343-be7e-4cfd-9fb8-0dd9df586688))
-    (pin "2" (uuid 491e9828-5edd-4410-8678-b6870b101368))
+    (pin "1" (uuid 87036274-0082-4195-8173-6fc2f9907413))
+    (pin "2" (uuid 6777735d-1f06-4584-9224-861c86579890))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -937,7 +937,7 @@
     (property "Datasheet" "~" (at 121.92 90.805 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c4360756-87bb-4359-8e79-5195dfab2bab))
+    (pin "1" (uuid bbb2c99b-64e2-48ba-9b0e-842d298108e8))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -985,8 +985,8 @@
     (property "Datasheet" "~" (at 115.57 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0f1243b3-2b3a-40c5-b0df-7792a7e6dda3))
-    (pin "2" (uuid e991b0dc-1646-436d-824d-27519e498a45))
+    (pin "1" (uuid 1c7b77b3-8602-4447-93f1-f89cfa4dcba8))
+    (pin "2" (uuid 42df89ba-82bb-41ab-92ae-de14e7428acf))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -1039,15 +1039,15 @@
     (property "Datasheet" "https://www.tme.eu/Document/c98656c49a036767b89c9bb93e3dda4a/mcp6001_2_4.pdf" (at 171.45 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0e7cf43a-bf14-41c9-b51c-cc132d0714a2))
-    (pin "2" (uuid 297ae59c-7856-4997-b40f-ae735efdbda5))
-    (pin "3" (uuid 6f8a13d5-033e-4cea-a3f6-dcdb9fe95684))
-    (pin "5" (uuid 1e6b1e6e-bddc-4156-a94c-834138a960de))
-    (pin "6" (uuid 90ecf171-e24b-4068-8187-9d4c39193b50))
-    (pin "7" (uuid 1a9d1e2b-83af-4d3d-a219-8a9e9ce4e225))
-    (pin "4" (uuid 13f082e0-327c-4b4a-8dbf-47c82c94f227))
-    (pin "8" (uuid 6735cfb5-74b7-40e8-b16e-d56444afca1e))
-    (pin "9" (uuid 92b2eb71-f189-4c00-9ee8-0e5cd7d193bd))
+    (pin "1" (uuid ea45a55a-34b3-48c3-b097-915ddb543901))
+    (pin "2" (uuid 0e9253b4-4333-48bb-a206-b0e6f2ae6278))
+    (pin "3" (uuid 0d27e7fc-b696-4480-ab27-313f7e9d88f5))
+    (pin "5" (uuid 79652b3a-0ae2-473c-aee2-96d9c580432f))
+    (pin "6" (uuid 99ff5679-9b99-484a-9242-872a755d557c))
+    (pin "7" (uuid b402ab21-ff3e-4b17-876c-8050a0700bb4))
+    (pin "4" (uuid 074e2495-72cb-4300-b7b8-5a042519699c))
+    (pin "8" (uuid 68872576-0f66-436a-84f9-12c63bde0f02))
+    (pin "9" (uuid 3d972ca2-79e6-4d0f-ab56-16d9a76fcf87))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -1092,7 +1092,7 @@
     (property "Datasheet" "" (at 214.63 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7511cba4-e8f0-4e06-a346-827da77535d9))
+    (pin "1" (uuid 5b4cae46-0dbc-4d6c-a527-037c22258c18))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -1145,7 +1145,7 @@
     (property "Datasheet" "~" (at 132.08 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 84af6884-ee6b-4454-b13a-adb7d060989b))
+    (pin "1" (uuid 06c923ba-f3d3-4660-808d-a9f23c62270e))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -1193,7 +1193,7 @@
     (property "Datasheet" "" (at 121.92 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a74b9feb-3f2b-4c0c-b734-19367ef2d11b))
+    (pin "1" (uuid b3c51143-0241-4721-95e6-aafb7efdad94))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -1246,15 +1246,15 @@
     (property "Datasheet" "https://www.tme.eu/Document/c98656c49a036767b89c9bb93e3dda4a/mcp6001_2_4.pdf" (at 212.09 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f17638f3-1b62-4cab-b09e-111ab6fd8feb))
-    (pin "2" (uuid e8eb2f44-c955-4c61-b006-0d60965a4b29))
-    (pin "3" (uuid 74d480a7-63cd-4454-845e-0778f25c5d33))
-    (pin "5" (uuid b90b776e-9b01-424e-8ee2-90277b9a75de))
-    (pin "6" (uuid 48100963-3c29-4cf7-a5c4-d02e363051d5))
-    (pin "7" (uuid b3ab7e9b-cef2-40f1-95ac-fe972aaa8da5))
-    (pin "4" (uuid 605e75d9-a03b-4777-9a16-c19e76b9dd88))
-    (pin "8" (uuid bb631ec2-9576-4f8a-b61b-049fa0e38e24))
-    (pin "9" (uuid f8cda88d-a628-49cd-946a-e5c5d51e3f69))
+    (pin "1" (uuid 065e2de6-e0ea-451a-a335-1174a8132f42))
+    (pin "2" (uuid 1825c183-36ba-475b-8d59-94fa8951e35d))
+    (pin "3" (uuid 2474fd54-fd19-4c72-89c3-72f6126624a8))
+    (pin "5" (uuid d2a652a9-3d4d-411a-9e82-c3dfa4d632c8))
+    (pin "6" (uuid 87c3c0ef-0554-4b5b-b6cc-8c1c2ab4887c))
+    (pin "7" (uuid efed5928-9d9c-49f3-a5a7-0dcbb8e81f4e))
+    (pin "4" (uuid a3a94643-1362-4ae9-a13b-5c2c0ecfc784))
+    (pin "8" (uuid 7b333df8-831e-48ee-ba1e-094f12838699))
+    (pin "9" (uuid c6a8a010-751c-45a5-9a87-fb2a6dbd763f))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -1299,7 +1299,7 @@
     (property "Datasheet" "" (at 214.63 84.455 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9dc45499-6a62-4c95-aca4-41d4e309565d))
+    (pin "1" (uuid 7b1b55b9-775e-408b-83bc-24001f178d66))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -1347,15 +1347,15 @@
     (property "Datasheet" "https://www.tme.eu/Document/c98656c49a036767b89c9bb93e3dda4a/mcp6001_2_4.pdf" (at 138.43 93.345 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 66763e55-8a12-43f1-9570-232f5d86abde))
-    (pin "2" (uuid 63d698b3-34a3-4fce-9395-6f2aa3282c3a))
-    (pin "3" (uuid 312a9f8c-0046-4f9f-b7af-38c6cc8f0754))
-    (pin "5" (uuid 3db64515-4d1f-4abe-9a72-426bb20775c2))
-    (pin "6" (uuid 0d885e73-69e4-46aa-b95d-9add46692739))
-    (pin "7" (uuid fd8c100c-0397-45c8-afcf-2033f6a04d63))
-    (pin "4" (uuid 101caf4b-02b3-459a-b5d1-9788adb3847a))
-    (pin "8" (uuid 2a336d53-28d5-4ebc-8558-c190aacc4703))
-    (pin "9" (uuid 6c535670-db9a-4edd-a761-2660adb88e20))
+    (pin "1" (uuid f1818a29-a776-4bde-8ee1-84b51f077732))
+    (pin "2" (uuid 868d269a-d954-4bf6-ac7d-c126a15d3ed3))
+    (pin "3" (uuid cb2e8d0c-44a7-4d2f-ab99-e2535856c34d))
+    (pin "5" (uuid 5bae1586-3ec6-4f56-837f-64c642499db4))
+    (pin "6" (uuid 59b82304-7712-4eb0-b2fe-38ba0fc46107))
+    (pin "7" (uuid 309b330d-6188-44a2-9aad-9cec1439cf7e))
+    (pin "4" (uuid ca81ba1c-7e11-461f-b933-e5c359cf3c19))
+    (pin "8" (uuid d8e30c3c-1b8b-4f84-adbd-59ee30e1df78))
+    (pin "9" (uuid 5b155f44-c110-45cf-adbe-376d26508e5e))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -1400,8 +1400,8 @@
     (property "Datasheet" "~" (at 220.98 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2e81b5e9-d2e2-43d1-ac49-71880e23f424))
-    (pin "2" (uuid fcb414b5-bb7f-4258-82e1-5091f6dd9c7f))
+    (pin "1" (uuid 5a4793ca-d8b9-41fa-99a0-b93b9b1f4262))
+    (pin "2" (uuid b9b0fad7-3df6-4e9f-85f8-47eae7443148))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -1449,8 +1449,8 @@
     (property "Datasheet" "~" (at 171.45 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 56fab272-ede6-43fa-918c-74bb092905aa))
-    (pin "2" (uuid d9c54991-e67f-416b-a92b-d7c52509b1f7))
+    (pin "1" (uuid ab9fc0ad-550e-478a-910a-09dc20fb8fcc))
+    (pin "2" (uuid e372c23b-d84d-4c57-8e01-2cea52d9d5df))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -1503,7 +1503,7 @@
     (property "Datasheet" "" (at 96.52 85.725 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3657011f-cd66-4388-88c0-2230ea4f1c5c))
+    (pin "1" (uuid b2c49f3a-9264-4c31-831b-07d40456da18))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -1556,8 +1556,8 @@
     (property "Datasheet" "~" (at 138.43 78.105 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 604869a5-35b1-46e0-af06-c5affe3be0c7))
-    (pin "2" (uuid 201c2ad8-fa4d-4d1a-af4b-4bf7b3697b1e))
+    (pin "1" (uuid 9d153911-11d7-4eb7-a099-035e0573c3d2))
+    (pin "2" (uuid b25e3ef9-3407-4a2e-8d9d-56457766298c))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -1610,8 +1610,8 @@
     (property "Datasheet" "~" (at 153.67 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a1f491e7-42d5-4053-8cd8-23c496da9e7c))
-    (pin "2" (uuid bad02f24-e646-4157-a259-8b78f541a23b))
+    (pin "1" (uuid d7c26316-6a1a-4dce-ac87-c5ecd5179ea7))
+    (pin "2" (uuid 0344364e-519a-4b54-9dff-fa393314e5de))
     (instances
       (project "karta_pomiarowa_v2"
         (path "/93f66414-7c81-4a4e-9aa1-e6457ef2a18b/00000000-0000-0000-0000-0000622aff92"
@@ -1664,9 +1664,9 @@
     (property "Datasheet" "~" (at 96.52 90.805 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 96e9705b-cf85-4a28-8edf-e7a805526d4e))
-    (pin "2" (uuid 5a50354f-82ee-4c68-968e-82b765bc31cb))
-    (pin "3" (uuid f149e311-ddf8-4b04-a643-12e005aa158f))
+    (pin "1" (uuid 96b86bd6-7f88-4181-b1b5-8b17a0f13462))
+    (pin "2" (uuid 839f85ff-43a7-4194-bec4-c38b42610090))
+    (pin "3" (uuid 20506c3f-88e9-40ef-8fa4-c2ca142bb0ea))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
@@ -1714,7 +1714,7 @@
     (property "Datasheet" "~" (at 185.42 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 65042539-720c-4f77-859f-cf05e88fb2f2))
+    (pin "1" (uuid 3a541495-4441-467c-9525-4e922e56da1b))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"

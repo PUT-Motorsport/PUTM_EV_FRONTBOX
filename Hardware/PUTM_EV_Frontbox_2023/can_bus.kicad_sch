@@ -536,7 +536,7 @@
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 179.705 102.235 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 18c59a6d-9b0a-4041-8317-eef8715c3ea1)
     (property "Reference" "TP1" (at 181.61 98.298 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -550,11 +550,14 @@
     (property "Datasheet" "~" (at 184.785 102.235 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1753c213-d816-4f74-ba10-3312f41c0945))
+    (pin "1" (uuid af55f33a-d18c-4add-a1b3-465df9a6c64b))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "TP1") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "TP38") (unit 1)
         )
       )
     )
@@ -575,12 +578,15 @@
     (property "Datasheet" "~" (at 146.05 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a27f30d3-b2a3-46cd-a591-0c265257fd23))
-    (pin "2" (uuid fe0b73dc-c4ec-4813-9c3b-0793d344bb7d))
+    (pin "1" (uuid e7d086ca-3178-455e-99dc-e39a4934dd25))
+    (pin "2" (uuid 612f9222-3b57-41dd-85d6-559e4666dfb7))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "C20") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "C63") (unit 1)
         )
       )
     )
@@ -601,18 +607,21 @@
     (property "Datasheet" "" (at 133.35 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e3fec4b7-3002-4ed2-9c65-7086fb2e33e3))
+    (pin "1" (uuid 21ad988d-bdd9-464a-8348-83d06cc05f8c))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR058") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "#PWR055") (unit 1)
         )
       )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 187.325 102.235 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 6543cbff-bc33-4d74-8fcd-538a0e30052a)
     (property "Reference" "TP2" (at 189.23 98.298 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -626,11 +635,14 @@
     (property "Datasheet" "~" (at 192.405 102.235 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid adc7c745-70e2-4b1e-b0bf-119b13dff365))
+    (pin "1" (uuid 539fcb18-908e-49cd-aa3b-5957f2e7b576))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "TP2") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "TP39") (unit 1)
         )
       )
     )
@@ -651,11 +663,14 @@
     (property "Datasheet" "" (at 142.24 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 38c41112-a16a-4ca6-b988-7732bcfb43a3))
+    (pin "1" (uuid 85982e90-423f-4c7c-bbaa-4ee210fe83ed))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR061") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "#PWR086") (unit 1)
         )
       )
     )
@@ -676,11 +691,14 @@
     (property "Datasheet" "" (at 128.27 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6b687d69-3e32-472d-b2d6-8aa2bb7bb272))
+    (pin "1" (uuid edfa6772-f58b-4fab-98f0-89a4fc0ccb5a))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR0126") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -701,11 +719,14 @@
     (property "Datasheet" "~" (at 160.655 90.805 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a6d9914e-9b92-485c-b4a1-bf065b3cd6c2))
+    (pin "1" (uuid 0ad8004b-894c-43c9-9b05-29433db3a726))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#FLG08") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "#FLG01") (unit 1)
         )
       )
     )
@@ -726,11 +747,14 @@
     (property "Datasheet" "" (at 146.05 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid db469167-40d2-430e-add0-18adfe783b45))
+    (pin "1" (uuid 862ee14c-5c62-4344-b87e-49bd009ea917))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR062") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -751,12 +775,15 @@
     (property "Datasheet" "~" (at 133.35 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 37669c93-d99f-49a1-917a-f0de3c466e26))
-    (pin "2" (uuid 317fd28b-a068-497c-bccc-242214c8aff0))
+    (pin "1" (uuid 16d51df4-c89c-4e6c-9161-f7bbf9ffc734))
+    (pin "2" (uuid 94ac0be1-86f5-4336-bb1c-a39d8e5ec99b))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "C19") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "C25") (unit 1)
         )
       )
     )
@@ -777,11 +804,14 @@
     (property "Datasheet" "" (at 135.89 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 659d366c-262b-4740-b96e-69c54bf334ef))
+    (pin "1" (uuid 10542112-cf2b-4b7b-9146-ccb1b0fac199))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR059") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "#PWR084") (unit 1)
         )
       )
     )
@@ -802,19 +832,22 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP2542FD-4FD-MCP2542WFD-4WFD-Data-Sheet20005514B.pdf" (at 142.24 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 145bc073-be83-4667-9c5e-eb36f29e3e8c))
-    (pin "2" (uuid e3f73eaf-4ecf-48dc-85d7-bdfa9ff7b6a3))
-    (pin "3" (uuid c06936bb-76cc-467e-8249-b1d2e9c8394b))
-    (pin "4" (uuid 8d46c357-983a-4530-80c6-4be92ce8941f))
-    (pin "5" (uuid 7dd35a9a-d3ea-47a3-905d-478f6bdfd548))
-    (pin "6" (uuid 4733cada-18fc-43d5-bc17-14a2ba26a258))
-    (pin "7" (uuid 0190b647-ee8d-4867-8965-7af3b39ef0bc))
-    (pin "8" (uuid 9f3dda76-ca91-4c8a-bfec-021f4152a703))
-    (pin "9" (uuid 52b045b9-00ff-4726-8245-fc1f5e63ab03))
+    (pin "1" (uuid 494da7c2-f3f1-42f5-8a7c-f6377973929a))
+    (pin "2" (uuid 02a606d8-98a8-4196-95d6-1cbe00b6db2f))
+    (pin "3" (uuid 346f6d26-8583-4984-b8ea-219989e75986))
+    (pin "4" (uuid b22456e0-58fc-46db-9a32-dce17fa1e31e))
+    (pin "5" (uuid cc0e2567-6d19-4fc3-9996-172ff4f34314))
+    (pin "6" (uuid 05c4c049-0540-4edf-b8d7-ec92df7fab0f))
+    (pin "7" (uuid ad3c79c3-46b0-493e-afa0-743c84a82bdd))
+    (pin "8" (uuid f3f55c99-008c-4347-b72d-31f9ab5ce513))
+    (pin "9" (uuid ed527753-b488-4913-adf6-92cd9605a249))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "U8") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "U12") (unit 1)
         )
       )
     )
@@ -835,11 +868,14 @@
     (property "Datasheet" "" (at 142.24 74.295 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9070a1b0-ae7d-44f5-bd81-1c29b4f4290a))
+    (pin "1" (uuid 99dd4e3c-3fe8-4ee7-9db2-310677d1355f))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "#PWR060") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "#PWR085") (unit 1)
         )
       )
     )
@@ -860,12 +896,15 @@
     (property "Datasheet" "~" (at 142.24 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8f19cad5-0ca7-4bff-8f19-2efeeb341913))
-    (pin "2" (uuid d6d063ea-a2c9-488b-88be-5ab3e645d997))
+    (pin "1" (uuid 62140b53-d924-4641-8d83-9f9d6b400d62))
+    (pin "2" (uuid bafd3fd3-2410-459f-96c7-1deb4d695d02))
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/79afe43e-babf-4d5d-a636-ae8293b09b20"
           (reference "FB2") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6c790ed6-e097-47bd-81fb-910ea194e2b4"
+          (reference "FB3") (unit 1)
         )
       )
     )
