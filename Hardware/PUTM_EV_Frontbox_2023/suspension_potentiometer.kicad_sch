@@ -324,58 +324,6 @@
         )
       )
     )
-    (symbol "Power_Ports:+5V_EXT" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 6.35 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+5V_EXT" (at 0 5.08 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+5V_EXT\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+5V_EXT_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+5V_EXT_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+5V_EXT" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "power:+3.3VA" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -424,6 +372,58 @@
       (symbol "+3.3VA_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
           (name "+3.3VA" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+5V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+5V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+5V" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -620,7 +620,7 @@
     (uuid 46abc3a1-dd19-49b6-9478-5464ffdfd02b)
   )
 
-  (wire (pts (xy 57.15 79.375) (xy 57.15 80.645))
+  (wire (pts (xy 57.15 80.01) (xy 57.15 80.645))
     (stroke (width 0) (type default))
     (uuid 46d7a4ed-4520-4600-bb02-da2331465a76)
   )
@@ -1727,40 +1727,6 @@
     )
   )
 
-  (symbol (lib_id "Power_Ports:+5V_EXT") (at 57.15 79.375 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid c7cfd502-b76e-4f93-8226-2b4bb9a388dd)
-    (property "Reference" "#PWR093" (at 57.15 83.185 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V_EXT" (at 57.15 74.295 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 57.15 79.375 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 57.15 79.375 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid e4a0fcab-b002-4199-8a7d-ff16bd958792))
-    (instances
-      (project "PUTM_EV_Frontbox_2023"
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/911b86f7-6c1b-4cf5-8c52-4f515716b2b9"
-          (reference "#PWR093") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/cff9e037-b571-49da-8ef7-9a05892cc423"
-          (reference "#PWR019") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9be5e515-3e18-403e-b27a-ea3087f1514f"
-          (reference "#PWR091") (unit 1)
-        )
-        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e566fb6-1741-4092-b17e-402796433191"
-          (reference "#PWR0168") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C_Small") (at 182.88 95.885 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c8a158e7-76d6-4c9d-a7bc-32804322328c)
@@ -2003,6 +1969,40 @@
       (project "apps"
         (path "/fc4ad874-c922-4070-89f9-7262080469d8/00000000-0000-0000-0000-00006068dc5c"
           (reference "C?") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 57.15 80.01 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid f59e29eb-fb99-44e5-a41e-7aa78a0f87bd)
+    (property "Reference" "#PWR093" (at 57.15 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 57.15 74.93 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 57.15 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 57.15 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 76cd9437-7dc8-4b8f-9db2-adcc7cbf725a))
+    (instances
+      (project "PUTM_EV_Frontbox_2023"
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e566fb6-1741-4092-b17e-402796433191"
+          (reference "#PWR093") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/cff9e037-b571-49da-8ef7-9a05892cc423"
+          (reference "#PWR04") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/911b86f7-6c1b-4cf5-8c52-4f515716b2b9"
+          (reference "#PWR019") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9be5e515-3e18-403e-b27a-ea3087f1514f"
+          (reference "#PWR091") (unit 1)
         )
       )
     )
