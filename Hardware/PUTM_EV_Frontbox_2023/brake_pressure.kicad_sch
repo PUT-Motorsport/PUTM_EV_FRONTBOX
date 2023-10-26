@@ -281,11 +281,11 @@
         )
       )
     )
-    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+3.3VA" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+3V3" (at 0 3.556 0)
+      (property "Value" "+3.3VA" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -297,10 +297,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+3.3VA\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+3V3_0_1"
+      (symbol "+3.3VA_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -326,9 +326,9 @@
           (fill (type none))
         )
       )
-      (symbol "+3V3_1_1"
+      (symbol "+3.3VA_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (name "+3.3VA" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -1284,13 +1284,13 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 214.63 84.455 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b76065f0-2453-431d-aebb-f81486dc83d2)
-    (property "Reference" "#PWR017" (at 214.63 88.265 0)
+  (symbol (lib_id "power:+3.3VA") (at 214.63 84.455 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid a8527105-d4c2-44dd-8478-7da0e1a44a91)
+    (property "Reference" "#PWR?" (at 214.63 88.265 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 214.63 80.645 0)
+    (property "Value" "+3.3VA" (at 214.63 79.375 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 214.63 84.455 0)
@@ -1299,34 +1299,29 @@
     (property "Datasheet" "" (at 214.63 84.455 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7b1b55b9-775e-408b-83bc-24001f178d66))
+    (pin "1" (uuid 2400ba42-79c7-4e56-b18a-4ffdbdcf63d3))
     (instances
       (project "PUTM_EV_Frontbox_2023"
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
+          (reference "#PWR?") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/911b86f7-6c1b-4cf5-8c52-4f515716b2b9"
+          (reference "#PWR0109") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/cff9e037-b571-49da-8ef7-9a05892cc423"
+          (reference "#PWR064") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9be5e515-3e18-403e-b27a-ea3087f1514f"
+          (reference "#PWR0166") (unit 1)
+        )
+        (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/9e566fb6-1741-4092-b17e-402796433191"
+          (reference "#PWR0177") (unit 1)
+        )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/a44ca1e3-5a7e-4627-a097-706c52508f74"
           (reference "#PWR017") (unit 1)
         )
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/abdacfc0-d2db-4861-a051-817d03ac12cb"
           (reference "#PWR0103") (unit 1)
-        )
-      )
-      (project "apps"
-        (path "/fc4ad874-c922-4070-89f9-7262080469d8/00000000-0000-0000-0000-00005f60f829"
-          (reference "#PWR062") (unit 1)
-        )
-        (path "/fc4ad874-c922-4070-89f9-7262080469d8/347af574-7f04-42ac-a8b1-78f5ed89add6"
-          (reference "#PWR069") (unit 1)
-        )
-        (path "/fc4ad874-c922-4070-89f9-7262080469d8/11236715-9d3d-46a6-8693-03c5fb52ffb8"
-          (reference "#PWR070") (unit 1)
-        )
-        (path "/fc4ad874-c922-4070-89f9-7262080469d8/dfb38113-578c-49b0-8230-ef742c26f2e9"
-          (reference "#PWR077") (unit 1)
-        )
-        (path "/fc4ad874-c922-4070-89f9-7262080469d8/0b6b627a-962c-42da-9dc9-8c53f83f5a9f"
-          (reference "#PWR077") (unit 1)
-        )
-        (path "/fc4ad874-c922-4070-89f9-7262080469d8/92bd39b8-75fd-4234-bc33-f3cbcd27f008"
-          (reference "#PWR077") (unit 1)
         )
       )
     )
