@@ -68,13 +68,13 @@
         "courtyards_overlap": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
-        "drill_out_of_range": "error",
+        "drill_out_of_range": "warning",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
-        "hole_near_hole": "error",
+        "hole_near_hole": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -576,10 +576,6 @@
     [
       "9e566fb6-1741-4092-b17e-402796433191",
       "Suspension Potentiometer (Right)"
-    ],
-    [
-      "ba538a3c-1084-4770-aed2-08b4305d2379",
-      "Yaw probe"
     ]
   ],
   "text_variables": {
