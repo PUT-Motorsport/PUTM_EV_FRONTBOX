@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -56,10 +56,10 @@ void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
 void DMA1_Channel1_IRQHandler(void);
-void DMA1_Channel4_IRQHandler(void);
-void USB_LP_IRQHandler(void);
-void EXTI15_10_IRQHandler(void);
-void FDCAN2_IT0_IRQHandler(void);
+void DMA1_Channel2_IRQHandler(void);
+void ADC1_2_IRQHandler(void);
+void TIM2_IRQHandler(void);
+void TIM7_DAC_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

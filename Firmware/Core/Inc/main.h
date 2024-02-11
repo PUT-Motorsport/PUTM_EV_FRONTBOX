@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -57,44 +57,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define SENSE_OVERTRAVEL_Pin GPIO_PIN_13
-#define SENSE_OVERTRAVEL_GPIO_Port GPIOC
-#define SENSE_EBS_Pin GPIO_PIN_15
-#define SENSE_EBS_GPIO_Port GPIOC
-#define SENSE_LEFT_Pin GPIO_PIN_0
-#define SENSE_LEFT_GPIO_Port GPIOC
-#define SENSE_RIGHT_Pin GPIO_PIN_1
-#define SENSE_RIGHT_GPIO_Port GPIOC
-#define SENSE_DRIVER_Pin GPIO_PIN_2
-#define SENSE_DRIVER_GPIO_Port GPIOC
-#define SENSE_INERTIA_Pin GPIO_PIN_3
-#define SENSE_INERTIA_GPIO_Port GPIOC
-#define SAFETY_CONTROL_Pin GPIO_PIN_0
-#define SAFETY_CONTROL_GPIO_Port GPIOA
-#define APPS2_ADC1_Pin GPIO_PIN_3
-#define APPS2_ADC1_GPIO_Port GPIOA
-#define APPS1_ADC2_Pin GPIO_PIN_4
-#define APPS1_ADC2_GPIO_Port GPIOA
-#define SUSP_L_ADC2_Pin GPIO_PIN_6
-#define SUSP_L_ADC2_GPIO_Port GPIOA
-#define SUSP_R_ADC2_Pin GPIO_PIN_7
-#define SUSP_R_ADC2_GPIO_Port GPIOA
-#define ADC2_BRAKE_PRESSURE_FRONT_Pin GPIO_PIN_4
-#define ADC2_BRAKE_PRESSURE_FRONT_GPIO_Port GPIOC
-#define ADC2_BRAKE_PRESSURE_REAR_Pin GPIO_PIN_5
-#define ADC2_BRAKE_PRESSURE_REAR_GPIO_Port GPIOC
-#define DEBUG4_Pin GPIO_PIN_14
-#define DEBUG4_GPIO_Port GPIOB
-#define DEBUG3_Pin GPIO_PIN_15
-#define DEBUG3_GPIO_Port GPIOB
-#define DEBUG2_Pin GPIO_PIN_6
-#define DEBUG2_GPIO_Port GPIOC
-#define DEBUG1_Pin GPIO_PIN_7
-#define DEBUG1_GPIO_Port GPIOC
-#define DEBUG5_Pin GPIO_PIN_9
-#define DEBUG5_GPIO_Port GPIOA
-#define SENSE_BSPD_Pin GPIO_PIN_9
-#define SENSE_BSPD_GPIO_Port GPIOB
+#define LED4_Pin GPIO_PIN_14
+#define LED4_GPIO_Port GPIOB
+#define LED3_Pin GPIO_PIN_15
+#define LED3_GPIO_Port GPIOB
+#define LED2_Pin GPIO_PIN_6
+#define LED2_GPIO_Port GPIOC
+#define LED1_Pin GPIO_PIN_7
+#define LED1_GPIO_Port GPIOC
+#define SAFETY_Pin GPIO_PIN_3
+#define SAFETY_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
