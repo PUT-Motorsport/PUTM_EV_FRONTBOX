@@ -967,7 +967,7 @@
   (symbol (lib_id "power:+3.3V") (at 195.58 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0140108e-1886-4a26-85ba-ca4b97f39524)
-    (property "Reference" "#PWR0185" (at 195.58 130.175 0)
+    (property "Reference" "#PWR0107" (at 195.58 130.175 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 195.58 122.555 0)
@@ -983,7 +983,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0185") (unit 1)
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
@@ -992,7 +992,7 @@
   (symbol (lib_id "Device:R_Small") (at 126.365 52.705 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 024f8885-66dc-4c0d-92ff-f52b981c5bb0)
-    (property "Reference" "R79" (at 128.27 52.07 0)
+    (property "Reference" "R30" (at 128.27 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 128.27 54.61 0)
@@ -1009,7 +1009,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R79") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
@@ -1018,7 +1018,7 @@
   (symbol (lib_id "power:GND") (at 109.22 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0ba9acc7-7fad-47b4-91fa-52e55149edcd)
-    (property "Reference" "#PWR073" (at 109.22 95.25 0)
+    (property "Reference" "#PWR083" (at 109.22 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 109.22 92.71 0)
@@ -1034,7 +1034,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR073") (unit 1)
+          (reference "#PWR083") (unit 1)
         )
       )
     )
@@ -1043,7 +1043,7 @@
   (symbol (lib_id "power:GND") (at 176.53 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0df3e6a3-52e6-4206-b461-6a3d34c14588)
-    (property "Reference" "#PWR080" (at 176.53 69.85 0)
+    (property "Reference" "#PWR096" (at 176.53 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 176.53 67.31 0)
@@ -1059,7 +1059,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR080") (unit 1)
+          (reference "#PWR096") (unit 1)
         )
       )
     )
@@ -1068,7 +1068,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 185.42 85.09 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 108c1b2a-996a-4fe3-bd9d-f83f503ad13a)
-    (property "Reference" "U11" (at 185.42 77.47 0)
+    (property "Reference" "U13" (at 185.42 77.47 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 185.42 80.01 0)
@@ -1099,7 +1099,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U11") (unit 2)
+          (reference "U13") (unit 2)
         )
       )
     )
@@ -1108,7 +1108,7 @@
   (symbol (lib_id "power:GND") (at 125.73 62.865 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 18a24a8c-6381-4a45-a125-69a74f63a70b)
-    (property "Reference" "#PWR0138" (at 125.73 69.215 0)
+    (property "Reference" "#PWR088" (at 125.73 69.215 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 125.73 66.675 0)
@@ -1124,7 +1124,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0138") (unit 1)
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -1133,7 +1133,7 @@
   (symbol (lib_id "Device:R_Small") (at 99.695 175.895 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1a2a7832-7389-43f2-bb5c-da5b47c54b52)
-    (property "Reference" "R78" (at 99.695 170.815 90)
+    (property "Reference" "R24" (at 99.695 170.815 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 99.695 173.355 90)
@@ -1150,7 +1150,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R78") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -1159,7 +1159,7 @@
   (symbol (lib_id "power:GND") (at 194.945 113.665 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 21983ae2-e2fa-40c9-88ba-8219ec792fde)
-    (property "Reference" "#PWR067" (at 194.945 120.015 0)
+    (property "Reference" "#PWR0104" (at 194.945 120.015 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.945 117.475 0)
@@ -1175,7 +1175,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR067") (unit 1)
+          (reference "#PWR0104") (unit 1)
         )
       )
     )
@@ -1184,7 +1184,7 @@
   (symbol (lib_id "power:GND") (at 193.675 62.865 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 26162ae9-ab17-4f5d-8b52-3fcfea6cde58)
-    (property "Reference" "#PWR082" (at 193.675 69.215 0)
+    (property "Reference" "#PWR0100" (at 193.675 69.215 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 193.675 66.675 0)
@@ -1200,7 +1200,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR082") (unit 1)
+          (reference "#PWR0100") (unit 1)
         )
       )
     )
@@ -1209,7 +1209,7 @@
   (symbol (lib_id "power:+3.3V") (at 194.31 48.895 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 27d6deeb-f0c2-4dad-a5e9-2362c93869ee)
-    (property "Reference" "#PWR0142" (at 194.31 52.705 0)
+    (property "Reference" "#PWR0102" (at 194.31 52.705 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 194.31 45.085 0)
@@ -1225,7 +1225,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0142") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -1234,7 +1234,7 @@
   (symbol (lib_id "power:GND") (at 177.8 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 280b8695-ca93-4e54-a348-44c66493194a)
-    (property "Reference" "#PWR066" (at 177.8 120.65 0)
+    (property "Reference" "#PWR098" (at 177.8 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 177.8 118.11 0)
@@ -1250,7 +1250,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR098") (unit 1)
         )
       )
     )
@@ -1259,7 +1259,7 @@
   (symbol (lib_id "Device:R_Small") (at 173.355 82.55 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2d42b3a6-71fd-4da2-a74f-8400d944eb19)
-    (property "Reference" "R16" (at 173.355 77.47 90)
+    (property "Reference" "R35" (at 173.355 77.47 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 173.355 80.01 90)
@@ -1276,7 +1276,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R16") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
     )
@@ -1285,7 +1285,7 @@
   (symbol (lib_id "Device:R_Small") (at 106.045 82.55 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2d7b69d4-385c-407a-9902-e12f26d3b04a)
-    (property "Reference" "R12" (at 106.045 77.47 90)
+    (property "Reference" "R26" (at 106.045 77.47 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 106.045 80.01 90)
@@ -1302,7 +1302,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R12") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -1311,7 +1311,7 @@
   (symbol (lib_id "Device:R_Small") (at 121.285 170.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3319f7ac-d7ae-4d67-8599-5f73d2593b70)
-    (property "Reference" "R77" (at 123.19 169.545 0)
+    (property "Reference" "R29" (at 123.19 169.545 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 123.19 172.085 0)
@@ -1328,7 +1328,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R77") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -1337,7 +1337,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 118.11 85.09 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 35408960-9c91-43dc-a247-353d670c9f39)
-    (property "Reference" "U10" (at 118.11 77.47 0)
+    (property "Reference" "U12" (at 118.11 77.47 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 118.11 80.01 0)
@@ -1368,7 +1368,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U10") (unit 2)
+          (reference "U12") (unit 2)
         )
       )
     )
@@ -1377,7 +1377,7 @@
   (symbol (lib_id "power:GND") (at 194.945 140.335 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36f827a8-2ed7-4b84-8489-86d28e5fa2ea)
-    (property "Reference" "#PWR0184" (at 194.945 146.685 0)
+    (property "Reference" "#PWR0105" (at 194.945 146.685 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.945 144.145 0)
@@ -1393,7 +1393,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0184") (unit 1)
+          (reference "#PWR0105") (unit 1)
         )
       )
     )
@@ -1402,7 +1402,7 @@
   (symbol (lib_id "Device:R_Small") (at 174.625 107.95 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3a2777f8-041e-4bc2-a728-56564ec8a182)
-    (property "Reference" "R49" (at 174.625 102.87 90)
+    (property "Reference" "R36" (at 174.625 102.87 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 174.625 105.41 90)
@@ -1419,7 +1419,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R49") (unit 1)
+          (reference "R36") (unit 1)
         )
       )
     )
@@ -1428,7 +1428,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 117.475 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 40ce94c7-46ce-4a1e-95ce-ecd056db7661)
-    (property "Reference" "U10" (at 117.475 52.07 0)
+    (property "Reference" "U12" (at 117.475 52.07 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 117.475 54.61 0)
@@ -1459,7 +1459,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U10") (unit 1)
+          (reference "U12") (unit 1)
         )
       )
     )
@@ -1468,7 +1468,7 @@
   (symbol (lib_id "Device:R_Small") (at 127 78.105 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4674e281-733d-41a3-94fa-d915f1a2f038)
-    (property "Reference" "R80" (at 128.905 77.47 0)
+    (property "Reference" "R31" (at 128.905 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 128.905 80.01 0)
@@ -1485,7 +1485,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R80") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -1494,7 +1494,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 118.11 137.16 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 46769f63-c4c2-43d6-8c82-619a254422d4)
-    (property "Reference" "U10" (at 118.11 129.54 0)
+    (property "Reference" "U12" (at 118.11 129.54 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 118.11 132.08 0)
@@ -1525,7 +1525,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U10") (unit 4)
+          (reference "U12") (unit 4)
         )
       )
     )
@@ -1534,7 +1534,7 @@
   (symbol (lib_id "power:GND") (at 176.53 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4da256de-a415-4ae2-9f87-7deacfe2501e)
-    (property "Reference" "#PWR081" (at 176.53 95.25 0)
+    (property "Reference" "#PWR097" (at 176.53 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 176.53 92.71 0)
@@ -1550,7 +1550,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR081") (unit 1)
+          (reference "#PWR097") (unit 1)
         )
       )
     )
@@ -1559,7 +1559,7 @@
   (symbol (lib_id "power:GND") (at 108.585 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 536bf5bb-7600-4631-aff7-e1b7dec79fc7)
-    (property "Reference" "#PWR072" (at 108.585 69.85 0)
+    (property "Reference" "#PWR082" (at 108.585 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 108.585 67.31 0)
@@ -1575,7 +1575,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR072") (unit 1)
+          (reference "#PWR082") (unit 1)
         )
       )
     )
@@ -1584,7 +1584,7 @@
   (symbol (lib_id "Device:R_Small") (at 194.31 52.705 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 53b7b104-21af-4ab1-953a-6818bab59ccd)
-    (property "Reference" "R83" (at 196.215 52.07 0)
+    (property "Reference" "R38" (at 196.215 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 196.215 54.61 0)
@@ -1601,7 +1601,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R83") (unit 1)
+          (reference "R38") (unit 1)
         )
       )
     )
@@ -1610,7 +1610,7 @@
   (symbol (lib_id "Device:R_Small") (at 127 103.505 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 65887b5b-f00e-464f-b529-b4c65dc2f2d6)
-    (property "Reference" "R81" (at 128.905 102.87 0)
+    (property "Reference" "R32" (at 128.905 102.87 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 128.905 105.41 0)
@@ -1627,7 +1627,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R81") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -1636,7 +1636,7 @@
   (symbol (lib_id "Device:R_Small") (at 195.58 103.505 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7045a324-bb64-4156-9c36-ec692d81a274)
-    (property "Reference" "R50" (at 197.485 102.87 0)
+    (property "Reference" "R40" (at 197.485 102.87 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 197.485 105.41 0)
@@ -1653,7 +1653,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R50") (unit 1)
+          (reference "R40") (unit 1)
         )
       )
     )
@@ -1662,7 +1662,7 @@
   (symbol (lib_id "Device:R_Small") (at 174.625 134.62 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7288ec0c-6e14-446e-850a-7b642e59b34e)
-    (property "Reference" "R52" (at 174.625 129.54 90)
+    (property "Reference" "R37" (at 174.625 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 174.625 132.08 90)
@@ -1679,7 +1679,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R52") (unit 1)
+          (reference "R37") (unit 1)
         )
       )
     )
@@ -1688,7 +1688,7 @@
   (symbol (lib_id "power:GND") (at 126.365 88.265 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 75177265-e600-4364-91c8-be1fa245166f)
-    (property "Reference" "#PWR0139" (at 126.365 94.615 0)
+    (property "Reference" "#PWR090" (at 126.365 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 126.365 92.075 0)
@@ -1704,7 +1704,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0139") (unit 1)
+          (reference "#PWR090") (unit 1)
         )
       )
     )
@@ -1713,7 +1713,7 @@
   (symbol (lib_id "power:GND") (at 177.8 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 761cac6a-32ed-4eb2-90f0-0c537fb9bb0d)
-    (property "Reference" "#PWR0183" (at 177.8 147.32 0)
+    (property "Reference" "#PWR099" (at 177.8 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 177.8 144.78 0)
@@ -1729,7 +1729,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0183") (unit 1)
+          (reference "#PWR099") (unit 1)
         )
       )
     )
@@ -1738,7 +1738,7 @@
   (symbol (lib_id "Device:R_Small") (at 127 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 770b2629-8aa4-438e-a384-1135e2c6a3fd)
-    (property "Reference" "R82" (at 128.905 129.54 0)
+    (property "Reference" "R33" (at 128.905 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 128.905 132.08 0)
@@ -1755,7 +1755,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R82") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -1764,7 +1764,7 @@
   (symbol (lib_id "power:GND") (at 100.33 180.975 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 77682996-33f1-4f16-9124-a0877f42384a)
-    (property "Reference" "#PWR0135" (at 100.33 187.325 0)
+    (property "Reference" "#PWR081" (at 100.33 187.325 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 100.33 184.785 0)
@@ -1780,7 +1780,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0135") (unit 1)
+          (reference "#PWR081") (unit 1)
         )
       )
     )
@@ -1789,7 +1789,7 @@
   (symbol (lib_id "power:GND") (at 121.285 180.975 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7afd472d-b709-4465-969d-7041069b42a4)
-    (property "Reference" "#PWR0134" (at 121.285 187.325 0)
+    (property "Reference" "#PWR087" (at 121.285 187.325 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 121.285 184.785 0)
@@ -1805,7 +1805,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0134") (unit 1)
+          (reference "#PWR087") (unit 1)
         )
       )
     )
@@ -1814,7 +1814,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 186.69 110.49 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7be193be-23c7-4d88-b14f-ad4100ef3d29)
-    (property "Reference" "U11" (at 186.69 101.6 0)
+    (property "Reference" "U13" (at 186.69 101.6 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 186.69 104.14 0)
@@ -1845,7 +1845,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U11") (unit 3)
+          (reference "U13") (unit 3)
         )
       )
     )
@@ -1854,7 +1854,7 @@
   (symbol (lib_id "power:+3.3V") (at 126.365 48.895 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7d085e76-3615-487b-a991-13e6de300d23)
-    (property "Reference" "#PWR076" (at 126.365 52.705 0)
+    (property "Reference" "#PWR089" (at 126.365 52.705 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 126.365 45.085 0)
@@ -1870,7 +1870,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR076") (unit 1)
+          (reference "#PWR089") (unit 1)
         )
       )
     )
@@ -1879,7 +1879,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 186.69 137.16 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 85f37b76-e126-4fdf-8131-2cde4de5524d)
-    (property "Reference" "U11" (at 186.69 128.27 0)
+    (property "Reference" "U13" (at 186.69 128.27 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 186.69 130.81 0)
@@ -1910,7 +1910,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U11") (unit 4)
+          (reference "U13") (unit 4)
         )
       )
     )
@@ -1919,7 +1919,7 @@
   (symbol (lib_id "power:+3.3V") (at 127 99.695 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 873d455a-b54e-41da-8ec8-bec10d165941)
-    (property "Reference" "#PWR0141" (at 127 103.505 0)
+    (property "Reference" "#PWR094" (at 127 103.505 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 127 95.885 0)
@@ -1935,7 +1935,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0141") (unit 1)
+          (reference "#PWR094") (unit 1)
         )
       )
     )
@@ -1944,7 +1944,7 @@
   (symbol (lib_id "power:+3.3V") (at 121.285 166.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8961fef7-f62b-45bf-9091-65c91321d3e9)
-    (property "Reference" "#PWR0120" (at 121.285 170.18 0)
+    (property "Reference" "#PWR086" (at 121.285 170.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 121.285 162.56 0)
@@ -1960,7 +1960,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0120") (unit 1)
+          (reference "#PWR086") (unit 1)
         )
       )
     )
@@ -1969,7 +1969,7 @@
   (symbol (lib_id "Device:R_Small") (at 106.045 107.95 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8af3138c-ecf2-44d9-b32b-44d02493e1bb)
-    (property "Reference" "R13" (at 106.045 102.87 90)
+    (property "Reference" "R27" (at 106.045 102.87 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 106.045 105.41 90)
@@ -1986,7 +1986,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R13") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
     )
@@ -1995,7 +1995,7 @@
   (symbol (lib_id "power:GND") (at 193.675 88.265 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 903020c6-6fc9-4776-b52e-7ad51562fefa)
-    (property "Reference" "#PWR083" (at 193.675 94.615 0)
+    (property "Reference" "#PWR0101" (at 193.675 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 193.675 92.075 0)
@@ -2011,7 +2011,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR083") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
     )
@@ -2020,7 +2020,7 @@
   (symbol (lib_id "Device:R_Small") (at 195.58 130.175 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 90532bd4-be0d-4453-be58-d335a763a893)
-    (property "Reference" "R53" (at 197.485 129.54 0)
+    (property "Reference" "R41" (at 197.485 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 197.485 132.08 0)
@@ -2037,7 +2037,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R53") (unit 1)
+          (reference "R41") (unit 1)
         )
       )
     )
@@ -2046,7 +2046,7 @@
   (symbol (lib_id "power:+3.3V") (at 195.58 99.695 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 90ec9f5a-90c8-486f-8e05-0b713ba4239d)
-    (property "Reference" "#PWR065" (at 195.58 103.505 0)
+    (property "Reference" "#PWR0106" (at 195.58 103.505 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 195.58 95.885 0)
@@ -2062,7 +2062,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -2071,7 +2071,7 @@
   (symbol (lib_id "power:GND") (at 109.22 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 94b82e75-eaa0-47e7-b26f-826ac16febd2)
-    (property "Reference" "#PWR075" (at 109.22 147.32 0)
+    (property "Reference" "#PWR085" (at 109.22 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 109.22 144.78 0)
@@ -2087,7 +2087,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR075") (unit 1)
+          (reference "#PWR085") (unit 1)
         )
       )
     )
@@ -2096,7 +2096,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 118.11 110.49 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 965cce7f-581c-460f-822b-abd2fad45289)
-    (property "Reference" "U10" (at 118.11 102.87 0)
+    (property "Reference" "U12" (at 118.11 102.87 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 118.11 105.41 0)
@@ -2127,7 +2127,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U10") (unit 3)
+          (reference "U12") (unit 3)
         )
       )
     )
@@ -2136,7 +2136,7 @@
   (symbol (lib_id "power:+3.3V") (at 127 126.365 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9a8fbfcd-7b25-4f54-88ff-ebf49797b887)
-    (property "Reference" "#PWR079" (at 127 130.175 0)
+    (property "Reference" "#PWR095" (at 127 130.175 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 127 122.555 0)
@@ -2152,7 +2152,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR079") (unit 1)
+          (reference "#PWR095") (unit 1)
         )
       )
     )
@@ -2161,7 +2161,7 @@
   (symbol (lib_id "power:GND") (at 109.22 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b33d3a78-cce5-4409-870d-a716942a817d)
-    (property "Reference" "#PWR074" (at 109.22 120.65 0)
+    (property "Reference" "#PWR084" (at 109.22 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 109.22 118.11 0)
@@ -2177,7 +2177,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR074") (unit 1)
+          (reference "#PWR084") (unit 1)
         )
       )
     )
@@ -2186,7 +2186,7 @@
   (symbol (lib_id "Isolator:FODM217B") (at 109.855 178.435 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b4e9454c-8009-4d5d-a032-ff7e25f56064)
-    (property "Reference" "U28" (at 109.855 169.545 0)
+    (property "Reference" "U11" (at 109.855 169.545 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "FODM217B" (at 109.855 172.085 0)
@@ -2205,7 +2205,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U28") (unit 1)
+          (reference "U11") (unit 1)
         )
       )
     )
@@ -2214,7 +2214,7 @@
   (symbol (lib_id "Device:R_Small") (at 106.045 134.62 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b51d37f9-8128-4f57-a653-3d3f780515c5)
-    (property "Reference" "R14" (at 106.045 129.54 90)
+    (property "Reference" "R28" (at 106.045 129.54 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 106.045 132.08 90)
@@ -2231,7 +2231,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R14") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
     )
@@ -2240,7 +2240,7 @@
   (symbol (lib_id "power:GND") (at 126.365 113.665 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b5e7b2cb-9eb5-4813-b4a6-8f3c5d1d3d8a)
-    (property "Reference" "#PWR077" (at 126.365 120.015 0)
+    (property "Reference" "#PWR091" (at 126.365 120.015 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 126.365 117.475 0)
@@ -2256,7 +2256,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR077") (unit 1)
+          (reference "#PWR091") (unit 1)
         )
       )
     )
@@ -2265,7 +2265,7 @@
   (symbol (lib_id "Device:R_Small") (at 105.41 57.15 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c640b729-35e7-43dd-8bbc-2d9928995aba)
-    (property "Reference" "R11" (at 105.41 52.07 90)
+    (property "Reference" "R25" (at 105.41 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 105.41 54.61 90)
@@ -2282,7 +2282,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R11") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
     )
@@ -2291,7 +2291,7 @@
   (symbol (lib_id "power:GND") (at 126.365 140.335 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c7ab8600-ab11-4c12-8616-47cdacba8f61)
-    (property "Reference" "#PWR078" (at 126.365 146.685 0)
+    (property "Reference" "#PWR092" (at 126.365 146.685 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 126.365 144.145 0)
@@ -2307,7 +2307,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR078") (unit 1)
+          (reference "#PWR092") (unit 1)
         )
       )
     )
@@ -2316,7 +2316,7 @@
   (symbol (lib_id "Isolator:TLP291-4") (at 185.42 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cbd970f5-78c3-41cd-a298-d9803dd38479)
-    (property "Reference" "U11" (at 185.42 52.07 0)
+    (property "Reference" "U13" (at 185.42 52.07 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TLP291-4" (at 185.42 54.61 0)
@@ -2347,7 +2347,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "U11") (unit 1)
+          (reference "U13") (unit 1)
         )
       )
     )
@@ -2356,7 +2356,7 @@
   (symbol (lib_id "power:+3.3V") (at 127 74.295 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d83fae7f-3302-4cf6-9d89-520283215149)
-    (property "Reference" "#PWR0140" (at 127 78.105 0)
+    (property "Reference" "#PWR093" (at 127 78.105 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 127 70.485 0)
@@ -2372,7 +2372,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0140") (unit 1)
+          (reference "#PWR093") (unit 1)
         )
       )
     )
@@ -2381,7 +2381,7 @@
   (symbol (lib_id "Device:R_Small") (at 173.355 57.15 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e96530bf-a9be-4c2a-99b1-709709d919d7)
-    (property "Reference" "R15" (at 173.355 52.07 90)
+    (property "Reference" "R34" (at 173.355 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2k" (at 173.355 54.61 90)
@@ -2398,7 +2398,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R15") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
     )
@@ -2407,7 +2407,7 @@
   (symbol (lib_id "power:+3.3V") (at 194.31 74.295 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f01387c1-1ad7-497d-a240-f5eb40e26c46)
-    (property "Reference" "#PWR0143" (at 194.31 78.105 0)
+    (property "Reference" "#PWR0103" (at 194.31 78.105 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 194.31 70.485 0)
@@ -2423,7 +2423,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "#PWR0143") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -2432,7 +2432,7 @@
   (symbol (lib_id "Device:R_Small") (at 194.31 78.105 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f2b7eeac-0e1f-4cd4-ab4f-221d829bfbd0)
-    (property "Reference" "R84" (at 196.215 77.47 0)
+    (property "Reference" "R39" (at 196.215 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 196.215 80.01 0)
@@ -2449,7 +2449,7 @@
     (instances
       (project "PUTM_EV_Frontbox_2023"
         (path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/d8521410-c497-472e-ae31-9f909ba7779b"
-          (reference "R84") (unit 1)
+          (reference "R39") (unit 1)
         )
       )
     )

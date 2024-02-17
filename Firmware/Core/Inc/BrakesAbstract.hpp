@@ -19,8 +19,8 @@ private:
 	static const unsigned number_of_brake_pressure_sample = 50;
 	bool sensor_plausibility_last = false;
 public:
-	uint16_t brake_pressure1_val_raw[number_of_brake_pressure_sample];
-	uint16_t brake_pressure2_val_raw[number_of_brake_pressure_sample];
+	uint16_t brake_pressure_rear_val_raw[number_of_brake_pressure_sample];
+	uint16_t brake_pressure_front_val_raw[number_of_brake_pressure_sample];
 	uint16_t brake_position_val_raw [number_of_brake_pressure_sample];
 
 	std::pair<int, int> get_raw_avg_press_value();
