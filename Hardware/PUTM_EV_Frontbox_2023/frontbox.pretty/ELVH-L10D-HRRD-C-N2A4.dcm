@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP ELVH-L10D-HRRD-C-N2A4
-D Pressure Sensor -0.29 ~ 0.36PSI (-2 ~ 2.5kPa) Differential Male - 0.06" (1.6mm) Tube, Dual 14 b 8-DIP (0.504", 12.80mm), Dual Ports, Same Side
-K
-F https://www.allsensors.com/datasheets/DS-0376_Rev_A.pdf
-$ENDCMP
-#
-#End Doc Library
