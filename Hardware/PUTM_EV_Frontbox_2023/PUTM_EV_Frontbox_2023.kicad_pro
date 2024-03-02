@@ -577,6 +577,14 @@
     [
       "9e566fb6-1741-4092-b17e-402796433191",
       "Suspension Potentiometer (Right)"
+    ],
+    [
+      "f95f3902-9421-4aca-b3ac-7516fc1a03f4",
+      "Gearbox_Temp_sensor_1"
+    ],
+    [
+      "a476bcd8-ab71-4a19-95ab-946de722cc84",
+      "Gearbox_Temp_sensor_2"
     ]
   ],
   "text_variables": {
