@@ -151,6 +151,7 @@ int main(void)
   HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 1800); // ~2418 mV 3003
   // Turn on safety
   HAL_GPIO_WritePin(SAFETY_GPIO_Port, SAFETY_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(RESET_GPIO_Port, RESET_Pin, GPIO_PIN_SET);
   // APPS
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
   HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
@@ -161,7 +162,7 @@ int main(void)
 
   HAL_FDCAN_Start(&hfdcan1);
   // Brakes
-
+  uint8_t counter = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -172,20 +173,21 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-
 	  apps_value_to_send = apps.get_value_to_send();
 
 	  PUTM_CAN::Apps_main apps = {
-			  .pedal_position = apps_value_to_send,
-			  .counter = 0,
-			  .position_diff = 0,
-			  .device_state = PUTM_CAN::Apps_states::Normal_operation
+			  .pedal_position = (uint16_t)apps_value_to_send,
+			  .counter = counter++,
+			  .position_diff = 10,
+			  .device_state = PUTM_CAN::Apps_states::Power_up
 	  };
 
 	  auto apps_main_frame = PUTM_CAN::Can_tx_message<PUTM_CAN::Apps_main>(apps, PUTM_CAN::can_tx_header_APPS_MAIN);
+	  HAL_StatusTypeDef status = apps_main_frame.send(hfdcan1);
+	  UNUSED(status);
 
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-	  HAL_Delay(250);
+	  HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -211,8 +213,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
-  RCC_OscInitStruct.PLL.PLLN = 85;
+  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
+  RCC_OscInitStruct.PLL.PLLN = 20;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
@@ -548,9 +550,9 @@ static void MX_FDCAN1_Init(void)
   hfdcan1.Init.AutoRetransmission = DISABLE;
   hfdcan1.Init.TransmitPause = DISABLE;
   hfdcan1.Init.ProtocolException = DISABLE;
-  hfdcan1.Init.NominalPrescaler = 16;
+  hfdcan1.Init.NominalPrescaler = 10;
   hfdcan1.Init.NominalSyncJumpWidth = 1;
-  hfdcan1.Init.NominalTimeSeg1 = 2;
+  hfdcan1.Init.NominalTimeSeg1 = 13;
   hfdcan1.Init.NominalTimeSeg2 = 2;
   hfdcan1.Init.DataPrescaler = 1;
   hfdcan1.Init.DataSyncJumpWidth = 1;
@@ -657,6 +659,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, LED2_Pin|LED1_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(RESET_GPIO_Port, RESET_Pin, GPIO_PIN_SET);
+
   /*Configure GPIO pins : LED4_Pin LED3_Pin SAFETY_Pin */
   GPIO_InitStruct.Pin = LED4_Pin|LED3_Pin|SAFETY_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -670,6 +675,16 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : RESET_Pin */
+  GPIO_InitStruct.Pin = RESET_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(RESET_GPIO_Port, &GPIO_InitStruct);
+
+  /**/
+  __HAL_SYSCFG_FASTMODEPLUS_ENABLE(SYSCFG_FASTMODEPLUS_PB8);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
