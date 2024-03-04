@@ -52,7 +52,7 @@ bool Apps::get_sensors_plausibility(int apps_raw_value_1, int apps_raw_value_2)
 	}
 }
 
-int Apps::get_value_to_send()
+uint16_t Apps::get_value_to_send()
 {
     auto [apps_avg_1, apps_avg_2] = get_raw_avg_apps_value();
 

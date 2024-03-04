@@ -158,6 +158,8 @@ int main(void)
   HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t*>(adc1_dma_buffer), 150);
   HAL_ADC_Start_DMA(&hadc2, reinterpret_cast<uint32_t*>(adc2_dma_buffer), 250);
   HAL_TIM_Base_Start(&htim2);
+
+  HAL_FDCAN_Start(&hfdcan1);
   // Brakes
 
   /* USER CODE END 2 */
@@ -170,10 +172,20 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
+
 	  apps_value_to_send = apps.get_value_to_send();
 
+	  PUTM_CAN::Apps_main apps = {
+			  .pedal_position = apps_value_to_send,
+			  .counter = 0,
+			  .position_diff = 0,
+			  .device_state = PUTM_CAN::Apps_states::Normal_operation
+	  };
+
+	  auto apps_main_frame = PUTM_CAN::Can_tx_message<PUTM_CAN::Apps_main>(apps, PUTM_CAN::can_tx_header_APPS_MAIN);
+
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-	  HAL_Delay(10);
+	  HAL_Delay(250);
   }
   /* USER CODE END 3 */
 }

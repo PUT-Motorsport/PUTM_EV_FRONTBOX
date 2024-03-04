@@ -52,7 +52,7 @@ public:
 	std::pair<int, int> get_raw_avg_apps_value();
 	std::pair<int, int> get_raw_avg_press_value();
 	bool get_sensors_plausibility(int apps_raw_value_1, int apps_raw_value_2);
-	int get_value_to_send();
+	uint16_t get_value_to_send();
 	int apps_nonlinear_curve(int apps, APPS_map_profile map);
 	float horner(const float *arry, unsigned int array_size, float x);
 };
