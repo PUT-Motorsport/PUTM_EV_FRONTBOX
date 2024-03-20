@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model ELVH-L10D-HRRD-C-N2A4
+#/15764945/696300/2.49/8/3/Integrated Circuit
+DEF ELVH-L10D-HRRD-C-N2A4 IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "ELVH-L10D-HRRD-C-N2A4" 950 200 50 H V L CNN
+F2 "ELVHL10DHRRDCN2A4" 950 100 50 H I L CNN
+F3 "https://www.allsensors.com/datasheets/DS-0376_Rev_A.pdf" 950 0 50 H I L CNN
+F4 "Pressure Sensor -0.29 ~ 0.36PSI (-2 ~ 2.5kPa) Differential Male - 0.06\" (1.6mm) Tube, Dual 14 b 8-DIP (0.504\", 12.80mm), Dual Ports, Same Side" 950 -100 50 H I L CNN "Description"
+F5 "8.98" 950 -200 50 H I L CNN "Height"
+F6 "Amphenol" 950 -300 50 H I L CNN "Manufacturer_Name"
+F7 "ELVH-L10D-HRRD-C-N2A4" 950 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 950 -500 50 H I L CNN "Mouser Part Number"
+F9 "" 950 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 950 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 950 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X GND 1 0 0 200 R 50 50 0 0 P
+X VS 2 0 -100 200 R 50 50 0 0 P
+X SDA 3 0 -200 200 R 50 50 0 0 P
+X SCL 4 0 -300 200 R 50 50 0 0 P
+X N/C_1 5 1100 -300 200 L 50 50 0 0 P
+X N/C_2 6 1100 -200 200 L 50 50 0 0 P
+X N/C_3 7 1100 -100 200 L 50 50 0 0 P
+X N/C_4 8 1100 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
