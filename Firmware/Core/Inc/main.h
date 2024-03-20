@@ -67,6 +67,8 @@ void Error_Handler(void);
 #define LED1_GPIO_Port GPIOC
 #define SAFETY_Pin GPIO_PIN_3
 #define SAFETY_GPIO_Port GPIOB
+#define RESET_Pin GPIO_PIN_8
+#define RESET_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

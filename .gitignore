@@ -32,3 +32,17 @@ fp-info-cache
 *.xml
 *.csv
 /.metadata/
+# Cube ide ignore
+.metadata/
+RemoteSystemsTempFiles/
+.settings/
+Debug/
+*.launch
+
+# STM32 git ignore
+*.mxproject
+
+# Ignore can libraru
+Firmware/Core/Inc/PUTM_EV_CAN_LIBRARY_2024/
+.metadata/.plugins/com.genuitec.eclipse.devstyle/recent.json
+Hardware/PUTM_EV_Frontbox_2023/~PUTM_EV_Frontbox_2023.kicad_pcb.lck
