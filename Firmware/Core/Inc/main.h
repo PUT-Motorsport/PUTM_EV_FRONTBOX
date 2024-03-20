@@ -65,10 +65,24 @@ void Error_Handler(void);
 #define LED2_GPIO_Port GPIOC
 #define LED1_Pin GPIO_PIN_7
 #define LED1_GPIO_Port GPIOC
+#define Sense_EBS_Pin GPIO_PIN_10
+#define Sense_EBS_GPIO_Port GPIOC
+#define Sense_Left_Pin GPIO_PIN_11
+#define Sense_Left_GPIO_Port GPIOC
+#define Sense_Driver_Pin GPIO_PIN_12
+#define Sense_Driver_GPIO_Port GPIOC
 #define SAFETY_Pin GPIO_PIN_3
 #define SAFETY_GPIO_Port GPIOB
-#define RESET_Pin GPIO_PIN_8
-#define RESET_GPIO_Port GPIOB
+#define Sense_Left_Wheel_Pin GPIO_PIN_4
+#define Sense_Left_Wheel_GPIO_Port GPIOB
+#define Sense_Right_Wheel_Pin GPIO_PIN_6
+#define Sense_Right_Wheel_GPIO_Port GPIOB
+#define Sense_Overtravel_Pin GPIO_PIN_7
+#define Sense_Overtravel_GPIO_Port GPIOB
+#define Sense_Right_Pin GPIO_PIN_8
+#define Sense_Right_GPIO_Port GPIOB
+#define Sense_BSPD_Pin GPIO_PIN_9
+#define Sense_BSPD_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
