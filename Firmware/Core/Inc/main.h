@@ -79,8 +79,8 @@ void Error_Handler(void);
 #define Sense_Right_Wheel_GPIO_Port GPIOB
 #define Sense_Overtravel_Pin GPIO_PIN_7
 #define Sense_Overtravel_GPIO_Port GPIOB
-#define Sense_Right_Pin GPIO_PIN_8
-#define Sense_Right_GPIO_Port GPIOB
+#define BOOOT_Pin GPIO_PIN_8
+#define BOOOT_GPIO_Port GPIOB
 #define Sense_BSPD_Pin GPIO_PIN_9
 #define Sense_BSPD_GPIO_Port GPIOB
 

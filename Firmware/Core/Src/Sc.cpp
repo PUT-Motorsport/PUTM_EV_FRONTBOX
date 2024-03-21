@@ -29,8 +29,8 @@ SC_val[4]=Sense_Left_Wheel;
 Sense_Overtravel=HAL_GPIO_ReadPin(Sense_Overtravel_GPIO_Port, Sense_Overtravel_Pin);
 SC_val[5]=Sense_Overtravel;
 
-Sense_Right=HAL_GPIO_ReadPin(Sense_Right_GPIO_Port, Sense_Right_Pin);
-SC_val[6]=Sense_Right;
+//Sense_Right=HAL_GPIO_ReadPin(Sense_Right_GPIO_Port, Sense_Right_Pin);
+//SC_val[6]=Sense_Right;
 
 Sense_Right_Wheel=HAL_GPIO_ReadPin(Sense_Right_Wheel_GPIO_Port, Sense_Right_Wheel_Pin);
 SC_val[7]=Sense_Right_Wheel;
