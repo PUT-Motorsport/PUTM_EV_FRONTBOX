@@ -53,6 +53,7 @@ uint16_t adc2_dma_buffer[250];
 
 Apps apps;
 Brakes brakes;
+Analog analogs;
 
 /* USER CODE END PM */
 
@@ -105,7 +106,9 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int apps_value_to_send;
+uint16_t apps_value_to_send;
+std::pair<uint16_t, uint16_t> brakePressureValueToSend;
+int16_t steering_position_to_send;
 /* USER CODE END 0 */
 
 /**
@@ -147,11 +150,11 @@ int main(void)
   // Setup DAC for the offset voltages
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
   HAL_DAC_Start(&hdac2, DAC_CHANNEL_1);
-  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1400); // ~2200  mV 2733
-  HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 1800); // ~2418 mV 3003
-  // Turn on safety
-  HAL_GPIO_WritePin(SAFETY_GPIO_Port, SAFETY_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(BOOOT_GPIO_Port, BOOOT_Pin, GPIO_PIN_RESET);
+  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1850); // ~2200  mV 2733
+  HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 900); // ~2418 mV 3003
+ // Turn on safety
+//  HAL_GPIO_WritePin(SAFETY_GPIO_Port, SAFETY_Pin, GPIO_PIN_SET);
+//  HAL_GPIO_WritePin(BOOOT_GPIO_Port, BOOOT_Pin, GPIO_PIN_RESET);
   // APPS
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
   HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
@@ -161,8 +164,6 @@ int main(void)
   HAL_TIM_Base_Start(&htim2);
 
   HAL_FDCAN_Start(&hfdcan1);
-  // Brakes
-  uint8_t counter = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -174,20 +175,22 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 	  apps_value_to_send = apps.get_value_to_send();
+	  brakePressureValueToSend = brakes.get_raw_avg_press_value();
+	  steering_position_to_send = analogs.get_steering_position();
 
-	  PUTM_CAN::Apps_main appsfr = {
-			  .pedal_position = (uint16_t)apps_value_to_send,
-			  .counter = counter++,
-			  .position_diff = 10,
-			  .device_state = PUTM_CAN::Apps_states::Power_up
+	  PUTM_CAN::DriverInput drvInput = {
+			  .pedalPosition = (uint16_t)apps_value_to_send,
+			  .brakePressureFront = (uint16_t)brakePressureValueToSend.first,
+			  .brakePressureRear = (uint16_t)brakePressureValueToSend.second,
+			  .steeringWheelPosition = (int16_t)steering_position_to_send
 	  };
 
-	  auto apps_main_frame = PUTM_CAN::Can_tx_message<PUTM_CAN::Apps_main>(appsfr, PUTM_CAN::can_tx_header_APPS_MAIN);
-	  HAL_StatusTypeDef status = apps_main_frame.send(hfdcan1);
+	  auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
+	  HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
 	  UNUSED(status);
 
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-	  HAL_Delay(10);
+	  HAL_Delay(25);
   }
   /* USER CODE END 3 */
 }
