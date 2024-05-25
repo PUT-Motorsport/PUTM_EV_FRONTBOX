@@ -31,6 +31,7 @@
 #include "BrakesAbstract.hpp"
 #include "AnalogsAbstract.hpp"
 #include "ScAbstract.hpp"
+#include "AccelerometerAbstract.hpp"
 
 #include "PUTM_EV_CAN_LIBRARY_2024/lib/can_interface.hpp"
 /* USER CODE END Includes */
@@ -50,10 +51,16 @@
 
 uint16_t adc1_dma_buffer[150];
 uint16_t adc2_dma_buffer[250];
+bool sdc_values[8];
+uint8_t sdc_values_to_send;
+
+float accelerometer_values[3]; //0- x axis 1- y axis 2-z axis value in g
 
 Apps apps;
 Brakes brakes;
 Analog analogs;
+Accelerometer accelerometer;
+SC Sc;
 
 /* USER CODE END PM */
 
@@ -67,6 +74,8 @@ DAC_HandleTypeDef hdac1;
 DAC_HandleTypeDef hdac2;
 
 FDCAN_HandleTypeDef hfdcan1;
+
+I2C_HandleTypeDef hi2c3;
 
 TIM_HandleTypeDef htim2;
 
@@ -84,6 +93,7 @@ static void MX_DAC1_Init(void);
 static void MX_DAC2_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_FDCAN1_Init(void);
+static void MX_I2C3_Init(void);
 /* USER CODE BEGIN PFP */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
@@ -102,6 +112,30 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 		j++;
 	}
 }
+void update_accelerometer_values()
+{
+accelerometer.acc_update_value(hi2c3);
+accelerometer_values[0]=accelerometer.acc_val[0]/(16489.0/8);
+accelerometer_values[1]=accelerometer.acc_val[1]/(16489.0/8);
+accelerometer_values[2]=accelerometer.acc_val[2]/(16489.0/8);
+}
+
+void update_sc_val()
+{
+	Sc.update_val();
+	  uint8_t bufor = 0;
+	 for(int i = 0; i<=8 ; i++)
+	    {
+	       if(Sc.SC_val[i])
+	       {
+	    	   bufor |= 1 << i;
+	       }
+
+	    }
+	    sdc_values_to_send = bufor;
+}
+
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -146,6 +180,7 @@ int main(void)
   MX_DAC2_Init();
   MX_TIM2_Init();
   MX_FDCAN1_Init();
+  MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
   // Setup DAC for the offset voltages
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
@@ -164,15 +199,24 @@ int main(void)
   HAL_TIM_Base_Start(&htim2);
 
   HAL_FDCAN_Start(&hfdcan1);
+
+  //Accelerometer
+  accelerometer.acc_initial(hi2c3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_SET);
+
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
 
 	  apps_value_to_send = apps.get_value_to_send();
 	  brakePressureValueToSend = brakes.get_raw_avg_press_value();
@@ -188,6 +232,9 @@ int main(void)
 	  auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
 	  HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
 	  UNUSED(status);
+	  update_accelerometer_values();
+	  update_sc_val();
+
 
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 	  HAL_Delay(25);
@@ -571,6 +618,54 @@ static void MX_FDCAN1_Init(void)
   /* USER CODE BEGIN FDCAN1_Init 2 */
 
   /* USER CODE END FDCAN1_Init 2 */
+
+}
+
+/**
+  * @brief I2C3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C3_Init(void)
+{
+
+  /* USER CODE BEGIN I2C3_Init 0 */
+
+  /* USER CODE END I2C3_Init 0 */
+
+  /* USER CODE BEGIN I2C3_Init 1 */
+
+  /* USER CODE END I2C3_Init 1 */
+  hi2c3.Instance = I2C3;
+  hi2c3.Init.Timing = 0x30909DEC;
+  hi2c3.Init.OwnAddress1 = 0;
+  hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c3.Init.OwnAddress2 = 0;
+  hi2c3.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c3.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c3.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c3, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c3, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C3_Init 2 */
+
+  /* USER CODE END I2C3_Init 2 */
 
 }
 
