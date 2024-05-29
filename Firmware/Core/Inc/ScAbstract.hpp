@@ -16,17 +16,16 @@
 
 class SC{
 private:
-	bool Sense_BSPD;
 	bool Sense_Right;
+	bool Sense_Left;
+	bool Sense_Driver;
+	bool Sense_Inertia;
+	bool Sense_BSPD;
 	bool Sense_Overtravel;
 	bool Sense_Right_Wheel;
-	bool Sense_Left_Wheel;
-	bool Sense_Driver;
-	bool Sense_Left;
-	bool Sense_EBS;
 public:
 bool SC_val[8];
-void update_val();
+uint8_t update_val();
 
 };
 
