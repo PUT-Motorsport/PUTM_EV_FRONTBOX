@@ -7,7 +7,7 @@
  *      Author: PW
  */
 
-#include "ScAbstract.hpp"
+#include "interfaces/ScAbstract.hpp"
 
 uint8_t SC::update_val()
 {

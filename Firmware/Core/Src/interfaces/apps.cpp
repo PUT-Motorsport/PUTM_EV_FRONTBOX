@@ -5,7 +5,7 @@
  *      Author: ketirange
  */
 
-#include "AppsAbstract.hpp"
+#include "interfaces/AppsAbstract.hpp"
 
 extern bool sensor_plausibility_last;
 

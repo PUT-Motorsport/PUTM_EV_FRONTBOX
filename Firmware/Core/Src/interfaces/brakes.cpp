@@ -5,7 +5,7 @@
  *      Author: ketirange
  */
 
-#include "BrakesAbstract.hpp"
+#include "interfaces/BrakesAbstract.hpp"
 
 std::pair<int, int> Brakes::get_raw_avg_press_value()
 {
