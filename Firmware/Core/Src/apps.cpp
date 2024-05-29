@@ -7,12 +7,6 @@
 
 #include "AppsAbstract.hpp"
 
-//extern uint16_t apps1_val_raw[50];
-//extern uint16_t apps2_val_raw[50];
-//
-//extern uint16_t brake_pressure1_val_raw[50];
-//extern uint16_t brake_pressure2_val_raw[50];
-
 extern bool sensor_plausibility_last;
 
 std::pair<int, int> Apps::get_raw_avg_apps_value()
