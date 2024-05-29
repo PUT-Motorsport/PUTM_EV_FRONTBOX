@@ -31,8 +31,8 @@ private:
 	uint8_t Int1_init = 0x01;//configuration device
 
 public:
-void acc_update_value(I2C_HandleTypeDef );
-void acc_initial(I2C_HandleTypeDef);
+//void acc_update_value(I2C_HandleTypeDef );
+//void acc_initial(I2C_HandleTypeDef);
 int16_t acc_val [3];
 };
 
