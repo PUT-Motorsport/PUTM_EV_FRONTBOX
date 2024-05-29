@@ -65,6 +65,8 @@ void Error_Handler(void);
 #define LED2_GPIO_Port GPIOC
 #define LED1_Pin GPIO_PIN_7
 #define LED1_GPIO_Port GPIOC
+#define Sense_Inertia_Pin GPIO_PIN_15
+#define Sense_Inertia_GPIO_Port GPIOA
 #define Sense_EBS_Pin GPIO_PIN_10
 #define Sense_EBS_GPIO_Port GPIOC
 #define Sense_Left_Pin GPIO_PIN_11
@@ -75,10 +77,12 @@ void Error_Handler(void);
 #define SAFETY_GPIO_Port GPIOB
 #define Sense_Left_Wheel_Pin GPIO_PIN_4
 #define Sense_Left_Wheel_GPIO_Port GPIOB
-#define Sense_Right_Wheel_Pin GPIO_PIN_6
+#define Sense_Right_Wheel_Pin GPIO_PIN_5
 #define Sense_Right_Wheel_GPIO_Port GPIOB
-#define Sense_Overtravel_Pin GPIO_PIN_7
+#define Sense_Overtravel_Pin GPIO_PIN_6
 #define Sense_Overtravel_GPIO_Port GPIOB
+#define Sense_Right_Kill_Pin GPIO_PIN_7
+#define Sense_Right_Kill_GPIO_Port GPIOB
 #define BOOOT_Pin GPIO_PIN_8
 #define BOOOT_GPIO_Port GPIOB
 #define Sense_BSPD_Pin GPIO_PIN_9
