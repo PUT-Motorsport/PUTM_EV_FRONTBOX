@@ -54,7 +54,6 @@ uint16_t adc2_dma_buffer[250];
 //uint8_t sdc_values_to_send;
 
 float accelerometer_values[3]; //0- x axis 1- y axis 2-z axis value in g
-
 Apps apps;
 Brakes brakes;
 Analog analogs;
@@ -109,30 +108,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 		j++;
 	}
 }
-void update_accelerometer_values()
-{
-//accelerometer.acc_update_value(hi2c3);
-accelerometer_values[0]=accelerometer.acc_val[0]/(16489.0/8);
-accelerometer_values[1]=accelerometer.acc_val[1]/(16489.0/8);
-accelerometer_values[2]=accelerometer.acc_val[2]/(16489.0/8);
-}
-
-//uint8_t update_sc_val()
-//{
-//	Sc.update_val();
-//	uint8_t bufor = 0;
-//	for(int i = 0; i<=8 ; i++)
-//		{
-//	      if(Sc.SC_val[i])
-//	      {
-//	    	  bufor |= 1 << i;
-//	      }
-//
-//	   }
-//	return bufor;
-//}
-
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
