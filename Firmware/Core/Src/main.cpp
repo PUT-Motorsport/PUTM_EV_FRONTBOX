@@ -110,20 +110,27 @@ void StartBlinkTask(void *argument);
 /* USER CODE BEGIN PFP */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-	int j = 0;
-	for(int i = 0; i < 150; i = i+3)
+	uint8_t j = 0;
+	if (hadc->Instance == ADC1)
 	{
-		apps.apps1_val_raw[j] = adc1_dma_buffer[i];
-		analogs.steering_position_val_raw[j] = adc1_dma_buffer[i+2];
-		j++;
+		int j = 0;
+		for(int i = 0; i < 150; i = i+3)
+		{
+			apps.apps1_val_raw[j] = adc1_dma_buffer[i];
+			analogs.steering_position_val_raw[j] = adc1_dma_buffer[i+2];
+			j++;
+		}
 	}
-	j = 0;
-	for(int i = 0; i < 250; i = i+5)
+	else
 	{
-		apps.apps2_val_raw[j] = adc2_dma_buffer[i+4];
-		brakes.brake_pressure_rear_val_raw[j] = adc2_dma_buffer[i];
-		brakes.brake_pressure_front_val_raw[j] = adc2_dma_buffer[i+1];
-		j++;
+		j = 0;
+		for(int i = 0; i < 250; i = i+5)
+		{
+			apps.apps2_val_raw[j] = adc2_dma_buffer[i+4];
+			brakes.brake_pressure_rear_val_raw[j] = adc2_dma_buffer[i];
+			brakes.brake_pressure_front_val_raw[j] = adc2_dma_buffer[i+1];
+			j++;
+		}
 	}
 }
 /* USER CODE END PFP */
@@ -186,7 +193,7 @@ int main(void)
 
   HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t*>(adc1_dma_buffer), 150);
   HAL_ADC_Start_DMA(&hadc2, reinterpret_cast<uint32_t*>(adc2_dma_buffer), 250);
-  HAL_TIM_Base_Start(&htim2);
+//  HAL_TIM_Base_Start(&htim2);
 
   HAL_FDCAN_Start(&hfdcan1);
 
@@ -798,13 +805,13 @@ void StartMainTask(void *argument)
 	  };
 
 	  PUTM_CAN::FrontData frontData = {
-			  .sense_left_kill = sc_state & 0x01,
-			  .sense_right_kill = sc_state & 0x02,
-			  .sense_driver_kill = sc_state & 0x03,
-			  .sense_inertia = sc_state & 0x04,
-			  .sense_bspd = sc_state & 0x05,
-			  .sense_overtravel = sc_state & 0x06,
-			  .sense_right_wheel = sc_state & 0x07,
+			  .sense_left_kill    = static_cast<bool>(sc_state & 0x01),
+			  .sense_right_kill   = static_cast<bool>(sc_state & 0x02),
+			  .sense_driver_kill  = static_cast<bool>(sc_state & 0x03),
+			  .sense_inertia      = static_cast<bool>(sc_state & 0x04),
+			  .sense_bspd         = static_cast<bool>(sc_state & 0x05),
+			  .sense_overtravel   = static_cast<bool>(sc_state & 0x06),
+			  .sense_right_wheel  = static_cast<bool>(sc_state & 0x07),
 	  };
 
 
