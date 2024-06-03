@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -75,6 +76,13 @@ FDCAN_HandleTypeDef hfdcan1;
 
 TIM_HandleTypeDef htim2;
 
+/* Definitions for MainTask */
+osThreadId_t MainTaskHandle;
+const osThreadAttr_t MainTask_attributes = {
+  .name = "MainTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -89,6 +97,8 @@ static void MX_DAC1_Init(void);
 static void MX_DAC2_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_FDCAN1_Init(void);
+void StartMainTask(void *argument);
+
 /* USER CODE BEGIN PFP */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
@@ -172,71 +182,58 @@ int main(void)
 
   HAL_FDCAN_Start(&hfdcan1);
 
-  //Accelerometer
-//  accelerometer.acc_initial(hi2c3);
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_SET);
 
-  auto time_ref = HAL_GetTick();
+  //Accelerometer
+//  accelerometer.acc_initial(hi2c3);
+  /* USER CODE END 2 */
+
+  /* Init scheduler */
+  osKernelInitialize();
+
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+
+  /* Create the thread(s) */
+  /* creation of MainTask */
+  MainTaskHandle = osThreadNew(StartMainTask, NULL, &MainTask_attributes);
+
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+  /* USER CODE END RTOS_THREADS */
+
+  /* USER CODE BEGIN RTOS_EVENTS */
+  /* add events, ... */
+  /* USER CODE END RTOS_EVENTS */
+
+  /* Start scheduler */
+  osKernelStart();
+
+  /* We should never get here as control is now taken by the scheduler */
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
 
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-
-	  apps_value_to_send = apps.get_value_to_send();
-	  brakePressureValueToSend = brakes.get_raw_avg_press_value();
-	  steering_position_to_send = analogs.get_steering_position();
-	  sc_state = sc.update_val();
-
-	  PUTM_CAN::DriverInput drvInput = {
-			  .pedalPosition = (uint16_t)apps_value_to_send,
-			  .brakePressureFront = (uint16_t)brakePressureValueToSend.first,
-			  .brakePressureRear = (uint16_t)brakePressureValueToSend.second,
-			  .steeringWheelPosition = (int16_t)steering_position_to_send
-	  };
-
-	  PUTM_CAN::FrontData frontData = {
-			  .sense_left_kill = sc_state & 0x01,
-			  .sense_right_kill = sc_state & 0x02,
-			  .sense_driver_kill = sc_state & 0x03,
-			  .sense_inertia = sc_state & 0x04,
-			  .sense_bspd = sc_state & 0x05,
-			  .sense_overtravel = sc_state & 0x06,
-			  .sense_right_wheel = sc_state & 0x07,
-	  };
-
-
-	  auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
-	  HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
-	  UNUSED(status);
-
-	  auto frontDataFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
-	  status = frontDataFrame.send(hfdcan1);
-	  UNUSED(status);
-
-	  if (HAL_GetTick() - time_ref > 100)
-	  {
-		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-		time_ref = HAL_GetTick();
-	  }
-	  if (brakePressureValueToSend.first > 1500 || brakePressureValueToSend.second > 1500)
-	  {
-		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
-	  }
-	  else
-	  {
-		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
-	  }
-	  HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -677,10 +674,10 @@ static void MX_DMA_Init(void)
 
   /* DMA interrupt init */
   /* DMA1_Channel1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
   /* DMA1_Channel2_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
 
 }
@@ -763,6 +760,88 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartMainTask */
+/**
+  * @brief  Function implementing the MainTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartMainTask */
+void StartMainTask(void *argument)
+{
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+	  apps_value_to_send = apps.get_value_to_send();
+	  brakePressureValueToSend = brakes.get_raw_avg_press_value();
+	  steering_position_to_send = analogs.get_steering_position();
+	  sc_state = sc.update_val();
+
+	  PUTM_CAN::DriverInput drvInput = {
+			  .pedalPosition = (uint16_t)apps_value_to_send,
+			  .brakePressureFront = (uint16_t)brakePressureValueToSend.first,
+			  .brakePressureRear = (uint16_t)brakePressureValueToSend.second,
+			  .steeringWheelPosition = (int16_t)steering_position_to_send
+	  };
+
+	  PUTM_CAN::FrontData frontData = {
+			  .sense_left_kill = sc_state & 0x01,
+			  .sense_right_kill = sc_state & 0x02,
+			  .sense_driver_kill = sc_state & 0x03,
+			  .sense_inertia = sc_state & 0x04,
+			  .sense_bspd = sc_state & 0x05,
+			  .sense_overtravel = sc_state & 0x06,
+			  .sense_right_wheel = sc_state & 0x07,
+	  };
+
+
+	  auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
+	  HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
+	  UNUSED(status);
+
+	  auto frontDataFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
+	  status = frontDataFrame.send(hfdcan1);
+	  UNUSED(status);
+
+//	  if (HAL_GetTick() - time_ref > 100)
+//	  {
+//		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+//		time_ref = HAL_GetTick();
+//	  }
+	  if (brakePressureValueToSend.first > 1500 || brakePressureValueToSend.second > 1500)
+	  {
+		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+	  }
+	  else
+	  {
+		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+	  }
+  }
+  /* USER CODE END 5 */
+}
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM1 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM1) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.
