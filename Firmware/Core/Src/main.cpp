@@ -91,6 +91,13 @@ const osThreadAttr_t BlinkTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow
 };
+/* Definitions for AmkTask */
+osThreadId_t AmkTaskHandle;
+const osThreadAttr_t AmkTask_attributes = {
+  .name = "AmkTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -108,6 +115,7 @@ static void MX_FDCAN1_Init(void);
 static void MX_FDCAN2_Init(void);
 void StartMainTask(void *argument);
 void StartBlinkTask(void *argument);
+void StartAmkTask(void *argument);
 
 /* USER CODE BEGIN PFP */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
@@ -234,6 +242,9 @@ int main(void)
 
   /* creation of BlinkTask */
   BlinkTaskHandle = osThreadNew(StartBlinkTask, NULL, &BlinkTask_attributes);
+
+  /* creation of AmkTask */
+  AmkTaskHandle = osThreadNew(StartAmkTask, NULL, &AmkTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -899,6 +910,24 @@ void StartBlinkTask(void *argument)
     osDelay(150);
   }
   /* USER CODE END StartBlinkTask */
+}
+
+/* USER CODE BEGIN Header_StartAmkTask */
+/**
+* @brief Function implementing the AmkTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartAmkTask */
+void StartAmkTask(void *argument)
+{
+  /* USER CODE BEGIN StartAmkTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartAmkTask */
 }
 
 /**
