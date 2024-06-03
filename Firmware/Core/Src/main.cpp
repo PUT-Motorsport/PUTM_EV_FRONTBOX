@@ -83,6 +83,13 @@ const osThreadAttr_t MainTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal
 };
+/* Definitions for BlinkTask */
+osThreadId_t BlinkTaskHandle;
+const osThreadAttr_t BlinkTask_attributes = {
+  .name = "BlinkTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -98,6 +105,7 @@ static void MX_DAC2_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_FDCAN1_Init(void);
 void StartMainTask(void *argument);
+void StartBlinkTask(void *argument);
 
 /* USER CODE BEGIN PFP */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
@@ -213,6 +221,9 @@ int main(void)
   /* Create the thread(s) */
   /* creation of MainTask */
   MainTaskHandle = osThreadNew(StartMainTask, NULL, &MainTask_attributes);
+
+  /* creation of BlinkTask */
+  BlinkTaskHandle = osThreadNew(StartBlinkTask, NULL, &BlinkTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -805,11 +816,6 @@ void StartMainTask(void *argument)
 	  status = frontDataFrame.send(hfdcan1);
 	  UNUSED(status);
 
-//	  if (HAL_GetTick() - time_ref > 100)
-//	  {
-//		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-//		time_ref = HAL_GetTick();
-//	  }
 	  if (brakePressureValueToSend.first > 1500 || brakePressureValueToSend.second > 1500)
 	  {
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
@@ -818,8 +824,28 @@ void StartMainTask(void *argument)
 	  {
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 	  }
+	  osDelay(10);
   }
   /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_StartBlinkTask */
+/**
+* @brief Function implementing the BlinkTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartBlinkTask */
+void StartBlinkTask(void *argument)
+{
+  /* USER CODE BEGIN StartBlinkTask */
+  /* Infinite loop */
+  for(;;)
+  {
+	HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    osDelay(150);
+  }
+  /* USER CODE END StartBlinkTask */
 }
 
 /**
