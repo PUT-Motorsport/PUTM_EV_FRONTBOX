@@ -34,6 +34,7 @@
 #include "interfaces/ScAbstract.hpp"
 #include "interfaces/AccelerometerAbstract.hpp"
 #include "PUTM_EV_CAN_LIBRARY_2024/lib/can_interface.hpp"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -75,6 +76,8 @@ DAC_HandleTypeDef hdac2;
 FDCAN_HandleTypeDef hfdcan1;
 FDCAN_HandleTypeDef hfdcan2;
 
+IWDG_HandleTypeDef hiwdg;
+
 TIM_HandleTypeDef htim2;
 
 /* Definitions for MainTask */
@@ -113,6 +116,8 @@ static void MX_DAC2_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_FDCAN1_Init(void);
 static void MX_FDCAN2_Init(void);
+static void MX_IWDG_Init(void);
+
 void StartMainTask(void *argument);
 void StartBlinkTask(void *argument);
 void StartAmkTask(void *argument);
@@ -189,32 +194,9 @@ int main(void)
   MX_TIM2_Init();
   MX_FDCAN1_Init();
   MX_FDCAN2_Init();
+  MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
-  // Setup DAC for the offset voltages
-  HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
-  HAL_DAC_Start(&hdac2, DAC_CHANNEL_1);
-  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1850); // ~2200  mV 2733
-  HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 900); // ~2418 mV 3003
- // Turn on safety
-//  HAL_GPIO_WritePin(SAFETY_GPIO_Port, SAFETY_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(BOOOT_GPIO_Port, BOOOT_Pin, GPIO_PIN_RESET);
-  // APPS
-  HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
-  HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
 
-  HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t*>(adc1_dma_buffer), 150);
-  HAL_ADC_Start_DMA(&hadc2, reinterpret_cast<uint32_t*>(adc2_dma_buffer), 250);
-//  HAL_TIM_Base_Start(&htim2);
-
-  HAL_FDCAN_Start(&hfdcan1);
-
-  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_SET);
-
-  //Accelerometer
-//  accelerometer.acc_initial(hi2c3);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -286,9 +268,10 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
@@ -693,6 +676,35 @@ static void MX_FDCAN2_Init(void)
 }
 
 /**
+  * @brief IWDG Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_IWDG_Init(void)
+{
+
+  /* USER CODE BEGIN IWDG_Init 0 */
+
+  /* USER CODE END IWDG_Init 0 */
+
+  /* USER CODE BEGIN IWDG_Init 1 */
+
+  /* USER CODE END IWDG_Init 1 */
+  hiwdg.Instance = IWDG;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
+  hiwdg.Init.Window = 4095;
+  hiwdg.Init.Reload = 4095;
+  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN IWDG_Init 2 */
+
+  /* USER CODE END IWDG_Init 2 */
+
+}
+
+/**
   * @brief TIM2 Initialization Function
   * @param None
   * @retval None
@@ -713,7 +725,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 63;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 99;
+  htim2.Init.Period = 2500;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -846,6 +858,27 @@ static void MX_GPIO_Init(void)
 void StartMainTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
+	/* Set APPS reference voltage */
+	HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
+	HAL_DAC_Start(&hdac2, DAC_CHANNEL_1);
+	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1850); // ~2200  mV 2733
+	HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 900); // ~2418 mV 3003
+
+	HAL_GPIO_WritePin(BOOOT_GPIO_Port, BOOOT_Pin, GPIO_PIN_RESET);
+	// APPS
+	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
+	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
+
+	HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t*>(adc1_dma_buffer), 150);
+	HAL_ADC_Start_DMA(&hadc2, reinterpret_cast<uint32_t*>(adc2_dma_buffer), 250);
+	HAL_TIM_Base_Start(&htim2);
+
+	HAL_FDCAN_Start(&hfdcan1);
+
+	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_SET);
   /* Infinite loop */
   for(;;)
   {
@@ -857,7 +890,7 @@ void StartMainTask(void *argument)
 	  PUTM_CAN::DriverInput drvInput = {
 			  .pedalPosition = (uint16_t)apps_value_to_send,
 			  .brakePressureFront = (uint16_t)brakePressureValueToSend.first,
-			  .brakePressureRear = (uint16_t)brakePressureValueToSend.second,
+			  .brakePressureRear = 0,
 			  .steeringWheelPosition = (int16_t)steering_position_to_send
 	  };
 
@@ -880,7 +913,7 @@ void StartMainTask(void *argument)
 	  status = frontDataFrame.send(hfdcan1);
 	  UNUSED(status);
 
-	  if (brakePressureValueToSend.first > 1500 || brakePressureValueToSend.second > 1500)
+	  if (brakePressureValueToSend.first > 1500)
 	  {
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
 	  }
@@ -888,6 +921,7 @@ void StartMainTask(void *argument)
 	  {
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 	  }
+	  HAL_IWDG_Refresh(&hiwdg);
 	  osDelay(10);
   }
   /* USER CODE END 5 */
@@ -925,7 +959,7 @@ void StartAmkTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    osDelay(100);
   }
   /* USER CODE END StartAmkTask */
 }
@@ -962,6 +996,7 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+
   }
   /* USER CODE END Error_Handler_Debug */
 }
