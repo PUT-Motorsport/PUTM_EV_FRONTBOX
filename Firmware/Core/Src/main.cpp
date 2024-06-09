@@ -148,7 +148,15 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 	}
 }
 /* USER CODE END PFP */
-
+//void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan1) {
+//    PUTM_CAN::Can_rx_message rx { *hfdcan1, 0 };
+//    if(rx.status == HAL_StatusTypeDef::HAL_OK) {
+//        if(not PUTM_CAN::can.parse_message(rx)) {
+//            // Unknown message
+//            // Error_Handler();
+//        }
+//    }
+//}
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint16_t apps_value_to_send;
@@ -873,6 +881,7 @@ void StartMainTask(void *argument)
 	HAL_TIM_Base_Start(&htim2);
 
 	HAL_FDCAN_Start(&hfdcan1);
+	HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
 
 	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
