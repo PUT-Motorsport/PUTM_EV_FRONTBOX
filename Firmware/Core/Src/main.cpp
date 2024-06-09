@@ -148,15 +148,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 	}
 }
 /* USER CODE END PFP */
-//void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan1) {
-//    PUTM_CAN::Can_rx_message rx { *hfdcan1, 0 };
-//    if(rx.status == HAL_StatusTypeDef::HAL_OK) {
-//        if(not PUTM_CAN::can.parse_message(rx)) {
-//            // Unknown message
-//            // Error_Handler();
-//        }
-//    }
-//}
+
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint16_t apps_value_to_send;
