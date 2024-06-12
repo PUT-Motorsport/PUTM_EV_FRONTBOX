@@ -7,3 +7,6 @@
 [submodule "Firmware/Core/Inc/-f"]
 	path = Firmware/Core/Inc/-f
 	url = git@github.com:PUT-Motorsport/PUTM_EV_CAN_LIBRARY_2024.git
+[submodule "Firmware/Core/Inc/LowPassFilter"]
+	path = Firmware/Core/Inc/LowPassFilter
+	url = https://github.com/jimmyberg/LowPassFilter.git
