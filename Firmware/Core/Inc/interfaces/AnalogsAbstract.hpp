@@ -18,8 +18,8 @@ class Analog{
 private:
 	static const unsigned number_of_analog_samples = 50;
 
-	static const int STEERING_RAW_MIN = 0;
-	static const int STEERING_RAW_MAX = 4010;
+	static const int STEERING_RAW_MIN = 330;
+	static const int STEERING_RAW_MAX = 2800;
 
 	const int STEERING_RAW_FULLSCALE = STEERING_RAW_MAX - STEERING_RAW_MIN;
 	const int STEERING_OFFSETTED_MIN = (int)std::round(STEERING_RAW_FULLSCALE * 0 + STEERING_RAW_MIN);
@@ -31,9 +31,6 @@ private:
 
 	const float scale_factor_1 = (float)(((float)STEERING_RAW_MAX - (float)STEERING_OFFSETTED_MIN) / (float)STEERING_REAL_MAX);
 
-	static const uint16_t min_angle = 270;
-	static const uint16_t max_angle = 2850;
-	static constexpr uint16_t sensor_range = max_angle - min_angle;
 
 public:
 	uint16_t steering_position_val_raw[number_of_analog_samples];
