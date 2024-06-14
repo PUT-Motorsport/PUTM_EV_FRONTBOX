@@ -15,7 +15,7 @@ uint16_t Analog::get_steering_position()
 	for(unsigned int i = 0; i < number_of_analog_samples; i++)
 	{
 		last_sample = alpha * steering_position_val_raw[i] +(1-alpha) * last_sample;
-		steering_wheel_position_sum += current_sample;
+		steering_wheel_position_sum += last_sample;
 	}
 
 	uint64_t steering_position_val_avg = (int)(steering_wheel_position_sum / ((int)number_of_analog_samples));
