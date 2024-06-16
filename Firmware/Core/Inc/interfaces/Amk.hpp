@@ -17,19 +17,17 @@
 #include "main.h"
 
 
-
-class AMK{
-private:
-
-
-public:
-	void AMK()
-	{
-
-	}
-	void RunStateMachine(uint16_t pedalPosition, std::pair<uint16_t, uint16_t> BrakePressure, bool rtd_button);
-
-};
+//class AMK{
+//private:
+//
+//
+//public:
+//	void AMK()
+//	{
+//
+//	}
+//	void RunStateMachine(uint16_t pedalPosition, std::pair<uint16_t, uint16_t> BrakePressure, bool rtd_button);
+//};
 
 
 
