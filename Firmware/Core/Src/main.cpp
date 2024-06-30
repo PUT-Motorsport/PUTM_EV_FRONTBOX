@@ -163,6 +163,7 @@ uint8_t sc_state;
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -239,6 +240,7 @@ int main(void)
   osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
@@ -879,7 +881,6 @@ void StartMainTask(void *argument)
 	  apps_value_to_send = apps.get_value_to_send();
 	  brakePressureValueToSend = brakes.get_raw_avg_press_value();
 	  steering_position_to_send = analogs.get_steering_position();
-	  sc_state = sc.update_val();
 
 	  PUTM_CAN::DriverInput drvInput = {
 			  .pedalPosition = (uint16_t)apps_value_to_send,
@@ -888,33 +889,10 @@ void StartMainTask(void *argument)
 			  .steeringWheelPosition = (int16_t)steering_position_to_send
 	  };
 
-	  PUTM_CAN::FrontData frontData = {
-			  .sense_left_kill    = static_cast<bool>(sc_state & 0x01),
-			  .sense_right_kill   = static_cast<bool>(sc_state & 0x02),
-			  .sense_driver_kill  = static_cast<bool>(sc_state & 0x03),
-			  .sense_inertia      = static_cast<bool>(sc_state & 0x04),
-			  .sense_bspd         = static_cast<bool>(sc_state & 0x05),
-			  .sense_overtravel   = static_cast<bool>(sc_state & 0x06),
-			  .sense_right_wheel  = static_cast<bool>(sc_state & 0x07),
-	  };
-
-
 	  auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
 	  HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
 	  UNUSED(status);
 
-	  auto frontDataFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
-	  status = frontDataFrame.send(hfdcan1);
-	  UNUSED(status);
-
-	  if (brakePressureValueToSend.first > 1500)
-	  {
-		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
-	  }
-	  else
-	  {
-		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
-	  }
 	  HAL_IWDG_Refresh(&hiwdg);
 	  osDelay(10);
   }
@@ -934,8 +912,42 @@ void StartBlinkTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	  sc_state = sc.update_val();
+	  PUTM_CAN::FrontData frontData = {
+	 			  .sense_left_kill    = static_cast<bool>(sc_state & 0x01),
+	 			  .sense_right_kill   = static_cast<bool>(sc_state & 0x02),
+	 			  .sense_driver_kill  = static_cast<bool>(sc_state & 0x03),
+	 			  .sense_inertia      = static_cast<bool>(sc_state & 0x04),
+	 			  .sense_bspd         = static_cast<bool>(sc_state & 0x05),
+	 			  .sense_overtravel   = static_cast<bool>(sc_state & 0x06),
+	 			  .sense_right_wheel  = true
+	};
+
+	if (brakePressureValueToSend.first > 1000)
+	{
+		frontData.is_braking = true;
+	}
+	auto frontDataFrame =  PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
+	auto status = frontDataFrame.send(hfdcan1);
+
+
+	PUTM_CAN::Dashboard dash;
+	auto dash_button = HAL_GPIO_ReadPin(Sense_Right_Wheel_GPIO_Port, Sense_Right_Wheel_Pin);
+	if (dash_button == GPIO_PIN_RESET)
+	{
+		dash.ts_activation_button = true;
+//		if (brakePressureValueToSend.first > 1000)
+//		{
+//			dash.ready_to_drive_button = true;
+//		}
+		auto dashframe = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dash, PUTM_CAN::can_tx_header_DASHBOARD);
+		status = dashframe.send(hfdcan1);
+		UNUSED(status);
+		osDelay(1000);
+	}
+
 	HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-    osDelay(150);
+    osDelay(50);
   }
   /* USER CODE END StartBlinkTask */
 }
