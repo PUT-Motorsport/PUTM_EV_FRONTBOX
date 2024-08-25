@@ -22,7 +22,6 @@ private:
 	bool Sense_Inertia;
 	bool Sense_BSPD;
 	bool Sense_Overtravel;
-	bool Sense_Right_Wheel;
 public:
 bool SC_val[8];
 uint8_t update_val();

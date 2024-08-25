@@ -10,3 +10,6 @@
 [submodule "Firmware/Core/Inc/LowPassFilter"]
 	path = Firmware/Core/Inc/LowPassFilter
 	url = https://github.com/jimmyberg/LowPassFilter.git
+[submodule "Firmware/Middlewares/putm_sim_gen"]
+	path = Firmware/Middlewares/putm_sim_gen
+	url = git@github.com:PUT-Motorsport/putm_sim_gen.git

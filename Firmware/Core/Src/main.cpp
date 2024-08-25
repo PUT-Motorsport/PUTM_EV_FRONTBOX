@@ -52,10 +52,9 @@
 
 uint16_t adc1_dma_buffer[200];
 uint16_t adc2_dma_buffer[250];
-//bool sdc_values[8];
-//uint8_t sdc_values_to_send;
 
-float accelerometer_values[3]; //0- x axis 1- y axis 2-z axis value in g
+bool rtd {false};
+
 Apps apps;
 Brakes brakes;
 Analog analogs;
@@ -102,7 +101,15 @@ const osThreadAttr_t AmkTask_attributes = {
   .priority = (osPriority_t) osPriorityLow
 };
 /* USER CODE BEGIN PV */
-
+enum struct StateMachine {
+	UNDEFINED = -1,
+	ERROR_RESET,
+	IDLING,
+	STARTUP,
+	TORQUE_CONTROL,
+	SWITCH_OFF
+};
+StateMachine state = StateMachine::UNDEFINED;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -683,9 +690,9 @@ static void MX_IWDG_Init(void)
 
   /* USER CODE END IWDG_Init 1 */
   hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
-  hiwdg.Init.Window = 500;
-  hiwdg.Init.Reload = 4095;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_16;
+  hiwdg.Init.Window = 12000;
+  hiwdg.Init.Reload = 5000;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {
     Error_Handler();
@@ -853,8 +860,8 @@ void StartMainTask(void *argument)
 	/* Set APPS reference voltage */
 	HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
 	HAL_DAC_Start(&hdac2, DAC_CHANNEL_1);
-	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1850); // ~2200  mV 2733
-	HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 900); // ~2418 mV 3003
+	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1950); // ~2200  mV 2733
+	HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 2100); // ~2418 mV 3003
 
 	HAL_GPIO_WritePin(BOOOT_GPIO_Port, BOOOT_Pin, GPIO_PIN_RESET);
 	// APPS
@@ -875,26 +882,42 @@ void StartMainTask(void *argument)
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_SET);
-  /* Infinite loop */
-  for(;;)
-  {
-	  apps_value_to_send = apps.get_value_to_send();
-	  brakePressureValueToSend = brakes.get_raw_avg_press_value();
-	  steering_position_to_send = analogs.get_steering_position();
+	/* Infinite loop */
+	for(;;)
+	{
+		apps_value_to_send = apps.get_value_to_send();
+		brakePressureValueToSend = brakes.get_raw_avg_press_value();
+		steering_position_to_send = analogs.get_steering_position();
 
-	  PUTM_CAN::DriverInput drvInput = {
-			  .pedalPosition = (uint16_t)apps_value_to_send,
-			  .brakePressureFront = (uint16_t)brakePressureValueToSend.first,
-			  .brakePressureRear = 0,
+		PUTM_CAN::DriverInput drvInput = {
+			  .pedalPosition = apps_value_to_send,
+			  .brakePressureFront = brakePressureValueToSend.first,
+			  .brakePressureRear = brakePressureValueToSend.second,
 			  .steeringWheelPosition = (int16_t)steering_position_to_send
-	  };
+		};
 
-	  auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
-	  HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
-	  UNUSED(status);
+		auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
+		HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
+		UNUSED(status);
 
-	  HAL_IWDG_Refresh(&hiwdg);
-	  osDelay(10);
+		sc_state = sc.update_val();
+		PUTM_CAN::FrontData frontData = {
+	  	 			  .sense_left_kill    = static_cast<bool>(sc_state & 0x01),
+	  	 			  .sense_right_kill   = static_cast<bool>(sc_state & 0x02),
+	  	 			  .sense_driver_kill  = static_cast<bool>(sc_state & 0x03),
+	  	 			  .sense_inertia      = static_cast<bool>(sc_state & 0x04),
+	  	 			  .sense_bspd         = static_cast<bool>(sc_state & 0x05),
+	  	 			  .sense_overtravel   = static_cast<bool>(sc_state & 0x06),
+	  	 			  .sense_right_wheel  = true
+		};
+		if (brakePressureValueToSend.first > brakes.FRONT_BRAKING_THRESHOLD || brakePressureValueToSend.second > brakes.REAR_BRAKING_THRESHOLD)
+		{
+			frontData.is_braking = true;
+		}
+	  	auto frontDataFrame =  PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
+	  	status = frontDataFrame.send(hfdcan1);
+	  	HAL_IWDG_Refresh(&hiwdg);
+	  	osDelay(25);
   }
   /* USER CODE END 5 */
 }
@@ -910,57 +933,66 @@ void StartBlinkTask(void *argument)
 {
   /* USER CODE BEGIN StartBlinkTask */
   /* Infinite loop */
-  for(;;)
-  {
-	  sc_state = sc.update_val();
-	  PUTM_CAN::FrontData frontData = {
-	 			  .sense_left_kill    = static_cast<bool>(sc_state & 0x01),
-	 			  .sense_right_kill   = static_cast<bool>(sc_state & 0x02),
-	 			  .sense_driver_kill  = static_cast<bool>(sc_state & 0x03),
-	 			  .sense_inertia      = static_cast<bool>(sc_state & 0x04),
-	 			  .sense_bspd         = static_cast<bool>(sc_state & 0x05),
-	 			  .sense_overtravel   = static_cast<bool>(sc_state & 0x06),
-	 			  .sense_right_wheel  = true
-	};
-
-	if (brakePressureValueToSend.first > 1000)
+	osDelay(500);
+	for(;;)
 	{
-		frontData.is_braking = true;
-	}
-	auto frontDataFrame =  PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
-	auto status = frontDataFrame.send(hfdcan1);
+		PUTM_CAN::Dashboard dsh;
+		PUTM_CAN::PcMainData pcMain = {
+			  .time = 0,
+			  .rtd = rtd,
+		};
 
+		if (PUTM_CAN::can.get_dashboard_new_data())
+		{
+			auto dash_ts_button = PUTM_CAN::can.get_dashboard().ts_activation_button;
+			auto dash_rtd_button = PUTM_CAN::can.get_dashboard().ready_to_drive_button;
 
-	PUTM_CAN::Dashboard dash;
-	auto dash_button = HAL_GPIO_ReadPin(Sense_Right_Wheel_GPIO_Port, Sense_Right_Wheel_Pin);
-	if (dash_button == GPIO_PIN_RESET)
-	{
-		dash.ts_activation_button = true;
-//		if (brakePressureValueToSend.first > 1000)
-//		{
-//			dash.ready_to_drive_button = true;
-//		}
-		auto dashframe = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dash, PUTM_CAN::can_tx_header_DASHBOARD);
-		status = dashframe.send(hfdcan1);
+			/* Check if we want to enable TS voltage */
+			if (dash_ts_button == true)
+			{
+				dsh.ts_activation_button = 1;
+				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+			}
+
+			/* Act according to current rtd state */
+			switch(rtd){
+			case true:
+				if (dash_rtd_button == true)
+				{
+					/* Escape rtd */
+					rtd = false;
+				}
+				break;
+
+			case false:
+				/* If NOT in rtd, check if we want to enter it */
+				if (dash_rtd_button == true and brakePressureValueToSend.first >= brakes.FRONT_BRAKING_THRESHOLD and brakePressureValueToSend.second >= brakes.REAR_BRAKING_THRESHOLD)
+				{
+					/* Enter rtd */
+					rtd = true;
+					HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+				}
+				break;
+			}
+			pcMain.rtd = rtd;
+		}
+		osDelay(50);
+		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+
+		auto pc_main = PUTM_CAN::Can_tx_message<PUTM_CAN::PcMainData>(pcMain, PUTM_CAN::can_tx_header_PC_MAIN_DATA);
+		auto status = pc_main.send(hfdcan1);
 		UNUSED(status);
-		osDelay(1000);
-	}
 
-	HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-    osDelay(50);
-  }
+		auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD);
+		status = dash.send(hfdcan1);
+		UNUSED(status);
+	}
   /* USER CODE END StartBlinkTask */
 }
 
 /* USER CODE BEGIN Header_StartAmkTask */
-enum struct StateMachine {
-	UNDEFINED = -1,
-	ERROR_RESET,
-	IDLING,
-	STARTUP,
-	TORQUE_CONTROL,
-	SWITCH_OFF
-}state = StateMachine::UNDEFINED;
+
 /**
 * @brief Function implementing the AmkTask thread.
 * @param argument: Not used
@@ -977,18 +1009,12 @@ void StartAmkTask(void *argument)
 	PUTM_CAN::AmkRearLeftSetpoints1   rearLeftAmkSetpoints = {};
 	PUTM_CAN::AmkRearRightSetpoints1  rearRightAmkSetpoints = {};
 
-  for(;;)
-  {
-
-	auto frontLeftAmk  = PUTM_CAN::can.get_amk_front_left_actual_values1();
-	auto frontRightAmk = PUTM_CAN::can.get_amk_front_right_actual_values1();
-	auto rearLeftAmk   = PUTM_CAN::can.get_amk_rear_left_actual_values1();
-	auto rearRightAmk  = PUTM_CAN::can.get_amk_rear_right_actual_values1();
-	PUTM_CAN::Dashboard dash  = {.ready_to_drive_button = false};
-	if (PUTM_CAN::can.get_dashboard_new_data())
+	for(;;)
 	{
-		dash = PUTM_CAN::can.get_dashboard();
-	}
+		auto frontLeftAmk  = PUTM_CAN::can.get_amk_front_left_actual_values1();
+		auto frontRightAmk = PUTM_CAN::can.get_amk_front_right_actual_values1();
+		auto rearLeftAmk   = PUTM_CAN::can.get_amk_rear_left_actual_values1();
+		auto rearRightAmk  = PUTM_CAN::can.get_amk_rear_right_actual_values1();
 
 	switch(state)
 	{
@@ -1029,7 +1055,12 @@ void StartAmkTask(void *argument)
 			{
 				state = StateMachine::ERROR_RESET;
 			}
-			if ((dash.ready_to_drive_button == true) and (brakePressureValueToSend.first > 1500))
+//			auto dash_button = HAL_GPIO_ReadPin(Sense_Right_Wheel_GPIO_Port, Sense_Right_Wheel_Pin);
+//			if ((dash_button == GPIO_PIN_RESET and brakePressureValueToSend.first >= BRAKES_THRESHOLD))
+//			{
+//				state = StateMachine::STARTUP;
+//			}
+			if (rtd == true)
 			{
 				state = StateMachine::STARTUP;
 			}
@@ -1096,6 +1127,7 @@ void StartAmkTask(void *argument)
 				 else
 				 {
 					 state = StateMachine::TORQUE_CONTROL;
+					 HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_RESET);
 				 }
 			 }
 		}
@@ -1119,19 +1151,19 @@ void StartAmkTask(void *argument)
 			rearLeftAmkSetpoints.AMK_TorqueLimitPositiv   = 1000;
 			rearRightAmkSetpoints.AMK_TorqueLimitPositiv  = 1000;
 
-			float target_torque = (apps_value_to_send / 500.0) * 9.8 * 10;
+			float target_torque = (apps_value_to_send / 500.0) * 9 * 10;
 
 //			if (brakePressureValueToSend.first > 500 and frontLeftAmk.AMK_ActualVelocity > 0)
 //			{
 //				target_torque = -20.f;
 //			}
 
-			frontLeftAmkSetpoints.AMK_TargetVelocity  = target_torque;
-			frontRightAmkSetpoints.AMK_TargetVelocity = target_torque;
+			frontLeftAmkSetpoints.AMK_TargetVelocity  =  -1.0 * target_torque * 0;
+			frontRightAmkSetpoints.AMK_TargetVelocity = target_torque * 0;
 			rearLeftAmkSetpoints.AMK_TargetVelocity   = target_torque;
-			rearRightAmkSetpoints.AMK_TargetVelocity  = target_torque;
+			rearRightAmkSetpoints.AMK_TargetVelocity  = -1.0  * target_torque;
 
-			if (dash.ready_to_drive_button == true)
+			if (!rtd)
 			{
 				state = StateMachine::SWITCH_OFF;
 				osDelay(10);
@@ -1192,7 +1224,7 @@ void StartAmkTask(void *argument)
 	osDelay(1);
 	rearRightSetpoint.send(hfdcan2);
 
-	osDelay(5);
+	osDelay(25);
   }
   /* USER CODE END StartAmkTask */
 }

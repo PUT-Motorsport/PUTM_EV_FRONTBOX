@@ -29,8 +29,8 @@ uint8_t SC::update_val()
 	Sense_Overtravel=HAL_GPIO_ReadPin(Sense_Overtravel_GPIO_Port, Sense_Overtravel_Pin);
 	SC_val[5]=Sense_Overtravel;
 
-	Sense_Right_Wheel=HAL_GPIO_ReadPin(Sense_Right_Wheel_GPIO_Port, Sense_Right_Wheel_Pin);
-	SC_val[6]=Sense_Right_Wheel;
+//	Sense_Right_Wheel=HAL_GPIO_ReadPin(Sense_Right_Wheel_GPIO_Port, Sense_Right_Wheel_Pin);
+//	SC_val[6]=Sense_Right_Wheel;
 
 	uint8_t bufor = 0;
 		for(int i = 0; i<=8 ; i++)
