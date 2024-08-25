@@ -54,6 +54,7 @@ uint16_t adc1_dma_buffer[200];
 uint16_t adc2_dma_buffer[250];
 
 bool rtd {false};
+bool inverterStatus {false};
 
 Apps apps;
 Brakes brakes;
@@ -923,6 +924,7 @@ void StartMainTask(void *argument)
 }
 
 /* USER CODE BEGIN Header_StartBlinkTask */
+PUTM_CAN::PcMainData pcMain;
 /**
 * @brief Function implementing the BlinkTask thread.
 * @param argument: Not used
@@ -937,10 +939,7 @@ void StartBlinkTask(void *argument)
 	for(;;)
 	{
 		PUTM_CAN::Dashboard dsh;
-		PUTM_CAN::PcMainData pcMain = {
-			  .time = 0,
-			  .rtd = rtd,
-		};
+//		PUTM_CAN::PcMainData pcMain;
 
 		if (PUTM_CAN::can.get_dashboard_new_data())
 		{
@@ -980,9 +979,31 @@ void StartBlinkTask(void *argument)
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 
+		auto amkRearLeftData = PUTM_CAN::can.get_amk_rear_left_actual_values2();
+		auto amkRearRightData = PUTM_CAN::can.get_amk_rear_right_actual_values2();
+
+		auto amkRearLeftMain = PUTM_CAN::can.get_amk_rear_left_actual_values1();
+		auto amkRearRightMain = PUTM_CAN::can.get_amk_rear_right_actual_values1();
+
+		auto tsVoltage = PUTM_CAN::can.get_bms_hv_main().voltage_sum;
+
+		pcMain.invertersReady = inverterStatus;
+		pcMain.rearLeftInverterTemperature = amkRearLeftData.AMK_TempIGBT / 10;
+		pcMain.rearRightInverterTemperature = amkRearRightData.AMK_TempIGBT / 10;
+		pcMain.rearLeftMotorTemperature = amkRearLeftData.AMK_TempMotor / 10;
+		pcMain.rearRightMotorTemperature = amkRearRightData.AMK_TempMotor / 10;
+		pcMain.rtd = rtd;
+		pcMain.power = ((amkRearLeftMain.AMK_TorqueCurrent * 107.20) / 16384) + ((amkRearRightMain.AMK_TorqueCurrent * 107.20) / 16384) * tsVoltage;
+		float rpm = (amkRearLeftMain.AMK_ActualVelocity + amkRearRightMain.AMK_ActualVelocity)/2.0;
+		pcMain.vehicleSpeed = ((amkRearLeftMain.AMK_ActualVelocity + amkRearRightMain.AMK_ActualVelocity)/2) * 60 * 2 * 3.14 * (405.0/2.0) * 0.0000001;
+		pcMain.rpm = (uint32_t)rpm;
+
 		auto pc_main = PUTM_CAN::Can_tx_message<PUTM_CAN::PcMainData>(pcMain, PUTM_CAN::can_tx_header_PC_MAIN_DATA);
 		auto status = pc_main.send(hfdcan1);
 		UNUSED(status);
+
+		//48
+		//54
 
 		auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD);
 		status = dash.send(hfdcan1);
@@ -1004,27 +1025,30 @@ void StartAmkTask(void *argument)
   /* USER CODE BEGIN StartAmkTask */
   /* Infinite loop */
 
-	PUTM_CAN::AmkFrontLeftSetpoints1  frontLeftAmkSetpoints = {};
-	PUTM_CAN::AmkFrontRightSetpoints1 frontRightAmkSetpoints = {};
 	PUTM_CAN::AmkRearLeftSetpoints1   rearLeftAmkSetpoints = {};
 	PUTM_CAN::AmkRearRightSetpoints1  rearRightAmkSetpoints = {};
 
+	uint32_t timeout = 0;
+	constexpr uint32_t amk_startup_timeout = 5000;
+
+	PUTM_CAN::PcMainData pcMain = {
+		  .rtd = rtd,
+	};
+
 	for(;;)
 	{
-		auto frontLeftAmk  = PUTM_CAN::can.get_amk_front_left_actual_values1();
-		auto frontRightAmk = PUTM_CAN::can.get_amk_front_right_actual_values1();
-		auto rearLeftAmk   = PUTM_CAN::can.get_amk_rear_left_actual_values1();
-		auto rearRightAmk  = PUTM_CAN::can.get_amk_rear_right_actual_values1();
+	auto rearLeftAmk   = PUTM_CAN::can.get_amk_rear_left_actual_values1();
+	auto rearRightAmk  = PUTM_CAN::can.get_amk_rear_right_actual_values1();
 
 	switch(state)
 	{
 		case StateMachine::UNDEFINED:
 		{
-	      if (frontLeftAmk.AMK_Status.AMK_bError || frontRightAmk.AMK_Status.AMK_bError || rearLeftAmk.AMK_Status.AMK_bError || rearRightAmk.AMK_Status.AMK_bError )
+	      if (rearLeftAmk.AMK_Status.AMK_bError || rearRightAmk.AMK_Status.AMK_bError )
 	      {
 	        state = StateMachine::ERROR_RESET;
 	      }
-	      if (frontLeftAmk.AMK_Status.AMK_bSystemReady && frontRightAmk.AMK_Status.AMK_bSystemReady && rearLeftAmk.AMK_Status.AMK_bSystemReady && rearRightAmk.AMK_Status.AMK_bSystemReady)
+	      if (rearLeftAmk.AMK_Status.AMK_bSystemReady && rearRightAmk.AMK_Status.AMK_bSystemReady)
 	      {
 	    	  state = StateMachine::IDLING;
 	      }
@@ -1032,18 +1056,14 @@ void StartAmkTask(void *argument)
 	    break;
 		case StateMachine::ERROR_RESET:
 		{
-		      if (frontLeftAmk.AMK_Status.AMK_bSystemReady && frontRightAmk.AMK_Status.AMK_bSystemReady && rearLeftAmk.AMK_Status.AMK_bSystemReady && rearRightAmk.AMK_Status.AMK_bSystemReady)
+		      if (rearLeftAmk.AMK_Status.AMK_bSystemReady && rearRightAmk.AMK_Status.AMK_bSystemReady)
 		      {
-		    	frontLeftAmkSetpoints.AMK_Control.AMK_bErrorReset = false;
-		    	frontRightAmkSetpoints.AMK_Control.AMK_bErrorReset = false;
 		    	rearLeftAmkSetpoints.AMK_Control.AMK_bErrorReset = false;
 		    	rearRightAmkSetpoints.AMK_Control.AMK_bErrorReset = false;
 		        state = StateMachine::IDLING;
 		      }
 		      else
 		      {
-		        frontLeftAmkSetpoints.AMK_Control.AMK_bErrorReset = true;
-			    frontRightAmkSetpoints.AMK_Control.AMK_bErrorReset = true;
 			    rearLeftAmkSetpoints.AMK_Control.AMK_bErrorReset = true;
 			    rearRightAmkSetpoints.AMK_Control.AMK_bErrorReset = true;
 		      }
@@ -1051,69 +1071,65 @@ void StartAmkTask(void *argument)
 		break;
 		case StateMachine::IDLING:
 		{
-			if ((frontLeftAmk.AMK_Status.AMK_bError or frontRightAmk.AMK_Status.AMK_bError or rearLeftAmk.AMK_Status.AMK_bError  or rearRightAmk.AMK_Status.AMK_bError))
+			inverterStatus = false;
+			if ((rearLeftAmk.AMK_Status.AMK_bError  or rearRightAmk.AMK_Status.AMK_bError))
 			{
 				state = StateMachine::ERROR_RESET;
 			}
-//			auto dash_button = HAL_GPIO_ReadPin(Sense_Right_Wheel_GPIO_Port, Sense_Right_Wheel_Pin);
-//			if ((dash_button == GPIO_PIN_RESET and brakePressureValueToSend.first >= BRAKES_THRESHOLD))
-//			{
-//				state = StateMachine::STARTUP;
-//			}
 			if (rtd == true)
 			{
 				state = StateMachine::STARTUP;
+				timeout = xTaskGetTickCount();
 			}
 		}
 		break;
 
 		case StateMachine::STARTUP:
 		{
-			 if ((frontLeftAmk.AMK_Status.AMK_bError or frontRightAmk.AMK_Status.AMK_bError or rearLeftAmk.AMK_Status.AMK_bError or rearRightAmk.AMK_Status.AMK_bError))
+			 if ((xTaskGetTickCount() - timeout) > amk_startup_timeout)
+			 {
+				 /* Stop startup and go to idle through error reset */
+				 state = StateMachine::SWITCH_OFF;
+				 rtd = false;
+				 timeout = 0;
+			 }
+			 if ((rearLeftAmk.AMK_Status.AMK_bError or rearRightAmk.AMK_Status.AMK_bError))
 			 {
 				 state = StateMachine::ERROR_RESET;
 			 }
 
-			 frontLeftAmkSetpoints.AMK_Control.AMK_bDcOn = true;
-			 frontRightAmkSetpoints.AMK_Control.AMK_bDcOn = true;
 			 rearLeftAmkSetpoints.AMK_Control.AMK_bDcOn = true;
 			 rearRightAmkSetpoints.AMK_Control.AMK_bDcOn = true;
 
-			 frontLeftAmkSetpoints.AMK_TorqueLimitNegativ  = 0;
-			 frontRightAmkSetpoints.AMK_TorqueLimitNegativ = 0;
+
 			 rearLeftAmkSetpoints.AMK_TorqueLimitNegativ   = 0;
 			 rearRightAmkSetpoints.AMK_TorqueLimitNegativ  = 0;
 
-			 frontLeftAmkSetpoints.AMK_TorqueLimitPositiv  = 0;
-			 frontRightAmkSetpoints.AMK_TorqueLimitPositiv = 0;
+
 			 rearLeftAmkSetpoints.AMK_TorqueLimitPositiv   = 0;
 			 rearRightAmkSetpoints.AMK_TorqueLimitPositiv  = 0;
 
-			 frontLeftAmkSetpoints.AMK_TargetVelocity  = 0;
-			 frontRightAmkSetpoints.AMK_TargetVelocity = 0;
+
 			 rearLeftAmkSetpoints.AMK_TargetVelocity   = 0;
 			 rearRightAmkSetpoints.AMK_TargetVelocity  = 0;
 
-			 if (!frontLeftAmk.AMK_Status.AMK_bDcOn && !frontRightAmk.AMK_Status.AMK_bDcOn && !rearLeftAmk.AMK_Status.AMK_bDcOn && !rearRightAmk.AMK_Status.AMK_bDcOn)
+			 if (!rearLeftAmk.AMK_Status.AMK_bDcOn && !rearRightAmk.AMK_Status.AMK_bDcOn)
 			 {
 			     break;
 			 }
 
-			 frontLeftAmkSetpoints.AMK_Control.AMK_bInverterOn = true;
-			 frontRightAmkSetpoints.AMK_Control.AMK_bInverterOn = true;
+
 			 rearLeftAmkSetpoints.AMK_Control.AMK_bInverterOn = true;
 			 rearRightAmkSetpoints.AMK_Control.AMK_bInverterOn = true;
 
-			 frontLeftAmkSetpoints.AMK_Control.AMK_bEnable = true;
-			 frontRightAmkSetpoints.AMK_Control.AMK_bEnable = true;
 			 rearLeftAmkSetpoints.AMK_Control.AMK_bEnable = true;
 			 rearRightAmkSetpoints.AMK_Control.AMK_bEnable = true;
 
-			 if (!frontLeftAmk.AMK_Status.AMK_bInverterOn && !frontRightAmk.AMK_Status.AMK_bInverterOn  && !rearLeftAmk.AMK_Status.AMK_bInverterOn  && !rearRightAmk.AMK_Status.AMK_bInverterOn )
+			 if (!rearLeftAmk.AMK_Status.AMK_bInverterOn  && !rearRightAmk.AMK_Status.AMK_bInverterOn )
 			 {
 			     break;
 			 }
-			 if (!(frontLeftAmk.AMK_Status.AMK_bQuitInverterOn && frontRightAmk.AMK_Status.AMK_bQuitInverterOn && rearLeftAmk.AMK_Status.AMK_bQuitInverterOn  && rearRightAmk.AMK_Status.AMK_bQuitInverterOn))
+			 if (!(rearLeftAmk.AMK_Status.AMK_bQuitInverterOn  && rearRightAmk.AMK_Status.AMK_bQuitInverterOn))
 			 {
 			     break;
 			 }
@@ -1136,18 +1152,17 @@ void StartAmkTask(void *argument)
 		case StateMachine::TORQUE_CONTROL:
 		{
 			/* Check some stop conditions*/
-			if ((frontLeftAmk.AMK_Status.AMK_bError or frontRightAmk.AMK_Status.AMK_bError or rearLeftAmk.AMK_Status.AMK_bError or rearRightAmk.AMK_Status.AMK_bError))
+			if ((rearLeftAmk.AMK_Status.AMK_bError or rearRightAmk.AMK_Status.AMK_bError))
 			{
 				state = StateMachine::SWITCH_OFF;
 			}
 
-			frontLeftAmkSetpoints.AMK_TorqueLimitNegativ  = -1000;
-			frontRightAmkSetpoints.AMK_TorqueLimitNegativ = -1000;
+			inverterStatus = true;
+
+
 			rearLeftAmkSetpoints.AMK_TorqueLimitNegativ   = -1000;
 			rearRightAmkSetpoints.AMK_TorqueLimitNegativ  = -1000;
 
-			frontLeftAmkSetpoints.AMK_TorqueLimitPositiv  = 1000;
-			frontRightAmkSetpoints.AMK_TorqueLimitPositiv = 1000;
 			rearLeftAmkSetpoints.AMK_TorqueLimitPositiv   = 1000;
 			rearRightAmkSetpoints.AMK_TorqueLimitPositiv  = 1000;
 
@@ -1158,8 +1173,8 @@ void StartAmkTask(void *argument)
 //				target_torque = -20.f;
 //			}
 
-			frontLeftAmkSetpoints.AMK_TargetVelocity  =  -1.0 * target_torque * 0;
-			frontRightAmkSetpoints.AMK_TargetVelocity = target_torque * 0;
+//			frontLeftAmkSetpoints.AMK_TargetVelocity  =  -1.0 * target_torque * 0;
+//			frontRightAmkSetpoints.AMK_TargetVelocity = target_torque * 0;
 			rearLeftAmkSetpoints.AMK_TargetVelocity   = target_torque;
 			rearRightAmkSetpoints.AMK_TargetVelocity  = -1.0  * target_torque;
 
@@ -1175,28 +1190,22 @@ void StartAmkTask(void *argument)
 		case StateMachine::SWITCH_OFF:
 		{
 
-			frontLeftAmkSetpoints.AMK_Control.AMK_bInverterOn = false;
-			frontRightAmkSetpoints.AMK_Control.AMK_bInverterOn = false;
 			rearLeftAmkSetpoints.AMK_Control.AMK_bInverterOn = false;
 			rearRightAmkSetpoints.AMK_Control.AMK_bInverterOn = false;
 
-			frontLeftAmkSetpoints.AMK_Control.AMK_bEnable = false;
-			frontRightAmkSetpoints.AMK_Control.AMK_bEnable = false;
 			rearLeftAmkSetpoints.AMK_Control.AMK_bEnable = false;
 			rearRightAmkSetpoints.AMK_Control.AMK_bEnable = false;
 
-			frontLeftAmkSetpoints.AMK_Control.AMK_bDcOn = false;
-			frontRightAmkSetpoints.AMK_Control.AMK_bDcOn = false;
 			rearLeftAmkSetpoints.AMK_Control.AMK_bDcOn = false;
 			rearRightAmkSetpoints.AMK_Control.AMK_bDcOn = false;
 
-			if ((frontLeftAmk.AMK_Status.AMK_bError or frontRightAmk.AMK_Status.AMK_bError or rearLeftAmk.AMK_Status.AMK_bError  or rearRightAmk.AMK_Status.AMK_bError))
+			if ((rearLeftAmk.AMK_Status.AMK_bError  or rearRightAmk.AMK_Status.AMK_bError))
 			{
 				state = StateMachine::ERROR_RESET;
 			}
 
 			/* Wait until inverter 0 is switched-off.*/
-			if (frontLeftAmk.AMK_Status.AMK_bInverterOn || frontRightAmk.AMK_Status.AMK_bInverterOn || rearLeftAmk.AMK_Status.AMK_bInverterOn || rearRightAmk.AMK_Status.AMK_bInverterOn)
+			if (rearLeftAmk.AMK_Status.AMK_bInverterOn || rearRightAmk.AMK_Status.AMK_bInverterOn)
 			{
 				break;
 			}
@@ -1210,20 +1219,12 @@ void StartAmkTask(void *argument)
 		break;
 	}
 
-	auto frontLeftSetpoint  = PUTM_CAN::Can_tx_message<PUTM_CAN::AmkFrontLeftSetpoints1  > (frontLeftAmkSetpoints,  PUTM_CAN::can_tx_header_AMK_FRONT_LEFT_SETPOINTS);
-	auto frontRightSetpoint = PUTM_CAN::Can_tx_message<PUTM_CAN::AmkFrontRightSetpoints1 > (frontRightAmkSetpoints, PUTM_CAN::can_tx_header_AMK_FRONT_RIGHT_SETPOINTS);
 	auto rearLefttSetpoint  = PUTM_CAN::Can_tx_message<PUTM_CAN::AmkRearLeftSetpoints1   > (rearLeftAmkSetpoints,   PUTM_CAN::can_tx_header_AMK_REAR_LEFT_SETPOINTS);
 	auto rearRightSetpoint  = PUTM_CAN::Can_tx_message<PUTM_CAN::AmkRearRightSetpoints1  > (rearRightAmkSetpoints,  PUTM_CAN::can_tx_header_AMK_REAR_RIGHT_SETPOINTS);
 
-	osDelay(1);
-	frontLeftSetpoint.send(hfdcan2);
-	osDelay(1);
-	frontRightSetpoint.send(hfdcan2);
-	osDelay(1);
 	rearLefttSetpoint.send(hfdcan2);
 	osDelay(1);
 	rearRightSetpoint.send(hfdcan2);
-
 	osDelay(25);
   }
   /* USER CODE END StartAmkTask */
