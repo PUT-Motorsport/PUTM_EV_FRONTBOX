@@ -1163,10 +1163,10 @@ void StartAmkTask(void *argument)
 			rearLeftAmkSetpoints.AMK_TorqueLimitNegativ   = -1000;
 			rearRightAmkSetpoints.AMK_TorqueLimitNegativ  = -1000;
 
-			rearLeftAmkSetpoints.AMK_TorqueLimitPositiv   = 1000;
-			rearRightAmkSetpoints.AMK_TorqueLimitPositiv  = 1000;
+			rearLeftAmkSetpoints.AMK_TorqueLimitPositiv   = 1100;
+			rearRightAmkSetpoints.AMK_TorqueLimitPositiv  = 1100;
 
-			float target_torque = (apps_value_to_send / 500.0) * 9 * 10;
+			float target_torque = (apps_value_to_send / 500.0) * 1000;
 
 //			if (brakePressureValueToSend.first > 500 and frontLeftAmk.AMK_ActualVelocity > 0)
 //			{
