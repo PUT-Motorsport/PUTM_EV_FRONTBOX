@@ -1002,9 +1002,6 @@ void StartBlinkTask(void *argument)
 		auto status = pc_main.send(hfdcan1);
 		UNUSED(status);
 
-		//48
-		//54
-
 		auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD);
 		status = dash.send(hfdcan1);
 		UNUSED(status);
@@ -1162,11 +1159,10 @@ void StartAmkTask(void *argument)
 
 			rearLeftAmkSetpoints.AMK_TorqueLimitNegativ   = -1000;
 			rearRightAmkSetpoints.AMK_TorqueLimitNegativ  = -1000;
+			rearLeftAmkSetpoints.AMK_TorqueLimitPositiv   = 1100;
+			rearRightAmkSetpoints.AMK_TorqueLimitPositiv  = 1100;
 
-			rearLeftAmkSetpoints.AMK_TorqueLimitPositiv   = 1200;
-			rearRightAmkSetpoints.AMK_TorqueLimitPositiv  = 1200;
-
-			float target_torque = (apps_value_to_send / 500.0) * 9.8 * 10;
+			float target_torque = (apps_value_to_send / 500.0) * 1000;
 
 //			if (brakePressureValueToSend.first > 500 and frontLeftAmk.AMK_ActualVelocity > 0)
 //			{
