@@ -234,7 +234,7 @@ int main(void)
   BlinkTaskHandle = osThreadNew(StartBlinkTask, NULL, &BlinkTask_attributes);
 
   /* creation of AmkTask */
-  AmkTaskHandle = osThreadNew(StartAmkTask, NULL, &AmkTask_attributes);
+//  AmkTaskHandle = osThreadNew(StartAmkTask, NULL, &AmkTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -954,56 +954,56 @@ void StartBlinkTask(void *argument)
 			}
 
 			/* Act according to current rtd state */
-			switch(rtd){
-			case true:
-				if (dash_rtd_button == true)
-				{
-					/* Escape rtd */
-					rtd = false;
-				}
-				break;
-
-			case false:
-				/* If NOT in rtd, check if we want to enter it */
-				if (dash_rtd_button == true and brakePressureValueToSend.first >= brakes.FRONT_BRAKING_THRESHOLD and brakePressureValueToSend.second >= brakes.REAR_BRAKING_THRESHOLD)
-				{
-					/* Enter rtd */
-					rtd = true;
-					HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
-				}
-				break;
-			}
-			pcMain.rtd = rtd;
+//			switch(rtd){
+//			case true:
+//				if (dash_rtd_button == true)
+//				{
+//					/* Escape rtd */
+//					rtd = false;
+//				}
+//				break;
+//
+//			case false:
+//				/* If NOT in rtd, check if we want to enter it */
+//				if (dash_rtd_button == true and brakePressureValueToSend.first >= brakes.FRONT_BRAKING_THRESHOLD and brakePressureValueToSend.second >= brakes.REAR_BRAKING_THRESHOLD)
+//				{
+//					/* Enter rtd */
+//					rtd = true;
+//					HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+//				}
+//				break;
+//			}
+//			pcMain.rtd = rtd;
 		}
 		osDelay(50);
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 
-		auto amkRearLeftData = PUTM_CAN::can.get_amk_rear_left_actual_values2();
-		auto amkRearRightData = PUTM_CAN::can.get_amk_rear_right_actual_values2();
+//		auto amkRearLeftData = PUTM_CAN::can.get_amk_rear_left_actual_values2();
+//		auto amkRearRightData = PUTM_CAN::can.get_amk_rear_right_actual_values2();
+//
+//		auto amkRearLeftMain = PUTM_CAN::can.get_amk_rear_left_actual_values1();
+//		auto amkRearRightMain = PUTM_CAN::can.get_amk_rear_right_actual_values1();
+//
+//		auto tsVoltage = PUTM_CAN::can.get_bms_hv_main().voltage_sum;
+//
+//		pcMain.invertersReady = inverterStatus;
+//		pcMain.rearLeftInverterTemperature = amkRearLeftData.AMK_TempIGBT / 10;
+//		pcMain.rearRightInverterTemperature = amkRearRightData.AMK_TempIGBT / 10;
+//		pcMain.rearLeftMotorTemperature = amkRearLeftData.AMK_TempMotor / 10;
+//		pcMain.rearRightMotorTemperature = amkRearRightData.AMK_TempMotor / 10;
+//		pcMain.rtd = rtd;
+//		pcMain.power = ((amkRearLeftMain.AMK_TorqueCurrent * 107.20) / 16384) + ((amkRearRightMain.AMK_TorqueCurrent * 107.20) / 16384) * tsVoltage;
+//		float rpm = (amkRearLeftMain.AMK_ActualVelocity + amkRearRightMain.AMK_ActualVelocity)/2.0;
+//		pcMain.vehicleSpeed = ((amkRearLeftMain.AMK_ActualVelocity + amkRearRightMain.AMK_ActualVelocity)/2) * 60 * 2 * 3.14 * (405.0/2.0) * 0.0000001;
+//		pcMain.rpm = (uint32_t)rpm;
 
-		auto amkRearLeftMain = PUTM_CAN::can.get_amk_rear_left_actual_values1();
-		auto amkRearRightMain = PUTM_CAN::can.get_amk_rear_right_actual_values1();
-
-		auto tsVoltage = PUTM_CAN::can.get_bms_hv_main().voltage_sum;
-
-		pcMain.invertersReady = inverterStatus;
-		pcMain.rearLeftInverterTemperature = amkRearLeftData.AMK_TempIGBT / 10;
-		pcMain.rearRightInverterTemperature = amkRearRightData.AMK_TempIGBT / 10;
-		pcMain.rearLeftMotorTemperature = amkRearLeftData.AMK_TempMotor / 10;
-		pcMain.rearRightMotorTemperature = amkRearRightData.AMK_TempMotor / 10;
-		pcMain.rtd = rtd;
-		pcMain.power = ((amkRearLeftMain.AMK_TorqueCurrent * 107.20) / 16384) + ((amkRearRightMain.AMK_TorqueCurrent * 107.20) / 16384) * tsVoltage;
-		float rpm = (amkRearLeftMain.AMK_ActualVelocity + amkRearRightMain.AMK_ActualVelocity)/2.0;
-		pcMain.vehicleSpeed = ((amkRearLeftMain.AMK_ActualVelocity + amkRearRightMain.AMK_ActualVelocity)/2) * 60 * 2 * 3.14 * (405.0/2.0) * 0.0000001;
-		pcMain.rpm = (uint32_t)rpm;
-
-		auto pc_main = PUTM_CAN::Can_tx_message<PUTM_CAN::PcMainData>(pcMain, PUTM_CAN::can_tx_header_PC_MAIN_DATA);
-		auto status = pc_main.send(hfdcan1);
-		UNUSED(status);
+//		auto pc_main = PUTM_CAN::Can_tx_message<PUTM_CAN::PcMainData>(pcMain, PUTM_CAN::can_tx_header_PC_MAIN_DATA);
+//		auto status = pc_main.send(hfdcan1);
+//		UNUSED(status);
 
 		auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD);
-		status = dash.send(hfdcan1);
+		auto status = dash.send(hfdcan1);
 		UNUSED(status);
 	}
   /* USER CODE END StartBlinkTask */
@@ -1192,8 +1192,8 @@ void StartAmkTask(void *argument)
 //				target_torque = -20.f;
 //			}
 
-			frontLeftAmkSetpoints.AMK_TargetVelocity  =  -1.0 * target_torque;
-			frontRightAmkSetpoints.AMK_TargetVelocity = target_torque;
+			frontLeftAmkSetpoints.AMK_TargetVelocity  =  -1.0 * target_torque * 0.7;
+			frontRightAmkSetpoints.AMK_TargetVelocity = target_torque * 0.7;
 			rearLeftAmkSetpoints.AMK_TargetVelocity   = target_torque;
 			rearRightAmkSetpoints.AMK_TargetVelocity  = -1.0  * target_torque;
 
