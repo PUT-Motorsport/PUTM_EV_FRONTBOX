@@ -7,7 +7,7 @@
 
 #include "interfaces/AnalogsAbstract.hpp"
 
-uint16_t Analog::get_steering_position()
+int16_t Analog::get_steering_position()
 {
 	float steering_wheel_position_sum = 0;
 	float alpha = 0.5;
@@ -18,12 +18,22 @@ uint16_t Analog::get_steering_position()
 		steering_wheel_position_sum += last_sample;
 	}
 
-	uint64_t steering_position_val_avg = (int)(steering_wheel_position_sum / ((int)number_of_analog_samples));
+	uint64_t steering_position_val_avg = (int)(steering_wheel_position_sum / ((int)number_of_analog_samples))+STEERING_RESET-STEERING_RAW_MAX;
 
-    int steering_position_real_1 = (int)std::round(((float)steering_position_val_avg - (float)STEERING_OFFSETTED_MIN) / scale_factor_1);
-    int steering_temp_1 = std::clamp(steering_position_real_1, STEERING_REAL_MIN, STEERING_REAL_MAX);
 
-	return steering_temp_1;
+
+	if(steering_position_val_avg<STEERING_RAW_MAX)
+	{
+		steering_position_val_avg-=STEERING_OFFSET_MIN;
+	}
+
+    //int steering_position_real_1 = (int)std::round(((float)steering_position_val_avg - (float)STEERING_OFFSETTED_MIN) / scale_factor_1);
+	int steering_position_real_1 =(((int16_t)steering_position_val_avg % (int16_t)STEERING_RESET));//-(int)STEERING_OFFSETTED_MIN);///scale_factor_1;
+    //int steering_temp_1 = std::clamp(steering_position_real_1, STEERING_REAL_MIN, STEERING_REAL_MAX);
+    int steering_temp_1 = (int)std::round(((float)steering_position_real_1-(float)STEERING_RESET+(float)STEERING_RAW_MAX)/scale_factor_1);
+    int16_t steering_temp_2=std::clamp(steering_temp_1,STEERING_REAL_MIN,STEERING_REAL_MAX);
+
+	return steering_temp_2;
 }
 
 

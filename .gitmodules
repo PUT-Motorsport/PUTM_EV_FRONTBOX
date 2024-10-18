@@ -13,3 +13,6 @@
 [submodule "Firmware/Middlewares/putm_sim_gen"]
 	path = Firmware/Middlewares/putm_sim_gen
 	url = git@github.com:PUT-Motorsport/putm_sim_gen.git
+[submodule "Firmware/Core/Inc/PUTM_EV_CAN_LIBRARY_2024"]
+	path = Firmware/Core/Inc/PUTM_EV_CAN_LIBRARY_2024
+	url = git@github.com:PUT-Motorsport/PUTM_EV_CAN_LIBRARY_2024.git
