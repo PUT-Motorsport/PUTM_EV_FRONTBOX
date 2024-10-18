@@ -161,7 +161,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 /* USER CODE BEGIN 0 */
 uint16_t apps_value_to_send;
 std::pair<uint16_t, uint16_t> brakePressureValueToSend;
-uint16_t steering_position_to_send;
+int16_t steering_position_to_send;
 uint8_t sc_state;
 /* USER CODE END 0 */
 
