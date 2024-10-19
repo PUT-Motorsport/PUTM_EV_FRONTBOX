@@ -938,7 +938,7 @@ void StartBlinkTask(void *argument)
 	osDelay(500);
 	for(;;)
 	{
-		PUTM_CAN::Dashboard dsh;
+		PUTM_CAN::Dashboard dsh{0};
 //		PUTM_CAN::PcMainData pcMain;
 
 		if (PUTM_CAN::can.get_dashboard_new_data())
@@ -1003,6 +1003,7 @@ void StartBlinkTask(void *argument)
 //		UNUSED(status);
 
 		auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD);
+		//dsh.ts_activation_button = 0;
 		auto status = dash.send(hfdcan1);
 		UNUSED(status);
 	}
