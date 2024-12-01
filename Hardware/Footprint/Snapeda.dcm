@@ -1,0 +1,29 @@
+EESchema-DOCLIB  Version 2.0
+#
+# AD8226BRMZ-R7
+#
+$CMP AD8226BRMZ-R7
+D
+F
+$ENDCMP
+#
+$CMP D369-G99-NP4
+D Body Features: Connector & Keying Code N | Primary Product Color Black | Configuration Features: Number of Positions 9 | Number of Loaded Positions 6 | PCB Mount Orientation Right Angle | Number of Rows 3 | Number of Columns 3 | Contact Features: PCB Contact Termination Area Plating Material Gold | Contact Layout Matrix | Contact Type Pin | Contact Current Rating (Max) 5 AMP | Contact Mating Area Plating Material Gold | Contact Shape & Form Round | Contact Base Material Copper Alloy | Electrical Characteris
+K
+F 
+$ENDCMP
+#
+# M80-5101022
+#
+$CMP M80-5101022
+D
+F
+$ENDCMP
+#
+# M80-5100622
+#
+$CMP M80-5100622
+D
+F
+$ENDCMP
+#End Doc Library

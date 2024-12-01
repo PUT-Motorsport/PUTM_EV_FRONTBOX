@@ -3073,7 +3073,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:TDFN-8-1EP_3x2mm_P0.5mm_EP1.80x1.65mm"
+		(property "Footprint" "Samacsys:TDFN-8-1EP_3x2mm_P0.5mm_EP1.70x1.65mm"
 			(at 113.03 109.855 0)
 			(effects
 				(font

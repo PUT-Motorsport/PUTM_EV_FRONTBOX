@@ -467,8 +467,14 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": [
+      "Samacsys",
+      "Snapeda"
+    ],
+    "pinned_symbol_libs": [
+      "Samacsys",
+      "Snapeda"
+    ]
   },
   "meta": {
     "filename": "PUTM_EV_Frontbox_2023.kicad_pro",
@@ -509,7 +515,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "PUTM_EV_Frontbox_2023.step",
+      "step": "",
       "svg": "",
       "vrml": ""
     },
@@ -576,6 +582,24 @@
         },
         {
           "group_by": false,
+          "label": "Arrow Part Number",
+          "name": "Arrow Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Price/Stock",
+          "name": "Arrow Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Availability",
+          "name": "Availability",
+          "show": false
+        },
+        {
+          "group_by": false,
           "label": "Check_prices",
           "name": "Check_prices",
           "show": false
@@ -588,8 +612,20 @@
         },
         {
           "group_by": false,
+          "label": "Description_1",
+          "name": "Description_1",
+          "show": false
+        },
+        {
+          "group_by": false,
           "label": "DigiKey_Part_Number",
           "name": "DigiKey_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
           "show": false
         },
         {
@@ -612,6 +648,54 @@
         },
         {
           "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "OC_FARNELL",
+          "name": "OC_FARNELL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "OC_NEWARK",
+          "name": "OC_NEWARK",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PACKAGE",
+          "name": "PACKAGE",
+          "show": false
+        },
+        {
+          "group_by": false,
           "label": "PARTREV",
           "name": "PARTREV",
           "show": false
@@ -620,6 +704,12 @@
           "group_by": false,
           "label": "Package",
           "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Price",
+          "name": "Price",
           "show": false
         },
         {
@@ -638,6 +728,12 @@
           "group_by": false,
           "label": "STANDARD",
           "name": "STANDARD",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SUPPLIER",
+          "name": "SUPPLIER",
           "show": false
         },
         {
@@ -782,8 +878,8 @@
       "APPS1"
     ],
     [
-      "29d51475-725b-4edf-8a67-3bd507a56ba4",
-      "steering_position"
+      "a1f51b52-eb43-44bd-ad58-3192444d1202",
+      "Steering_Position"
     ],
     [
       "9e566fb6-1741-4092-b17e-402796433191",
@@ -802,7 +898,7 @@
       "Programator"
     ],
     [
-      "ec591501-86ba-4f34-8ec1-e058bc47edd9",
+      "7da16e37-d500-4066-9eb9-1e6cc6bf794c",
       "Tensometers"
     ]
   ],

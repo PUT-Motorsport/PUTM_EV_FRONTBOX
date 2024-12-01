@@ -5,6 +5,138 @@
 	(uuid "b7184b39-242a-4728-8fca-6660e3b2a8bb")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Device:Fuse_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse_Small"
+				(at 0 1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fuse, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fuse_Small_0_1"
+				(rectangle
+					(start -1.27 0.508)
+					(end 1.27 -0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_Small_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "FrontBox:STLINK-V3MODS"
 			(pin_names
 				(offset 1.016)
@@ -762,6 +894,126 @@
 				)
 			)
 		)
+		(symbol "power:+5V"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_names
@@ -898,10 +1150,6 @@
 		(uuid "122420c6-a5b2-415e-961a-275e546722b3")
 	)
 	(no_connect
-		(at 90.805 102.87)
-		(uuid "1882199f-dc5b-4040-8783-717ddccd6c53")
-	)
-	(no_connect
 		(at 172.085 74.93)
 		(uuid "1dbd40ea-c55b-41f3-ac08-dc84720981dc")
 	)
@@ -914,16 +1162,8 @@
 		(uuid "25ec1629-8a17-489f-9bf8-52a2cd1d78a0")
 	)
 	(no_connect
-		(at 90.805 107.95)
-		(uuid "3132f471-6e8f-4be8-b022-df1763291120")
-	)
-	(no_connect
 		(at 172.085 85.09)
 		(uuid "5100a03b-c3e5-4a82-b6a8-a743d959ff35")
-	)
-	(no_connect
-		(at 90.805 69.85)
-		(uuid "5bb39ec4-b4e4-45f7-8d64-ee6a84fa1663")
 	)
 	(no_connect
 		(at 90.805 90.17)
@@ -977,10 +1217,6 @@
 		(at 172.085 92.71)
 		(uuid "f26473ec-a50b-4936-bf0f-1b40746c5111")
 	)
-	(no_connect
-		(at 90.805 105.41)
-		(uuid "fb022563-3b16-4fdf-81d1-f7573866068e")
-	)
 	(wire
 		(pts
 			(xy 145.415 128.27) (xy 145.415 130.81)
@@ -990,6 +1226,26 @@
 			(type default)
 		)
 		(uuid "0398224f-c626-4a93-afe2-450ac4c47dbd")
+	)
+	(wire
+		(pts
+			(xy 82.55 69.85) (xy 90.805 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "102895e4-65b1-44a3-a2ac-dd236f73b546")
+	)
+	(wire
+		(pts
+			(xy 69.215 66.04) (xy 69.215 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24e3caaa-194f-4a88-8fb8-181a11969d32")
 	)
 	(wire
 		(pts
@@ -1040,6 +1296,16 @@
 			(type default)
 		)
 		(uuid "72efef97-b2be-4dd7-abb6-c1eb42d78d23")
+	)
+	(wire
+		(pts
+			(xy 69.215 69.85) (xy 77.47 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87e02857-fa28-4200-89bd-d67e17429788")
 	)
 	(wire
 		(pts
@@ -1368,6 +1634,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 69.215 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5ede0ba0-46ab-4f3f-92e2-cf564df23cac")
+		(property "Reference" "#PWR09"
+			(at 69.215 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 69.215 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.215 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.215 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.215 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8acf7485-19d2-4e9f-a53a-b26b981ccfa6")
+		)
+		(instances
+			(project "PUTM_EV_Frontbox_2023"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/dd0098ec-f4e0-48aa-9050-ddfd0a2e4304"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "FrontBox:STLINK-V3MODS")
 		(at 131.445 87.63 0)
 		(unit 1)
@@ -1687,6 +2018,74 @@
 			(project "PUTM_EV_Frontbox_2023"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/dd0098ec-f4e0-48aa-9050-ddfd0a2e4304"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 80.01 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fc172f49-5567-4839-aae3-38701378a069")
+		(property "Reference" "F5"
+			(at 80.01 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fuse_Small"
+			(at 80.01 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric"
+			(at 80.01 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse, small symbol"
+			(at 80.01 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4c7980e2-820d-400f-988c-2b5e536ae911")
+		)
+		(pin "1"
+			(uuid "24f1309c-67a0-4048-8c59-b3c81ecbf87e")
+		)
+		(instances
+			(project "PUTM_EV_Frontbox_2023"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/dd0098ec-f4e0-48aa-9050-ddfd0a2e4304"
+					(reference "F5")
 					(unit 1)
 				)
 			)
