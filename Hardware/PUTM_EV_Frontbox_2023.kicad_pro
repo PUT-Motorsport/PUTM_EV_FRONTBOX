@@ -838,10 +838,6 @@
       "CAN bus"
     ],
     [
-      "cff9e037-b571-49da-8ef7-9a05892cc423",
-      "Brake Position"
-    ],
-    [
       "4deadd9b-3e18-4284-beb5-6600402c5311",
       "Oscillator"
     ],
@@ -896,6 +892,10 @@
     [
       "dd0098ec-f4e0-48aa-9050-ddfd0a2e4304",
       "Programator"
+    ],
+    [
+      "6de6146b-2213-45c8-a06a-8f4a94142e11",
+      "Steering_Position_2"
     ],
     [
       "7da16e37-d500-4066-9eb9-1e6cc6bf794c",

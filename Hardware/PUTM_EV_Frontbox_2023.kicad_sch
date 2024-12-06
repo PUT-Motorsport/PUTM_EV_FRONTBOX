@@ -6724,7 +6724,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 163.83) (xy 45.72 163.83)
+			(xy 20.32 163.83) (xy 45.72 163.83)
 		)
 		(stroke
 			(width 0)
@@ -7423,8 +7423,8 @@
 		)
 		(uuid "1bbe5ba5-1bc1-4436-9cd8-099921e6e8bd")
 	)
-	(label "BRAKE_POSITION_IN"
-		(at 24.13 163.83 0)
+	(label "STEERING_POSITION_2_IN"
+		(at 20.32 163.83 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7456,7 +7456,7 @@
 		)
 		(uuid "1fb07ec3-e5ec-4ad5-95cd-dda370516080")
 	)
-	(label "BRAKE_POSITION_OUT"
+	(label "STEERING_POSITION_2_OUT"
 		(at 353.695 86.36 180)
 		(fields_autoplaced yes)
 		(effects
@@ -7874,7 +7874,7 @@
 		)
 		(uuid "61f0dafc-33e8-463b-82f6-0ca5798ee178")
 	)
-	(label "BRAKE_POSITION_OUT"
+	(label "STEERING_POSITION_2_OUT"
 		(at 93.98 163.83 180)
 		(fields_autoplaced yes)
 		(effects
@@ -8271,7 +8271,7 @@
 		)
 		(uuid "9bb08d12-f908-4d79-9d60-34746381a33e")
 	)
-	(label "BRAKE_POSITION_IN"
+	(label "STEERING_POSITION_2_IN"
 		(at 33.02 39.37 0)
 		(fields_autoplaced yes)
 		(effects
@@ -12402,6 +12402,65 @@
 		)
 	)
 	(sheet
+		(at 45.72 161.925)
+		(size 19.05 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6de6146b-2213-45c8-a06a-8f4a94142e11")
+		(property "Sheetname" "Steering_Position_2"
+			(at 45.72 161.2134 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Steering_Position_2.kicad_sch"
+			(at 45.72 166.3196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "IN" input
+			(at 45.72 163.83 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "516e18dc-6f86-45ed-8d09-158c810cc263")
+		)
+		(pin "OUT" output
+			(at 64.77 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3bae040c-a55d-4565-bfbc-4dda764829e4")
+		)
+		(instances
+			(project "PUTM_EV_Frontbox_2023"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
+					(page "20")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 132.08 46.99)
 		(size 21.59 5.08)
 		(fields_autoplaced yes)
@@ -13081,64 +13140,6 @@
 			(project "apps"
 				(path "/fc4ad874-c922-4070-89f9-7262080469d8"
 					(page "8")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 45.72 161.925)
-		(size 19.05 3.81)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "cff9e037-b571-49da-8ef7-9a05892cc423")
-		(property "Sheetname" "Brake Position"
-			(at 48.26 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "suspension_potentiometer.kicad_sch"
-			(at 38.735 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "IN" input
-			(at 45.72 163.83 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "8f36095c-e1d1-40bc-a1db-516518ce4359")
-		)
-		(pin "OUT" output
-			(at 64.77 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "d55fdcf8-b933-4fb7-b132-6a5e127da6ef")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox_2023"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
-					(page "5")
 				)
 			)
 		)
