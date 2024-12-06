@@ -1418,7 +1418,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "\nSTM32 series Debugger, Programmer (In-Circuit/In-System)\n"
+		(property "Description" "STM32 series Debugger, Programmer (In-Circuit/In-System)"
 			(at 130.175 133.35 0)
 			(effects
 				(font
@@ -1743,7 +1743,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "\nSTM32 series Debugger, Programmer (In-Circuit/In-System)\n"
+		(property "Description" "STM32 series Debugger, Programmer (In-Circuit/In-System)"
 			(at 131.445 87.63 0)
 			(effects
 				(font

@@ -2025,6 +2025,12 @@
 		(uuid "152b8e59-76c1-42bc-82c7-d53f7b508e0c")
 	)
 	(junction
+		(at 140.97 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "16c1d57c-484f-437d-a202-783f6f1be57a")
+	)
+	(junction
 		(at 58.42 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2059,12 +2065,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "32fcc3cf-d254-41d8-b044-c66ba0f88d16")
-	)
-	(junction
-		(at 141.605 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "37550666-145d-4b34-ac85-e92684daf106")
 	)
 	(junction
 		(at 210.185 109.855)
@@ -2292,16 +2292,6 @@
 	)
 	(wire
 		(pts
-			(xy 141.605 64.77) (xy 151.765 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a114478-272c-434f-8532-342d3b908f1c")
-	)
-	(wire
-		(pts
 			(xy 195.58 116.205) (xy 195.58 116.84)
 		)
 		(stroke
@@ -2372,7 +2362,7 @@
 	)
 	(wire
 		(pts
-			(xy 141.605 64.77) (xy 141.605 66.04)
+			(xy 140.97 64.77) (xy 140.97 66.04)
 		)
 		(stroke
 			(width 0)
@@ -2812,6 +2802,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 64.77) (xy 151.765 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62f8d585-97e6-45e0-9b1a-a0217007a5d8")
+	)
+	(wire
+		(pts
 			(xy 195.58 144.78) (xy 195.58 146.685)
 		)
 		(stroke
@@ -2902,7 +2902,7 @@
 	)
 	(wire
 		(pts
-			(xy 131.445 64.77) (xy 141.605 64.77)
+			(xy 131.445 64.77) (xy 140.97 64.77)
 		)
 		(stroke
 			(width 0)
@@ -3372,7 +3372,7 @@
 	)
 	(wire
 		(pts
-			(xy 141.605 76.2) (xy 141.605 77.47)
+			(xy 140.97 76.2) (xy 140.97 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3572,7 +3572,7 @@
 	)
 	(wire
 		(pts
-			(xy 141.605 77.47) (xy 131.445 77.47)
+			(xy 140.97 77.47) (xy 131.445 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4437,6 +4437,17 @@
 		)
 		(uuid "13546e25-2990-4c32-b341-6ffb8ae01f30")
 	)
+	(label "LF_5V"
+		(at 133.35 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 0.5 0.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "4083e848-a064-4fe7-afa9-2ea7a0774ea6")
+	)
 	(label "FB"
 		(at 120.015 77.47 0)
 		(fields_autoplaced yes)
@@ -4459,12 +4470,12 @@
 		)
 		(uuid "550a8280-521f-4956-aeff-208f575cfe91")
 	)
-	(label "SW"
+	(label "SW_5V"
 		(at 120.015 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 0.5 0.5)
 			)
 			(justify left bottom)
 		)
@@ -4901,71 +4912,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 141.605 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1a17393d-12f1-4c7e-a6ff-94a572eb5e18")
-		(property "Reference" "#PWR0197"
-			(at 141.605 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 141.605 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 141.605 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 141.605 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 141.605 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4562369a-4635-4fc0-8bc4-514a334f32cd")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox_2023"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fd3e8671-032e-4b6a-9a43-a9c36a92201e"
-					(reference "#PWR0197")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:TLV73330PDBV")
 		(at 220.345 147.32 0)
 		(unit 1)
@@ -5330,73 +5276,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 161.925 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2ad7ff94-fda0-47b7-8719-7cdca884df71")
-		(property "Reference" "TP4"
-			(at 160.655 63.5 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 163.195 66.675 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 167.005 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.005 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 161.925 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fe699c5f-7927-432e-a258-b63348b93f82")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox_2023"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fd3e8671-032e-4b6a-9a43-a9c36a92201e"
-					(reference "TP4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:TLV73330PDBV")
 		(at 47.625 161.29 0)
 		(unit 1)
@@ -5695,7 +5574,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 141.605 68.58 0)
+		(at 140.97 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5703,7 +5582,7 @@
 		(dnp no)
 		(uuid "3c58985e-8a4c-4643-994d-fa1d8b70084f")
 		(property "Reference" "R14"
-			(at 144.145 67.31 0)
+			(at 143.51 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5712,7 +5591,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 144.145 69.85 0)
+			(at 143.51 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5721,7 +5600,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 141.605 68.58 0)
+			(at 140.97 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5730,7 +5609,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 141.605 68.58 0)
+			(at 140.97 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5739,7 +5618,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 141.605 68.58 0)
+			(at 140.97 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6739,73 +6618,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 131.445 77.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5ff4dfb3-0816-4c3f-a08f-496aa0af3451")
-		(property "Reference" "TP3"
-			(at 130.175 76.2 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint_Small"
-			(at 132.715 79.375 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 136.525 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 136.525 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 131.445 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "49fae342-74b5-4536-b438-9ca6f9ddbc91")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox_2023"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/fd3e8671-032e-4b6a-9a43-a9c36a92201e"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 33.655 156.845 0)
 		(unit 1)
@@ -7538,7 +7350,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
 			(at 86.995 38.1 0)
 			(effects
 				(font
@@ -8275,7 +8087,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 141.605 73.66 0)
+		(at 140.97 73.66 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8284,7 +8096,7 @@
 		(dnp no)
 		(uuid "a2139746-df28-4dc8-aff2-50be0cbccc60")
 		(property "Reference" "C18"
-			(at 144.145 72.39 0)
+			(at 143.51 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8293,7 +8105,7 @@
 			)
 		)
 		(property "Value" "22p"
-			(at 144.145 74.93 0)
+			(at 143.51 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8302,7 +8114,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 141.605 73.66 0)
+			(at 140.97 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8311,7 +8123,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 141.605 73.66 0)
+			(at 140.97 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8320,7 +8132,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 141.605 73.66 0)
+			(at 140.97 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
