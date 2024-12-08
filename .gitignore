@@ -16,7 +16,7 @@ _autosave-*
 fp-info-cache
 *.lck
 *.log
-*.pretty
+# *.pretty # -- igonres kicad footprints !
 /*backups/
 fp-info-cache
 *.kicad_prl
