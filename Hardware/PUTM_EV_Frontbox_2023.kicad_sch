@@ -4617,12 +4617,20 @@
 		(uuid "404facec-c5a7-4b1f-a6e0-ec824c8d8a0a")
 	)
 	(no_connect
+		(at 342.9 60.96)
+		(uuid "66dd945f-70ad-44e2-bf9d-7456aed653d5")
+	)
+	(no_connect
 		(at 289.56 93.98)
 		(uuid "80607904-af4e-4315-8b1b-dbd0cef23b6a")
 	)
 	(no_connect
 		(at 289.56 99.06)
 		(uuid "a2b3071f-7865-4217-924e-b7aa29770a9f")
+	)
+	(no_connect
+		(at 342.9 63.5)
+		(uuid "a33f5ccc-89dc-4f88-b226-438720db9e53")
 	)
 	(no_connect
 		(at 289.56 96.52)
@@ -4714,7 +4722,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 144.145) (xy 45.72 144.145)
+			(xy 24.13 140.97) (xy 45.72 140.97)
 		)
 		(stroke
 			(width 0)
@@ -4951,6 +4959,16 @@
 			(type default)
 		)
 		(uuid "209ac333-13d8-482f-b1a1-3bb1535351bb")
+	)
+	(wire
+		(pts
+			(xy 64.77 181.61) (xy 93.98 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "211c0cd3-d0d5-4d2a-ac5c-2ac9040959eb")
 	)
 	(wire
 		(pts
@@ -5384,7 +5402,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 184.785) (xy 93.98 184.785)
+			(xy 64.77 201.93) (xy 93.98 201.93)
 		)
 		(stroke
 			(width 0)
@@ -5504,7 +5522,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 184.785) (xy 45.72 184.785)
+			(xy 24.13 201.93) (xy 45.72 201.93)
 		)
 		(stroke
 			(width 0)
@@ -5564,7 +5582,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 177.8) (xy 45.72 177.8)
+			(xy 24.13 191.77) (xy 45.72 191.77)
 		)
 		(stroke
 			(width 0)
@@ -5694,7 +5712,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 157.48) (xy 93.98 157.48)
+			(xy 64.77 161.29) (xy 93.98 161.29)
 		)
 		(stroke
 			(width 0)
@@ -6304,7 +6322,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 170.815) (xy 45.72 170.815)
+			(xy 24.13 181.61) (xy 45.72 181.61)
 		)
 		(stroke
 			(width 0)
@@ -6344,7 +6362,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 177.8) (xy 93.98 177.8)
+			(xy 64.77 191.77) (xy 93.98 191.77)
 		)
 		(stroke
 			(width 0)
@@ -6374,7 +6392,7 @@
 	)
 	(wire
 		(pts
-			(xy 325.12 63.5) (xy 340.995 63.5)
+			(xy 325.12 63.5) (xy 342.9 63.5)
 		)
 		(stroke
 			(width 0)
@@ -6394,7 +6412,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 157.48) (xy 45.72 157.48)
+			(xy 24.13 161.29) (xy 45.72 161.29)
 		)
 		(stroke
 			(width 0)
@@ -6404,7 +6422,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 137.16) (xy 93.98 137.16)
+			(xy 64.77 130.81) (xy 93.98 130.81)
 		)
 		(stroke
 			(width 0)
@@ -6614,7 +6632,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 163.83) (xy 93.98 163.83)
+			(xy 64.77 171.45) (xy 93.98 171.45)
 		)
 		(stroke
 			(width 0)
@@ -6654,7 +6672,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 144.145) (xy 93.98 144.145)
+			(xy 64.77 140.97) (xy 93.98 140.97)
 		)
 		(stroke
 			(width 0)
@@ -6724,7 +6742,7 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 163.83) (xy 45.72 163.83)
+			(xy 20.32 171.45) (xy 45.72 171.45)
 		)
 		(stroke
 			(width 0)
@@ -6734,7 +6752,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.765 137.16) (xy 45.72 137.16)
+			(xy 25.4 130.81) (xy 45.72 130.81)
 		)
 		(stroke
 			(width 0)
@@ -6794,16 +6812,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 170.815) (xy 93.98 170.815)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2ebb8df-7d82-4e15-b4c0-cb38a6cabe35")
-	)
-	(wire
-		(pts
 			(xy 136.525 112.395) (xy 140.335 112.395)
 		)
 		(stroke
@@ -6854,7 +6862,7 @@
 	)
 	(polyline
 		(pts
-			(xy 102.235 182.245) (xy 133.985 182.245)
+			(xy 102.87 182.245) (xy 134.62 182.245)
 		)
 		(stroke
 			(width 0)
@@ -6924,7 +6932,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.995 60.96) (xy 325.12 60.96)
+			(xy 325.12 60.96) (xy 342.9 60.96)
 		)
 		(stroke
 			(width 0)
@@ -7100,7 +7108,7 @@
 	)
 	(text "Analog Inputs\n\n"
 		(exclude_from_sim no)
-		(at 41.91 133.35 0)
+		(at 44.196 125.476 0)
 		(effects
 			(font
 				(size 2 2)
@@ -7236,7 +7244,7 @@
 		(uuid "006d86e2-b07b-4603-801b-0cf398105cc7")
 	)
 	(label "PT100_1"
-		(at 24.13 177.8 0)
+		(at 24.13 191.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7358,7 +7366,7 @@
 		(uuid "185fe3ef-c2e8-49ef-8a36-efa24b7b829e")
 	)
 	(label "BRAKE_PRESSURE1_IN"
-		(at 24.765 137.16 0)
+		(at 25.4 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7424,7 +7432,7 @@
 		(uuid "1bbe5ba5-1bc1-4436-9cd8-099921e6e8bd")
 	)
 	(label "STEERING_POSITION_2_IN"
-		(at 20.32 163.83 0)
+		(at 20.32 171.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7589,7 +7597,7 @@
 		(uuid "34b759a7-3cd3-412a-b9ff-772683952731")
 	)
 	(label "STEERING_POSITION_IN"
-		(at 24.13 170.815 0)
+		(at 24.13 181.61 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7622,7 +7630,7 @@
 		(uuid "390410ea-681b-4b73-b059-1ccd29899c2c")
 	)
 	(label "SUSP_R_OUT"
-		(at 93.98 157.48 180)
+		(at 93.98 161.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7743,7 +7751,7 @@
 		(uuid "486c8054-5bb2-4c20-8fb0-f4e59be6a827")
 	)
 	(label "GEARBOX_TEMP_2"
-		(at 93.98 184.785 180)
+		(at 93.98 201.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7875,7 +7883,7 @@
 		(uuid "61f0dafc-33e8-463b-82f6-0ca5798ee178")
 	)
 	(label "STEERING_POSITION_2_OUT"
-		(at 93.98 163.83 180)
+		(at 93.98 171.45 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8074,7 +8082,7 @@
 		(uuid "7e27daf9-9c43-477f-950c-43b8884b02dd")
 	)
 	(label "BRAKE_PRESSURE2_IN"
-		(at 24.13 144.145 0)
+		(at 24.13 140.97 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8140,7 +8148,7 @@
 		(uuid "861867b0-ce7d-456f-8def-edcdebe06966")
 	)
 	(label "BRAKE_PRESSURE_REAR_OUT"
-		(at 93.98 144.145 180)
+		(at 93.98 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8305,7 +8313,7 @@
 		(uuid "9d501641-afbe-4f6f-be5e-71b60b880748")
 	)
 	(label "PT100_2"
-		(at 24.13 184.785 0)
+		(at 24.13 201.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8393,7 +8401,7 @@
 		(uuid "ad419f71-5d22-41e2-96e8-bf74d6953490")
 	)
 	(label "BRAKE_PRESSURE_FRONT_OUT"
-		(at 93.98 137.16 180)
+		(at 93.98 130.81 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8448,7 +8456,7 @@
 		(uuid "b58965d2-ebda-4171-9a0a-fa6f200f1444")
 	)
 	(label "GEARBOX_TEMP_1"
-		(at 93.98 177.8 180)
+		(at 93.98 191.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8603,7 +8611,7 @@
 		(uuid "cf2c7daa-9716-4bc4-9ab3-07c28719598e")
 	)
 	(label "SUSPENSION_POT2_IN"
-		(at 24.13 157.48 0)
+		(at 24.13 161.29 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8658,7 +8666,7 @@
 		(uuid "e44318cb-4c06-4e0e-995c-1929b421e08c")
 	)
 	(label "STEERING_POSITION_OUT"
-		(at 93.98 170.815 180)
+		(at 93.98 181.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12402,8 +12410,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 161.925)
-		(size 19.05 3.81)
+		(at 45.72 168.91)
+		(size 19.05 5.08)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -12414,7 +12422,7 @@
 		)
 		(uuid "6de6146b-2213-45c8-a06a-8f4a94142e11")
 		(property "Sheetname" "Steering_Position_2"
-			(at 45.72 161.2134 0)
+			(at 45.72 168.1984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12423,7 +12431,7 @@
 			)
 		)
 		(property "Sheetfile" "Steering_Position_2.kicad_sch"
-			(at 45.72 166.3196 0)
+			(at 45.72 174.5746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12433,7 +12441,7 @@
 			)
 		)
 		(pin "IN" input
-			(at 45.72 163.83 180)
+			(at 45.72 171.45 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12443,7 +12451,7 @@
 			(uuid "516e18dc-6f86-45ed-8d09-158c810cc263")
 		)
 		(pin "OUT" output
-			(at 64.77 163.83 0)
+			(at 64.77 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12719,7 +12727,7 @@
 	)
 	(sheet
 		(at 45.72 148.59)
-		(size 19.05 4.445)
+		(size 19.05 5.08)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -12729,7 +12737,7 @@
 		)
 		(uuid "911b86f7-6c1b-4cf5-8c52-4f515716b2b9")
 		(property "Sheetname" "Suspension Potentiometer (Left)"
-			(at 41.91 147.8784 0)
+			(at 41.91 148.082 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12845,8 +12853,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 155.575)
-		(size 19.05 3.81)
+		(at 45.72 158.75)
+		(size 19.05 5.08)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -12856,7 +12864,7 @@
 		)
 		(uuid "9e566fb6-1741-4092-b17e-402796433191")
 		(property "Sheetname" "Suspension Potentiometer (Right)"
-			(at 41.91 154.8634 0)
+			(at 41.91 158.0384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12865,7 +12873,7 @@
 			)
 		)
 		(property "Sheetfile" "suspension_potentiometer.kicad_sch"
-			(at 38.735 170.18 0)
+			(at 38.735 173.355 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12875,7 +12883,7 @@
 			)
 		)
 		(pin "IN" input
-			(at 45.72 157.48 180)
+			(at 45.72 161.29 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12885,7 +12893,7 @@
 			(uuid "ebd2aa94-2f66-4707-a693-3920de0b2904")
 		)
 		(pin "OUT" output
-			(at 64.77 157.48 0)
+			(at 64.77 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12903,8 +12911,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 168.275)
-		(size 19.05 4.445)
+		(at 45.72 179.07)
+		(size 19.05 5.08)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -12914,7 +12922,7 @@
 		)
 		(uuid "a1f51b52-eb43-44bd-ad58-3192444d1202")
 		(property "Sheetname" "Steering_Position"
-			(at 46.99 167.767 0)
+			(at 46.99 178.562 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12923,7 +12931,7 @@
 			)
 		)
 		(property "Sheetfile" "Steering_position.kicad_sch"
-			(at 45.72 173.3046 0)
+			(at 45.72 184.0996 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12933,7 +12941,7 @@
 			)
 		)
 		(pin "OUT" output
-			(at 64.77 170.815 0)
+			(at 64.77 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12943,7 +12951,7 @@
 			(uuid "3e267c2b-f458-42d8-a797-d7d50810c3d9")
 		)
 		(pin "IN" input
-			(at 45.72 170.815 180)
+			(at 45.72 181.61 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12961,8 +12969,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 135.255)
-		(size 19.05 3.81)
+		(at 45.72 128.27)
+		(size 19.05 5.08)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -12972,7 +12980,7 @@
 		)
 		(uuid "a44ca1e3-5a7e-4627-a097-706c52508f74")
 		(property "Sheetname" "Brake Pressure Left"
-			(at 45.72 134.5434 0)
+			(at 45.72 127.5584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12981,7 +12989,7 @@
 			)
 		)
 		(property "Sheetfile" "brake_pressure.kicad_sch"
-			(at 45.72 145.9996 0)
+			(at 45.72 139.0146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12991,7 +12999,7 @@
 			)
 		)
 		(pin "IN" input
-			(at 45.72 137.16 180)
+			(at 45.72 130.81 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13001,7 +13009,7 @@
 			(uuid "d5d78cc3-5761-43e5-9b8b-359354b4e6aa")
 		)
 		(pin "OUT" output
-			(at 64.77 137.16 0)
+			(at 64.77 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13024,8 +13032,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 182.88)
-		(size 19.05 3.81)
+		(at 45.72 199.39)
+		(size 19.05 5.08)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -13035,7 +13043,7 @@
 		)
 		(uuid "a476bcd8-ab71-4a19-95ab-946de722cc84")
 		(property "Sheetname" "Gearbox_Temp_sensor_2"
-			(at 44.45 182.245 0)
+			(at 44.45 198.755 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13044,7 +13052,7 @@
 			)
 		)
 		(property "Sheetfile" "suspension_potentiometer.kicad_sch"
-			(at 38.735 197.485 0)
+			(at 38.735 213.995 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13054,7 +13062,7 @@
 			)
 		)
 		(pin "IN" input
-			(at 45.72 184.785 180)
+			(at 45.72 201.93 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13064,7 +13072,7 @@
 			(uuid "ffcd4edc-7db5-43c5-8d1a-56790a2c17de")
 		)
 		(pin "OUT" output
-			(at 64.77 184.785 0)
+			(at 64.77 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13082,8 +13090,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 142.24)
-		(size 19.05 3.81)
+		(at 45.72 138.43)
+		(size 19.05 5.08)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -13093,7 +13101,7 @@
 		)
 		(uuid "abdacfc0-d2db-4861-a051-817d03ac12cb")
 		(property "Sheetname" "Brake Pressure Right"
-			(at 45.72 141.5284 0)
+			(at 45.72 137.7184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13102,7 +13110,7 @@
 			)
 		)
 		(property "Sheetfile" "brake_pressure.kicad_sch"
-			(at 45.72 152.9846 0)
+			(at 45.72 149.1746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13112,7 +13120,7 @@
 			)
 		)
 		(pin "IN" input
-			(at 45.72 144.145 180)
+			(at 45.72 140.97 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13122,7 +13130,7 @@
 			(uuid "74269e15-72cc-46dc-a3c3-1ca254786013")
 		)
 		(pin "OUT" output
-			(at 64.77 144.145 0)
+			(at 64.77 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13588,8 +13596,8 @@
 		)
 	)
 	(sheet
-		(at 45.72 175.895)
-		(size 19.05 3.81)
+		(at 45.72 189.23)
+		(size 19.05 5.08)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -13599,7 +13607,7 @@
 		)
 		(uuid "f95f3902-9421-4aca-b3ac-7516fc1a03f4")
 		(property "Sheetname" "Gearbox_Temp_sensor_1"
-			(at 44.45 175.26 0)
+			(at 44.45 188.595 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13608,7 +13616,7 @@
 			)
 		)
 		(property "Sheetfile" "suspension_potentiometer.kicad_sch"
-			(at 38.735 190.5 0)
+			(at 38.735 203.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13618,7 +13626,7 @@
 			)
 		)
 		(pin "IN" input
-			(at 45.72 177.8 180)
+			(at 45.72 191.77 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13628,7 +13636,7 @@
 			(uuid "d0f193a7-6463-40c0-9d9c-f424823da1db")
 		)
 		(pin "OUT" output
-			(at 64.77 177.8 0)
+			(at 64.77 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -1142,79 +1142,91 @@
 		(uuid "f2a472ae-b03c-4ff0-819d-18e40ba84be6")
 	)
 	(no_connect
-		(at 90.805 92.71)
+		(at 91.44 92.71)
 		(uuid "04d7a304-9f87-4c54-9319-449bd2b432ef")
 	)
 	(no_connect
-		(at 172.085 105.41)
+		(at 91.44 107.95)
+		(uuid "0b04f0ae-f10b-4aea-b9b6-f8e10d0f27ae")
+	)
+	(no_connect
+		(at 91.44 102.87)
+		(uuid "0e003634-3d47-4996-bbba-38ac312e094e")
+	)
+	(no_connect
+		(at 172.72 105.41)
 		(uuid "122420c6-a5b2-415e-961a-275e546722b3")
 	)
 	(no_connect
-		(at 172.085 74.93)
+		(at 172.72 74.93)
 		(uuid "1dbd40ea-c55b-41f3-ac08-dc84720981dc")
 	)
 	(no_connect
-		(at 172.085 72.39)
+		(at 172.72 72.39)
 		(uuid "1ff72a58-3594-43cf-b156-4f1f31f587a8")
 	)
 	(no_connect
-		(at 172.085 87.63)
+		(at 172.72 87.63)
 		(uuid "25ec1629-8a17-489f-9bf8-52a2cd1d78a0")
 	)
 	(no_connect
-		(at 172.085 85.09)
+		(at 172.72 85.09)
 		(uuid "5100a03b-c3e5-4a82-b6a8-a743d959ff35")
 	)
 	(no_connect
-		(at 90.805 90.17)
+		(at 91.44 90.17)
 		(uuid "69bd9197-d7f3-423b-acc2-c72fcd424da5")
 	)
 	(no_connect
-		(at 172.085 107.95)
+		(at 172.72 107.95)
 		(uuid "6c9136aa-2712-4410-aad9-bff651a0852a")
 	)
 	(no_connect
-		(at 172.085 77.47)
+		(at 172.72 77.47)
 		(uuid "7d854bd0-c2eb-44d8-9535-0dda440d4924")
 	)
 	(no_connect
-		(at 172.085 80.01)
+		(at 172.72 80.01)
 		(uuid "7ee963a5-66e7-441a-a8b3-0d3a31be9f85")
 	)
 	(no_connect
-		(at 172.085 95.25)
+		(at 172.72 95.25)
 		(uuid "890b84f6-2414-4b04-a14e-1557072d4371")
 	)
 	(no_connect
-		(at 172.085 100.33)
+		(at 172.72 100.33)
 		(uuid "959794c1-2ee9-4b12-8a4b-ac3691ddc9c9")
 	)
 	(no_connect
-		(at 90.805 97.79)
+		(at 91.44 105.41)
+		(uuid "ad3bbf77-0b84-427b-becb-da9f50964378")
+	)
+	(no_connect
+		(at 91.44 97.79)
 		(uuid "b2468150-b9e6-45c5-91e7-edca676b01aa")
 	)
 	(no_connect
-		(at 172.085 82.55)
+		(at 172.72 82.55)
 		(uuid "c43c7f7c-8df8-478d-9a1e-b95bab2d1059")
 	)
 	(no_connect
-		(at 172.085 90.17)
+		(at 172.72 90.17)
 		(uuid "d0541671-d026-4a0a-85ff-02ddf28ef1fe")
 	)
 	(no_connect
-		(at 172.085 102.87)
+		(at 172.72 102.87)
 		(uuid "d8a0c757-cf46-4f30-8e12-24f04788c612")
 	)
 	(no_connect
-		(at 172.085 69.85)
+		(at 172.72 69.85)
 		(uuid "ea5f477e-17b3-4f0a-bfd9-36dbcb97a628")
 	)
 	(no_connect
-		(at 172.085 97.79)
+		(at 172.72 97.79)
 		(uuid "ed789acf-198f-416c-8dae-08e63c87410b")
 	)
 	(no_connect
-		(at 172.085 92.71)
+		(at 172.72 92.71)
 		(uuid "f26473ec-a50b-4936-bf0f-1b40746c5111")
 	)
 	(wire
@@ -1229,7 +1241,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 69.85) (xy 90.805 69.85)
+			(xy 82.55 69.85) (xy 91.44 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1239,7 +1251,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.215 66.04) (xy 69.215 69.85)
+			(xy 69.85 66.04) (xy 69.85 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1249,7 +1261,7 @@
 	)
 	(wire
 		(pts
-			(xy 84.455 87.63) (xy 90.805 87.63)
+			(xy 85.09 87.63) (xy 91.44 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1299,7 +1311,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.215 69.85) (xy 77.47 69.85)
+			(xy 69.85 69.85) (xy 77.47 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1319,7 +1331,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 95.25) (xy 90.805 95.25)
+			(xy 83.82 95.25) (xy 91.44 95.25)
 		)
 		(stroke
 			(width 0)
@@ -1329,7 +1341,7 @@
 	)
 	(wire
 		(pts
-			(xy 84.455 82.55) (xy 90.805 82.55)
+			(xy 85.09 82.55) (xy 91.44 82.55)
 		)
 		(stroke
 			(width 0)
@@ -1339,7 +1351,7 @@
 	)
 	(hierarchical_label "SWDIO"
 		(shape input)
-		(at 84.455 87.63 180)
+		(at 85.09 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1351,7 +1363,7 @@
 	)
 	(hierarchical_label "SWCLK"
 		(shape input)
-		(at 84.455 82.55 180)
+		(at 85.09 82.55 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1635,7 +1647,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 69.215 66.04 0)
+		(at 69.85 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1643,7 +1655,7 @@
 		(dnp no)
 		(uuid "5ede0ba0-46ab-4f3f-92e2-cf564df23cac")
 		(property "Reference" "#PWR09"
-			(at 69.215 69.85 0)
+			(at 69.85 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1652,7 +1664,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 69.215 60.96 0)
+			(at 69.85 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1660,7 +1672,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.215 66.04 0)
+			(at 69.85 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1669,7 +1681,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.215 66.04 0)
+			(at 69.85 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1678,7 +1690,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 69.215 66.04 0)
+			(at 69.85 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1700,7 +1712,7 @@
 	)
 	(symbol
 		(lib_id "FrontBox:STLINK-V3MODS")
-		(at 131.445 87.63 0)
+		(at 132.08 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1709,7 +1721,7 @@
 		(fields_autoplaced yes)
 		(uuid "b9b1eb10-f0d6-48c4-898f-828ad558e7f6")
 		(property "Reference" "U32"
-			(at 131.445 57.785 0)
+			(at 132.08 57.785 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1717,7 +1729,7 @@
 			)
 		)
 		(property "Value" "STLINK-V3MODS"
-			(at 131.445 60.325 0)
+			(at 132.08 60.325 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1725,7 +1737,7 @@
 			)
 		)
 		(property "Footprint" "Frontbox:MODULE_STLINK-V3MODS"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1735,7 +1747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1744,7 +1756,7 @@
 			)
 		)
 		(property "Description" "STM32 series Debugger, Programmer (In-Circuit/In-System)"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1754,7 +1766,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" "497-STLINK-V3MODS-ND"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1764,7 +1776,7 @@
 			)
 		)
 		(property "MF" "STMicroelectronics"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1774,7 +1786,7 @@
 			)
 		)
 		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=4704654&manufacturer=STMicroelectronics&part_name=STLINK-V3MODS&search_term=stlink-v3mods"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1784,7 +1796,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1794,7 +1806,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/STLINK-V3MODS/STMicroelectronics/view-part/?ref=eda"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1804,7 +1816,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1814,7 +1826,7 @@
 			)
 		)
 		(property "PARTREV" "1"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1824,7 +1836,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/STLINK-V3MODS/STMicroelectronics/view-part/?ref=snap"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1834,7 +1846,7 @@
 			)
 		)
 		(property "MP" "STLINK-V3MODS"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1844,7 +1856,7 @@
 			)
 		)
 		(property "MANUFACTURER" "ST Microelectronics"
-			(at 131.445 87.63 0)
+			(at 132.08 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
