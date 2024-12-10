@@ -29768,6 +29768,17 @@
 				)
 			)
 		)
+		(model "${KIPRJMOD}/Footprint/Snapeda.3dshapes/M80-5100622.stp"
+			(offset
+				(xyz 0 0 2.2)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
+		)
 	)
 	(footprint "Relay_THT:Relay_SPDT_Finder_32.21-x000"
 		(layer "F.Cu")
@@ -35374,6 +35385,17 @@
 					(xy 161.814214 137.785786) (xy 161.946021 137.931213) (xy 162.062939 138.08886) (xy 162.163843 138.257207)
 					(xy 162.247759 138.434633) (xy 162.313881 138.619431) (xy 162.361571 138.809819) (xy 162.390369 139.003966)
 				)
+			)
+		)
+		(model "${KIPRJMOD}/Footprint/Snapeda.3dshapes/M80-5100622.stp"
+			(offset
+				(xyz 0 0 2.2)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
 			)
 		)
 	)
