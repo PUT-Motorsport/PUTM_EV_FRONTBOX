@@ -4649,6 +4649,10 @@
 		(uuid "e2f9232b-a960-439d-aad8-ed0210217e06")
 	)
 	(no_connect
+		(at 289.56 83.82)
+		(uuid "eac14943-6497-419c-bab1-9580c9b0a38c")
+	)
+	(no_connect
 		(at 325.12 58.42)
 		(uuid "ece2929d-3f48-4c28-b73e-3e856a4e005f")
 	)
@@ -4659,6 +4663,10 @@
 	(no_connect
 		(at 53.34 59.69)
 		(uuid "f1e6e510-017f-4061-84e0-fb13cf886d35")
+	)
+	(no_connect
+		(at 289.56 81.28)
+		(uuid "f36bc2e9-e741-4708-b5b8-3d2c5fc44a3b")
 	)
 	(polyline
 		(pts
@@ -5812,7 +5820,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 162.56) (xy 133.35 162.56)
+			(xy 125.73 172.72) (xy 133.35 172.72)
 		)
 		(stroke
 			(width 0)
@@ -6082,16 +6090,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.095 200.025) (xy 134.62 200.025)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "994c3d5a-6427-4d12-a514-c5055ac3c415")
-	)
-	(wire
-		(pts
 			(xy 325.12 116.84) (xy 339.09 116.84)
 		)
 		(stroke
@@ -6132,7 +6130,7 @@
 	)
 	(wire
 		(pts
-			(xy 150.495 165.1) (xy 160.02 165.1)
+			(xy 150.495 175.26) (xy 160.02 175.26)
 		)
 		(stroke
 			(width 0)
@@ -6259,16 +6257,6 @@
 			(type default)
 		)
 		(uuid "acb6c49a-233c-42b8-a936-1308c7850b0b")
-	)
-	(wire
-		(pts
-			(xy 277.495 81.28) (xy 289.56 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad2882d7-35c8-4899-b361-c7ed2cf04dfa")
 	)
 	(wire
 		(pts
@@ -6512,16 +6500,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.095 203.2) (xy 134.62 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4bba399-460d-4715-b499-c7ab9e4b6b5b")
-	)
-	(wire
-		(pts
 			(xy 74.93 243.84) (xy 76.835 243.84)
 		)
 		(stroke
@@ -6589,16 +6567,6 @@
 			(type default)
 		)
 		(uuid "c973b9a7-9be5-4c25-817f-365287b3756b")
-	)
-	(wire
-		(pts
-			(xy 277.495 83.82) (xy 289.56 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9c8a8e8-eeb0-498c-8da9-8ca150f42a0f")
 	)
 	(wire
 		(pts
@@ -6730,16 +6698,6 @@
 		)
 		(uuid "dd2d7d6b-093d-4271-bea7-3eba941b107c")
 	)
-	(polyline
-		(pts
-			(xy 153.67 182.245) (xy 190.5 182.245)
-		)
-		(stroke
-			(width 0)
-			(type dot)
-		)
-		(uuid "dd66890e-6ff8-4c35-9591-b487fd7d5f45")
-	)
 	(wire
 		(pts
 			(xy 20.32 171.45) (xy 45.72 171.45)
@@ -6859,16 +6817,6 @@
 			(type default)
 		)
 		(uuid "e9337cc3-099d-4b88-84ef-0f817d93e0e4")
-	)
-	(polyline
-		(pts
-			(xy 102.87 182.245) (xy 134.62 182.245)
-		)
-		(stroke
-			(width 0)
-			(type dot)
-		)
-		(uuid "e93fd327-9c50-45e7-a583-00ce7237dd1f")
 	)
 	(wire
 		(pts
@@ -7092,19 +7040,6 @@
 			(justify left bottom)
 		)
 		(uuid "80b36eac-c6c3-42aa-8d6a-a2cbacf1e11b")
-	)
-	(text "Digital Inputs\n\n"
-		(exclude_from_sim no)
-		(at 133.35 186.69 0)
-		(effects
-			(font
-				(size 2 2)
-				(thickness 0.4)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "81e4693f-c043-43c3-aad5-9bfe2e1c733c")
 	)
 	(text "Analog Inputs\n\n"
 		(exclude_from_sim no)
@@ -7474,17 +7409,6 @@
 			(justify right bottom)
 		)
 		(uuid "226801b7-73e0-4f31-8fc1-69eba2ff345c")
-	)
-	(label "IMU_SDA"
-		(at 277.495 83.82 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "240d28c6-08e0-47f3-8cdb-49666a2becdc")
 	)
 	(label "Tensometer 3"
 		(at 274.32 66.04 0)
@@ -8026,7 +7950,7 @@
 		(uuid "75a21824-3043-4fcb-a2d7-42f5111543db")
 	)
 	(label "HSE_IN"
-		(at 125.73 162.56 0)
+		(at 125.73 172.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8046,17 +7970,6 @@
 			(justify right bottom)
 		)
 		(uuid "7ad717ad-b514-4fe6-bb55-3d3a41bd16db")
-	)
-	(label "IMU_SDA"
-		(at 125.095 203.2 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7bb70917-a25c-4e21-949d-b4b66ac53d96")
 	)
 	(label "Sense_left"
 		(at 76.835 236.22 0)
@@ -8104,7 +8017,7 @@
 		(uuid "800844a9-4b6c-4099-b5d3-de785c6ae9f7")
 	)
 	(label "HSE_OUT"
-		(at 160.02 165.1 180)
+		(at 160.02 175.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8234,17 +8147,6 @@
 			(justify left bottom)
 		)
 		(uuid "96147ab5-37a3-4065-a3ed-16028a7a8e72")
-	)
-	(label "IMU_SCL"
-		(at 277.495 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "97fb9950-9574-4125-a057-866ffe18934c")
 	)
 	(label "Sense_BSPD"
 		(at 341.63 104.14 180)
@@ -8598,17 +8500,6 @@
 			(justify right bottom)
 		)
 		(uuid "cdd36079-c2d1-4ee4-afa1-56239fe37a43")
-	)
-	(label "IMU_SCL"
-		(at 125.095 200.025 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cf2c7daa-9716-4bc4-9ab3-07c28719598e")
 	)
 	(label "SUSPENSION_POT2_IN"
 		(at 24.13 161.29 0)
@@ -12272,7 +12163,7 @@
 		)
 	)
 	(sheet
-		(at 133.35 161.29)
+		(at 133.35 171.45)
 		(size 17.145 5.08)
 		(fields_autoplaced yes)
 		(stroke
@@ -12284,7 +12175,7 @@
 		)
 		(uuid "4deadd9b-3e18-4284-beb5-6600402c5311")
 		(property "Sheetname" "Oscillator"
-			(at 133.35 160.5784 0)
+			(at 133.35 170.7384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12293,7 +12184,7 @@
 			)
 		)
 		(property "Sheetfile" "oscillator.kicad_sch"
-			(at 133.35 166.9546 0)
+			(at 133.35 177.1146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12303,7 +12194,7 @@
 			)
 		)
 		(pin "HSE_IN" input
-			(at 133.35 162.56 180)
+			(at 133.35 172.72 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12313,7 +12204,7 @@
 			(uuid "c877b136-e7a5-4d1e-bd2d-c54ad209d87f")
 		)
 		(pin "HSE_OUT" output
-			(at 150.495 165.1 0)
+			(at 150.495 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13649,64 +13540,6 @@
 			(project "PUTM_EV_Frontbox_2023"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
 					(page "17")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 134.62 197.485)
-		(size 21.59 8.255)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "fc1ffdcd-7b51-43f2-87c4-9a5d8609cd78")
-		(property "Sheetname" "IMU Sensor ISM330DHCX"
-			(at 128.905 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "imu_sensor.kicad_sch"
-			(at 133.35 206.375 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "IMU_SCL" bidirectional
-			(at 134.62 200.025 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "8eba0e34-6980-4503-828e-d9b92c427953")
-		)
-		(pin "IMU_SDA" bidirectional
-			(at 134.62 203.2 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "2986385e-09e6-4351-8d3e-53e21e77f2b5")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox_2023"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
-					(page "2")
 				)
 			)
 		)
