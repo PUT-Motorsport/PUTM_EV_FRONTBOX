@@ -6991,17 +6991,6 @@
 		)
 		(uuid "036eaf5c-afd7-4a38-a219-c6e3cf470fdc")
 	)
-	(text "Dodać programator stlink v3 mini\n"
-		(exclude_from_sim no)
-		(at 312.166 -6.858 0)
-		(effects
-			(font
-				(size 3 3)
-			)
-			(justify left bottom)
-		)
-		(uuid "078341b9-e00f-4d16-b5e2-1a734e2121e9")
-	)
 	(text "MCU Circutry\n\n"
 		(exclude_from_sim no)
 		(at 217.17 149.225 0)
@@ -7103,17 +7092,6 @@
 			(justify left bottom)
 		)
 		(uuid "c6194377-2408-41e6-9c0d-1171c6adb8a5")
-	)
-	(text "Dodać dodatkowe pomiary temperatury przekładni"
-		(exclude_from_sim no)
-		(at 312.166 -11.938 0)
-		(effects
-			(font
-				(size 3 3)
-			)
-			(justify left bottom)
-		)
-		(uuid "d03f05bc-6620-4a34-a6b2-486d1164db33")
 	)
 	(text "SC Control\n"
 		(exclude_from_sim no)
