@@ -5,7 +5,7 @@
 	(uuid "167e67a2-93a7-4847-8af8-c12782a74171")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Amplifier_Operational:MCP6002-xMC"
+		(symbol "Amplifier_Operational:MCP6002-xMS"
 			(pin_names
 				(offset 0.127)
 			)
@@ -21,7 +21,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MCP6002-xMC"
+			(property "Value" "MCP6002-xMS"
 				(at 0 -5.08 0)
 				(effects
 					(font
@@ -30,7 +30,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -48,7 +48,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+			(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -74,7 +74,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DFN*1EP*3x2mm*P0.5mm*"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -83,7 +83,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "MCP6002-xMC_1_1"
+			(symbol "MCP6002-xMS_1_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -151,7 +151,7 @@
 					)
 				)
 			)
-			(symbol "MCP6002-xMC_2_1"
+			(symbol "MCP6002-xMS_2_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -219,7 +219,7 @@
 					)
 				)
 			)
-			(symbol "MCP6002-xMC_3_1"
+			(symbol "MCP6002-xMS_3_1"
 				(pin power_in line
 					(at -2.54 -7.62 90)
 					(length 3.81)
@@ -249,24 +249,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -2.54 -7.62 90)
-					(length 3.81) hide
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4477,6 +4459,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Value" "100n"
@@ -4486,6 +4469,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -5205,6 +5189,94 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:MCP6002-xMS")
+		(at 267.97 86.36 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3479febb-0fe7-4d0c-9a15-5a29a54a5251")
+		(property "Reference" "U5"
+			(at 266.7 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP6002-xMS"
+			(at 266.7 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Snapeda:SOP65P490X110-8N"
+			(at 267.97 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 267.97 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
+			(at 267.97 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff9ca722-675e-4aa4-9a03-b5ab8334e55b")
+		)
+		(pin "7"
+			(uuid "7595b2d4-de1e-4239-9fa4-316d18d4dd4c")
+		)
+		(pin "6"
+			(uuid "5801eb60-d96c-4764-8c98-d762ae63506a")
+		)
+		(pin "8"
+			(uuid "e7883244-b3c1-4477-8a3a-349d5ff7933d")
+		)
+		(pin "3"
+			(uuid "0b403d99-dba5-459f-8f91-f2f46d2d0dd5")
+		)
+		(pin "2"
+			(uuid "b6744b2d-9524-4b8a-b853-6bb8fcef76c2")
+		)
+		(pin "5"
+			(uuid "9fb7e8c9-04e2-4211-8ba1-76d1625454a4")
+		)
+		(pin "4"
+			(uuid "326ba788-33b8-4451-acaf-f0a987c7615d")
+		)
+		(instances
+			(project ""
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
+					(reference "U5")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 29.21 152.4 0)
 		(unit 1)
@@ -5270,95 +5342,6 @@
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
 					(reference "C75")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
-		(at 119.38 83.82 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "381412cd-07cd-458c-89eb-0352780af771")
-		(property "Reference" "U33"
-			(at 119.38 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MCP6002-xMC"
-			(at 119.38 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
-			(at 119.38 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
-			(at 119.38 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
-			(at 119.38 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "92731f1d-465c-4c4d-a81f-6437c69448ea")
-		)
-		(pin "4"
-			(uuid "bca548f8-3e16-4f57-b407-aef167ccc339")
-		)
-		(pin "1"
-			(uuid "2f9db03c-6881-4478-9bac-56e7b9fb5310")
-		)
-		(pin "5"
-			(uuid "08aed4ce-dda4-4558-97a3-4d9b0e35e02c")
-		)
-		(pin "6"
-			(uuid "a738a5b3-d5cf-4bf0-aee4-6272c62153c1")
-		)
-		(pin "7"
-			(uuid "def538b9-993d-4a7f-8350-5c6d3496ba8b")
-		)
-		(pin "8"
-			(uuid "8f3758d7-6328-46de-bf89-468f14050ae7")
-		)
-		(pin "2"
-			(uuid "b9ba2d6d-08ef-48bb-b9bd-9e7130211aee")
-		)
-		(pin "9"
-			(uuid "42c8632b-95fa-44fd-9959-2b4390f00808")
-		)
-		(instances
-			(project ""
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
-					(reference "U33")
-					(unit 2)
 				)
 			)
 		)
@@ -6089,6 +6072,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -6825,97 +6809,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
-		(at 236.22 86.36 0)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "55572441-6cd7-4157-aff5-0f7bdb144e6d")
-		(property "Reference" "U33"
-			(at 234.95 85.0899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MCP6002-xMC"
-			(at 234.95 87.6299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
-			(at 236.22 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
-			(at 236.22 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
-			(at 236.22 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "9"
-			(uuid "7813d609-77dd-42e1-ac79-ca2ed67e17b9")
-		)
-		(pin "6"
-			(uuid "fc2ecdd2-4990-41f8-a97a-632cbf9f1a4e")
-		)
-		(pin "3"
-			(uuid "3d97e49f-ae0c-4d15-be31-47f5cf884ffc")
-		)
-		(pin "2"
-			(uuid "01949cdc-5129-4803-b57f-cffc478db28a")
-		)
-		(pin "1"
-			(uuid "6f865710-8fca-49b8-8ad3-9072f561dbc5")
-		)
-		(pin "8"
-			(uuid "a0563d10-67ca-45a9-8642-e72c6a2632eb")
-		)
-		(pin "4"
-			(uuid "61ef6c6c-4d9a-4508-9656-eeb29c384fab")
-		)
-		(pin "5"
-			(uuid "e39252e1-396e-46dc-9c1c-9ea3b650e58a")
-		)
-		(pin "7"
-			(uuid "1596f012-3739-467e-a007-09ddf77d37fe")
-		)
-		(instances
-			(project ""
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
-					(reference "U33")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 256.54 25.4 0)
 		(unit 1)
@@ -7118,97 +7011,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
-		(at 267.97 86.36 0)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "65a92e15-d32b-47f5-98a2-20ba1684a6c4")
-		(property "Reference" "U31"
-			(at 266.7 85.0899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MCP6002-xMC"
-			(at 266.7 87.6299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
-			(at 267.97 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
-			(at 267.97 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
-			(at 267.97 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "92731f1d-465c-4c4d-a81f-6437c69448eb")
-		)
-		(pin "4"
-			(uuid "bca548f8-3e16-4f57-b407-aef167ccc33a")
-		)
-		(pin "1"
-			(uuid "2f9db03c-6881-4478-9bac-56e7b9fb5311")
-		)
-		(pin "5"
-			(uuid "08aed4ce-dda4-4558-97a3-4d9b0e35e02d")
-		)
-		(pin "6"
-			(uuid "a738a5b3-d5cf-4bf0-aee4-6272c62153c2")
-		)
-		(pin "7"
-			(uuid "def538b9-993d-4a7f-8350-5c6d3496ba8c")
-		)
-		(pin "8"
-			(uuid "8f3758d7-6328-46de-bf89-468f14050ae8")
-		)
-		(pin "2"
-			(uuid "b9ba2d6d-08ef-48bb-b9bd-9e7130211aef")
-		)
-		(pin "9"
-			(uuid "42c8632b-95fa-44fd-9959-2b4390f00809")
-		)
-		(instances
-			(project ""
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
-					(reference "U31")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3VA")
 		(at 233.68 76.2 0)
 		(unit 1)
@@ -7270,6 +7072,92 @@
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
 					(reference "#PWR0209")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:MCP6002-xMS")
+		(at 119.38 171.45 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6d682c3f-87db-49f4-ba58-06fed7d67f17")
+		(property "Reference" "U5"
+			(at 119.38 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP6002-xMS"
+			(at 119.38 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Snapeda:SOP65P490X110-8N"
+			(at 119.38 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 119.38 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
+			(at 119.38 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff9ca722-675e-4aa4-9a03-b5ab8334e55b")
+		)
+		(pin "7"
+			(uuid "7595b2d4-de1e-4239-9fa4-316d18d4dd4c")
+		)
+		(pin "6"
+			(uuid "5801eb60-d96c-4764-8c98-d762ae63506a")
+		)
+		(pin "8"
+			(uuid "e7883244-b3c1-4477-8a3a-349d5ff7933d")
+		)
+		(pin "3"
+			(uuid "0b403d99-dba5-459f-8f91-f2f46d2d0dd5")
+		)
+		(pin "2"
+			(uuid "b6744b2d-9524-4b8a-b853-6bb8fcef76c2")
+		)
+		(pin "5"
+			(uuid "9fb7e8c9-04e2-4211-8ba1-76d1625454a4")
+		)
+		(pin "4"
+			(uuid "326ba788-33b8-4451-acaf-f0a987c7615d")
+		)
+		(instances
+			(project ""
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
+					(reference "U5")
+					(unit 2)
 				)
 			)
 		)
@@ -8973,95 +8861,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
-		(at 119.38 171.45 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "af83cbbf-468a-427d-9158-9c065142a885")
-		(property "Reference" "U31"
-			(at 119.38 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MCP6002-xMC"
-			(at 119.38 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
-			(at 119.38 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
-			(at 119.38 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
-			(at 119.38 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "9"
-			(uuid "7813d609-77dd-42e1-ac79-ca2ed67e17ba")
-		)
-		(pin "6"
-			(uuid "fc2ecdd2-4990-41f8-a97a-632cbf9f1a4f")
-		)
-		(pin "3"
-			(uuid "3d97e49f-ae0c-4d15-be31-47f5cf884ffd")
-		)
-		(pin "2"
-			(uuid "01949cdc-5129-4803-b57f-cffc478db28b")
-		)
-		(pin "1"
-			(uuid "6f865710-8fca-49b8-8ad3-9072f561dbc6")
-		)
-		(pin "8"
-			(uuid "a0563d10-67ca-45a9-8642-e72c6a2632ec")
-		)
-		(pin "4"
-			(uuid "61ef6c6c-4d9a-4508-9656-eeb29c384fac")
-		)
-		(pin "5"
-			(uuid "e39252e1-396e-46dc-9c1c-9ea3b650e58b")
-		)
-		(pin "7"
-			(uuid "1596f012-3739-467e-a007-09ddf77d37ff")
-		)
-		(instances
-			(project ""
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
-					(reference "U31")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 276.86 43.18 0)
 		(unit 1)
@@ -9266,7 +9065,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
+		(lib_id "Amplifier_Operational:MCP6002-xMS")
 		(at 119.38 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9274,8 +9073,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b8b86bc9-318d-43be-a60e-dabf0ec6b709")
-		(property "Reference" "U31"
+		(uuid "b832f5cf-b331-4030-b906-369aabad7e00")
+		(property "Reference" "U5"
 			(at 119.38 119.38 0)
 			(effects
 				(font
@@ -9283,7 +9082,7 @@
 				)
 			)
 		)
-		(property "Value" "MCP6002-xMC"
+		(property "Value" "MCP6002-xMS"
 			(at 119.38 121.92 0)
 			(effects
 				(font
@@ -9291,7 +9090,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
+		(property "Footprint" "Snapeda:SOP65P490X110-8N"
 			(at 119.38 129.54 0)
 			(effects
 				(font
@@ -9309,7 +9108,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
+		(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
 			(at 119.38 129.54 0)
 			(effects
 				(font
@@ -9318,37 +9117,34 @@
 				(hide yes)
 			)
 		)
-		(pin "9"
-			(uuid "7813d609-77dd-42e1-ac79-ca2ed67e17bb")
-		)
-		(pin "6"
-			(uuid "fc2ecdd2-4990-41f8-a97a-632cbf9f1a50")
-		)
-		(pin "3"
-			(uuid "3d97e49f-ae0c-4d15-be31-47f5cf884ffe")
-		)
-		(pin "2"
-			(uuid "01949cdc-5129-4803-b57f-cffc478db28c")
-		)
 		(pin "1"
-			(uuid "6f865710-8fca-49b8-8ad3-9072f561dbc7")
-		)
-		(pin "8"
-			(uuid "a0563d10-67ca-45a9-8642-e72c6a2632ed")
-		)
-		(pin "4"
-			(uuid "61ef6c6c-4d9a-4508-9656-eeb29c384fad")
-		)
-		(pin "5"
-			(uuid "e39252e1-396e-46dc-9c1c-9ea3b650e58c")
+			(uuid "ff9ca722-675e-4aa4-9a03-b5ab8334e55b")
 		)
 		(pin "7"
-			(uuid "1596f012-3739-467e-a007-09ddf77d3800")
+			(uuid "7595b2d4-de1e-4239-9fa4-316d18d4dd4c")
+		)
+		(pin "6"
+			(uuid "5801eb60-d96c-4764-8c98-d762ae63506a")
+		)
+		(pin "8"
+			(uuid "e7883244-b3c1-4477-8a3a-349d5ff7933d")
+		)
+		(pin "3"
+			(uuid "0b403d99-dba5-459f-8f91-f2f46d2d0dd5")
+		)
+		(pin "2"
+			(uuid "b6744b2d-9524-4b8a-b853-6bb8fcef76c2")
+		)
+		(pin "5"
+			(uuid "9fb7e8c9-04e2-4211-8ba1-76d1625454a4")
+		)
+		(pin "4"
+			(uuid "326ba788-33b8-4451-acaf-f0a987c7615d")
 		)
 		(instances
 			(project ""
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
-					(reference "U31")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -9639,6 +9435,94 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:MCP6002-xMS")
+		(at 236.22 86.36 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bcbb9253-109b-4c26-b922-ab2cf7dc4af6")
+		(property "Reference" "U3"
+			(at 234.95 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP6002-xMS"
+			(at 234.95 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Snapeda:SOP65P490X110-8N"
+			(at 236.22 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 236.22 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
+			(at 236.22 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "07e7141a-07cd-4397-9dd2-ea18511e2be7")
+		)
+		(pin "8"
+			(uuid "7ac3cc23-7fa2-4720-ae7c-8ca5cede48c9")
+		)
+		(pin "5"
+			(uuid "aa7ea3c6-4e69-4ff7-aa7b-3e9c8abc2224")
+		)
+		(pin "1"
+			(uuid "32230d6a-03b5-4d29-bec0-1ecdc0841e80")
+		)
+		(pin "2"
+			(uuid "2b92edd3-d144-4228-80fb-91a7cf6b554c")
+		)
+		(pin "7"
+			(uuid "0fb6a081-cc97-4578-a681-4406af9a8e28")
+		)
+		(pin "3"
+			(uuid "30ff983a-a1d8-4b06-a670-d688c5635ebf")
+		)
+		(pin "4"
+			(uuid "8c3ea641-bfed-43e5-8b5c-68995b343a0d")
+		)
+		(instances
+			(project ""
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
+					(reference "U3")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Polyfuse_Small")
 		(at 243.84 25.4 90)
 		(unit 1)
@@ -9842,6 +9726,92 @@
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
 					(reference "R109")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:MCP6002-xMS")
+		(at 119.38 83.82 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c39c969e-6269-47ac-9937-cc1eb8237989")
+		(property "Reference" "U3"
+			(at 119.38 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP6002-xMS"
+			(at 119.38 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Snapeda:SOP65P490X110-8N"
+			(at 119.38 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 119.38 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
+			(at 119.38 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "07e7141a-07cd-4397-9dd2-ea18511e2be7")
+		)
+		(pin "8"
+			(uuid "7ac3cc23-7fa2-4720-ae7c-8ca5cede48c9")
+		)
+		(pin "5"
+			(uuid "aa7ea3c6-4e69-4ff7-aa7b-3e9c8abc2224")
+		)
+		(pin "1"
+			(uuid "32230d6a-03b5-4d29-bec0-1ecdc0841e80")
+		)
+		(pin "2"
+			(uuid "2b92edd3-d144-4228-80fb-91a7cf6b554c")
+		)
+		(pin "7"
+			(uuid "0fb6a081-cc97-4578-a681-4406af9a8e28")
+		)
+		(pin "3"
+			(uuid "30ff983a-a1d8-4b06-a670-d688c5635ebf")
+		)
+		(pin "4"
+			(uuid "8c3ea641-bfed-43e5-8b5c-68995b343a0d")
+		)
+		(instances
+			(project ""
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
+					(reference "U3")
+					(unit 2)
 				)
 			)
 		)
@@ -10931,6 +10901,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:MCP6002-xMS")
+		(at 119.38 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e89d78de-8571-41ca-8332-2ed91281f4c5")
+		(property "Reference" "U3"
+			(at 119.38 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP6002-xMS"
+			(at 119.38 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Snapeda:SOP65P490X110-8N"
+			(at 119.38 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 119.38 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
+			(at 119.38 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "07e7141a-07cd-4397-9dd2-ea18511e2be7")
+		)
+		(pin "8"
+			(uuid "7ac3cc23-7fa2-4720-ae7c-8ca5cede48c9")
+		)
+		(pin "5"
+			(uuid "aa7ea3c6-4e69-4ff7-aa7b-3e9c8abc2224")
+		)
+		(pin "1"
+			(uuid "32230d6a-03b5-4d29-bec0-1ecdc0841e80")
+		)
+		(pin "2"
+			(uuid "2b92edd3-d144-4228-80fb-91a7cf6b554c")
+		)
+		(pin "7"
+			(uuid "0fb6a081-cc97-4578-a681-4406af9a8e28")
+		)
+		(pin "3"
+			(uuid "30ff983a-a1d8-4b06-a670-d688c5635ebf")
+		)
+		(pin "4"
+			(uuid "8c3ea641-bfed-43e5-8b5c-68995b343a0d")
+		)
+		(instances
+			(project ""
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 267.97 19.05 0)
 		(unit 1)
@@ -11536,95 +11592,6 @@
 			(project "PUTM_EV_Frontbox_2023"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
 					(reference "#PWR0204")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:MCP6002-xMC")
-		(at 119.38 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f09b4d7e-aff5-4e93-9b92-f34b27ce4d65")
-		(property "Reference" "U33"
-			(at 119.38 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MCP6002-xMC"
-			(at 119.38 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x2mm_P0.5mm_EP1.75x1.45mm"
-			(at 119.38 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
-			(at 119.38 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1MHz, Low-Power Op Amp, DFN-8"
-			(at 119.38 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "92731f1d-465c-4c4d-a81f-6437c69448ec")
-		)
-		(pin "4"
-			(uuid "bca548f8-3e16-4f57-b407-aef167ccc33b")
-		)
-		(pin "1"
-			(uuid "2f9db03c-6881-4478-9bac-56e7b9fb5312")
-		)
-		(pin "5"
-			(uuid "08aed4ce-dda4-4558-97a3-4d9b0e35e02e")
-		)
-		(pin "6"
-			(uuid "a738a5b3-d5cf-4bf0-aee4-6272c62153c3")
-		)
-		(pin "7"
-			(uuid "def538b9-993d-4a7f-8350-5c6d3496ba8d")
-		)
-		(pin "8"
-			(uuid "8f3758d7-6328-46de-bf89-468f14050ae9")
-		)
-		(pin "2"
-			(uuid "b9ba2d6d-08ef-48bb-b9bd-9e7130211af0")
-		)
-		(pin "9"
-			(uuid "42c8632b-95fa-44fd-9959-2b4390f0080a")
-		)
-		(instances
-			(project ""
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/7da16e37-d500-4066-9eb9-1e6cc6bf794c"
-					(reference "U33")
 					(unit 1)
 				)
 			)

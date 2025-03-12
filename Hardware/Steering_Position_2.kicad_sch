@@ -542,7 +542,7 @@
 				)
 			)
 		)
-		(symbol "power:+3.3VA"
+		(symbol "power:+5V"
 			(power)
 			(pin_numbers hide)
 			(pin_names
@@ -559,7 +559,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+3.3VA"
+			(property "Value" "+5V"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -585,7 +585,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -603,7 +603,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+3.3VA_0_1"
+			(symbol "+5V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -641,7 +641,7 @@
 					)
 				)
 			)
-			(symbol "+3.3VA_1_1"
+			(symbol "+5V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -1317,72 +1317,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3VA")
-		(at 68.58 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0421d3b3-2869-4168-ad9d-ed695d86e2a6")
-		(property "Reference" "#PWR074"
-			(at 68.58 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3VA"
-			(at 68.58 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 68.58 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 68.58 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
-			(at 68.58 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "51988c11-6090-4ff9-8869-bf6074589a9c")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox_2023"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
-					(reference "#PWR074")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 115.57 77.47 0)
 		(unit 1)
@@ -1519,17 +1453,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3VA")
-		(at 133.35 76.2 0)
+		(lib_id "power:+5V")
+		(at 214.63 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0b6533fb-00f0-44d9-afa6-6a43fbb675f6")
-		(property "Reference" "#PWR068"
-			(at 133.35 80.01 0)
+		(uuid "142d04ac-41d9-4f19-a27a-4c3a694606f3")
+		(property "Reference" "#PWR070"
+			(at 214.63 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1537,8 +1471,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3VA"
-			(at 133.35 71.12 0)
+		(property "Value" "+5V"
+			(at 214.63 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1546,7 +1480,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 76.2 0)
+			(at 214.63 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1555,7 +1489,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 76.2 0)
+			(at 214.63 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1563,8 +1497,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
-			(at 133.35 76.2 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 214.63 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1573,12 +1507,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f0f8ea80-767c-4247-ac35-e53ce424c719")
+			(uuid "59438cd2-25f7-41fc-a519-03a6be24560d")
 		)
 		(instances
 			(project "PUTM_EV_Frontbox_2023"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
-					(reference "#PWR068")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -1646,6 +1580,72 @@
 			(project "PUTM_EV_Frontbox_2023"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
 					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 68.58 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "442fe608-6578-4f4a-88c3-993c10d5a09f")
+		(property "Reference" "#PWR068"
+			(at 68.58 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 68.58 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 68.58 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e43e2a46-b1ec-4ae0-8ea7-7b6769536658")
+		)
+		(instances
+			(project ""
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -1860,71 +1860,6 @@
 			(project "PUTM_EV_Frontbox_2023"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
 					(reference "U37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3VA")
-		(at 214.63 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "69ca32a3-25b2-41f8-9871-357694e666be")
-		(property "Reference" "#PWR070"
-			(at 214.63 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3VA"
-			(at 214.63 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 214.63 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 214.63 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 214.63 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5f835282-42b2-48ac-8bfe-0c374552f684")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox_2023"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
-					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -2401,6 +2336,72 @@
 			(project "PUTM_EV_Frontbox_2023"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
 					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 133.35 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b87f0a24-7791-466d-9fba-256ff243fd00")
+		(property "Reference" "#PWR074"
+			(at 133.35 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 133.35 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "049cc5d3-c73e-4a3e-9024-db86ea2f0eb1")
+		)
+		(instances
+			(project "PUTM_EV_Frontbox_2023"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/6de6146b-2213-45c8-a06a-8f4a94142e11"
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
