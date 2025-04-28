@@ -10231,9 +10231,10 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "633a7ec9-5eba-4068-955d-b6bb608058f1")
 		(property "Reference" "U31"
-			(at 306.324 80.264 0)
+			(at 312.0233 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10242,7 +10243,7 @@
 			)
 		)
 		(property "Value" "STM32G484RETx"
-			(at 300.228 83.312 0)
+			(at 312.0233 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)

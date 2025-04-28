@@ -1200,10 +1200,10 @@
 		(uuid "0c4cb6c8-40b0-4558-b385-9ecd2a5c2285")
 	)
 	(junction
-		(at 129.54 91.44)
+		(at 129.54 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "162b7e36-9a41-403e-acff-31f6721b3f1f")
+		(uuid "1e993b6d-bb0c-44b2-bebe-dfc7f22e9f71")
 	)
 	(junction
 		(at 156.21 93.98)
@@ -1212,10 +1212,10 @@
 		(uuid "208af6f9-f764-4c87-b084-3833b34ba461")
 	)
 	(junction
-		(at 147.32 93.98)
+		(at 147.32 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "349bf881-9eff-43a7-9abc-ebe40e2859ae")
+		(uuid "302b98f7-c8f0-4571-a4e0-52f75db919fa")
 	)
 	(junction
 		(at 214.63 87.63)
@@ -1285,7 +1285,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 78.74) (xy 147.32 93.98)
+			(xy 147.32 92.71) (xy 147.32 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1365,13 +1365,23 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 96.52) (xy 127 96.52)
+			(xy 130.81 95.25) (xy 127 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4fbd0155-b16f-4e86-9f60-2f7b66848252")
+	)
+	(wire
+		(pts
+			(xy 147.32 78.74) (xy 147.32 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "538dd76e-1ecd-446f-8cfa-933f3f63d1b9")
 	)
 	(polyline
 		(pts
@@ -1395,7 +1405,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 93.98) (xy 146.05 93.98)
+			(xy 147.32 92.71) (xy 146.05 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1485,7 +1495,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 78.74) (xy 129.54 91.44)
+			(xy 129.54 90.17) (xy 129.54 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1522,6 +1532,16 @@
 			(type default)
 		)
 		(uuid "95e1b506-2dd8-4d19-b2ea-ed9badd1f575")
+	)
+	(wire
+		(pts
+			(xy 129.54 78.74) (xy 129.54 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98253cbc-83e9-4baf-a498-6b318f871508")
 	)
 	(wire
 		(pts
@@ -1595,7 +1615,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 91.44) (xy 130.81 91.44)
+			(xy 129.54 90.17) (xy 130.81 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1642,6 +1662,16 @@
 			(type default)
 		)
 		(uuid "e7c164d7-d26c-4986-8ee5-43fe26ae40ec")
+	)
+	(wire
+		(pts
+			(xy 127 95.25) (xy 127 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eed0e773-2341-4aad-aa3a-8916e28ed159")
 	)
 	(polyline
 		(pts
@@ -2101,7 +2131,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:MCP6002-xMS")
-		(at 138.43 93.98 0)
+		(at 138.43 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2110,7 +2140,7 @@
 		(fields_autoplaced yes)
 		(uuid "33920d75-f2fa-4090-a185-b7efea7af2f2")
 		(property "Reference" "U15"
-			(at 138.43 83.82 0)
+			(at 138.43 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2118,7 +2148,7 @@
 			)
 		)
 		(property "Value" "MCP6002-xMS"
-			(at 138.43 86.36 0)
+			(at 138.43 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2126,7 +2156,7 @@
 			)
 		)
 		(property "Footprint" "Snapeda:SOP65P490X110-8N"
-			(at 138.43 93.98 0)
+			(at 138.43 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2135,7 +2165,7 @@
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
-			(at 138.43 93.98 0)
+			(at 138.43 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2144,7 +2174,7 @@
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, MSOP-8"
-			(at 138.43 93.98 0)
+			(at 138.43 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)

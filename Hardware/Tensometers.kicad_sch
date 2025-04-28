@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "167e67a2-93a7-4847-8af8-c12782a74171")
 	(paper "A4")
 	(lib_symbols
@@ -96,17 +96,17 @@
 						(type background)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -132,17 +132,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
+				(pin output line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "+"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -221,24 +221,6 @@
 			)
 			(symbol "MCP6002-xMS_3_1"
 				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at -2.54 7.62 270)
 					(length 3.81)
 					(name "V+"
@@ -256,12 +238,35 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.762) hide)
+				(offset 0.762)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -359,11 +364,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -433,10 +443,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -445,10 +455,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -494,9 +504,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:Polyfuse_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -566,6 +579,18 @@
 				)
 			)
 			(symbol "Polyfuse_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.016 1.27) (xy -1.016 0.762) (xy 1.016 -0.762) (xy 1.016 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(rectangle
 					(start -0.508 1.27)
 					(end 0.508 -1.27)
@@ -580,18 +605,6 @@
 				(polyline
 					(pts
 						(xy 0 2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 1.27) (xy -1.016 0.762) (xy 1.016 -0.762) (xy 1.016 -1.27)
 					)
 					(stroke
 						(width 0)
@@ -640,11 +653,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -762,6 +780,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Samacsys:MCP1501T-18E_CHY"
 			(exclude_from_sim no)
@@ -934,7 +953,8 @@
 				)
 				(pin passive line
 					(at 0 -5.08 0)
-					(length 5.08) hide
+					(length 5.08)
+					(hide yes)
 					(name "GND_2"
 						(effects
 							(font
@@ -951,26 +971,9 @@
 					)
 				)
 				(pin passive line
-					(at 30.48 -5.08 180)
-					(length 5.08)
-					(name "~{SHDN}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 0 -5.08 0)
-					(length 5.08) hide
+					(length 5.08)
+					(hide yes)
 					(name "GND_3"
 						(effects
 							(font
@@ -1004,7 +1007,26 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 30.48 -5.08 180)
+					(length 5.08)
+					(name "~{SHDN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Snapeda:AD8226BRMZ-R7"
 			(pin_names
@@ -1263,6 +1285,24 @@
 					)
 				)
 				(pin power_in line
+					(at 0 12.7 270)
+					(length 5.08)
+					(name "+VS"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
 					(at 0 -12.7 90)
 					(length 5.08)
 					(name "-VS"
@@ -1316,24 +1356,6 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 12.7 270)
-					(length 5.08)
-					(name "+VS"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
 			)
 			(symbol "AD8226BRMZ-R7_1_1"
 				(polyline
@@ -1349,12 +1371,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+12V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1426,7 +1453,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1438,7 +1465,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1469,12 +1496,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3VA"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1546,7 +1578,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1558,7 +1590,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1589,12 +1621,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1666,7 +1703,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1678,7 +1715,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1709,12 +1746,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1805,12 +1847,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:PWR_FLAG"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1901,7 +1948,64 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 103.505 18.415)
+		(end 151.13 196.85)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 1066d0bf-abbb-40a6-93b1-a7471f97a0f5)
+	)
+	(rectangle
+		(start 17.78 18.415)
+		(end 94.615 196.85)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid ea2a0582-78e5-43e4-a71c-e4e2f969067c)
+	)
+	(text "Power section\n"
+		(exclude_from_sim no)
+		(at 249.174 63.246 0)
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+				(bold yes)
+			)
+		)
+		(uuid "0e35496c-a925-4f35-9e47-10a788fdd27e")
+	)
+	(text "Voltage followers with 0R for non inverting amplifier"
+		(exclude_from_sim no)
+		(at 127.254 15.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "63051ee8-8af0-4868-bde7-baeb64bd98ed")
+	)
+	(text "Diffrental op-amps for 1kR => Gain=50"
+		(exclude_from_sim no)
+		(at 50.8 14.732 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6cdb1d86-15f8-4b02-924b-489f0fa3fcdc")
 	)
 	(junction
 		(at 265.43 77.47)
@@ -3695,65 +3799,8 @@
 		)
 		(uuid "fff1dbe2-fe1f-4b7a-b49b-7d02aba1ed94")
 	)
-	(rectangle
-		(start 103.505 18.415)
-		(end 151.13 196.85)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 1066d0bf-abbb-40a6-93b1-a7471f97a0f5)
-	)
-	(rectangle
-		(start 17.78 18.415)
-		(end 94.615 196.85)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid ea2a0582-78e5-43e4-a71c-e4e2f969067c)
-	)
-	(text "Power section\n"
-		(exclude_from_sim no)
-		(at 249.174 63.246 0)
-		(effects
-			(font
-				(size 2 2)
-				(thickness 0.4)
-				(bold yes)
-			)
-		)
-		(uuid "0e35496c-a925-4f35-9e47-10a788fdd27e")
-	)
-	(text "Voltage followers with 0R for non inverting amplifier"
-		(exclude_from_sim no)
-		(at 127.254 15.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "63051ee8-8af0-4868-bde7-baeb64bd98ed")
-	)
-	(text "Diffrental op-amps for 1kR => Gain=50"
-		(exclude_from_sim no)
-		(at 50.8 14.732 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "6cdb1d86-15f8-4b02-924b-489f0fa3fcdc")
-	)
 	(label "1,8V"
 		(at 267.97 50.8 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3764,7 +3811,6 @@
 	)
 	(label "1,8V"
 		(at 62.23 53.34 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3775,7 +3821,6 @@
 	)
 	(label "1,8V"
 		(at 62.23 182.88 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3786,7 +3831,6 @@
 	)
 	(label "1,8V"
 		(at 62.23 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3797,7 +3841,6 @@
 	)
 	(label "1,8V"
 		(at 62.23 140.97 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3809,7 +3852,6 @@
 	(hierarchical_label "OUT4-"
 		(shape input)
 		(at 41.91 160.02 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3821,7 +3863,6 @@
 	(hierarchical_label "OUT3"
 		(shape output)
 		(at 140.97 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3833,7 +3874,6 @@
 	(hierarchical_label "OUT3-"
 		(shape input)
 		(at 41.91 118.11 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3845,7 +3885,6 @@
 	(hierarchical_label "OUT2-"
 		(shape input)
 		(at 41.91 72.39 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3857,7 +3896,6 @@
 	(hierarchical_label "OUT2+"
 		(shape input)
 		(at 41.91 90.17 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3869,7 +3907,6 @@
 	(hierarchical_label "OUT4"
 		(shape output)
 		(at 140.97 171.45 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3881,7 +3918,6 @@
 	(hierarchical_label "OUT3+"
 		(shape input)
 		(at 41.91 135.89 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3893,7 +3929,6 @@
 	(hierarchical_label "12V2"
 		(shape input)
 		(at 223.52 25.4 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3905,7 +3940,6 @@
 	(hierarchical_label "OUT1"
 		(shape output)
 		(at 143.51 41.91 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3917,7 +3951,6 @@
 	(hierarchical_label "OUT4+"
 		(shape input)
 		(at 41.91 177.8 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3929,7 +3962,6 @@
 	(hierarchical_label "12V1"
 		(shape input)
 		(at 223.52 19.05 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3941,7 +3973,6 @@
 	(hierarchical_label "OUT2"
 		(shape output)
 		(at 142.24 83.82 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3953,7 +3984,6 @@
 	(hierarchical_label "OUT1-"
 		(shape input)
 		(at 41.91 30.48 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3965,7 +3995,6 @@
 	(hierarchical_label "OUT1+"
 		(shape input)
 		(at 41.91 48.26 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7130,28 +7159,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "ff9ca722-675e-4aa4-9a03-b5ab8334e55b")
+			(uuid "ff9ca722-675e-4aa4-9a03-b5ab8334e55c")
 		)
 		(pin "7"
-			(uuid "7595b2d4-de1e-4239-9fa4-316d18d4dd4c")
+			(uuid "7595b2d4-de1e-4239-9fa4-316d18d4dd4d")
 		)
 		(pin "6"
-			(uuid "5801eb60-d96c-4764-8c98-d762ae63506a")
+			(uuid "5801eb60-d96c-4764-8c98-d762ae63506b")
 		)
 		(pin "8"
-			(uuid "e7883244-b3c1-4477-8a3a-349d5ff7933d")
+			(uuid "e7883244-b3c1-4477-8a3a-349d5ff7933e")
 		)
 		(pin "3"
-			(uuid "0b403d99-dba5-459f-8f91-f2f46d2d0dd5")
+			(uuid "0b403d99-dba5-459f-8f91-f2f46d2d0dd6")
 		)
 		(pin "2"
-			(uuid "b6744b2d-9524-4b8a-b853-6bb8fcef76c2")
+			(uuid "b6744b2d-9524-4b8a-b853-6bb8fcef76c3")
 		)
 		(pin "5"
-			(uuid "9fb7e8c9-04e2-4211-8ba1-76d1625454a4")
+			(uuid "9fb7e8c9-04e2-4211-8ba1-76d1625454a5")
 		)
 		(pin "4"
-			(uuid "326ba788-33b8-4451-acaf-f0a987c7615d")
+			(uuid "326ba788-33b8-4451-acaf-f0a987c7615e")
 		)
 		(instances
 			(project ""
@@ -9118,28 +9147,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "ff9ca722-675e-4aa4-9a03-b5ab8334e55b")
+			(uuid "ff9ca722-675e-4aa4-9a03-b5ab8334e55d")
 		)
 		(pin "7"
-			(uuid "7595b2d4-de1e-4239-9fa4-316d18d4dd4c")
+			(uuid "7595b2d4-de1e-4239-9fa4-316d18d4dd4e")
 		)
 		(pin "6"
-			(uuid "5801eb60-d96c-4764-8c98-d762ae63506a")
+			(uuid "5801eb60-d96c-4764-8c98-d762ae63506c")
 		)
 		(pin "8"
-			(uuid "e7883244-b3c1-4477-8a3a-349d5ff7933d")
+			(uuid "e7883244-b3c1-4477-8a3a-349d5ff7933f")
 		)
 		(pin "3"
-			(uuid "0b403d99-dba5-459f-8f91-f2f46d2d0dd5")
+			(uuid "0b403d99-dba5-459f-8f91-f2f46d2d0dd7")
 		)
 		(pin "2"
-			(uuid "b6744b2d-9524-4b8a-b853-6bb8fcef76c2")
+			(uuid "b6744b2d-9524-4b8a-b853-6bb8fcef76c4")
 		)
 		(pin "5"
-			(uuid "9fb7e8c9-04e2-4211-8ba1-76d1625454a4")
+			(uuid "9fb7e8c9-04e2-4211-8ba1-76d1625454a6")
 		)
 		(pin "4"
-			(uuid "326ba788-33b8-4451-acaf-f0a987c7615d")
+			(uuid "326ba788-33b8-4451-acaf-f0a987c7615f")
 		)
 		(instances
 			(project ""
@@ -9784,28 +9813,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "07e7141a-07cd-4397-9dd2-ea18511e2be7")
+			(uuid "07e7141a-07cd-4397-9dd2-ea18511e2be8")
 		)
 		(pin "8"
-			(uuid "7ac3cc23-7fa2-4720-ae7c-8ca5cede48c9")
+			(uuid "7ac3cc23-7fa2-4720-ae7c-8ca5cede48ca")
 		)
 		(pin "5"
-			(uuid "aa7ea3c6-4e69-4ff7-aa7b-3e9c8abc2224")
+			(uuid "aa7ea3c6-4e69-4ff7-aa7b-3e9c8abc2225")
 		)
 		(pin "1"
-			(uuid "32230d6a-03b5-4d29-bec0-1ecdc0841e80")
+			(uuid "32230d6a-03b5-4d29-bec0-1ecdc0841e81")
 		)
 		(pin "2"
-			(uuid "2b92edd3-d144-4228-80fb-91a7cf6b554c")
+			(uuid "2b92edd3-d144-4228-80fb-91a7cf6b554d")
 		)
 		(pin "7"
-			(uuid "0fb6a081-cc97-4578-a681-4406af9a8e28")
+			(uuid "0fb6a081-cc97-4578-a681-4406af9a8e29")
 		)
 		(pin "3"
-			(uuid "30ff983a-a1d8-4b06-a670-d688c5635ebf")
+			(uuid "30ff983a-a1d8-4b06-a670-d688c5635ec0")
 		)
 		(pin "4"
-			(uuid "8c3ea641-bfed-43e5-8b5c-68995b343a0d")
+			(uuid "8c3ea641-bfed-43e5-8b5c-68995b343a0e")
 		)
 		(instances
 			(project ""
@@ -10954,28 +10983,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "07e7141a-07cd-4397-9dd2-ea18511e2be7")
+			(uuid "07e7141a-07cd-4397-9dd2-ea18511e2be9")
 		)
 		(pin "8"
-			(uuid "7ac3cc23-7fa2-4720-ae7c-8ca5cede48c9")
+			(uuid "7ac3cc23-7fa2-4720-ae7c-8ca5cede48cb")
 		)
 		(pin "5"
-			(uuid "aa7ea3c6-4e69-4ff7-aa7b-3e9c8abc2224")
+			(uuid "aa7ea3c6-4e69-4ff7-aa7b-3e9c8abc2226")
 		)
 		(pin "1"
-			(uuid "32230d6a-03b5-4d29-bec0-1ecdc0841e80")
+			(uuid "32230d6a-03b5-4d29-bec0-1ecdc0841e82")
 		)
 		(pin "2"
-			(uuid "2b92edd3-d144-4228-80fb-91a7cf6b554c")
+			(uuid "2b92edd3-d144-4228-80fb-91a7cf6b554e")
 		)
 		(pin "7"
-			(uuid "0fb6a081-cc97-4578-a681-4406af9a8e28")
+			(uuid "0fb6a081-cc97-4578-a681-4406af9a8e2a")
 		)
 		(pin "3"
-			(uuid "30ff983a-a1d8-4b06-a670-d688c5635ebf")
+			(uuid "30ff983a-a1d8-4b06-a670-d688c5635ec1")
 		)
 		(pin "4"
-			(uuid "8c3ea641-bfed-43e5-8b5c-68995b343a0d")
+			(uuid "8c3ea641-bfed-43e5-8b5c-68995b343a0f")
 		)
 		(instances
 			(project ""
