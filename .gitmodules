@@ -1,0 +1,3 @@
+[submodule "Firmware/Core/Inc/PUTM_EV_CAN_LIBRAR"]
+	path = Firmware/Core/Inc/PUTM_EV_CAN_LIBRAR
+	url = https://github.com/PUT-Motorsport/PUTM_EV_CAN_LIBRARY_2024.git
