@@ -34,7 +34,7 @@
 #include "interfaces/ScAbstract.hpp"
 #include "interfaces/AccelerometerAbstract.hpp"
 #include "interfaces/Tensometers.hpp"
-#include "PUTM_EV_CAN_LIBRARY_2024/lib/can_interface.hpp"
+#include "PUTM_EV_CAN_LIBRAR/lib/can_interface.hpp"
 
 /* USER CODE END Includes */
 
@@ -51,7 +51,7 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
-uint16_t adc1_dma_buffer[150];
+uint16_t adc1_dma_buffer[400];
 uint16_t adc2_dma_buffer[250];
 
 bool rtd {false};
@@ -138,11 +138,12 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 	if (hadc->Instance == ADC1)
 	{
 		int j = 0;
-		for(int i = 0; i < 150; i = i+3)
+		for(int i = 0; i < 200; i = i+4)
 		{
 			apps.apps1_val_raw[j] = adc1_dma_buffer[i];
-			tensometers.tensometer_1_val_raw[j]=adc1_dma_buffer[i+2];
 			analogs.steering_position_val_raw[j] = adc1_dma_buffer[i+1];
+			tensometers.tensometer_1_val_raw[j]=adc1_dma_buffer[i+2];
+			tensometers.tensometer_2_val_raw[j]=adc1_dma_buffer[i+3];
 			j++;
 		}
 	}
@@ -165,7 +166,8 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 uint16_t apps_value_to_send;
 std::pair<uint16_t, uint16_t> brakePressureValueToSend;
 int16_t steering_position_to_send;
-int16_t tensometers_to_send;
+int16_t tensometers_to_send1;
+int16_t tensometers_to_send2;
 uint8_t sc_state;
 /* USER CODE END 0 */
 
@@ -206,7 +208,7 @@ int main(void)
   MX_TIM2_Init();
   MX_FDCAN1_Init();
   MX_FDCAN2_Init();
- // MX_IWDG_Init();
+  //MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -342,7 +344,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.NbrOfConversion = 3;
+  hadc1.Init.NbrOfConversion = 4;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_T2_TRGO;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
@@ -396,6 +398,15 @@ static void MX_ADC1_Init(void)
   sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_8;
+  sConfig.Rank = ADC_REGULAR_RANK_4;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -673,7 +684,7 @@ static void MX_FDCAN2_Init(void)
   hfdcan2.Init.NominalPrescaler = 10;
   hfdcan2.Init.NominalSyncJumpWidth = 2;
   hfdcan2.Init.NominalTimeSeg1 = 13;
-  hfdcan2.Init.NominalTimeSeg2 = 2;
+  hfdcan2.Init.NominalTimeSeg2 = 1;
   hfdcan2.Init.DataPrescaler = 1;
   hfdcan2.Init.DataSyncJumpWidth = 1;
   hfdcan2.Init.DataTimeSeg1 = 1;
@@ -793,8 +804,8 @@ static void MX_DMA_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOF_CLK_ENABLE();
@@ -856,8 +867,8 @@ static void MX_GPIO_Init(void)
   /**/
   __HAL_SYSCFG_FASTMODEPLUS_ENABLE(SYSCFG_FASTMODEPLUS_PB8);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -885,7 +896,7 @@ void StartMainTask(void *argument)
 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
 	HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
 
-	HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t*>(adc1_dma_buffer), 150);
+	HAL_ADC_Start_DMA(&hadc1, reinterpret_cast<uint32_t*>(adc1_dma_buffer), 200);
 	HAL_ADC_Start_DMA(&hadc2, reinterpret_cast<uint32_t*>(adc2_dma_buffer), 250);
 	HAL_TIM_Base_Start(&htim2);
 
@@ -905,7 +916,8 @@ void StartMainTask(void *argument)
 		apps_value_to_send = apps.get_value_to_send();
 		brakePressureValueToSend = brakes.get_raw_avg_press_value();
 		steering_position_to_send = analogs.get_steering_position();
-		tensometers_to_send=tensometers.get_tens_1();
+		tensometers_to_send1=tensometers.get_tens_1();
+		tensometers_to_send2=tensometers.get_tens_2();
 
 		PUTM_CAN::DriverInput drvInput = {
 			  .pedalPosition = apps_value_to_send,
@@ -919,15 +931,7 @@ void StartMainTask(void *argument)
 		UNUSED(status);
 
 		sc_state = sc.update_val();
-		PUTM_CAN::FrontData frontData = {/*
-	  	 			  .sense_left_kill    = static_cast<bool>(sc_state & 0x01),
-	  	 			  .sense_right_kill   = static_cast<bool>(sc_state & 0x02),
-	  	 			  .sense_driver_kill  = static_cast<bool>(sc_state & 0x03),
-	  	 			  .sense_inertia      = static_cast<bool>(sc_state & 0x04),
-	  	 			  .sense_bspd         = static_cast<bool>(sc_state & 0x05),
-	  	 			  .sense_overtravel   = static_cast<bool>(sc_state & 0x06),
-	  	 			  .sense_right_wheel  = true
-					  */
+		PUTM_CAN::FrontData frontData = {
 					  .sense_left_kill    = static_cast<bool>((sc_state>>1) & 1),
 					  .sense_right_kill   = static_cast<bool>((sc_state>>0) & 1),
 					  .sense_driver_kill  = static_cast<bool>((sc_state>>2) & 1),
@@ -940,6 +944,10 @@ void StartMainTask(void *argument)
 		{
 			frontData.is_braking = true;
 		}
+		//frontData.apps=static_cast<bool>(apps.apps_flag&1);
+		//frontData.apps_implausibility=(uint8_t)(apps.diff *10);// sending apps implausibility with 1 place decimal
+		frontData.frontLeftSuspension=tensometers_to_send1;
+		frontData.frontRightSuspension=tensometers_to_send2;
 	  	auto frontDataFrame =  PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
 	  	status = frontDataFrame.send(hfdcan1);
 	  	HAL_IWDG_Refresh(&hiwdg);
@@ -1303,7 +1311,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
 
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM1) {
+  if (htim->Instance == TIM1)
+  {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */

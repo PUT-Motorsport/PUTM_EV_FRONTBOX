@@ -36,8 +36,8 @@ bool Apps::get_sensors_plausibility(int apps_raw_value_1, int apps_raw_value_2)
 // fraction of full scale position
 	float apps_scaled_1 = ((float)apps_raw_value_1 - (float)APPS_1_OFFSETTED_MIN) / (float)APPS_1_RAW_FULLSCALE;
 	float apps_scaled_2 = ((float)apps_raw_value_2 - (float)APPS_2_OFFSETTED_MIN) / (float)APPS_2_RAW_FULLSCALE;
-
 	float diff = fabsf(apps_scaled_1 - apps_scaled_2);
+	//diff = fabsf(apps_scaled_1 - apps_scaled_2);
 
 	if(diff > sensor_implausibility_factor) {
 		return false;
@@ -54,9 +54,10 @@ uint16_t Apps::get_value_to_send()
     {
     	// turn led on
     	// HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PinState::GPIO_PIN_RESET);
+    	//apps_flag=0;
         return 0;
     }
-
+    //apps_flag=1;
     // range calculation
     int apps_real_1 = (int)std::round(((float)apps_avg_1 - (float)APPS_1_OFFSETTED_MIN) / scale_factor_1);
     int apps_real_2 = (int)std::round(((float)apps_avg_2 - (float)APPS_2_OFFSETTED_MIN) / scale_factor_2);

@@ -21,7 +21,7 @@ private:
 	bool sensor_plausibility_last = false;
 	// const for apps sensor 1
 	static const int APPS_1_RAW_MIN = 192;
-	static const int APPS_1_RAW_MAX = 2840;
+	static const int APPS_1_RAW_MAX = 2910;//2840;
 	static_assert(APPS_1_RAW_MIN < APPS_1_RAW_MAX);
 	const int APPS_1_RAW_FULLSCALE = APPS_1_RAW_MAX - APPS_1_RAW_MIN;
 	const int APPS_1_OFFSETTED_MIN = (int)std::round(APPS_1_RAW_FULLSCALE * apps_dead_zone + APPS_1_RAW_MIN);
@@ -55,6 +55,8 @@ public:
 	uint16_t get_value_to_send();
 	int apps_nonlinear_curve(int apps, APPS_map_profile map);
 	float horner(const float *arry, unsigned int array_size, float x);
+	//float diff;
+	//bool apps_flag=1;
 };
 
 
