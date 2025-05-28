@@ -50,7 +50,7 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
   /* Enable TIM1 clock */
   __HAL_RCC_TIM1_CLK_ENABLE();
 
-  /* Get clock configuration */
+/* Get clock configuration */
   HAL_RCC_GetClockConfig(&clkconfig, &pFLatency);
 
   /* Compute TIM1 clock */

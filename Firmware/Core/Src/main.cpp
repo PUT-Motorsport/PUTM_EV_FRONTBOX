@@ -208,7 +208,11 @@ int main(void)
   MX_TIM2_Init();
   MX_FDCAN1_Init();
   MX_FDCAN2_Init();
+<<<<<<< HEAD
   //MX_IWDG_Init();
+=======
+ // MX_IWDG_Init();
+>>>>>>> 8d76dbde599a48d852f7c74896aa3ea92b4828f1
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -845,14 +849,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : Sense_Left_Wheel_Pin */
-  GPIO_InitStruct.Pin = Sense_Left_Wheel_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(Sense_Left_Wheel_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : Sense_Right_Wheel_Pin Sense_Overtravel_Pin Sense_Right_Kill_Pin Sense_BSPD_Pin */
-  GPIO_InitStruct.Pin = Sense_Right_Wheel_Pin|Sense_Overtravel_Pin|Sense_Right_Kill_Pin|Sense_BSPD_Pin;
+  /*Configure GPIO pins : Sense_Left_Wheel_Pin Sense_Right_Wheel_Pin Sense_Overtravel_Pin Sense_Right_Kill_Pin
+                           Sense_BSPD_Pin */
+  GPIO_InitStruct.Pin = Sense_Left_Wheel_Pin|Sense_Right_Wheel_Pin|Sense_Overtravel_Pin|Sense_Right_Kill_Pin
+                          |Sense_BSPD_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -931,6 +931,7 @@ void StartMainTask(void *argument)
 		UNUSED(status);
 
 		sc_state = sc.update_val();
+<<<<<<< HEAD
 		PUTM_CAN::FrontData frontData = {
 					  .sense_left_kill    = static_cast<bool>((sc_state>>1) & 1),
 					  .sense_right_kill   = static_cast<bool>((sc_state>>0) & 1),
@@ -939,6 +940,26 @@ void StartMainTask(void *argument)
 					  .sense_bspd         = static_cast<bool>((sc_state>>4) & 1),
 					  .sense_overtravel   = static_cast<bool>((sc_state>>5) & 1),
 					  .sense_right_wheel  = static_cast<bool>((sc_state>>5) & 1)
+=======
+		PUTM_CAN::FrontData frontData = {/*
+	  	 			  .sense_left_kill    =! static_cast<bool>(sc_state & 0x01),
+	  	 			  .sense_right_kill   =! static_cast<bool>(sc_state & 0x02),
+	  	 			  .sense_driver_kill  =! static_cast<bool>(sc_state & 0x03),
+	  	 			  .sense_inertia      =! static_cast<bool>(sc_state & 0x04),
+	  	 			  .sense_bspd         =! static_cast<bool>(sc_state & 0x05),
+	  	 			  .sense_overtravel   =! static_cast<bool>(sc_state & 0x06),
+	  	 			  .sense_right_wheel  = true
+	  	 			  */
+
+				.sense_left_kill    = static_cast<bool>((sc_state>>1) & 1),
+				.sense_right_kill   = static_cast<bool>((sc_state>>0) & 1),
+				.sense_driver_kill  = static_cast<bool>((sc_state>>2) & 1),
+				.sense_inertia      = static_cast<bool>((sc_state>>3) & 1),
+				.sense_bspd         = static_cast<bool>((sc_state>>4) & 1),
+				.sense_overtravel   = static_cast<bool>((sc_state>>5) & 1),
+				.sense_right_wheel  = false
+
+>>>>>>> 8d76dbde599a48d852f7c74896aa3ea92b4828f1
 		};
 		if (brakePressureValueToSend.first > brakes.FRONT_BRAKING_THRESHOLD || brakePressureValueToSend.second > brakes.REAR_BRAKING_THRESHOLD)
 		{
@@ -972,20 +993,27 @@ void StartBlinkTask(void *argument)
 	for(;;)
 	{
 		PUTM_CAN::Dashboard dsh{0};
-//		PUTM_CAN::PcMainData pcMain;
+		/* Gimela 26.02 reciving RTD signal from PC to chceck it state
+		PUTM_CAN::PcMainData pcMain;
+		if(PUTM_CAN::can.get_pc_new_data())
+		{
+			auto pcMain = PUTM_CAN::can.get_pc_main_data();
+			auto rtd_state=pcMain.rtd;
+		}
 
+		 */
 		if (PUTM_CAN::can.get_dashboard_new_data())
 		{
 			auto dash_ts_button = PUTM_CAN::can.get_dashboard().ts_activation_button;
 			auto dash_rtd_button = PUTM_CAN::can.get_dashboard().ready_to_drive_button;
 
-			/* Check if we want to enable TS voltage */
-			if (dash_ts_button == true)
+			/* Check if we want to enable TS voltage*/ //no need to check if we send signal from computer
+		/*	if (dash_ts_button == true)
 			{
 				dsh.ts_activation_button = 1;
 				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
 			}
-
+*/
 			/* Act according to current rtd state */
 //			switch(rtd){
 //			case true:
@@ -1035,10 +1063,17 @@ void StartBlinkTask(void *argument)
 //		auto status = pc_main.send(hfdcan1);
 //		UNUSED(status);
 
+<<<<<<< HEAD
 		//auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD);
 		//dsh.ts_activation_button = 0;
 		//auto status = dash.send(hfdcan1);
 		//UNUSED(status);
+=======
+		//auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD); // Now send by computer
+		//dsh.ts_activation_button = 0;
+	//	auto status = dash.send(hfdcan1);
+	//	UNUSED(status);
+>>>>>>> 8d76dbde599a48d852f7c74896aa3ea92b4828f1
 	}
   /* USER CODE END StartBlinkTask */
 }
