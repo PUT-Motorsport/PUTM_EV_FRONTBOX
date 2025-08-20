@@ -54,10 +54,10 @@ uint16_t Apps::get_value_to_send()
     {
     	// turn led on
     	// HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PinState::GPIO_PIN_RESET);
-    	//apps_flag=0;
+    	apps_flag=1;
         return 0;
     }
-    //apps_flag=1;
+    apps_flag=0;
     // range calculation
     int apps_real_1 = (int)std::round(((float)apps_avg_1 - (float)APPS_1_OFFSETTED_MIN) / scale_factor_1);
     int apps_real_2 = (int)std::round(((float)apps_avg_2 - (float)APPS_2_OFFSETTED_MIN) / scale_factor_2);

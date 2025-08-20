@@ -56,7 +56,7 @@ public:
 	int apps_nonlinear_curve(int apps, APPS_map_profile map);
 	float horner(const float *arry, unsigned int array_size, float x);
 	//float diff;
-	//bool apps_flag=1;
+	bool apps_flag=1;
 };
 
 

@@ -20,7 +20,7 @@ int16_t Analog::get_steering_position()
 
 	uint64_t steering_position_val_avg = (int)(steering_wheel_position_sum / ((int)number_of_analog_samples));
 
-	int16_t steering_position_calc =std::round(((steering_position_val_avg/scale_factor_1)-317)*0.9);
+	int16_t steering_position_calc =std::round(((steering_position_val_avg/scale_factor_1)-135)*1);
 
 /*
 	if(steering_position_val_avg<STEERING_RAW_MAX)
@@ -37,4 +37,22 @@ int16_t Analog::get_steering_position()
 	return steering_position_calc;
 }
 
+
+int16_t Analog::get_steering_position2()
+{
+	float steering_wheel_position_sum = 0;
+	float alpha = 0.5;
+	float last_sample = 0;
+	for(unsigned int i = 0; i < number_of_analog_samples; i++)
+	{
+		last_sample = alpha * steering_position2_val_raw[i] +(1-alpha) * last_sample;
+		steering_wheel_position_sum += last_sample;
+	}
+
+	uint64_t steering_position2_val_avg = (int)(steering_wheel_position_sum / ((int)number_of_analog_samples));
+
+	int16_t steering_position2_calc =std::round(((steering_position2_val_avg/scale_factor_2)+160)*0.985);
+
+return steering_position2_calc;
+}
 
