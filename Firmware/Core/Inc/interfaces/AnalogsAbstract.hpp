@@ -19,13 +19,13 @@ private:
 	static const unsigned number_of_analog_samples = 50;
 
 
-	static const int STEERING_RAW_MIN = 30;
+	static const int STEERING_RAW_MIN = 0;
 	static const int STEERING_RAW_MAX = 2690;
 	//static const int STEERING_RESET = 3040;//3070;
 
 
-	static const int STEERING_RAW_MIN2 = 2945;
-	static const int STEERING_RAW_MAX2 = 228;
+	static const int STEERING_RAW_MIN2 = 1680;
+	static const int STEERING_RAW_MAX2 = 230;
 
 	const int STEERING_RAW_FULLSCALE = STEERING_RAW_MAX - STEERING_RAW_MIN;
 

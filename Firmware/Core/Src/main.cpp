@@ -56,6 +56,9 @@ uint16_t adc2_dma_buffer[250];
 
 bool rtd {false};
 bool inverterStatus {false};
+int status_s;
+int status_d;
+uint8_t errors_counter=0;
 
 Apps apps;
 Brakes brakes;
@@ -86,7 +89,7 @@ TIM_HandleTypeDef htim2;
 osThreadId_t MainTaskHandle;
 const osThreadAttr_t MainTask_attributes = {
   .name = "MainTask",
-  .stack_size = 128 * 4,
+  .stack_size = 128 * 16,
   .priority = (osPriority_t) osPriorityNormal
 };
 /* Definitions for BlinkTask */
@@ -725,7 +728,7 @@ static void MX_IWDG_Init(void)
   /* USER CODE END IWDG_Init 1 */
   hiwdg.Instance = IWDG;
   hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
-  hiwdg.Init.Window = 500;
+  hiwdg.Init.Window = 4095;
   hiwdg.Init.Reload = 4095;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {
@@ -905,8 +908,8 @@ void StartMainTask(void *argument)
 	HAL_FDCAN_Start(&hfdcan1);
 	HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
 
-	HAL_FDCAN_Start(&hfdcan2);
-	HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
+//	HAL_FDCAN_Start(&hfdcan2);
+//	HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
 
 	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
@@ -915,10 +918,12 @@ void StartMainTask(void *argument)
 	/* Infinite loop */
 	for(;;)
 	{
+		osDelay(12);
+
 		apps_value_to_send = apps.get_value_to_send();
 		brakePressureValueToSend = brakes.get_raw_avg_press_value();
-		steering_position_to_send =0;// analogs.get_steering_position();
-		steering_position_to_send2 =0;// analogs.get_steering_position2();
+		steering_position_to_send = analogs.get_steering_position();
+		steering_position_to_send2 = analogs.get_steering_position2();
 		tensometers_to_send1=tensometers.get_tens_1();
 		tensometers_to_send2=tensometers.get_tens_2();
 
@@ -929,9 +934,14 @@ void StartMainTask(void *argument)
 			  .steeringWheelPosition = (int16_t)steering_position_to_send
 		};
 
-		auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
-		HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
-		UNUSED(status);
+	//	if (HAL_FDCAN_GetTxFifoFreeLevel(&hfdcan1) >=2) {
+
+			auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
+			HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
+			status_s=status;
+			UNUSED(status);
+
+		//}
 
 		sc_state = sc.update_val();
 
@@ -950,30 +960,42 @@ void StartMainTask(void *argument)
 		{
 			frontData.is_braking = true;
 		}
-		frontData.apps=static_cast<bool>(apps.apps_flag&1);
+		frontData.apps=static_cast<bool>(apps.apps_flag & 1);
 		//frontData.apps_implausibility=(uint8_t)(apps.diff *10);// sending apps implausibility with 1 place decimal
 		frontData.frontLeftSuspension=tensometers_to_send1;
 		frontData.frontRightSuspension=tensometers_to_send2;
 
+		osDelay(12);
+
+
 	  	auto frontDataFrame =  PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
 	  	status = frontDataFrame.send(hfdcan1);
+	  	status_d=status;
 
-	  	switch (status)
+
+
+		if(status_d || status_s == HAL_ERROR)
+		{
+			//HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_RESET);
+			NVIC_SystemReset();
+		}
+
+	  /*	switch (status)
 		{
 
-		case 0:
+		case HAL_OK:
 			HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,  GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,  GPIO_PIN_RESET);
-		case 1:
+		case HAL_ERROR:
 			HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,  GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,  GPIO_PIN_SET);
 		case 2:
 			HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,  GPIO_PIN_SET);
 			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,  GPIO_PIN_SET);
 		}
-
-//	  ?	HAL_IWDG_Refresh(&hiwdg);
-	  	osDelay(25);
+*/
+		HAL_IWDG_Refresh(&hiwdg);
+//	  	osDelay(25);
   }
   /* USER CODE END 5 */
 }
@@ -994,15 +1016,16 @@ void StartBlinkTask(void *argument)
 	for(;;)
 	{
 		PUTM_CAN::Dashboard dsh{0};
-		/* Gimela 26.02 reciving RTD signal from PC to chceck it state
+		// Gimela 26.02 reciving RTD signal from PC to chceck it state
 		PUTM_CAN::PcMainData pcMain;
 		if(PUTM_CAN::can.get_pc_new_data())
 		{
 			auto pcMain = PUTM_CAN::can.get_pc_main_data();
 			auto rtd_state=pcMain.rtd;
+			rtd=rtd_state;
 		}
 
-		 */
+
 		if (PUTM_CAN::can.get_dashboard_new_data())
 		{
 			auto dash_rtd_button = PUTM_CAN::can.get_dashboard().ready_to_drive_button;
@@ -1039,6 +1062,7 @@ void StartBlinkTask(void *argument)
 		osDelay(50);
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		HAL_IWDG_Refresh(&hiwdg);
 
 //		auto amkRearLeftData = PUTM_CAN::can.get_amk_rear_left_actual_values2();
 //		auto amkRearRightData = PUTM_CAN::can.get_amk_rear_right_actual_values2();
@@ -1314,14 +1338,14 @@ void StartAmkTask(void *argument)
 	auto rearRightSetpoint  = PUTM_CAN::Can_tx_message<PUTM_CAN::AmkRearRightSetpoints1  > (rearRightAmkSetpoints,  PUTM_CAN::can_tx_header_AMK_REAR_RIGHT_SETPOINTS);
 
 
-	osDelay(1);
-	frontLeftSetpoint.send(hfdcan2);
-	osDelay(1);
-	frontRightSetpoint.send(hfdcan2);
-	osDelay(1);
-	rearLefttSetpoint.send(hfdcan2);
-	osDelay(1);
-	rearRightSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	frontLeftSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	frontRightSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	rearLefttSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	rearRightSetpoint.send(hfdcan2);
 
 	osDelay(25);
   }

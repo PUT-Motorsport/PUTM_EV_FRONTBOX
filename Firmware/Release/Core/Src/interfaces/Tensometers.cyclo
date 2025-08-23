@@ -1,0 +1,2 @@
+../Core/Src/interfaces/Tensometers.cpp:10:9:int16_t Tensometers::get_tens_1()	2
+../Core/Src/interfaces/Tensometers.cpp:29:9:int16_t Tensometers::get_tens_2()	2

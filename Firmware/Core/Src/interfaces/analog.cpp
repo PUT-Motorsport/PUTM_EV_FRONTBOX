@@ -51,7 +51,7 @@ int16_t Analog::get_steering_position2()
 
 	uint64_t steering_position2_val_avg = (int)(steering_wheel_position_sum / ((int)number_of_analog_samples));
 
-	int16_t steering_position2_calc =std::round(((steering_position2_val_avg/scale_factor_2)+160)*0.985);
+	int16_t steering_position2_calc =std::round(((steering_position2_val_avg/scale_factor_2)+41)*0.985);
 
 return steering_position2_calc;
 }
