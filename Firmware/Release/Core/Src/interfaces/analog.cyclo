@@ -1,2 +1,0 @@
-../Core/Src/interfaces/analog.cpp:10:9:int16_t Analog::get_steering_position()	2
-../Core/Src/interfaces/analog.cpp:41:9:int16_t Analog::get_steering_position2()	2

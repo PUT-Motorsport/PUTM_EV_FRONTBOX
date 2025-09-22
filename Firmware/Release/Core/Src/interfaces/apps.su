@@ -1,5 +1,0 @@
-../Core/Src/interfaces/apps.cpp:12:21:std::pair<int, int> Apps::get_raw_avg_apps_value()	0	static
-../Core/Src/interfaces/apps.cpp:29:6:bool Apps::get_sensors_plausibility(int, int)	0	static
-../Core/Src/interfaces/apps.cpp:76:7:float Apps::horner(const float*, unsigned int, float)	0	static
-../Core/Src/interfaces/apps.cpp:85:5:int Apps::apps_nonlinear_curve(int, APPS_map_profile)	104	static
-../Core/Src/interfaces/apps.cpp:49:10:uint16_t Apps::get_value_to_send()	40	static

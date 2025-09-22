@@ -17,8 +17,8 @@
 class Tensometers {
 private:
 	static const unsigned number_of_analog_samples = 50;
-	int16_t tens1_base = 2341;
-	int16_t tens2_base = 2257;
+	int16_t tens1_base = 2016;
+	int16_t tens2_base = 1984;
 	uint16_t tens_scale_factor = 5263;
 public:
 	uint16_t tensometer_1_val_raw[number_of_analog_samples];
