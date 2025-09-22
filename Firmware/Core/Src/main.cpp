@@ -56,6 +56,9 @@ uint16_t adc2_dma_buffer[250];
 
 bool rtd {false};
 bool inverterStatus {false};
+int status_s;
+int status_d;
+uint8_t errors_counter=0;
 
 Apps apps;
 Brakes brakes;
@@ -86,7 +89,7 @@ TIM_HandleTypeDef htim2;
 osThreadId_t MainTaskHandle;
 const osThreadAttr_t MainTask_attributes = {
   .name = "MainTask",
-  .stack_size = 128 * 4,
+  .stack_size = 128 * 16,
   .priority = (osPriority_t) osPriorityNormal
 };
 /* Definitions for BlinkTask */
@@ -153,6 +156,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 		for(int i = 0; i < 250; i = i+5)
 		{
 			apps.apps2_val_raw[j] = adc2_dma_buffer[i+4];
+			analogs.steering_position2_val_raw[j] = adc2_dma_buffer[i+3];
 			brakes.brake_pressure_rear_val_raw[j] = adc2_dma_buffer[i];
 			brakes.brake_pressure_front_val_raw[j] = adc2_dma_buffer[i+1];
 			j++;
@@ -166,6 +170,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 uint16_t apps_value_to_send;
 std::pair<uint16_t, uint16_t> brakePressureValueToSend;
 int16_t steering_position_to_send;
+int16_t steering_position_to_send2;
 int16_t tensometers_to_send1;
 int16_t tensometers_to_send2;
 uint8_t sc_state;
@@ -208,11 +213,11 @@ int main(void)
   MX_TIM2_Init();
   MX_FDCAN1_Init();
   MX_FDCAN2_Init();
-<<<<<<< HEAD
+
   //MX_IWDG_Init();
-=======
+
  // MX_IWDG_Init();
->>>>>>> 8d76dbde599a48d852f7c74896aa3ea92b4828f1
+
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -723,7 +728,7 @@ static void MX_IWDG_Init(void)
   /* USER CODE END IWDG_Init 1 */
   hiwdg.Instance = IWDG;
   hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
-  hiwdg.Init.Window = 500;
+  hiwdg.Init.Window = 4095;
   hiwdg.Init.Reload = 4095;
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {
@@ -888,8 +893,8 @@ void StartMainTask(void *argument)
 	/* Set APPS reference voltage */
 	HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
 	HAL_DAC_Start(&hdac2, DAC_CHANNEL_1);
-	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1950); // ~2200  mV 2733
-	HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 2100); // ~2418 mV 3003
+	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, 1950); // ~2200  mV 2733// 1,5714V
+	HAL_DAC_SetValue(&hdac2, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 2100); // ~2418 mV 3003// 1,6923V
 
 	HAL_GPIO_WritePin(BOOOT_GPIO_Port, BOOOT_Pin, GPIO_PIN_RESET);
 	// APPS
@@ -903,8 +908,8 @@ void StartMainTask(void *argument)
 	HAL_FDCAN_Start(&hfdcan1);
 	HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
 
-	HAL_FDCAN_Start(&hfdcan2);
-	HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
+//	HAL_FDCAN_Start(&hfdcan2);
+//	HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
 
 	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
@@ -913,9 +918,12 @@ void StartMainTask(void *argument)
 	/* Infinite loop */
 	for(;;)
 	{
+		osDelay(12);
+
 		apps_value_to_send = apps.get_value_to_send();
 		brakePressureValueToSend = brakes.get_raw_avg_press_value();
 		steering_position_to_send = analogs.get_steering_position();
+		steering_position_to_send2 = analogs.get_steering_position2();
 		tensometers_to_send1=tensometers.get_tens_1();
 		tensometers_to_send2=tensometers.get_tens_2();
 
@@ -926,53 +934,68 @@ void StartMainTask(void *argument)
 			  .steeringWheelPosition = (int16_t)steering_position_to_send
 		};
 
-		auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
-		HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
-		UNUSED(status);
+	//	if (HAL_FDCAN_GetTxFifoFreeLevel(&hfdcan1) >=2) {
+
+			auto driverInputFrame = PUTM_CAN::Can_tx_message<PUTM_CAN::DriverInput>(drvInput, PUTM_CAN::can_tx_header_DRIVER_INPUT);
+			HAL_StatusTypeDef status = driverInputFrame.send(hfdcan1);
+			status_s=status;
+			UNUSED(status);
+
+		//}
 
 		sc_state = sc.update_val();
-<<<<<<< HEAD
+
 		PUTM_CAN::FrontData frontData = {
-					  .sense_left_kill    = static_cast<bool>((sc_state>>1) & 1),
-					  .sense_right_kill   = static_cast<bool>((sc_state>>0) & 1),
-					  .sense_driver_kill  = static_cast<bool>((sc_state>>2) & 1),
-					  .sense_inertia      = static_cast<bool>((sc_state>>3) & 1),
-					  .sense_bspd         = static_cast<bool>((sc_state>>4) & 1),
-					  .sense_overtravel   = static_cast<bool>((sc_state>>5) & 1),
-					  .sense_right_wheel  = static_cast<bool>((sc_state>>5) & 1)
-=======
-		PUTM_CAN::FrontData frontData = {/*
-	  	 			  .sense_left_kill    =! static_cast<bool>(sc_state & 0x01),
-	  	 			  .sense_right_kill   =! static_cast<bool>(sc_state & 0x02),
-	  	 			  .sense_driver_kill  =! static_cast<bool>(sc_state & 0x03),
-	  	 			  .sense_inertia      =! static_cast<bool>(sc_state & 0x04),
-	  	 			  .sense_bspd         =! static_cast<bool>(sc_state & 0x05),
-	  	 			  .sense_overtravel   =! static_cast<bool>(sc_state & 0x06),
-	  	 			  .sense_right_wheel  = true
-	  	 			  */
+					  .sense_left_kill    = !(static_cast<bool>((sc_state>>1) & 1)),
+					  .sense_right_kill   = !(static_cast<bool>((sc_state>>0) & 1)),
+					  .sense_driver_kill  = !(static_cast<bool>((sc_state>>2) & 1)),
+					  .sense_inertia      = !(static_cast<bool>((sc_state>>3) & 1)),
+					  .sense_bspd         = !(static_cast<bool>((sc_state>>4) & 1)),
+					  .sense_overtravel   = !(static_cast<bool>((sc_state>>5) & 1)),
+					  .safety_suspension_fl  = 0,//(static_cast<bool>((sc_state>>6) & 1)),
+					  .safety_suspension_fr  = 0,//static_cast<bool>((sc_state>>7) & 1),
 
-				.sense_left_kill    = static_cast<bool>((sc_state>>1) & 1),
-				.sense_right_kill   = static_cast<bool>((sc_state>>0) & 1),
-				.sense_driver_kill  = static_cast<bool>((sc_state>>2) & 1),
-				.sense_inertia      = static_cast<bool>((sc_state>>3) & 1),
-				.sense_bspd         = static_cast<bool>((sc_state>>4) & 1),
-				.sense_overtravel   = static_cast<bool>((sc_state>>5) & 1),
-				.sense_right_wheel  = false
-
->>>>>>> 8d76dbde599a48d852f7c74896aa3ea92b4828f1
 		};
 		if (brakePressureValueToSend.first > brakes.FRONT_BRAKING_THRESHOLD || brakePressureValueToSend.second > brakes.REAR_BRAKING_THRESHOLD)
 		{
 			frontData.is_braking = true;
 		}
-		//frontData.apps=static_cast<bool>(apps.apps_flag&1);
+		frontData.apps=static_cast<bool>(apps.apps_flag & 1);
 		//frontData.apps_implausibility=(uint8_t)(apps.diff *10);// sending apps implausibility with 1 place decimal
 		frontData.frontLeftSuspension=tensometers_to_send1;
 		frontData.frontRightSuspension=tensometers_to_send2;
+
+		osDelay(12);
+
+
 	  	auto frontDataFrame =  PUTM_CAN::Can_tx_message<PUTM_CAN::FrontData>(frontData, PUTM_CAN::can_tx_header_FRONT_DATA);
 	  	status = frontDataFrame.send(hfdcan1);
-	  	HAL_IWDG_Refresh(&hiwdg);
-	  	osDelay(25);
+	  	status_d=status;
+
+
+
+		if(status_d || status_s == HAL_ERROR)
+		{
+			//HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, GPIO_PIN_RESET);
+			NVIC_SystemReset();
+		}
+
+	  /*	switch (status)
+		{
+
+		case HAL_OK:
+			HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,  GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,  GPIO_PIN_RESET);
+		case HAL_ERROR:
+			HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,  GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,  GPIO_PIN_SET);
+		case 2:
+			HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin,  GPIO_PIN_SET);
+			HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin,  GPIO_PIN_SET);
+		}
+*/
+		HAL_IWDG_Refresh(&hiwdg);
+//	  	osDelay(25);
   }
   /* USER CODE END 5 */
 }
@@ -993,18 +1016,18 @@ void StartBlinkTask(void *argument)
 	for(;;)
 	{
 		PUTM_CAN::Dashboard dsh{0};
-		/* Gimela 26.02 reciving RTD signal from PC to chceck it state
+		// Gimela 26.02 reciving RTD signal from PC to chceck it state
 		PUTM_CAN::PcMainData pcMain;
 		if(PUTM_CAN::can.get_pc_new_data())
 		{
 			auto pcMain = PUTM_CAN::can.get_pc_main_data();
 			auto rtd_state=pcMain.rtd;
+			rtd=rtd_state;
 		}
 
-		 */
+
 		if (PUTM_CAN::can.get_dashboard_new_data())
 		{
-			auto dash_ts_button = PUTM_CAN::can.get_dashboard().ts_activation_button;
 			auto dash_rtd_button = PUTM_CAN::can.get_dashboard().ready_to_drive_button;
 
 			/* Check if we want to enable TS voltage*/ //no need to check if we send signal from computer
@@ -1039,6 +1062,7 @@ void StartBlinkTask(void *argument)
 		osDelay(50);
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		HAL_IWDG_Refresh(&hiwdg);
 
 //		auto amkRearLeftData = PUTM_CAN::can.get_amk_rear_left_actual_values2();
 //		auto amkRearRightData = PUTM_CAN::can.get_amk_rear_right_actual_values2();
@@ -1063,17 +1087,12 @@ void StartBlinkTask(void *argument)
 //		auto status = pc_main.send(hfdcan1);
 //		UNUSED(status);
 
-<<<<<<< HEAD
-		//auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD);
-		//dsh.ts_activation_button = 0;
-		//auto status = dash.send(hfdcan1);
-		//UNUSED(status);
-=======
+
 		//auto dash = PUTM_CAN::Can_tx_message<PUTM_CAN::Dashboard>(dsh, PUTM_CAN::can_tx_header_DASHBOARD); // Now send by computer
 		//dsh.ts_activation_button = 0;
 	//	auto status = dash.send(hfdcan1);
 	//	UNUSED(status);
->>>>>>> 8d76dbde599a48d852f7c74896aa3ea92b4828f1
+
 	}
   /* USER CODE END StartBlinkTask */
 }
@@ -1319,14 +1338,14 @@ void StartAmkTask(void *argument)
 	auto rearRightSetpoint  = PUTM_CAN::Can_tx_message<PUTM_CAN::AmkRearRightSetpoints1  > (rearRightAmkSetpoints,  PUTM_CAN::can_tx_header_AMK_REAR_RIGHT_SETPOINTS);
 
 
-	osDelay(1);
-	frontLeftSetpoint.send(hfdcan2);
-	osDelay(1);
-	frontRightSetpoint.send(hfdcan2);
-	osDelay(1);
-	rearLefttSetpoint.send(hfdcan2);
-	osDelay(1);
-	rearRightSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	frontLeftSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	frontRightSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	rearLefttSetpoint.send(hfdcan2);
+//	osDelay(1);
+//	rearRightSetpoint.send(hfdcan2);
 
 	osDelay(25);
   }

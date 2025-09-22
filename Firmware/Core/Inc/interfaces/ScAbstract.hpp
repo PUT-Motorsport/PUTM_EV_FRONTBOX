@@ -23,6 +23,7 @@ private:
 	bool Sense_BSPD;
 	bool Sense_Overtravel;
 	bool Sense_Right_Wheel;
+	bool Sense_Left_Wheel;
 public:
 bool SC_val[8];
 uint8_t update_val();
