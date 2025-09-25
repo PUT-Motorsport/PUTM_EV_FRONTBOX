@@ -1,8 +1,20 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP MCP1501T-18E_CHY
-D Voltage References Precision Buffered Voltage Reference
+$CMP ATX-11-F-32.000MHZ-F05-T
+D 32 MHz TCXO Clipped Sine Wave Oscillator 1.68V ~ 3.63V - 4-SMD, No Lead
 K
-F http://ww1.microchip.com/downloads/en/DeviceDoc/20005474E.pdf
+F https://abracon.com/datasheets/ATX-11.pdf
+$ENDCMP
+#
+$CMP TLV76750DGNR
+D LDO Voltage Regulators Adjustable- and fixed-output, 1-A, 16-V, positive-voltage low-dropout (LDO) linear regulator 8-HVSSOP -40 to 125
+K
+F https://www.ti.com/lit/gpn/tlv767
+$ENDCMP
+#
+$CMP TLV9354QPWRQ1
+D Operational Amplifiers - Op Amps Automotive quad-channel 3.5-MHz, 40-V, RRO, MUX-friendly op amp
+K
+F https://www.ti.com/lit/ds/symlink/tlv9354-q1.pdf?ts=1627393417201&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTLV9354-Q1%253FkeyMatch%253DTLV9354QPWRQ1%2526tisearch%253Dsearch-everything%2526usecase%253DOPN
 $ENDCMP
 #End Doc Library
