@@ -1,0 +1,7 @@
+C:/Users/pwlub/Desktop/PUTM_EV_Frontbox_2023/Firmware/CMakeFiles/Firmware.dir
+C:/Users/pwlub/Desktop/PUTM_EV_Frontbox_2023/Firmware/CMakeFiles/edit_cache.dir
+C:/Users/pwlub/Desktop/PUTM_EV_Frontbox_2023/Firmware/CMakeFiles/rebuild_cache.dir
+C:/Users/pwlub/Desktop/PUTM_EV_Frontbox_2023/Firmware/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+C:/Users/pwlub/Desktop/PUTM_EV_Frontbox_2023/Firmware/cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir
+C:/Users/pwlub/Desktop/PUTM_EV_Frontbox_2023/Firmware/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/pwlub/Desktop/PUTM_EV_Frontbox_2023/Firmware/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
