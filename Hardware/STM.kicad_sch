@@ -3358,10 +3358,6 @@
 		(uuid "c42d7fc1-7825-463c-9343-45f663530a46")
 	)
 	(no_connect
-		(at 121.92 119.38)
-		(uuid "c59f5533-39d0-4ce7-83e3-ff6e97bf4a45")
-	)
-	(no_connect
 		(at 121.92 71.12)
 		(uuid "cd6e0c3d-88b8-4d2c-a3e7-bfcbbe5df625")
 	)
@@ -3376,10 +3372,6 @@
 	(no_connect
 		(at 121.92 83.82)
 		(uuid "f1dae6ef-7e28-448b-a5f0-3e43f9d23a50")
-	)
-	(no_connect
-		(at 121.92 116.84)
-		(uuid "fa883a5e-9836-43db-80cf-3b671d94b1a9")
 	)
 	(no_connect
 		(at 157.48 104.14)
@@ -4120,6 +4112,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 116.84) (xy 121.92 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a6d54a9-2514-4747-bfb8-de0826a3d838")
+	)
+	(wire
+		(pts
 			(xy 186.69 27.94) (xy 186.69 30.48)
 		)
 		(stroke
@@ -4297,6 +4299,16 @@
 			(type default)
 		)
 		(uuid "9a0d2efc-9f65-421c-8a9b-866c30a0c307")
+	)
+	(wire
+		(pts
+			(xy 118.11 119.38) (xy 121.92 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b6c7576-7647-46de-a970-5a272b426866")
 	)
 	(bus
 		(pts
@@ -5384,6 +5396,28 @@
 			(justify right)
 		)
 		(uuid "6a42c504-7238-4866-9b3b-fed89a0a7a4b")
+	)
+	(hierarchical_label "STBY_CAN_2"
+		(shape output)
+		(at 118.11 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6f16aede-0a9f-4691-ac51-895aa1a0c370")
+	)
+	(hierarchical_label "STBY_CAN_1"
+		(shape output)
+		(at 118.11 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8d2161bd-d657-4df7-be91-cd1b5627bac7")
 	)
 	(hierarchical_label "BRAKE_PRESSURE_REAR_OUT"
 		(shape input)

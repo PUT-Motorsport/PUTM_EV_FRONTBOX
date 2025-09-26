@@ -3032,6 +3032,12 @@
 		(uuid "16cb5432-b698-4542-ba71-833134a5fe18")
 	)
 	(junction
+		(at 156.21 171.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1b0d55a4-cb18-411b-82d4-9797e9f829b2")
+	)
+	(junction
 		(at 204.47 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3264,6 +3270,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 171.45) (xy 156.21 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0148f5ee-6918-43d4-9649-c3be0bbd7324")
+	)
+	(wire
+		(pts
 			(xy 237.49 133.35) (xy 237.49 137.16)
 		)
 		(stroke
@@ -3392,6 +3408,16 @@
 		)
 		(uuid "257042b8-d289-46de-9282-62fd785e2ec8")
 	)
+	(wire
+		(pts
+			(xy 144.78 161.29) (xy 144.78 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28b4b5fd-a05b-4764-8406-bc51b1d59318")
+	)
 	(polyline
 		(pts
 			(xy 88.9 88.9) (xy 91.44 88.9)
@@ -3434,6 +3460,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 171.45) (xy 167.64 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d402528-19d4-449c-bfa3-9cf8393812b7")
+	)
+	(wire
+		(pts
 			(xy 129.54 107.95) (xy 152.4 107.95)
 		)
 		(stroke
@@ -3451,6 +3487,16 @@
 			(type default)
 		)
 		(uuid "3f1feb06-d0fd-46e3-b3eb-f10028889fb6")
+	)
+	(wire
+		(pts
+			(xy 170.18 147.32) (xy 170.18 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "444b7b5d-c1f1-4d20-9b4e-12d2631d85a4")
 	)
 	(wire
 		(pts
@@ -3501,6 +3547,16 @@
 			(type default)
 		)
 		(uuid "4990c6ba-644b-470a-88d4-73ee4eb02add")
+	)
+	(wire
+		(pts
+			(xy 167.64 161.29) (xy 167.64 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fc48f23-a6cd-4516-9920-dc8591b787cc")
 	)
 	(wire
 		(pts
@@ -3591,6 +3647,36 @@
 			(type default)
 		)
 		(uuid "60e7e594-28d0-4443-9c7e-06bdb031b091")
+	)
+	(wire
+		(pts
+			(xy 165.1 147.32) (xy 165.1 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61773cf6-041a-498f-8888-5d56460426bc")
+	)
+	(wire
+		(pts
+			(xy 156.21 177.8) (xy 156.21 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61d354d0-7626-4b79-8a20-4e08d4e8a5d4")
+	)
+	(wire
+		(pts
+			(xy 147.32 147.32) (xy 147.32 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "635197f5-bf5f-4b6b-979d-90d29338ca44")
 	)
 	(wire
 		(pts
@@ -4122,6 +4208,16 @@
 		)
 		(uuid "eb23e787-7d0d-4077-b3fe-3e0d88af867a")
 	)
+	(wire
+		(pts
+			(xy 142.24 147.32) (xy 142.24 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec911af7-fdab-4112-866b-8e105bc3c390")
+	)
 	(bus
 		(pts
 			(xy 154.94 102.87) (xy 154.94 105.41)
@@ -4182,6 +4278,16 @@
 		)
 		(uuid "1128ce09-d064-4a6b-86c0-9f7f7a2fb6de")
 	)
+	(label "CAN1+"
+		(at 170.18 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c7c3d1c-f09a-4c6c-a74c-bdee0ef86fe4")
+	)
 	(label "CAN2+"
 		(at 134.62 82.55 0)
 		(effects
@@ -4192,6 +4298,26 @@
 		)
 		(uuid "246554a3-bcb8-4ad5-8b3a-affa4cb880dd")
 	)
+	(label "CAN2+"
+		(at 147.32 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "32bb3261-c9e0-44c1-b10e-2fd696ebe4ac")
+	)
+	(label "CAN2-"
+		(at 142.24 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3c6aff94-484e-4b1f-a33e-f797f37946e9")
+	)
 	(label "CAN1+"
 		(at 134.62 87.63 0)
 		(effects
@@ -4201,6 +4327,16 @@
 			(justify left bottom)
 		)
 		(uuid "52bdf18b-dec7-4470-8519-2ea424563a66")
+	)
+	(label "CAN1-"
+		(at 165.1 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "771caaf9-8396-4eb6-8f0d-ca640c27e850")
 	)
 	(label "NRST"
 		(at 220.98 109.22 0)
@@ -4394,7 +4530,7 @@
 		(uuid "0df37934-5d4f-48ef-9d83-e829819a272d")
 	)
 	(hierarchical_label "{CAN}"
-		(shape output)
+		(shape bidirectional)
 		(at 151.13 80.01 0)
 		(effects
 			(font
@@ -4568,6 +4704,17 @@
 			(justify left)
 		)
 		(uuid "e778068e-a246-4e91-8ada-33f9ebb10d23")
+	)
+	(hierarchical_label "GND_CAN_ISO"
+		(shape input)
+		(at 156.21 177.8 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fb43e0e8-0705-4e2e-a9cf-2e9b3c8a1513")
 	)
 	(symbol
 		(lib_id "power:+3.3V")
@@ -5395,6 +5542,89 @@
 		)
 	)
 	(symbol
+		(lib_id "Power_Protection:ESDA5V3L")
+		(at 144.78 156.21 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a5022c09-6281-40a2-a9f9-c6213d95e9a5")
+		(property "Reference" "D6"
+			(at 138.43 154.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.3V/400W"
+			(at 138.43 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+			(at 160.02 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/esdal.pdf"
+			(at 144.78 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "TVS Diode Array, 5.5V Standoff, 2 Channels, SOT23"
+			(at 144.78 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "511-ESDA5V3L"
+			(at 144.78 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93eb77fd-f5ac-4b29-a914-e174186af653")
+		)
+		(pin "2"
+			(uuid "b25ec634-de7f-4fa1-9185-5af80ca9d429")
+		)
+		(pin "3"
+			(uuid "12481c48-00b3-4084-9e30-6a84ca97e8a1")
+		)
+		(instances
+			(project "PUTM_EV_Frontbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/05ab4043-b566-4501-8a33-377ac21fdb45"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 232.41 149.86 0)
 		(unit 1)
@@ -5454,6 +5684,89 @@
 			(project "PUTM_EV_Frontbox"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/05ab4043-b566-4501-8a33-377ac21fdb45"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Power_Protection:ESDA5V3L")
+		(at 167.64 156.21 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc309ef7-4c0b-4bc3-be63-f0e37b7e233b")
+		(property "Reference" "D7"
+			(at 161.29 154.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.3V/400W"
+			(at 161.29 157.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+			(at 182.88 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/esdal.pdf"
+			(at 167.64 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "TVS Diode Array, 5.5V Standoff, 2 Channels, SOT23"
+			(at 167.64 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "511-ESDA5V3L"
+			(at 167.64 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da6c74ee-7efc-4665-8e7a-c125c60b8dd0")
+		)
+		(pin "2"
+			(uuid "b6880557-5fee-45d1-88cc-e3553ce8b692")
+		)
+		(pin "3"
+			(uuid "f0ba2dcd-8ed5-49f9-921a-2e7e02051d08")
+		)
+		(instances
+			(project "PUTM_EV_Frontbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/05ab4043-b566-4501-8a33-377ac21fdb45"
+					(reference "D7")
 					(unit 1)
 				)
 			)

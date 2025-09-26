@@ -216,6 +216,18 @@
 			(embedded_fonts no)
 		)
 	)
+	(rectangle
+		(start 49.53 140.97)
+		(end 134.62 153.67)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 93c6c6a5-4b67-4972-b0ed-2fb547c2c2d4)
+	)
 	(text "MCU\n"
 		(exclude_from_sim no)
 		(at 218.44 63.5 0)
@@ -294,6 +306,16 @@
 		)
 		(uuid "e2b93008-fd37-4210-9edb-a329fb8d6faf")
 	)
+	(text "Isolated\n"
+		(exclude_from_sim no)
+		(at 85.09 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e7c406ac-78b7-4a07-8c6f-46a453815792")
+	)
 	(wire
 		(pts
 			(xy 182.88 209.55) (xy 182.88 223.52)
@@ -336,7 +358,7 @@
 	)
 	(bus
 		(pts
-			(xy 148.59 147.32) (xy 190.5 147.32)
+			(xy 148.59 144.78) (xy 190.5 144.78)
 		)
 		(stroke
 			(width 0)
@@ -496,6 +518,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 148.59) (xy 190.5 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4fbb3fb-6b22-4d6e-a7df-95146feb33f7")
+	)
+	(wire
+		(pts
 			(xy 148.59 101.6) (xy 190.5 101.6)
 		)
 		(stroke
@@ -526,6 +558,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 151.13) (xy 190.5 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c462bcfe-df51-4c7c-967a-5109bcf52c53")
+	)
+	(wire
+		(pts
 			(xy 72.39 30.48) (xy 76.2 30.48)
 		)
 		(stroke
@@ -533,6 +575,16 @@
 			(type default)
 		)
 		(uuid "cc633140-fc29-4c95-9d1d-938061a8730e")
+	)
+	(wire
+		(pts
+			(xy 69.85 151.13) (xy 118.11 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd362dc6-90f4-4ab7-ab80-47af6fc5a386")
 	)
 	(wire
 		(pts
@@ -1430,7 +1482,7 @@
 				(justify right)
 			)
 		)
-		(pin "{CAN}" output
+		(pin "{CAN}" bidirectional
 			(at 69.85 147.32 0)
 			(uuid "e162bb21-927c-46e2-abb0-d7a15cc5bd5a")
 			(effects
@@ -1453,6 +1505,16 @@
 		(pin "{ST-LINK}" output
 			(at 69.85 190.5 0)
 			(uuid "62ff978d-dd88-4210-8ab6-5f230e8fd1eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND_CAN_ISO" input
+			(at 69.85 151.13 0)
+			(uuid "9a14a191-56a1-4292-86de-344a64362234")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1729,13 +1791,12 @@
 		)
 	)
 	(sheet
-		(at 118.11 143.51)
-		(size 30.48 7.62)
+		(at 118.11 142.24)
+		(size 30.48 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -1745,7 +1806,7 @@
 		)
 		(uuid "7d5cef8e-72a6-433d-979d-fffb066d7d4e")
 		(property "Sheetname" "CAN bus"
-			(at 118.11 142.7984 0)
+			(at 118.11 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1754,7 +1815,7 @@
 			)
 		)
 		(property "Sheetfile" "can_bus.kicad_sch"
-			(at 118.11 151.7146 0)
+			(at 118.11 152.9846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1763,8 +1824,8 @@
 				(hide yes)
 			)
 		)
-		(pin "{CAN_MCU}" output
-			(at 148.59 147.32 0)
+		(pin "{CAN_MCU}" bidirectional
+			(at 148.59 144.78 0)
 			(uuid "eb402787-33a8-46bc-9d78-046358c1b3a5")
 			(effects
 				(font
@@ -1773,9 +1834,39 @@
 				(justify right)
 			)
 		)
-		(pin "{CAN}" input
+		(pin "{CAN}" bidirectional
 			(at 118.11 147.32 180)
 			(uuid "c4f5e886-715c-434d-9313-7dc79abc0583")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "STBY_CAN_1" input
+			(at 148.59 148.59 0)
+			(uuid "d0ad8365-9167-4c4e-b41b-286aed65fae1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "STBY_CAN_2" input
+			(at 148.59 151.13 0)
+			(uuid "b4239df3-eadd-4660-b237-3edbb540555c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GND_CAN_ISO" output
+			(at 118.11 151.13 180)
+			(uuid "1cba7a39-6781-4911-8700-3808d3455c06")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2100,7 +2191,7 @@
 			)
 		)
 		(pin "{CAN_MCU}" bidirectional
-			(at 190.5 147.32 180)
+			(at 190.5 144.78 180)
 			(uuid "85a3fc23-7a4f-46ba-afe2-5aa8bb9b676b")
 			(effects
 				(font
@@ -2122,6 +2213,26 @@
 		(pin "{ST-LINK}" input
 			(at 190.5 190.5 180)
 			(uuid "9724e629-5d56-46d6-b305-6d6287a1ac8e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "STBY_CAN_1" output
+			(at 190.5 148.59 180)
+			(uuid "4dce9ef4-221f-40ed-b6c0-03272456b76a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "STBY_CAN_2" output
+			(at 190.5 151.13 180)
+			(uuid "e6578aab-a3a3-4b17-988f-62fd6fbc11a0")
 			(effects
 				(font
 					(size 1.27 1.27)
