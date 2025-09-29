@@ -6212,7 +6212,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SMD0603B010TF"
 			(at 39.37 172.72 0)
 			(effects
 				(font
@@ -6281,7 +6281,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SMD0603B010TF"
 			(at 40.64 138.43 0)
 			(effects
 				(font
@@ -8795,7 +8795,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SMD0603B010TF"
 			(at 39.37 72.39 0)
 			(effects
 				(font
@@ -9688,7 +9688,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "SMD0603B010TF"
 			(at 41.91 107.95 0)
 			(effects
 				(font
