@@ -1690,7 +1690,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "APPS_MID"
+		(property "Value" "BRAKE_OUT"
 			(at 127 51.943 0)
 			(effects
 				(font
@@ -1757,7 +1757,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "APPS_MID"
+		(property "Value" "BRAKE_OUT"
 			(at 127 104.013 0)
 			(effects
 				(font
@@ -2380,7 +2380,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "APPS_MID"
+		(property "Value" "BRAKE_MID"
 			(at 93.98 101.473 0)
 			(effects
 				(font
