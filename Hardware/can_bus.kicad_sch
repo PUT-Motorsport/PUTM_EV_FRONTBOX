@@ -3253,7 +3253,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 96.52 119.38 0)
 			(effects
 				(font
@@ -3387,7 +3387,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 97.79 33.02 0)
 			(effects
 				(font
@@ -3838,7 +3838,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 44.45 160.02 0)
 			(effects
 				(font
@@ -3907,7 +3907,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 44.45 73.66 0)
 			(effects
 				(font
@@ -4037,7 +4037,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "220n"
+		(property "Value" "47u"
 			(at 64.77 74.9235 0)
 			(effects
 				(font
@@ -4046,7 +4046,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 62.23 73.66 0)
 			(effects
 				(font
@@ -5043,7 +5043,7 @@
 				)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "47u"
 			(at 96.5263 104.14 90)
 			(effects
 				(font
@@ -5051,7 +5051,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 96.52 107.95 0)
 			(effects
 				(font
@@ -5182,7 +5182,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "220n"
+		(property "Value" "47u"
 			(at 64.77 161.2835 0)
 			(effects
 				(font
@@ -5191,7 +5191,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 62.23 160.02 0)
 			(effects
 				(font
@@ -5922,7 +5922,7 @@
 				)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "47u"
 			(at 97.7963 17.78 90)
 			(effects
 				(font
@@ -5930,7 +5930,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 97.79 21.59 0)
 			(effects
 				(font

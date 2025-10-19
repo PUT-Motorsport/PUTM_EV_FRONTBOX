@@ -122,6 +122,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.85 200.66) (xy 190.5 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0afaee43-a985-471c-b260-e09947f641a7")
+	)
+	(wire
+		(pts
 			(xy 69.85 77.47) (xy 118.11 77.47)
 		)
 		(stroke
@@ -499,6 +509,16 @@
 			(type default)
 		)
 		(uuid "e2fb4b59-17e1-40bc-9077-69f32e4c42b0")
+	)
+	(wire
+		(pts
+			(xy 69.85 196.85) (xy 190.5 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef1286d6-4a6e-46dc-ab6a-d62865f644ff")
 	)
 	(bus
 		(pts
@@ -907,6 +927,26 @@
 		(pin "XIAO_GPIO" input
 			(at 39.37 71.12 90)
 			(uuid "a9c9e34c-6ad3-421f-8205-b44b69f6c881")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART_RX_PROG" input
+			(at 69.85 196.85 0)
+			(uuid "e0fb2f2b-6a0f-481d-9741-6f9419404b36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART_TX_PROG" input
+			(at 69.85 200.66 0)
+			(uuid "82b7d7f8-792d-47db-a43f-02f2a1504f7b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1700,6 +1740,26 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "UART_RX_PROG" input
+			(at 190.5 196.85 180)
+			(uuid "7119435a-662c-4892-a0da-8f894ccfd3e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "UART_TX_PROG" input
+			(at 190.5 200.66 180)
+			(uuid "8a083244-f19e-420a-a014-b4d420428909")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
