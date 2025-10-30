@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "66701aed-7a5c-493b-a55e-598c0754308a")
 	(paper "A4")
+	(title_block
+		(title "FrontBox")
+	)
 	(lib_symbols
 		(symbol "Device:C_Small"
 			(pin_numbers

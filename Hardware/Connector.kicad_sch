@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "17078a7e-d3fe-42f8-b86b-04962301bdc5")
 	(paper "A4")
+	(title_block
+		(title "FrontBox")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x04_Socket"
 			(pin_names
@@ -5597,6 +5600,16 @@
 		)
 		(uuid "3c6aff94-484e-4b1f-a33e-f797f37946e9")
 	)
+	(label "5V_EXT"
+		(at 190.5 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "520be2c4-61a3-4e69-808d-3c141a76bf15")
+	)
 	(label "CAN1+"
 		(at 134.62 87.63 0)
 		(effects
@@ -6502,71 +6515,6 @@
 			(project ""
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/05ab4043-b566-4501-8a33-377ac21fdb45"
 					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 190.5 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "270e8f53-73cd-4625-a477-4c1d79d7a9c6")
-		(property "Reference" "#PWR09"
-			(at 190.5 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 190.5 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 190.5 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190.5 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 190.5 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a44b0edf-2e7c-4e56-8a7c-e6cd4ac6bfc5")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/05ab4043-b566-4501-8a33-377ac21fdb45"
-					(reference "#PWR09")
 					(unit 1)
 				)
 			)

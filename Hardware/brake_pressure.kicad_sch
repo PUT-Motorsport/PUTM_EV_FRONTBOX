@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "f3f86379-d18f-43e9-ac81-de827713df09")
 	(paper "A4")
+	(title_block
+		(title "FrontBox")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:MCP6002-xSN"
 			(pin_names

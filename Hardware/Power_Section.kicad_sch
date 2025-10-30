@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "5b14881b-885d-4991-9463-91066c920b8f")
 	(paper "A4")
+	(title_block
+		(title "FrontBox")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint_Small"
 			(pin_numbers
@@ -2799,12 +2802,6 @@
 		(uuid "5454910a-6f38-4145-b270-d585971691df")
 	)
 	(junction
-		(at 64.77 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "54770c94-19d4-4308-b902-63e51cb4424c")
-	)
-	(junction
 		(at 245.11 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2905,6 +2902,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a8b33d29-a8c1-4026-938a-dee672da3062")
+	)
+	(junction
+		(at 64.77 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9e696e6-d053-4432-a31d-0b0ad501352c")
 	)
 	(junction
 		(at 218.44 46.99)
@@ -3314,16 +3317,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 172.72) (xy 77.47 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a95d595-5c57-44aa-8744-d10496c75381")
-	)
-	(wire
-		(pts
 			(xy 25.4 72.39) (xy 25.4 73.66)
 		)
 		(stroke
@@ -3471,6 +3464,16 @@
 			(type default)
 		)
 		(uuid "6b1f508e-5f83-4b35-b781-9318db2ede31")
+	)
+	(wire
+		(pts
+			(xy 64.77 172.72) (xy 78.74 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c8374cd-785d-4b97-9c34-3672e2fe99fe")
 	)
 	(wire
 		(pts
@@ -4171,6 +4174,16 @@
 			(type default)
 		)
 		(uuid "e3151f0a-3845-4ec8-a7c7-7bc05c1ab325")
+	)
+	(wire
+		(pts
+			(xy 78.74 172.72) (xy 78.74 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3cabe84-7892-492e-aff9-c7d21bb5da64")
 	)
 	(wire
 		(pts
@@ -8259,7 +8272,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3VA")
-		(at 77.47 172.72 0)
+		(at 78.74 170.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8267,7 +8280,7 @@
 		(dnp no)
 		(uuid "b3db3989-3835-4b0b-a1f3-2780be9ad9f2")
 		(property "Reference" "#PWR036"
-			(at 77.47 176.53 0)
+			(at 78.74 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8276,7 +8289,7 @@
 			)
 		)
 		(property "Value" "+3.3VA"
-			(at 77.47 167.64 0)
+			(at 78.74 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8284,7 +8297,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 172.72 0)
+			(at 78.74 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8293,7 +8306,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 172.72 0)
+			(at 78.74 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8302,7 +8315,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 77.47 172.72 0)
+			(at 78.74 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)

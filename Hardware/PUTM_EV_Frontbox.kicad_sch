@@ -5,9 +5,10 @@
 	(uuid "b652b05a-4e3d-4ad1-b032-18886abe7d45")
 	(paper "A3")
 	(title_block
+		(title "FrontBox")
 		(rev "${REVISION}")
-		(company "Author:")
-		(comment 1 "Reviewer:")
+		(company "Author: ${AUTHORS}")
+		(comment 1 "Reviewer: ${REVIEVER}")
 	)
 	(lib_symbols)
 	(rectangle

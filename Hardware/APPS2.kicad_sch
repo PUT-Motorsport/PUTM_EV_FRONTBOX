@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "d9f4c0bf-9434-4ece-a3f1-2f6a37ec733f")
 	(paper "A4")
+	(title_block
+		(title "FrontBox")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
