@@ -4859,6 +4859,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 31.75 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a74a7f0a-c9d2-463e-b1fd-9bad75103022")
 		)
@@ -5796,6 +5804,15 @@
 				)
 			)
 		)
+		(property "Mouser Part Number" "78-SI2347DS-T1-GE3"
+			(at 59.69 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "81ded65e-c001-47c7-8b30-eb7fa694f9ac")
 		)
@@ -5943,6 +5960,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "504-PTS181233V075"
+			(at 35.56 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bd513d85-f386-41ac-a26c-d5b6b628f13c")
 		)
@@ -6011,6 +6037,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 25.4 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -6234,6 +6268,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-SMD0603B010TF"
+			(at 39.37 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1bc132ae-e387-463d-ac16-308954a212cf")
 		)
@@ -6295,6 +6338,15 @@
 			)
 		)
 		(property "Description" "SMD0603B010TF"
+			(at 40.64 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-SMD0603B010TF"
 			(at 40.64 138.43 0)
 			(effects
 				(font
@@ -6767,6 +6819,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 30.48 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -7366,6 +7426,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "595-TLV74333PDBVR"
+			(at 57.15 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "93b92f60-7b80-4a0a-b81e-a826a01a2cf4")
 		)
@@ -7503,6 +7572,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 57.15 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "595-TLV74333PDBVR"
 			(at 57.15 74.93 0)
 			(effects
 				(font
@@ -7849,6 +7927,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 68.58 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8255,6 +8341,14 @@
 				)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 59.69 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "91dece4e-3e82-4fce-8d4a-7e9c2bf27689")
 		)
@@ -8388,6 +8482,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 29.21 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -8739,6 +8841,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "595-TLV74333PDBVR"
+			(at 55.88 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0525e628-b34d-47da-849f-656b86799613")
 		)
@@ -8809,6 +8920,15 @@
 			)
 		)
 		(property "Description" "SMD0603B010TF"
+			(at 39.37 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-SMD0603B010TF"
 			(at 39.37 72.39 0)
 			(effects
 				(font
@@ -9439,6 +9559,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 64.77 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "430b6923-effd-466c-b658-362aca34f9fb")
 		)
@@ -9641,6 +9769,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 66.04 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4ba9699d-b1b7-40c8-acfb-21a84dddbbeb")
 		)
@@ -9702,6 +9838,15 @@
 			)
 		)
 		(property "Description" "SMD0603B010TF"
+			(at 41.91 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-SMD0603B010TF"
 			(at 41.91 107.95 0)
 			(effects
 				(font
@@ -10042,6 +10187,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 67.31 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b2c985fe-ed2e-4246-a44a-5613ef6da41d")
 		)
@@ -10235,6 +10388,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 54.61 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "595-TLV74333PDBVR"
 			(at 54.61 175.26 0)
 			(effects
 				(font

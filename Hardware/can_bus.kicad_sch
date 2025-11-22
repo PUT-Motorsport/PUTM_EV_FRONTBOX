@@ -3526,6 +3526,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 96.52 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b4429320-66c3-41e4-8383-9ec3a7f3707e")
 		)
@@ -3585,6 +3593,15 @@
 			)
 		)
 		(property "Description" "Ferrite bead, small symbol"
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "623-2508052027Y1"
 			(at 53.34 76.2 0)
 			(effects
 				(font
@@ -3658,6 +3675,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 97.79 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -3797,6 +3822,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "584-ADM3057EBRWZ"
+			(at 87.63 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "0182df44-364f-45f6-b966-1bd7bb157949")
 		)
@@ -3916,6 +3950,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 63.5 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -4054,6 +4096,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "584-ADM3057EBRWZ"
+			(at 87.63 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "a5a022a5-eec0-4aa0-8577-69ec27a5e6fe")
 		)
@@ -4177,6 +4228,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 44.45 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9828bb05-7910-4cda-8626-9ba86df871ca")
 		)
@@ -4244,6 +4303,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 44.45 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -4471,6 +4538,15 @@
 			)
 		)
 		(property "Description" "Ferrite bead, small symbol"
+			(at 110.49 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "623-2508052027Y1"
 			(at 110.49 113.03 0)
 			(effects
 				(font
@@ -4713,6 +4789,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 62.23 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5baa4717-9dea-4989-8553-6024efb83df6")
 		)
@@ -4773,6 +4857,15 @@
 			)
 		)
 		(property "Description" "Ferrite bead, small symbol"
+			(at 53.34 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "623-2508052027Y1"
 			(at 53.34 71.12 0)
 			(effects
 				(font
@@ -5047,6 +5140,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 30.48 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "daa486c4-061e-42b3-bbec-b4257cfb495c")
 		)
@@ -5116,6 +5217,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 30.48 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b9192c28-fe95-4750-a329-ee3279d1baca")
 		)
@@ -5183,6 +5292,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 38.1 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c3815b87-7f1f-47ec-903a-45aa7b922dfc")
 		)
@@ -5243,6 +5360,15 @@
 			)
 		)
 		(property "Description" "Ferrite bead, small symbol"
+			(at 53.34 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "623-2508052027Y1"
 			(at 53.34 157.48 0)
 			(effects
 				(font
@@ -5451,6 +5577,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 129.54 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "168c0cd5-7c7f-4225-915c-d8b2a0f12d70")
 		)
@@ -5650,6 +5784,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 121.92 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "34ab0cbf-026d-4c39-afeb-5fad600b1036")
 		)
@@ -5783,6 +5925,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 96.52 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6517f95d-b670-4e64-a75d-88307459c6c1")
 		)
@@ -5845,6 +5995,15 @@
 			)
 		)
 		(property "Description" "Ferrite bead, small symbol"
+			(at 114.3 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "623-2508052027Y1"
 			(at 114.3 113.03 0)
 			(effects
 				(font
@@ -5923,6 +6082,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 62.23 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7c39e244-d15d-48a5-beb2-e3e7d2257f6f")
 		)
@@ -5984,6 +6151,15 @@
 			)
 		)
 		(property "Description" "Ferrite bead, small symbol"
+			(at 110.49 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "623-2508052027Y1"
 			(at 110.49 26.67 0)
 			(effects
 				(font
@@ -6125,6 +6301,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 129.54 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3c9262b0-7931-4b82-90c0-ba174bff07b7")
 		)
@@ -6194,6 +6378,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "623-2508052027Y1"
+			(at 114.3 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "85878add-7b07-464a-ad4d-7100204c098c")
 		)
@@ -6253,6 +6446,15 @@
 			)
 		)
 		(property "Description" "Ferrite bead, small symbol"
+			(at 53.34 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "623-2508052027Y1"
 			(at 53.34 162.56 0)
 			(effects
 				(font
@@ -6460,6 +6662,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 63.5 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f9196bb3-7b65-40b9-b5c6-a45a8a54af54")
 		)
@@ -6594,6 +6804,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 128.27 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c8493a64-23c5-4cc2-aced-fcbdf1adffa8")
 		)
@@ -6662,6 +6880,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 97.79 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "301d2f5c-5d7a-418a-bce2-07111a6cf87a")
 		)
@@ -6727,6 +6953,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 38.1 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"

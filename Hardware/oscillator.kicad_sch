@@ -913,6 +913,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 110.49 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d99cae6e-823c-4df7-8270-9f5537b30deb")
 		)
@@ -980,6 +988,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 67.31 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"

@@ -1590,6 +1590,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 86.36 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4bf6c11a-e675-4ab7-b59a-c2f4603c53b3")
 		)
@@ -1658,6 +1666,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 66.04 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -1862,6 +1878,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 68.58 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -2198,6 +2222,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 86.36 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0afd21d6-1c92-4a17-bb41-b26b151ad6b4")
 		)
@@ -2324,6 +2356,15 @@
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, SOIC-8"
+			(at 106.68 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "579-MCP6002-E/SN"
 			(at 106.68 105.41 0)
 			(effects
 				(font
@@ -2550,6 +2591,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "579-MCP6002-E/SN"
+			(at 106.68 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f993c321-c3a8-428d-b7d0-b61b4b5beda1")
 		)
@@ -2637,6 +2687,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 204.47 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5a4793ca-d8b9-41fa-99a0-b93b9b1f4262")
 		)
@@ -2698,6 +2756,15 @@
 			)
 		)
 		(property "Description" "1MHz, Low-Power Op Amp, SOIC-8"
+			(at 194.31 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "579-MCP6002-E/SN"
 			(at 194.31 78.74 0)
 			(effects
 				(font
@@ -2790,6 +2857,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 76.2 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -2923,6 +2998,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 73.66 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"

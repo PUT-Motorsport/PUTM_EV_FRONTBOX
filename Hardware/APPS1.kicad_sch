@@ -1887,6 +1887,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 55.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5e44acde-adb7-482c-aafd-c2feac560c5e")
 		)
@@ -1947,6 +1955,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 156.21 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "579-MCP6N11-001E/SN"
 			(at 156.21 95.25 0)
 			(effects
 				(font
@@ -2175,6 +2192,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 198.12 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0c5f364d-3122-4ccb-81b3-1927aa7024aa")
 		)
@@ -2240,6 +2265,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 57.15 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -2372,6 +2405,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 166.37 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -2510,6 +2551,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 119.38 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6ff0efdb-8a9f-4336-be43-6cecd37549d6")
 		)
@@ -2577,6 +2626,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 106.68 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -2711,6 +2768,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 184.15 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dfafc65f-7173-4b27-affa-d7cdf070d07a")
 		)
@@ -2778,6 +2843,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 242.57 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -2914,6 +2987,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 156.21 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d1b0318b-8586-4c72-9f3b-ef35f09d98aa")
 		)
@@ -3044,6 +3125,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 166.37 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -3243,6 +3332,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 252.73 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"

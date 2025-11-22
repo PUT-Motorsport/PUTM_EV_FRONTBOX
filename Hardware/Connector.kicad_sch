@@ -6284,6 +6284,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "771-PESD5V0L2BT-QR"
+			(at 139.7 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9eecea52-9dfb-46c8-ae91-b8dc9bbed678")
 		)
@@ -6347,6 +6356,15 @@
 			)
 		)
 		(property "Description" "Bidirectional dual transient-voltage-suppression diode, center on pin 3"
+			(at 171.45 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "771-PESD5V0L2BT-QR"
 			(at 171.45 153.67 0)
 			(effects
 				(font
@@ -6502,6 +6520,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "78-BZX84C3V6-E3-08"
+			(at 245.11 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "64aa83ff-747c-442e-901c-7c6a698c3735")
 		)
@@ -6574,6 +6601,14 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "."
+			(at 144.78 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "db426f21-4a8d-444c-b28b-210648c854e6")
 		)
@@ -6642,6 +6677,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 171.45 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -7054,6 +7097,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 121.92 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -7470,6 +7521,15 @@
 		)
 		(property "Mouser Link" "https://www.mouser.pl/ProductDetail/Diotec-Semiconductor/BZX84C5V6?qs=OlC7AqGiEDnFbERTexMLXA%3D%3D"
 			(at 190.5 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "637-BZX84C5V6"
+			(at 190.5 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8030,6 +8090,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "."
+			(at 250.19 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "3"
