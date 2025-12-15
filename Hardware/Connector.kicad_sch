@@ -4322,6 +4322,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 54.61) (xy 264.16 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0109eafa-44e9-4e2d-8866-ae9bb9807fca")
+	)
+	(wire
+		(pts
 			(xy 219.71 109.22) (xy 237.49 109.22)
 		)
 		(stroke
@@ -4399,6 +4409,16 @@
 			(type default)
 		)
 		(uuid "14d2ea16-9d22-4872-bf04-4f5f626dda67")
+	)
+	(wire
+		(pts
+			(xy 236.22 54.61) (xy 238.76 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "168f884f-94c0-4709-8427-902c93641a3a")
 	)
 	(wire
 		(pts
@@ -4499,16 +4519,6 @@
 			(type default)
 		)
 		(uuid "2be9863a-e0a6-4a7f-a1e2-021bc67a5ce1")
-	)
-	(wire
-		(pts
-			(xy 236.22 54.61) (xy 238.76 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c71101d-510f-448c-8c5c-e5e61bd71597")
 	)
 	(wire
 		(pts
@@ -4839,16 +4849,6 @@
 			(type default)
 		)
 		(uuid "6edc635a-b0d3-45e7-85c6-ae8e336e4db5")
-	)
-	(wire
-		(pts
-			(xy 264.16 54.61) (xy 261.62 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70afc0d6-bb83-41d0-bf20-cb09cbf68dde")
 	)
 	(wire
 		(pts
@@ -5947,12 +5947,12 @@
 	)
 	(hierarchical_label "UART_TX"
 		(shape input)
-		(at 236.22 54.61 180)
+		(at 264.16 54.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "39933db1-6cb2-4c0d-a8e0-e91b33f7e8ff")
 	)
@@ -6079,12 +6079,12 @@
 	)
 	(hierarchical_label "UART_RX"
 		(shape input)
-		(at 264.16 54.61 0)
+		(at 236.22 54.61 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "961d1eb2-028b-476c-b0e7-3ec7ae9a1510")
 	)
