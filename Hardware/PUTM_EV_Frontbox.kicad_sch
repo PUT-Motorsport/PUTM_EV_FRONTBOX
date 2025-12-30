@@ -90,7 +90,7 @@
 	)
 	(text "Clock\n"
 		(exclude_from_sim no)
-		(at 158.75 215.9 0)
+		(at 154.94 205.74 0)
 		(effects
 			(font
 				(size 2 2)
@@ -113,7 +113,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 209.55) (xy 182.88 223.52)
+			(xy 179.07 209.55) (xy 179.07 213.36)
 		)
 		(stroke
 			(width 0)
@@ -183,7 +183,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 209.55) (xy 182.88 209.55)
+			(xy 190.5 209.55) (xy 179.07 209.55)
 		)
 		(stroke
 			(width 0)
@@ -203,7 +203,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 223.52) (xy 182.88 223.52)
+			(xy 167.64 213.36) (xy 179.07 213.36)
 		)
 		(stroke
 			(width 0)
@@ -260,6 +260,16 @@
 			(type default)
 		)
 		(uuid "428b091e-40ff-4343-93b6-ff663cec3e29")
+	)
+	(wire
+		(pts
+			(xy 69.85 214.63) (xy 119.38 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "453a88d3-09c2-4cb7-9692-83063c64aee5")
 	)
 	(bus
 		(pts
@@ -373,6 +383,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.43 222.25) (xy 190.5 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ab4fa9b-b8ba-47cc-9ea8-740fd6dd27c0")
+	)
+	(wire
+		(pts
 			(xy 69.85 125.73) (xy 118.11 125.73)
 		)
 		(stroke
@@ -401,6 +421,16 @@
 		)
 		(uuid "aa597b04-2c5a-4b90-861e-db8d87a0a70a")
 	)
+	(wire
+		(pts
+			(xy 69.85 227.33) (xy 119.38 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac92f687-c2ac-40da-be41-9b73834996af")
+	)
 	(bus
 		(pts
 			(xy 69.85 142.24) (xy 118.11 142.24)
@@ -420,6 +450,16 @@
 			(type default)
 		)
 		(uuid "b724206a-ebce-40c9-95b5-54f592d719a2")
+	)
+	(wire
+		(pts
+			(xy 138.43 228.6) (xy 190.5 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdd3e520-b5b4-4f6c-a494-beb762cfebc3")
 	)
 	(wire
 		(pts
@@ -513,6 +553,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.85 217.17) (xy 119.38 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e517ecdf-245f-4362-a558-35e820eea893")
+	)
+	(wire
+		(pts
 			(xy 69.85 196.85) (xy 190.5 196.85)
 		)
 		(stroke
@@ -520,6 +570,16 @@
 			(type default)
 		)
 		(uuid "ef1286d6-4a6e-46dc-ab6a-d62865f644ff")
+	)
+	(wire
+		(pts
+			(xy 69.85 223.52) (xy 119.38 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1d804bb-2cb3-4d1c-bb00-51b3a5649199")
 	)
 	(bus
 		(pts
@@ -552,7 +612,7 @@
 		(uuid "000e3d92-d298-49eb-8248-5ea3bef886ea")
 	)
 	(label "HSE_IN"
-		(at 182.88 223.52 180)
+		(at 179.07 213.36 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -733,7 +793,7 @@
 	)
 	(sheet
 		(at 26.67 71.12)
-		(size 43.18 134.62)
+		(size 43.18 167.64)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -757,7 +817,7 @@
 			)
 		)
 		(property "Sheetfile" "Connector.kicad_sch"
-			(at 26.67 206.3246 0)
+			(at 26.67 239.3446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -955,6 +1015,46 @@
 				(justify right)
 			)
 		)
+		(pin "Tens_Out1+" output
+			(at 69.85 214.63 0)
+			(uuid "79101600-c05f-4462-a802-7e988da79e36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Tens_Out1-" output
+			(at 69.85 217.17 0)
+			(uuid "3a4e8402-f85c-42c8-aebb-928f851789a1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Tens_Out2+" output
+			(at 69.85 223.52 0)
+			(uuid "5e67b90c-98e6-4b48-adaf-a332ce1adf1f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Tens_Out2-" output
+			(at 69.85 227.33 0)
+			(uuid "22d6f1bf-dcca-4edd-95f2-48a654db5d7b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "PUTM_EV_Frontbox"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
@@ -1089,7 +1189,7 @@
 		)
 	)
 	(sheet
-		(at 153.67 220.98)
+		(at 149.86 210.82)
 		(size 17.78 5.08)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1105,7 +1205,7 @@
 		)
 		(uuid "55e35dc4-bd2c-4dc0-8f21-03116b82c791")
 		(property "Sheetname" "Oscillator"
-			(at 153.67 220.2684 0)
+			(at 149.86 210.1084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1114,7 +1214,7 @@
 			)
 		)
 		(property "Sheetfile" "oscillator.kicad_sch"
-			(at 153.67 226.6446 0)
+			(at 149.86 216.4846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1124,7 +1224,7 @@
 			)
 		)
 		(pin "HSE_IN" output
-			(at 171.45 223.52 0)
+			(at 167.64 213.36 0)
 			(uuid "ef7a2c60-b3b6-4452-86a6-d1c8eeb0aef6")
 			(effects
 				(font
@@ -1448,6 +1548,108 @@
 		)
 	)
 	(sheet
+		(at 119.38 210.82)
+		(size 19.05 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "af294f79-0e3a-4ef0-97e3-369c60ae6dab")
+		(property "Sheetname" "Tensionmeter"
+			(at 119.38 210.1084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "tensionmeter.kicad_sch"
+			(at 119.38 234.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "OUT1+" input
+			(at 119.38 214.63 180)
+			(uuid "04354c43-e2c1-4f3a-916f-4ee7f501bcc9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT1-" input
+			(at 119.38 217.17 180)
+			(uuid "340b1faf-b5fa-47ba-b6fd-c2fb45746f93")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT2+" input
+			(at 119.38 223.52 180)
+			(uuid "a9990869-60c3-4c55-b330-1f38c9280564")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT2-" input
+			(at 119.38 227.33 180)
+			(uuid "a6b3fa03-9527-419c-b41b-aba0130e2cd4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Tens1" output
+			(at 138.43 222.25 0)
+			(uuid "6d4bfd91-4b65-4985-a220-bbb1310778d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Tens2" output
+			(at 138.43 228.6 0)
+			(uuid "4391c909-e275-43ba-97ad-f1178a9471be")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PUTM_EV_Frontbox"
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 118.11 93.98)
 		(size 30.48 12.7)
 		(exclude_from_sim no)
@@ -1551,7 +1753,7 @@
 	)
 	(sheet
 		(at 190.5 69.85)
-		(size 62.23 147.32)
+		(size 62.23 167.64)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1575,7 +1777,7 @@
 			)
 		)
 		(property "Sheetfile" "STM.kicad_sch"
-			(at 190.5 217.7546 0)
+			(at 190.5 238.0746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1756,6 +1958,26 @@
 		(pin "UART_TX_PROG" input
 			(at 190.5 200.66 180)
 			(uuid "8a083244-f19e-420a-a014-b4d420428909")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Tens1" input
+			(at 190.5 222.25 180)
+			(uuid "453becda-4446-40fb-88f5-957c4a55c27a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Tens2" input
+			(at 190.5 228.6 180)
+			(uuid "bd97241d-a413-4df5-8ddb-581b7d5b4dc8")
 			(effects
 				(font
 					(size 1.27 1.27)

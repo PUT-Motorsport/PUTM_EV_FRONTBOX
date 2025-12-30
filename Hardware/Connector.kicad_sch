@@ -3595,6 +3595,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+12V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+12V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+12V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+12V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+12V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_names
@@ -3979,17 +4104,6 @@
 		)
 		(uuid "61be65d9-7db8-48b9-9cf9-171273a0cb8f")
 	)
-	(text "1: 	Signals with no connect flag are still on Connector\n	but are not proccesed on this board\n"
-		(exclude_from_sim no)
-		(at 29.21 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7b9ef9f5-6fad-4511-8b23-4be1efdf8592")
-	)
 	(text "1*"
 		(exclude_from_sim no)
 		(at 102.87 104.14 0)
@@ -4010,60 +4124,6 @@
 			(justify left bottom)
 		)
 		(uuid "9137d32c-ef32-4594-86d0-d719980c143e")
-	)
-	(text "1*"
-		(exclude_from_sim no)
-		(at 86.36 83.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a67f9832-c858-4096-b321-28a9c31c41a5")
-	)
-	(text "SUSPENSION_POT1_IN"
-		(exclude_from_sim no)
-		(at 95.25 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bb44312f-4f16-4b4d-8b32-4c2c7eafd700")
-	)
-	(text "SUSPENSION_POT2_IN"
-		(exclude_from_sim no)
-		(at 95.25 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c5ea5cf9-a0de-4bfd-9491-7cb4740ffa78")
-	)
-	(text "STEERING_POSITION_IN"
-		(exclude_from_sim no)
-		(at 93.98 83.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c87ec61f-e11c-474a-98a1-9a2c4fd16a8c")
-	)
-	(text "STEERING_POSITION_2_IN"
-		(exclude_from_sim no)
-		(at 91.44 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e9d0c0e6-32c5-4a74-affc-88b786f80d61")
 	)
 	(junction
 		(at 132.08 116.84)
@@ -4096,10 +4156,6 @@
 		(uuid "26216283-7678-405e-a00c-9998eada8cf5")
 	)
 	(no_connect
-		(at 116.84 82.55)
-		(uuid "27d68d8e-fe9e-4976-8739-8bf1cf9e993d")
-	)
-	(no_connect
 		(at 261.62 52.07)
 		(uuid "2817aec7-7543-4bcb-974e-1044760f1d03")
 	)
@@ -4112,10 +4168,6 @@
 		(uuid "30336265-2183-4801-b0eb-f37cdfb4796f")
 	)
 	(no_connect
-		(at 116.84 87.63)
-		(uuid "374de65e-1153-4341-a688-9f72c88c69dd")
-	)
-	(no_connect
 		(at 261.62 49.53)
 		(uuid "3fad3725-ebe2-4ecc-83a0-f309148c32a9")
 	)
@@ -4126,14 +4178,6 @@
 	(no_connect
 		(at 238.76 44.45)
 		(uuid "67ad730c-ec81-4674-a8b3-fa0d68d9f2ad")
-	)
-	(no_connect
-		(at 116.84 80.01)
-		(uuid "6b5a2ba3-8898-4a30-9788-8f3619d7488f")
-	)
-	(no_connect
-		(at 116.84 85.09)
-		(uuid "8083c9eb-6352-49ca-9366-7a289a2b29b1")
 	)
 	(no_connect
 		(at 238.76 46.99)
@@ -4154,10 +4198,6 @@
 	(no_connect
 		(at 219.71 106.68)
 		(uuid "d889666e-b318-4c50-987a-aa952aadf6fe")
-	)
-	(no_connect
-		(at 116.84 107.95)
-		(uuid "dd178b2e-4cfb-4fcd-ba6e-2e5162160d0a")
 	)
 	(no_connect
 		(at 207.01 106.68)
@@ -4510,16 +4550,6 @@
 		)
 		(uuid "28dfcf41-fca9-4c8b-8669-771c4c6a03c9")
 	)
-	(polyline
-		(pts
-			(xy 88.9 88.9) (xy 91.44 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2be9863a-e0a6-4a7f-a1e2-021bc67a5ce1")
-	)
 	(wire
 		(pts
 			(xy 204.47 111.76) (xy 207.01 111.76)
@@ -4559,6 +4589,16 @@
 			(type default)
 		)
 		(uuid "3b53fb79-24c0-4ea7-9154-87a8dd4b8d80")
+	)
+	(wire
+		(pts
+			(xy 113.03 87.63) (xy 116.84 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ba834af-9f33-4395-bd88-59920d71b36e")
 	)
 	(wire
 		(pts
@@ -4840,6 +4880,16 @@
 		)
 		(uuid "6d6f205f-3f2b-4956-9b0d-1e0fa538570e")
 	)
+	(wire
+		(pts
+			(xy 113.03 107.95) (xy 116.84 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e6ba5a7-979f-4df9-8d06-ab4870963ff2")
+	)
 	(bus
 		(pts
 			(xy 203.2 74.93) (xy 203.2 71.12)
@@ -4920,6 +4970,16 @@
 		)
 		(uuid "7d6d0b4c-288c-4280-93f9-4ef8664e6fe3")
 	)
+	(wire
+		(pts
+			(xy 113.03 80.01) (xy 116.84 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e871e7a-dec3-4167-8a0a-9d34a84908b5")
+	)
 	(bus
 		(pts
 			(xy 132.08 116.84) (xy 154.94 116.84)
@@ -4960,16 +5020,6 @@
 		)
 		(uuid "851c2f08-2da4-4611-a6b4-09ce30c8cf67")
 	)
-	(polyline
-		(pts
-			(xy 91.44 78.74) (xy 88.9 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8632048e-5a40-45b1-bb25-418e01b6b22b")
-	)
 	(wire
 		(pts
 			(xy 119.38 161.29) (xy 119.38 166.37)
@@ -4979,16 +5029,6 @@
 			(type default)
 		)
 		(uuid "866d5652-2726-4482-abf3-04feef1207d5")
-	)
-	(polyline
-		(pts
-			(xy 88.9 78.74) (xy 88.9 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89514751-035c-49ac-af86-2553bb0d766a")
 	)
 	(polyline
 		(pts
@@ -5312,6 +5352,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 82.55) (xy 116.84 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db6e91e5-4aa6-42e9-b04a-5beb775fe733")
+	)
+	(wire
+		(pts
 			(xy 171.45 95.25) (xy 171.45 93.98)
 		)
 		(stroke
@@ -5429,6 +5479,16 @@
 			(type default)
 		)
 		(uuid "eb23e787-7d0d-4077-b3fe-3e0d88af867a")
+	)
+	(wire
+		(pts
+			(xy 113.03 85.09) (xy 116.84 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb47b181-18ed-41be-a9a6-542ca04dd40b")
 	)
 	(wire
 		(pts
@@ -5890,6 +5950,17 @@
 		)
 		(uuid "fadac3b0-a4d8-47d6-873c-a6ce3feb4262")
 	)
+	(hierarchical_label "Tens_Out1-"
+		(shape input)
+		(at 113.03 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "06a6aee6-9f79-4bb8-aa83-4d831dca37f0")
+	)
 	(hierarchical_label "APPS_POT_1"
 		(shape output)
 		(at 90.17 146.05 90)
@@ -5900,6 +5971,17 @@
 			(justify left)
 		)
 		(uuid "0df37934-5d4f-48ef-9d83-e829819a272d")
+	)
+	(hierarchical_label "Tens_Out2-"
+		(shape input)
+		(at 113.03 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0f09d7e3-e11e-46f8-b12c-23358684aee5")
 	)
 	(hierarchical_label "GND_CAN_ISO1"
 		(shape input)
@@ -6143,6 +6225,17 @@
 		)
 		(uuid "b3c95087-99b7-45ad-968e-5fdf4a2e36d4")
 	)
+	(hierarchical_label "Tens_Out2+"
+		(shape input)
+		(at 113.03 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c4b6c8e2-80c1-4d2d-868f-6d23efe24947")
+	)
 	(hierarchical_label "BRAKE_PRESSURE2_IN"
 		(shape output)
 		(at 121.92 147.32 90)
@@ -6153,6 +6246,17 @@
 			(justify left)
 		)
 		(uuid "e778068e-a246-4e91-8ada-33f9ebb10d23")
+	)
+	(hierarchical_label "Tens_Out1+"
+		(shape input)
+		(at 113.03 80.01 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f5704b50-0b2d-4ccc-878f-4c39d755d223")
 	)
 	(hierarchical_label "UART_TX_PROG"
 		(shape input)
@@ -6601,12 +6705,13 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "."
+		(property "Mouser Part Number" "603-SMD0603B010TF"
 			(at 144.78 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8347,6 +8452,73 @@
 			(project "PUTM_EV_Frontbox"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/05ab4043-b566-4501-8a33-377ac21fdb45"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 113.03 107.95 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec8c66a0-25a1-438c-b4a1-bd785783278e")
+		(property "Reference" "#PWR09"
+			(at 116.84 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 109.22 107.9499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 113.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "21494c38-8a28-4ca3-9640-e74e4fef67c4")
+		)
+		(instances
+			(project ""
+				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/05ab4043-b566-4501-8a33-377ac21fdb45"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)

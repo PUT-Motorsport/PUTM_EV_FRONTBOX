@@ -3331,107 +3331,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "pwr"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "MCU"
 		(exclude_from_sim no)
@@ -3615,10 +3514,6 @@
 		(uuid "94cc67dc-4521-4328-b7ce-a6f9f064b878")
 	)
 	(no_connect
-		(at 157.48 60.96)
-		(uuid "b6df073e-36f9-4ec2-9179-c41e172a5bbf")
-	)
-	(no_connect
 		(at 157.48 106.68)
 		(uuid "bf401ddf-fa6f-4516-b247-ee58c1160994")
 	)
@@ -3633,10 +3528,6 @@
 	(no_connect
 		(at 121.92 114.3)
 		(uuid "db75c7c2-fb55-4dd1-8302-16887ad874e5")
-	)
-	(no_connect
-		(at 157.48 58.42)
-		(uuid "e106f65c-c8f2-4b36-a5ef-963da3d947f1")
 	)
 	(no_connect
 		(at 157.48 104.14)
@@ -4307,6 +4198,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 58.42) (xy 157.48 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6841a9be-ae08-44c8-b67c-7b9ec2e23ca4")
+	)
+	(wire
+		(pts
 			(xy 86.36 58.42) (xy 121.92 58.42)
 		)
 		(stroke
@@ -4794,6 +4695,16 @@
 			(type default)
 		)
 		(uuid "b280f2a7-a453-4709-a860-832d80a828b2")
+	)
+	(wire
+		(pts
+			(xy 161.29 60.96) (xy 157.48 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3aca04e-ce31-422e-8a24-43a3d99b52c9")
 	)
 	(wire
 		(pts
@@ -5785,6 +5696,17 @@
 		)
 		(uuid "ffe5844f-5e7d-4835-8157-78e9fea90d77")
 	)
+	(hierarchical_label "Tens2"
+		(shape input)
+		(at 161.29 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "016a3c06-37ab-460f-a619-e386e516a3f8")
+	)
 	(hierarchical_label "{CAN1_MCU}"
 		(shape bidirectional)
 		(at 29.21 49.53 180)
@@ -5817,6 +5739,17 @@
 			(justify left)
 		)
 		(uuid "0757efbf-8cb4-47a4-9cfd-06bbb83250a7")
+	)
+	(hierarchical_label "Tens1"
+		(shape input)
+		(at 161.29 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a0d0733-f66f-4f6e-8699-7bd3dd06667e")
 	)
 	(hierarchical_label "DAC1_REF"
 		(shape output)
@@ -7192,6 +7125,7 @@
 		)
 		(pin "12"
 			(uuid "ab56cef4-ee0e-4335-8f58-4cd9f36a3105")
+			(alternate "ADC1_IN1")
 		)
 		(pin "19"
 			(uuid "43e2723b-2d28-48a0-91b8-ce9fbe5877b3")
@@ -7290,6 +7224,7 @@
 		)
 		(pin "13"
 			(uuid "d79a95d0-5253-4f40-969e-5fa7e0a0e6d3")
+			(alternate "ADC1_IN2")
 		)
 		(pin "25"
 			(uuid "4a2c1913-ce08-41d6-a46c-ed785f5a4d5a")
@@ -8151,73 +8086,6 @@
 			(project "PUTM_EV_Frontbox"
 				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/bb657190-4781-414f-856e-04fa26549ae4"
 					(reference "#PWR051")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 247.65 27.94 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "93aa91b5-ff4f-466f-8fe9-fa78d1ca8909")
-		(property "Reference" "#FLG013"
-			(at 249.555 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 251.46 27.9399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 247.65 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 247.65 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 247.65 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3b62868d-f0c0-4a39-83fa-6124c380454a")
-		)
-		(instances
-			(project "PUTM_EV_Frontbox"
-				(path "/b652b05a-4e3d-4ad1-b032-18886abe7d45/bb657190-4781-414f-856e-04fa26549ae4"
-					(reference "#FLG013")
 					(unit 1)
 				)
 			)
