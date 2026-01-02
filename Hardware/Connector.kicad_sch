@@ -6601,12 +6601,13 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "."
+		(property "Mouser Part Number" "603-SMD0603B010TF"
 			(at 144.78 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8044,7 +8045,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d155b42a-7e3a-40a7-bff5-13c9ee63a34f")
 		(property "Reference" "J1"
 			(at 251.46 48.2599 0)
