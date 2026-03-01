@@ -736,9 +736,9 @@
 		)
 		(uuid 29b75801-1670-439a-977b-acdf1ea47006)
 	)
-	(text "300R\n"
+	(text "1K\n"
 		(exclude_from_sim no)
-		(at 67.31 62.23 0)
+		(at 69.85 62.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -769,7 +769,7 @@
 		)
 		(uuid "4f26c9a6-51e5-4cb5-92c0-b3a7e879d256")
 	)
-	(text "Currently 1,692V - should be smaller than POT voltage\n"
+	(text "Currently 1,566V - should be smaller than POT voltage\n"
 		(exclude_from_sim no)
 		(at 104.14 101.6 0)
 		(effects
@@ -834,9 +834,9 @@
 		)
 		(uuid "eb149bdd-0a71-4bfa-9a5e-13d90540ad43")
 	)
-	(text "0R\n"
+	(text "325R\n"
 		(exclude_from_sim no)
-		(at 69.85 87.63 0)
+		(at 67.31 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2234,7 +2234,7 @@
 				)
 			)
 		)
-		(property "Value" "300R"
+		(property "Value" "1K"
 			(at 58.42 55.88 90)
 			(effects
 				(font
@@ -2656,7 +2656,7 @@
 				)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "325R"
 			(at 59.69 88.9 90)
 			(effects
 				(font

@@ -575,7 +575,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "PUTM_EV_Frontbox.step",
       "svg": "",
       "vrml": ""
     },
