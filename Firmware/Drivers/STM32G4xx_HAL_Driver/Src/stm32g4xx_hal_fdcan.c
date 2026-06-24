@@ -2135,7 +2135,7 @@ HAL_StatusTypeDef HAL_FDCAN_AddMessageToTxFifoQ(FDCAN_HandleTypeDef *hfdcan, con
       /* Update error code */
       hfdcan->ErrorCode |= HAL_FDCAN_ERROR_FIFO_FULL;
 
-       return HAL_ERROR;
+      return HAL_ERROR;
     }
     else
     {

@@ -611,10 +611,6 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
 
     /* USER CODE END TIM2_MspInit 1 */
 
-
-  /* USER CODE END TIM2_MspInit 1 */
-
-
   }
 
 }

@@ -89,7 +89,7 @@ TIM_HandleTypeDef htim2;
 osThreadId_t MainTaskHandle;
 const osThreadAttr_t MainTask_attributes = {
   .name = "MainTask",
-  .stack_size = 128 * 16,
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal
 };
 /* Definitions for BlinkTask */
@@ -213,11 +213,7 @@ int main(void)
   MX_TIM2_Init();
   MX_FDCAN1_Init();
   MX_FDCAN2_Init();
-
   //MX_IWDG_Init();
-
- // MX_IWDG_Init();
-
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -377,7 +373,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_6CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -390,7 +386,6 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_15;
   sConfig.Rank = ADC_REGULAR_RANK_2;
-  sConfig.SamplingTime = ADC_SAMPLETIME_6CYCLES_5;
   sConfig.OffsetNumber = ADC_OFFSET_1;
   sConfig.Offset = 1;
   sConfig.OffsetSign = ADC_OFFSET_SIGN_NEGATIVE;
@@ -404,7 +399,6 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_6;
   sConfig.Rank = ADC_REGULAR_RANK_3;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -471,7 +465,7 @@ static void MX_ADC2_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_6CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -693,7 +687,7 @@ static void MX_FDCAN2_Init(void)
   hfdcan2.Init.NominalPrescaler = 10;
   hfdcan2.Init.NominalSyncJumpWidth = 2;
   hfdcan2.Init.NominalTimeSeg1 = 13;
-  hfdcan2.Init.NominalTimeSeg2 = 1;
+  hfdcan2.Init.NominalTimeSeg2 = 2;
   hfdcan2.Init.DataPrescaler = 1;
   hfdcan2.Init.DataSyncJumpWidth = 1;
   hfdcan2.Init.DataTimeSeg1 = 1;
