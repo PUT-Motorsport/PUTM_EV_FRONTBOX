@@ -1,56 +1,42 @@
-# PUTM_EV_Frontbox_2023
+# PUTM_EV_Frontbox
 
 PCB board aquiring data from the front side of the vehicle.
 
 # Features
 
 - APPS
+  - read position of acceleration pedal and send to VCU
   - two outputs: power (+5V) lines with separate regulators
   - two inputs: APPS signal lines
-  - ability to disconnect the shutdown circuit
+  - check plasubility between two signal lines
 - Data acquisition
   - front and rear brake pressure measurement
   - safety sensing
-  - imu measurements
-  - steering wheel position sensor?
-  - brake pedal position sensor?
-  - suspension position sensors?
-  - <del>Laptimer</del>
+  - brake pedal position sensor for regenerative braking
+
 
 ### APPS
 
-Linear potentiometers:
+- 2 linear potentiometers mounted on pedal
+- hardware filter and voltage clamp
+- 2 diffrent transfer function to detect implasubility when defect occurs
 
 ### Front and rear brake pressure
 
-Two analog, 5V sensors
+- two analog, 5V sensors
+- hardware filter and voltage clamp
 
 ### Safety (shutdown circuit) sensing
-
+Optocupler to check state of SDC curcuit, shift level from 24V to 3V3 and read on MCU digital input
 The safety state will be measured at:
 - left kill switch
 - right kill switch
 - driver's kill switch
 - inertia switch
 - BSPD
-- overtravel
-- ASB
-
-### IMU measurements
-
-ISM330DHCX mounted on external board with swps:
-
-### Steering wheel position sensor
-
-Sensor: AS5600
-
-The sensor will be placed on a mini-board. The angle signal uses PWM
+- brake overtravel
+- suspension interlocks
 
 ### Brake pedal position sensor
-
-Same as APPS
-
-### Suspension position sensors
-
-Two linear potentiometers
+TBD
 
